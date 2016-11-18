@@ -1,0 +1,21 @@
+#
+# Blog Settings
+#
+
+title: QuickBlog
+author: michel
+
+
+#
+# Jekyll Settings
+#
+
+permalink: /:year/:month/:day/:title/
+
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+feed:
+  path: feed/atom

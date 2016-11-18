@@ -1,0 +1,250 @@
+/*
+ * voyages-docteur-francus
+ */
+
+
+/* Layout
+   (http://www.adamkaplan.me/grid/)
+   ========================================================================== */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font: 14px/1.4 "Century Gothic", "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #fff;
+  color: #444;
+}
+
+.container {
+  background-color: #fff;
+  xmargin: 0 auto;
+  max-width: 48rem;
+  padding: 1rem 1rem;
+  text-align: left;
+}
+
+
+/* Links
+   ========================================================================== */
+
+a,
+a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+a[href*='//'] {
+  color: magenta;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+
+/* Titles
+   ========================================================================== */
+
+h1 {
+  font-size: 1rem;
+  margin: 1.7rem 0;
+}
+
+h1 .title {
+  font-size: 1.7rem;
+  margin: 1.7rem 0;
+}
+
+h2 {
+  color: #d2691e;
+  font-size: 1.6rem;
+  margin: 1.6rem 0;
+}
+
+h2 a,
+h2 a:visited {
+  color: #d2691e;
+}
+
+h3 {
+  color: #39b449;
+  font-size: 1.3rem;
+  margin: 1.1rem 0;
+}
+
+h4 {
+  color: #777;
+  font-size: 1.1rem;
+  margin: 1.1rem 0;
+}
+
+
+/* Lists
+   ========================================================================== */
+
+ul,
+ol {
+  margin: 0 0 0 1.3rem;
+  padding: 0;
+  text-align: left;
+}
+
+#toc ol {
+  list-style: upper-roman;
+  margin-left: 3rem;
+}
+
+#toc ol :first-child {
+  list-style: none;
+}
+
+
+/* Texts
+   ========================================================================== */
+
+p a {
+  text-decoration: underline;
+}
+
+p img {
+  display: block;
+  margin: 0 auto;
+}
+
+li p {
+  margin: 0 auto;
+}
+
+blockquote {
+  background-color: #fbfaea;
+  border-left: 5px solid #e3d0aa;
+  clear: both;
+  margin: 20px 0;
+  padding: 5px 15px;
+}
+
+.encart {
+  background-color: #eaf7ff;
+  border-top: 1px solid #6b90da;
+  border-bottom: 1px solid #6b90da;
+  clear: both;
+  margin: 20px 0;
+  padding: 5px 15px;
+}
+
+
+/* Post meta informations
+   ========================================================================== */
+
+header p {
+  color: #777;
+  font-size: small;
+  margin-top: -1.5rem;
+}
+
+header p span {
+  background-color: #f8f8f8;
+  margin-right: .5rem;
+  padding: 1px 3px;
+}
+
+
+/* Code
+   ========================================================================== */
+
+pre {
+  background-color: #f8f8f8;
+  padding: .4rem .5rem;
+  font-size: .8rem;
+  text-align: left;
+  border: 1px #eee solid;
+}
+
+/* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap !important;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+code {
+  background-color: #f8f8f8;
+  border: 1px #eee solid;
+  padding: 0 2px;
+}
+
+pre code {
+  border: none;
+  padding: 0;
+}
+
+
+/* Navigation
+   ========================================================================== */
+
+nav {
+  font-size: small;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+nav a,
+nav a:visited {
+  margin: 0 .5rem;
+  text-decoration: none;
+}
+
+nav p :first-child:before {
+  content: '<< ';
+}
+
+nav p :last-child:after {
+  content: ' >>';
+}
+
+
+/* Footer
+   ========================================================================== */
+
+footer {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+
+/* Smartphone (landscape)
+   ========================================================================== */
+
+@media (min-width: 28rem) {
+  html {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+
+/* Tablet & desktop
+   ========================================================================== */
+
+@media (min-width: 48rem) {
+  html {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .container {
+    padding-left: 3rem;
+  }
+}

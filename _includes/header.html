@@ -1,0 +1,9 @@
+  <header>
+    <h1>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h1>
+    <p>
+      <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+      {% for tag in post.tags %}<span>#{{ tag }}</span>{% endfor %}
+    </p>
+  </header>

@@ -335,4 +335,4 @@ Allez hop ! Encore un coup de tests unitaires pour me conditionner et
 c'est tout pour aujourd'hui.
 
 ---
-Billet suivant dans la série : [Test-Driven Development avec ASP.NET MVC (suite)](http://blog2/pagesd.info/)
+Billet suivant dans la série : [Test-Driven Development avec ASP.NET MVC (suite)]({% post_url 2009-10-29-test-driven-development-aspnetmvc-suite %})

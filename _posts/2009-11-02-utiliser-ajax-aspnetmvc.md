@@ -309,4 +309,4 @@ si les différences sont bien cantonnées au niveau du repository. Et puis
 continuer en testant ça avec [SubSonic](http://www.subsonicproject.com/) ou [NHibernate](http://www.nhforge.org/), en particulier avec [Fluent NHibernate](http://www.bengtbe.com/blog/post/2009/08/10/NerdDinner-with-Fluent-NHibernate-Part-1-The-domain-model.aspx)...
 
 ---
-Billet suivant dans la série : [Gestion de contacts avec ASP.NET MVC et jQuery](http://blog2/pagesd.info/)
+Billet suivant dans la série : [Gestion de contacts avec ASP.NET MVC et jQuery]({% post_url 2009-11-03-gestion-contacts-aspnetmvc-jquery %})

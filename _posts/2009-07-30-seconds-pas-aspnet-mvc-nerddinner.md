@@ -46,4 +46,4 @@ permis de générer le script pour créer les deux tables Dinners et RSVP et pou
 initialiser leur contenu avec quelques données de tests.
 
 ---
-Billet suivant dans la série : [Troisième étape avec ASP.NET MVC](http://blog2/pagesd.info/)
+Billet suivant dans la série : [Troisième étape avec ASP.NET MVC]({% post_url 2009-09-23-troisieme-etape-aspnetmvc %})

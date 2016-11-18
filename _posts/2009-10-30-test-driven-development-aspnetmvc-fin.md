@@ -143,4 +143,4 @@ Je vais enfin pouvoir passer à la [7° partie du tutoriel](http://msdn.microsof
 là tout de suite, c'est le week-end !
 
 ---
-Billet suivant dans la série : [Utiliser Ajax avec ASP.NET MVC](http://blog2/pagesd.info/)
+Billet suivant dans la série : [Utiliser Ajax avec ASP.NET MVC]({% post_url 2009-11-02-utiliser-ajax-aspnetmvc %})

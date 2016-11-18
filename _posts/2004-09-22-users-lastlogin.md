@@ -25,4 +25,4 @@ Users
 
 Note: il reste à faire la mise à jour de lastLogin lorsque l'utilisateur se
 connecte, y compris dans le cas où il avait coché "Connexion automatique"
-([fait le 30 septembre](http://blog2/pagesd.info/)).
+([fait le 30 septembre]({% post_url 2004-09-30-variable-session-utilisateur %})).

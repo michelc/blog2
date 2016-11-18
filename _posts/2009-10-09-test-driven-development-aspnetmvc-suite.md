@@ -112,4 +112,4 @@ France
 * Un [compte-rendu d'une formation au TDD](http://blog.olivier-duval.info/?post/2008/09/29/TDD-integration-continue) par Olivier Duval
 
 ---
-Billet suivant dans la série : [Test-Driven Development avec ASP.NET MVC (suite)](http://blog2/pagesd.info/)
+Billet suivant dans la série : [Test-Driven Development avec ASP.NET MVC (suite)]({% post_url 2009-10-20-test-driven-development-aspnetmvc-suite %})

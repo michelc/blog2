@@ -38,7 +38,7 @@ Le faire, c'est bien et ça va même assez vite. Le dire, c'est mieux mais
 c'est un peu plus long.
 
 Et donc, après quelques heures d'efforts, voici mon tutorial sur le [développement d'une application de gestion de contacts avec
-ASP.NET MVC, MongoDB et NoRM](http://blog2/pagesd.info/) qui reprend quasiment mot à mot la première
+ASP.NET MVC, MongoDB et NoRM]({% post_url 2010-03-24-developper-application-contacts-aspnetmvc-mongo-db %}) qui reprend quasiment mot à mot la première
 étape du tutoriel de Microsoft. Comme l'original, ce tutoriel présente donc
 comment créer une application de gestion de contact de la façon la plus simple
 qui soit. Tout au long de celui-ci, vous pourrez voir comment mettre en place

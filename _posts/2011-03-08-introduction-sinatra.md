@@ -22,4 +22,4 @@ d'une URL
 Notes :
 
 * Il est même possible de faire encore plus court !
-* Screencasts.orgs propose aussi une [introduction à Haml](http://blog2/pagesd.info/)
+* Screencasts.orgs propose aussi une [introduction à Haml]({% post_url 2011-03-09-introduction-haml %})

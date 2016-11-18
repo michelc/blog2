@@ -478,4 +478,4 @@ c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\01b85
 Finalement, c'est pas ce soir que je vais finir...
 
 ---
-Billet suivant dans la série : [Test-Driven Development avec ASP.NET MVC (fin)](http://blog2/pagesd.info/)
+Billet suivant dans la série : [Test-Driven Development avec ASP.NET MVC (fin)]({% post_url 2009-10-30-test-driven-development-aspnetmvc-fin %})

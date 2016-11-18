@@ -394,4 +394,4 @@ pouvez retrouver sur le [tutoriel d'origine](http://ididitmyway.herokuapp.com/pa
 Git est une application super puissante qui va révolutionner la façon dont
 vous gérez vos projets. Et il est extrêmement précieux quand il s'agit de gérer
 et de déployer des applications Sinatra sur la plateforme [Heroku](http://heroku.com/), ce dont je parlerai dans un
-[prochain billet](http://blog2/pagesd.info/).
+[prochain billet]({% post_url 2010-09-13-deployer-applications-sinatra-heroku %}).

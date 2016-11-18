@@ -39,4 +39,4 @@ s'agit de la seule "vrai" page de Quick-Content et que toutes les autres pages
 ne sont que de l'url rewriting.
 
 Voir aussi : [
-Comment résoudre le problème du "double-clic" en asp.net](http://blog2/pagesd.info/)
+Comment résoudre le problème du "double-clic" en asp.net]({% post_url 2005-12-14-comment-resoudre-probleme-double-clic-aspnet %})

@@ -86,4 +86,4 @@ soit je poursuis avec la [cinquième étape](http://msdn.microsoft.com/fr-fr/asp
 Management...
 
 ---
-Billet suivant dans la série : [ASP.NET MVC et les tests unitaires](http://blog2/pagesd.info/)
+Billet suivant dans la série : [ASP.NET MVC et les tests unitaires]({% post_url 2009-09-28-aspnetmvc-tests-unitaires %})

@@ -185,4 +185,4 @@ Si tout va bien, je ferais plus tard quelques essais supplémentaires pour
 étudier comment ça se passe dans le cas où je pars d'un groupe et que j'accède
 ensuite à ses contacts.
 
-J'ai pas trainé : la suite de mes [essais avec LINQ to NHibernate](http://blog2/pagesd.info/) !
+J'ai pas trainé : la suite de mes [essais avec LINQ to NHibernate]({% post_url 2010-02-19-suite-essais-linq-to-nhibernate %}) !

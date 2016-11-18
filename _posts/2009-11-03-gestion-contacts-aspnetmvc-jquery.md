@@ -252,4 +252,4 @@ Au final, cela donne donc le source javascript suivant :
 ```
 
 ---
-Billet suivant dans la série : [Portage du tutoriel Contact Manager sous LINQ to SQL](http://blog2/pagesd.info/)
+Billet suivant dans la série : [Portage du tutoriel Contact Manager sous LINQ to SQL]({% post_url 2009-11-13-portage-tutoriel-contact-manager-linq-to-sql %})

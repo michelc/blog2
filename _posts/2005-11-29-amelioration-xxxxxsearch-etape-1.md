@@ -40,7 +40,7 @@ Layout](http://simplyaccessible.org/article/search-form-layout))
 Reste à faire :
 
 * DONE: Améliorer le fonctionnement en mode GET (cf. [étape
-2](http://blog2/pagesd.info/)),
+2]({% post_url 2005-12-01-amelioration-xxxxxxsearch-etape-2 %})),
 * Ne plus passer par le postback ?
 * Remplacer GoogleSearchService.dll, Msn.API.dll et Yahoo.API.dll par une
 seule DLL.

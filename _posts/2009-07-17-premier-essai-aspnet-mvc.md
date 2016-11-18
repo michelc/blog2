@@ -80,4 +80,4 @@ touché à rien, tout les tests sont réussis :)
 [![NUnit-Run.png](/public/2009/nunit-run.png)](/public/2009/nunit-run.png "NUnit-Run.png, juil 2009")
 
 ---
-Billet suivant dans la série : [Seconds pas avec ASP.NET MVC et NerdDinner](http://blog2/pagesd.info/)
+Billet suivant dans la série : [Seconds pas avec ASP.NET MVC et NerdDinner]({% post_url 2009-07-30-seconds-pas-aspnet-mvc-nerddinner %})

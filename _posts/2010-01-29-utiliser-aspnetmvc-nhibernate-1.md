@@ -414,7 +414,7 @@ catégorie a bien été ajoutée :
 
 ![](http://forerunnerg34.files.wordpress.com/2009/11/database.jpg)
 
-Dans la [prochaine partie](http://blog2/pagesd.info/) de ce tutoriel, nous complèterons le modèle
+Dans la [prochaine partie]({% post_url 2010-01-29-utiliser-aspnetmvc-nhibernate-2 %}) de ce tutoriel, nous complèterons le modèle
 et les tests unitaires puis nous attaquerons la création de notre application
 ASP.NET MVC.
 

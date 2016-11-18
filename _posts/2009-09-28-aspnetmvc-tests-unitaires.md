@@ -118,4 +118,4 @@ détail les problématiques liées à l'accès à la base de données) et commen
 résoudre.
 
 ---
-Billet suivant dans la série : [Test-Driven Development avec ASP.NET MVC](http://blog2/pagesd.info/)
+Billet suivant dans la série : [Test-Driven Development avec ASP.NET MVC]({% post_url 2009-10-06-test-driven-development-aspnetmvc %})

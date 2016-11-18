@@ -124,8 +124,8 @@ spécifiques au cours des billets suivants. Mon objectif tout au long de ces
 petits tutoriels consacrés à la traduction du SQL en LINQ est de présenter les
 points suivants :
 
-* [FROM et SELECT](http://blog2/pagesd.info/)
-* [DISTINCT, WHERE et ORDER BY](http://blog2/pagesd.info/)
+* [FROM et SELECT]({% post_url 2010-02-23-convertir-sql-linq-from-select %})
+* [DISTINCT, WHERE et ORDER BY]({% post_url 2010-02-24-convertir-sql-linq-distinct-where-order-by %})
 * Les fonctions (scalaires et agrégations)
 * GROUP BY et HAVING
 * Les jointures

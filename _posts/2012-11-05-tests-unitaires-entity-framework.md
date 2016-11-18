@@ -173,4 +173,4 @@ Framework Code First Ready, un tout bête SQL Server CE devrait pouvoir faire
 l'affaire...
 
 Je vais maintenant essayer de ne pas trop tarder pour faire un billet
-expliquant comment je m'y suis pris. C'est enfin fait : [Tester Entity Framework avec SQL CE](http://blog2/pagesd.info/).
+expliquant comment je m'y suis pris. C'est enfin fait : [Tester Entity Framework avec SQL CE]({% post_url 2012-12-13-tester-entity-framework-sql-ce %}).

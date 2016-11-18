@@ -349,7 +349,7 @@ public ActionResult Create(ViewPerson person)
 
 Après ça, il faudra que je teste le POST quand ça marche et que l'action
 Create() enregistre la nouvelle personne (màj : c'est fait avec la
-[2° partie de ce billet](http://blog2/pagesd.info/)).
+[2° partie de ce billet]({% post_url 2012-10-02-tester-partie-post-action-create-2 %})).
 
 ### Ce que je ne teste pas
 

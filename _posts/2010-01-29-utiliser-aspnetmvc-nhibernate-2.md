@@ -164,7 +164,7 @@ la nouvelle catégorie dans la base de données :
 ![](http://forerunnerg34.files.wordpress.com/2009/11/postandcategory.png)
 
 Il s'agit là des rudiments de NHibernate. Je vous encourage à vous
-documenter plus en détail sur le site de la [communauté NHibernate](http://nhforge.org/). Dans la [prochaine partie](http://blog2/pagesd.info/) de ce tutoriel nous commencerons à
+documenter plus en détail sur le site de la [communauté NHibernate](http://nhforge.org/). Dans la [prochaine partie]({% post_url 2010-01-29-utiliser-aspnetmvc-nhibernate-3-fin %}) de ce tutoriel nous commencerons à
 développer notre application ASP.NET MVC pour gérer les billets et les
 catégories !
 

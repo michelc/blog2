@@ -60,4 +60,4 @@ je n'utilise qu'une fois dans toute mon application :
 Pour compléter, au cours de mes recherche j'étais aussi tombé sur [cdnjs](http://cdnjs.com/) qui héberge pas mal de librairies
 et de plugins jQuery qu'on ne trouve pas chez Google ou Microsoft.
 
-Et voir aussi : [Utilisation d'un CDN pour jQuery UI](http://blog2/pagesd.info/).
+Et voir aussi : [Utilisation d'un CDN pour jQuery UI]({% post_url 2012-08-06-utilisation-cdn-jquery-ui %}).

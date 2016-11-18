@@ -235,11 +235,11 @@ de gérer.
 Ca, c'est fait. Il faut maintenant que je teste les autres actions du
 contrôleur : Edit() en versions GET et POST, Delete() en mode GET,
 DeleteConfirmed() en mode POST() et si possible accompagner ça d'un nouveau
-billet ([c'est fait !](http://blog2/pagesd.info/)).
+billet ([c'est fait !]({% post_url 2012-10-17-tests-unitaires-people-controller %})).
 
 Puis il faudra reporter ces tests au niveau du contrôleur
 CompaniesController qui gère les contacts de type sociétés.
 
 Et pour finir, essayer de me motiver suffisamment pour faire un billet qui
 explique comment j'ai décidé de gérer les tests unitaires pour ce qui touche à
-Entity Framework (c'est [presque](http://blog2/pagesd.info/) fait).
+Entity Framework (c'est [presque]({% post_url 2012-11-05-tests-unitaires-entity-framework %}) fait).

@@ -67,8 +67,8 @@ pm
 Puis configurer Visual Studio Code pour utiliser cette version plutôt qu'une
 autre installée manuellement.
 
-Ajouter (ou modifier) la ligne "typescript.tsdk" au fichier de configuration
-de l'utilisateur (File &gt; Preferences &gt; User Settings) :
+Ajouter (ou modifier) la ligne "typescript.tsdk" au fichier de configuration de
+l'utilisateur (File &gt; Preferences &gt; User Settings) :
 
 ```
 "typescript.tsdk": "C:/Users/NOM.PRENOM/AppData/Roaming/npm/node_modules/typescript/lib"

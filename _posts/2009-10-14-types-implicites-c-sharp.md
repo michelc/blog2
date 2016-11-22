@@ -70,7 +70,7 @@ aucun cas :
 * comme valeur de retour d'une méthode
 * comme type d'une propriété
 
- =>Le mot clé contextuel 'var' ne peut apparaître que dans une
+=> Le mot clé contextuel 'var' ne peut apparaître que dans une
 déclaration de variable locale
 
 Sinon, il (me) semble préférable de réserver l'utilisation des déclarations

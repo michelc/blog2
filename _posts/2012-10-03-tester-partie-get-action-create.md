@@ -78,7 +78,7 @@ les billets sur la partie POST de l'action pour les explications.
 var controller = new PeopleController(db);
 ```
 
- =>instancie un objet contrôleur en lui passant un DbContext pour que
+=> instancie un objet contrôleur en lui passant un DbContext pour que
 l'action puisse utiliser Entity Framework pour générer la liste des
 sociétés.
 
@@ -86,7 +86,7 @@ sociétés.
 var result = controller.Create();
 ```
 
- =>appelle l'action Create() sans argument.
+=> appelle l'action Create() sans argument.
 
 Note : ce test "attaque" la version GET de l'action
 car il l'appelle sans paramètre et que fort heureusement pour moi, la version
@@ -97,7 +97,7 @@ alors que la version POST attend un paramètre de type ViewPerson.
 Assert.IsNotNull(result, "...");
 ```
 
- =>1° test pour vérifier que l'action répond bien par un `return
+=> 1° test pour vérifier que l'action répond bien par un `return
 View` et pas par un `return RedirectToAction`.
 
 ```
@@ -105,7 +105,7 @@ Assert.IsTrue(string.IsNullOrEmpty(result.ViewName),
 "...");
 ```
 
- =>2° test pour vérifier que l'action n'a pas défini le nom de la vue à
+=> 2° test pour vérifier que l'action n'a pas défini le nom de la vue à
 utiliser et qu'elle laisse faire le moteur de vue pour qu'il utilise la vue par
 défaut.
 
@@ -159,14 +159,14 @@ public void PeopleCreate_get_doit_renvoyer_un_objet_ViewPerson_a_la_vue()
 var model = result.ViewData.Model as ViewPerson;
 ```
 
- =>récupère l'objet transmis à la vue par le contrôleur.
+=> récupère l'objet transmis à la vue par le contrôleur.
 
 ```
 Assert.IsNotNull(model, "Model devrait être du type
 ViewPerson");
 ```
 
- =>vérifie que l'action a bien transmis un objet de type
+=> vérifie que l'action a bien transmis un objet de type
 `ViewPerson`.
 
 Ce test unitaire me permet de contrôler que dans le code de l'action j'ai
@@ -213,7 +213,7 @@ public void PeopleCreate_get_doit_initialiser_la_liste_des_societes()
 Assert.IsNotNull(model.Companies, "...");
 ```
 
- =>test pour vérifier que la propriété Companies n'est pas nulle (ce qui
+=> test pour vérifier que la propriété Companies n'est pas nulle (ce qui
 est le cas par défaut) et que l'action Create() l'a bien initialisée avec la
 liste des sociétés existantes.
 
@@ -265,7 +265,7 @@ public void PeopleCreate_get_doit_initialiser_la_liste_des_societes()
 var company = new ViewCompany ... / db.SaveChanges();
 ```
 
- =>création et enregistrement d'une société pour que la base de données
+=> création et enregistrement d'une société pour que la base de données
 en contienne au moins une, de façon à ce que la liste des sociétés ne soit pas
 vide.
 
@@ -273,13 +273,13 @@ vide.
 var count = ... / Assert.IsTrue(count > 0, "...");
 ```
 
- =>vérifie que la liste n'est pas vide.
+=> vérifie que la liste n'est pas vide.
 
 ```
 var check = ... / Assert.IsTrue(check > 0, "...");
 ```
 
- =>vérifie que la liste contient la société qui vient d'être créée.
+=> vérifie que la liste contient la société qui vient d'être créée.
 
 "A ce coup", je suis certain que j'ai bien rempli ma liste avec les sociétés
 présentes en base de données. Mais je me demande aussi si ça fait pas un tout
@@ -319,14 +319,14 @@ public void PeopleCreate_get_doit_initialiser_la_societe_parente_si_elle_est_ren
 var company = new ViewCompany ... / db.SaveChanges();
 ```
 
- =>création et enregistrement d'une société pour que la base de données
+=> création et enregistrement d'une société pour que la base de données
 en contienne au moins une.
 
 ```
 var result = controller.Create(societe.Contact_ID);
 ```
 
- =>appelle l'action Create() en lui passant l'ID d'une société existant
+=> appelle l'action Create() en lui passant l'ID d'une société existant
 en base de données (c'est un argument de type int => "attaque" la version
 GET de l'action).
 
@@ -335,7 +335,7 @@ Assert.AreEqual(societe.Contact_ID, model.Company_ID,
 "...");
 ```
 
- =>teste que l'ID de la société transmise à la vue correspond à l'ID qui
+=> teste que l'ID de la société transmise à la vue correspond à l'ID qui
 avait été passée à l'action du contrôleur.
 
 Note : En fait, je ne teste pas que la société passée

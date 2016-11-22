@@ -11,7 +11,7 @@ title: "(Wdevs) Free Download: MSDN Library May 2006 Edition"
 > for download to MSDN subscribers. The current download is the May 2006 Edition
 > and future editions will also be available when we release them.
 
- =>[
+=> [
 http://www.microsoft.com/downloads/...](http://www.microsoft.com/downloads/details.aspx?FamilyId=373930CB-A3D7-4EA5-B421-DD6818DC7C41&amp;displaylang=en) !!!
 
 From <http://blogs.msdn.com/robcaron/archive/2006/07/26/678897.aspx>

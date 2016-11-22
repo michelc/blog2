@@ -26,7 +26,7 @@ INSERT INTO MaTable (Colonne1, Colonne2, Colonne3) VALUES ('Un_3', 'Deux_3', 'Tr
 etc...
 ```
 
- =>12,07 secondes pour insérer 4579 lignes (soit 379 requêtes à la
+=> 12,07 secondes pour insérer 4579 lignes (soit 379 requêtes à la
 secondes).
 
 ### Des commandes INSERT groupées dans un BEGIN / END
@@ -45,7 +45,7 @@ BEGIN
 END;
 ```
 
- =>6,37 secondes pour insérer 4579 lignes => déjà 2 fois plus
+=> 6,37 secondes pour insérer 4579 lignes => déjà 2 fois plus
 rapide
 
 Note : sous [Dapper](https://code.google.com/p/dapper-dot-net/) (et ADO.NET en général je suppose), Oracle ne supporte
@@ -75,7 +75,7 @@ UNION SELECT ('Un_3', 'Deux_3', 'Trois_3') FROM DUAL
 etc...
 ```
 
- =>2,84 secondes pour insérer 4579 lignes (soit 1612 requêtes à la
+=> 2,84 secondes pour insérer 4579 lignes (soit 1612 requêtes à la
 seconde) => 4 fois plus rapide
 
 ### Résultat des courses

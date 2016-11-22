@@ -41,13 +41,12 @@ Hello World
 c:\Code\Test2> _
 ```
 
-Il est possible de débuguer ce code de la même façon que pour le projet
-Test1.
+Il est possible de débuguer ce code de la même façon que pour le projet Test1.
 
 ### Créer le fichier jsconfig.json
 
-Le fichier "jsconfig.json" sert à indiquer que le répertoire dans lequel il
-se situe est un projet JavaScript.
+Le fichier "jsconfig.json" sert à indiquer que le répertoire dans lequel il se
+situe est un projet JavaScript.
 
 Il permet aussi de paramétrer les options pour ce projet.
 
@@ -74,11 +73,10 @@ fichier "jsconfig.json" par défaut :
 
 ### Installer le fichier de définition pour Node.js
 
-Par défaut, l'intellisense de Visual Studio Code reconnait le code
-JavaScript mais pas le code spécifique à Node.js.
+Par défaut, l'intellisense de Visual Studio Code reconnait le code JavaScript
+mais pas le code spécifique à Node.js.
 
-Pour cela, il faut installer le fichier de définition spécifique à
-Node.js :
+Pour cela, il faut installer le fichier de définition spécifique à Node.js :
 
 ```
 C:\Code\Test2> typings install dt~node --global --save
@@ -86,9 +84,7 @@ C:\Code\Test2> typings install dt~node --global --save
 
 Cela a pour effet de créer :
 
-* Un répertoire "typings" avec tout ce qui va bien pour gérer
-l'intellisense
-
-spécifique à Node.js
+* Un répertoire "typings" avec tout ce qui va bien pour gérer l'intellisense
+  spécifique à Node.js
 
 * Un fichier "typings.json" pour configurer tout ça

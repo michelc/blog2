@@ -105,26 +105,26 @@ var person = new ViewPerson { LastName = "test", Phone1 = "0"
 };
 ```
 
- =>initialise un objet ViewPerson que je sais valide.
+=> initialise un objet ViewPerson que je sais valide.
 
 ```
 controller.ModelState.AddModelError("global", "message");
 ```
 
- =>déclare que l'objet comporte une erreur.
+=> déclare que l'objet comporte une erreur.
 
 ```
 var result = controller.Create(person) as ViewResult;
 ```
 
- =>appelle l'action People.Create() en lui passant mon objet ViewPerson,
+=> appelle l'action People.Create() en lui passant mon objet ViewPerson,
 ce qui me permet d'accéder à la version "POST" de mon action.
 
 ```
 Assert.IsNotNull(result, "...");
 ```
 
- =>1° test pour vérifier que l'action répond bien par un `return
+=> 1° test pour vérifier que l'action répond bien par un `return
 View` et pas par un `return RedirectToAction`.
 
 ```
@@ -132,7 +132,7 @@ Assert.IsTrue(string.IsNullOrEmpty(result.ViewName),
 "...");
 ```
 
- =>2° test pour vérifier que l'action n'a pas défini le nom de la vue à
+=> 2° test pour vérifier que l'action n'a pas défini le nom de la vue à
 utiliser et qu'elle laisse faire le moteur de vue pour qu'il utilise la vue par
 défaut
 
@@ -189,7 +189,7 @@ Assert.IsTrue(result.ViewData.ModelState.Count > 0,
 "...");
 ```
 
- =>test pour vérifier que le ModelState contient bien des erreurs.
+=> test pour vérifier que le ModelState contient bien des erreurs.
 
 Note : En fait, c'est un test idiot ! S'il y a
 des erreurs dans le ModelState en entrée, c'est le boulot de ASP.NET MVC de
@@ -232,13 +232,13 @@ public void PeopleCreate_post_doit_initialiser_la_liste_des_societes_quand_saisi
 var model = result.ViewData.Model as ViewPerson;
 ```
 
- =>récupère l'objet transmis à la vue par le contrôleur.
+=> récupère l'objet transmis à la vue par le contrôleur.
 
 ```
 Assert.IsNotNull(model.Companies, "...");
 ```
 
- =>test pour vérifier que la propriété Companies n'est pas nulle (ce qui
+=> test pour vérifier que la propriété Companies n'est pas nulle (ce qui
 est le cas par défaut) et que l'action Create() l'a bien initialisée avec la
 liste des sociétés existantes (c'est ce que fait la ligne
 `person.Companies = ListCompanies(person.Company_ID);` dans le
@@ -290,7 +290,7 @@ Assert.IsNotNull(model, "Model devrait être du type
 ViewPerson");
 ```
 
- =>1° test pour vérifier que l'action transmet bien un objet de type
+=> 1° test pour vérifier que l'action transmet bien un objet de type
 `ViewPerson`.
 
 ```
@@ -301,7 +301,7 @@ Assert.AreEqual(person.LastName, model.LastName, "...");
 Assert.AreEqual(person.Phone1, model.Phone1, "...");
 ```
 
- =>2° test pour vérifier que l'action retransmet bien ce qu'elle a
+=> 2° test pour vérifier que l'action retransmet bien ce qu'elle a
 reçu.
 
 Note : En fait, le "vrai" but de ce test n'est pas de

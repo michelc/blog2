@@ -24,8 +24,8 @@ C:\Code\Test1> code .
 
 ### Créer le fichier tsconfig.json
 
-Le fichier "tsconfig.json" sert à indiquer que le répertoire dans lequel il
-se situe est un projet TypeScript.
+Le fichier "tsconfig.json" sert à indiquer que le répertoire dans lequel il se
+situe est un projet TypeScript.
 
 Il permet aussi de paramétrer les options pour que le compilateur TypeScript
 sache comment générer les fichiers JS à partir des fichiers TS.
@@ -61,8 +61,8 @@ Ce fichier sert à paramétrer les tâches dans Visual Code.
 
 * Ctrl+Shift+P => Command Palette
 * Taper "Configure Task Runner" et &lt;Entrée&gt;
-* Sélectionner la ligne "TypeScript - tsconfig.json : Compiles a
-TypeScript project"
+* Sélectionner la ligne "TypeScript - tsconfig.json : Compiles a TypeScript
+  project"
 * Cela crée un fichier .vscode/tasks.json
 
 ```
@@ -78,9 +78,8 @@ TypeScript project"
 }
 ```
 
-Note : cette tâche compile un projet TypeScript, il faut donc avoir un
-fichier "tsconfig.json" pour que le répertoire soit considéré comme un
-projet.
+Note : cette tâche compile un projet TypeScript, il faut donc avoir un fichier
+"tsconfig.json" pour que le répertoire soit considéré comme un projet.
 
 ### Générer le fichier test.js via Visual Code
 
@@ -112,10 +111,10 @@ c:\Code\Test1> tsc
 c:\Code\Test1> _
 ```
 
- =>génère le fichier test.js (et aussi test.js.map).
+=> génère le fichier test.js (et aussi test.js.map).
 
-Note : ça marche aussi avec un terminal externe tel que l'invite de
-commande de Windows.
+Note : ça marche aussi avec un terminal externe tel que l'invite de commande de
+Windows.
 
 ### Générer le fichier à chaque enregistrement
 
@@ -138,10 +137,9 @@ Il faut modifier le fichier "tasks.json" de la façon suivante :
 Puis Ctrl+Shift+B pour lancer la tâche et se mettre à observer les
 modifications.
 
-Note : pour créer directement une tâche qui compile à chaque
-enregistrement, il est possible de configurer l'exécuteur de tâche en
-sélectionnant "TypeScript - Watch Mode : Compiles a TypeScript project in
-watch mode".
+Note : pour créer directement une tâche qui compile à chaque enregistrement, il
+est possible de configurer l'exécuteur de tâche en sélectionnant "TypeScript -
+Watch Mode : Compiles a TypeScript project in watch mode".
 
 ### Exécuter le fichier test.js
 
@@ -161,7 +159,7 @@ c:\Code\Test1> _
   - Node.js
   - VSCode Extension Development
   - .NET Core
-* Choisir "Node.js" => génère un fichier .vscode/launch.json
+* Choisir "Node.js" => génère un fichier ".vscode/launch.json"
 * Y modifier `program` et `sourceMaps`
 
 ```
@@ -222,11 +220,10 @@ Debugger listening on [::]:30135
 Hello World
 ```
 
-Il est également possible de définir un point d'arrêt dans le code
-typescript
+Il est également possible de définir un point d'arrêt dans le code typescript :
 
 * F9 sur la ligne
 * Clic dans la marge gauche de la ligne
 
-Puis F5 pour lancer le débugage puis F10 ou F11 pour tracer le code au fur
-et à mesure de son exécution...
+Puis F5 pour lancer le débugage puis F10 ou F11 pour tracer le code au fur et à
+mesure de son exécution...

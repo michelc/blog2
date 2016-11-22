@@ -88,27 +88,27 @@ Je copie/colle plus ou moins les explications des billets précédents...
 var controller = new PeopleController(db);
 ```
 
- =>instancie un objet contrôleur en lui passant un DbContext pour que
+=> instancie un objet contrôleur en lui passant un DbContext pour que
 l'action puisse utiliser Entity Framework pour rechercher la fiche contact.
 
 ```
 var contact = new Contact(); ... db.SaveChanges();
 ```
 
- =>enregistre un contact pour en avoir un à rechercher.
+=> enregistre un contact pour en avoir un à rechercher.
 
 ```
 var result = controller.Details(contact.Contact_ID);
 ```
 
- =>appelle l'action Details() en demandant le contact qui a été créé à
+=> appelle l'action Details() en demandant le contact qui a été créé à
 l'étape précédente.
 
 ```
 Assert.IsNotNull(result, "...");
 ```
 
- =>1° test pour vérifier que l'action répond bien par un `return
+=> 1° test pour vérifier que l'action répond bien par un `return
 View` et pas par un `return RedirectToAction`.
 
 ```
@@ -116,7 +116,7 @@ Assert.IsTrue(string.IsNullOrEmpty(result.ViewName),
 "...");
 ```
 
- =>2° test pour vérifier que l'action n'a pas défini le nom de la vue à
+=> 2° test pour vérifier que l'action n'a pas défini le nom de la vue à
 utiliser et qu'elle laisse faire le moteur de vue pour qu'il utilise la vue par
 défaut.
 
@@ -152,14 +152,14 @@ public void PeopleDetails_doit_renvoyer_un_objet_ViewPerson_a_la_vue()
 var model = result.ViewData.Model as ViewPerson;
 ```
 
- =>récupère l'objet transmis à la vue par le contrôleur.
+=> récupère l'objet transmis à la vue par le contrôleur.
 
 ```
 Assert.IsNotNull(model, "Model devrait être du type
 ViewPerson");
 ```
 
- =>vérifie que l'action a bien transmis un objet de type
+=> vérifie que l'action a bien transmis un objet de type
 `ViewPerson`.
 
 ### 3° test : l'action renvoie le contact demandé à la vue
@@ -197,13 +197,13 @@ var contact1 = new Contact ...
 var contact2 = new Contact ...
 ```
 
- =>enregistrement de 2 contacts pour corser un peu.
+=> enregistrement de 2 contacts pour corser un peu.
 
 ```
 var result = controller.Details(contact1.Contact_ID);
 ```
 
- =>appelle l'action Details() en demandant un des 2 contacts créé à
+=> appelle l'action Details() en demandant un des 2 contacts créé à
 l'étape précédente.
 
 ```
@@ -215,7 +215,7 @@ Assert.AreEqual(contact1.DisplayName, model.DisplayName,
 Assert.AreEqual(contact1.Phone1, model.Phone1, "...");
 ```
 
- =>teste que le contact transmis à la vue correspond bien à celui qui a
+=> teste que le contact transmis à la vue correspond bien à celui qui a
 été demandé et pas à un autre de la table des contacts.
 
 ### Remarque en passant

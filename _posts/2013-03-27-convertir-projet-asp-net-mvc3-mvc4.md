@@ -225,7 +225,7 @@ namespace Repertoir
 * Fichier / Enregistrer tout
 * Générer / Regénérer la solution
 
- =>5 erreurs "Repertoir.MvcApplication ne contient pas de définition pour
+=> 5 erreurs "Repertoir.MvcApplication ne contient pas de définition pour
 RegisterRoutes" dans le projet Repertoir.Tests
 
 Remplacer 5 fois la ligne :
@@ -245,13 +245,13 @@ Revérifier que tout est OK
 * Fichier / Enregistrer tout
 * Générer / Regénérer la solution
 
- =>La regénération globale a réussi
+=> La regénération globale a réussi
 
 ### Lancer les tests unitaires
 
 Test / Exécuter / Tous les tests de la solution
 
- =>2 erreurs sur 151 tests
+=> 2 erreurs sur 151 tests
 
 Les deux tests TestIncomingRoutes et TestOutgoingRoutes lèvent une exception
 System.InvalidOperationException parce que la classe Repertoir.MvcApplication
@@ -272,14 +272,14 @@ var tester = new RouteTester(routes);
 
 Test / Exécuter / Tous les tests de la solution
 
- =>151/151 réussi(s)
+=> 151/151 réussi(s)
 
 ### Lancer l'application
 
 Boum !
 
 > L'exception SqlCeException n'a pas été gérée par le code utilisateur
-> 
+>
 > The column name is not valid. [ Node name (if any) = c,Column name =
 > CreatedOn ]
 

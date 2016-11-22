@@ -64,7 +64,7 @@ C:\Gits> cd MongoContactsBare
 C:\Gits\MongoContactsBare> git init --bare
 ```
 
- =>`Initialized empty Git repository in
+=> `Initialized empty Git repository in
 C:/MVC/MongoContactsBare/`
 
 ```
@@ -73,9 +73,9 @@ C:\Hgs\MongoContacts> hg bookmark -r default master
 C:\Hgs\MongoContacts> hg push C:/Gits/MongoContacts/Bare
 ```
 
- =>`pushing to C:/MVC/MongoContactsBare`
+=> `pushing to C:/MVC/MongoContactsBare`
 
- =>`creating and sending data`
+=> `creating and sending data`
 
 Ca y est, mon historique est dans mon repository Git "bare". Reste plus qu'à
 *clone the bare repository to a working directory*.
@@ -89,9 +89,9 @@ C:\Gits> md MongoContacts
 C:\Gits> git clone -l .\MongoContactsBare .\MongoContacts
 ```
 
- =>`Cloning into .\MongoContacts...`
+=> `Cloning into .\MongoContacts...`
 
- =>`done.`
+=> `done.`
 
 ### Finitions
 

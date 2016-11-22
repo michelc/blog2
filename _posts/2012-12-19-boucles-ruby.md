@@ -242,7 +242,7 @@ for (int i = 0; i < 6; i++)
 Console.WriteLine(fois2);
 ```
 
- =>`Le nom 'fois2' n'existe pas dans le contexte actuel`
+=> `Le nom 'fois2' n'existe pas dans le contexte actuel`
 
 C'est pareil en Ruby où une variable qui apparaît dans la boucle est
 locale :
@@ -255,7 +255,7 @@ end
 puts fois2
 ```
 
- =>`c:/Ruby/Rubyq.rb:5:in `<main>': undefined local variable
+=> `c:/Ruby/Rubyq.rb:5:in `<main>': undefined local variable
 or method `fois2' for main:Object (NameError)`
 
 Attention toutefois, car la variable ne sera pas locale du moment qu'elle
@@ -273,7 +273,7 @@ end
 puts fois2
 ```
 
- =>Le dernier `puts fois2` renverra 10.
+=> Le dernier `puts fois2` renverra 10.
 
 D'autre part, la variable utilisée pour indicer la boucle est toujours
 locale à la boucle, même dans le cas où une variable de même nom existe en
@@ -287,4 +287,4 @@ end
 puts i
 ```
 
- =>Le dernier `puts i` affichera 99 (et pas 10).
+=> Le dernier `puts i` affichera 99 (et pas 10).

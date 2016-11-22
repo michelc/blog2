@@ -46,19 +46,19 @@ pour effectuer les traitements suivants :
 var contact = new Contact(); ... db.SaveChanges();
 ```
 
- =>enregistre le nouveau contact.
+=> enregistre le nouveau contact.
 
 ```
 this.Flash(...);
 ```
 
- =>défini un message pour informer que la création a réussi.
+=> défini un message pour informer que la création a réussi.
 
 ```
 return RedirectToAction(...);
 ```
 
- =>redirige l'utilisateur vers l'affichage du contact créé (pattern
+=> redirige l'utilisateur vers l'affichage du contact créé (pattern
 PRG).
 
 ### 1° test : Si ok Alors on crée le nouveau contact
@@ -104,7 +104,7 @@ public void PeopleCreate_post_doit_enregistrer_contact_quand_saisie_correcte()
 var controller = new PeopleController(db);
 ```
 
- =>instancie un objet contrôleur en lui passant un DbContext pour que
+=> instancie un objet contrôleur en lui passant un DbContext pour que
 l'action puisse utiliser Entity Framework pour insérer dans la table des
 contacts.
 
@@ -112,20 +112,20 @@ contacts.
 var person = new ViewPerson { ... };
 ```
 
- =>initialise un objet ViewPerson valide.
+=> initialise un objet ViewPerson valide.
 
 ```
 var result = controller.Create(person)
 ```
 
- =>appelle l'action People.Create() en lui passant mon objet ViewPerson,
+=> appelle l'action People.Create() en lui passant mon objet ViewPerson,
 ce qui me permet d'accéder à la version "POST" de l'action.
 
 ```
 var contact = db.Contacts.Where(...).FirstOrDefault();
 ```
 
- =>recherche dans la table des contacts la personne qui a été passée en
+=> recherche dans la table des contacts la personne qui a été passée en
 paramètre (via à son nom qui doit être unique grace à l'utilisation de la
 propriété `Ticks` pour l'initialiser).
 
@@ -133,7 +133,7 @@ propriété `Ticks` pour l'initialiser).
 Assert.IsNotNull(contact, "...");
 ```
 
- =>test pour vérifier qu'on a bien trouvé le contact dans la base de
+=> test pour vérifier qu'on a bien trouvé le contact dans la base de
 données, ce qui signifie donc que l'action l'a correctement inséré dans la
 table des contacts et par conséquent que le test est réussi.
 
@@ -181,26 +181,26 @@ public void PeopleCreate_post_doit_definir_message_de_succes_quand_saisie_correc
 var context = new ViewContext ... var helper ...
 ```
 
- =>instancie un HtmlHelper pour pouvoir accéder à la méthode d'extension
+=> instancie un HtmlHelper pour pouvoir accéder à la méthode d'extension
 Flash.
 
 ```
 var flash = helper.Flash();
 ```
 
- =>récupère le message "flash" en cours.
+=> récupère le message "flash" en cours.
 
 ```
 Assert.IsNotNull(flash, "...");
 ```
 
- =>test pour vérifier qu'un message "flash" a bien été défini.
+=> test pour vérifier qu'un message "flash" a bien été défini.
 
 ```
 Assert.IsTrue(flash.ToString().Contains("..."), "...");
 ```
 
- =>test pour vérifier que le message contient le texte prévu.
+=> test pour vérifier que le message contient le texte prévu.
 
 Note : J'essaierai de faire un autre billet pour
 présenter comment je gère les messages "flash" et éventuellement comment je
@@ -250,14 +250,14 @@ public void PeopleCreate_post_doit_rediriger_vers_details_quand_saisie_correcte(
 Assert.IsNotNull(result, "...");
 ```
 
- =>test pour vérifier que l'action répond bien par un `return
+=> test pour vérifier que l'action répond bien par un `return
 RedirectToAction` et pas par un `return View`.
 
 ```
 Assert.IsNull(result.RouteValues["controller"], "...");
 ```
 
- =>test pour vérifier que la redirection se fait vers le contrôleur en
+=> test pour vérifier que la redirection se fait vers le contrôleur en
 cours.
 
 ```
@@ -265,7 +265,7 @@ Assert.AreEqual("Details", result.RouteValues["action"],
 "...");
 ```
 
- =>test pour vérifier que la redirection se fait vers l'action
+=> test pour vérifier que la redirection se fait vers l'action
 Details().
 
 ```
@@ -274,7 +274,7 @@ Assert.IsNotNull(result.RouteValues["id"], "...");
 
 `Assert.IsNotNull(result.RouteValues["slug"], "...");`
 
- =>tests pour vérifier que la redirection défini les paramètres attendus
+=> tests pour vérifier que la redirection défini les paramètres attendus
 par l'action Details().
 
 ### Conclusion
@@ -288,11 +288,11 @@ L'autre truc intéressant, c'est effectivement que ces tests unitaires
 décrivent ce que doit faire l'action Create() du contrôleur People dans sa
 version POST :
 
-* 
+*
 PeopleCreate_post_doit_renvoyer_la_vue_par_defaut_quand_saisie_incorrecte
-* 
+*
 PeopleCreate_post_doit_initialiser_la_liste_des_societes_quand_saisie_incorrecte
-* 
+*
 PeopleCreate_post_doit_renvoyer_le_meme_objet_ViewPerson_a_la_vue_quand_saisie_incorrecte
 * PeopleCreate_post_doit_enregistrer_contact_quand_saisie_correcte
 * PeopleCreate_post_doit_definir_message_de_succes_quand_saisie_correcte

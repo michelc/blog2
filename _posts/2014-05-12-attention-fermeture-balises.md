@@ -6,8 +6,8 @@ tags: html
 title: "Attention à la fermeture des balises"
 ---
 
-Soit une page HTML normalement compliquée mais qui après avoir viré toutes
-les CSS et tous les Javascript pourrait se ramener à ça :
+Soit une page HTML normalement compliquée mais qui après avoir viré toutes les
+CSS et tous les Javascript pourrait se ramener à ça :
 
 ```
 <!DOCTYPE html>
@@ -28,8 +28,7 @@ Voilà ce à quoi naïvement je pense aboutir :
 
 ![](/public/2014/bug-je-veux-ca.png)
 
-Et pour de vrai, j'ai le lien qui se répète inexpliquablement sur le
-titre :
+Et pour de vrai, j'ai le lien qui se répète inexpliquablement sur le titre :
 
 ![](/public/2014/bug-au-secours.png)
 
@@ -50,7 +49,7 @@ Afficher le code source de la page :
 </html>
 ```
 
- =>Oui, c'est bien ça que j'ai dit.
+=> Oui, c'est bien ça que j'ai dit.
 
 Inspecter l'élément :
 
@@ -67,7 +66,7 @@ Inspecter l'élément :
 </a></body></html>
 ```
 
- =>C'est quoi ce truc ! Chrome est bugué ?
+=> C'est quoi ce truc ! Chrome est bugué ?
 
 Flûte, sous IE c'est trop quasi pareil :
 
@@ -88,11 +87,11 @@ F12, outils de développement :
 </a></body></html>
 ```
 
- =>C'est un complot !
+=> C'est un complot !
 
-Et donc, ce n'est qu'un très et trop long moment plus tard, après avoir
-élagué au maximum mon code source d'origine, que le problème m'a enfin tapé
-dans l'oeil :
+Et donc, ce n'est qu'un très et trop long moment plus tard, après avoir élagué
+au maximum mon code source d'origine, que le problème m'a enfin tapé dans
+l'oeil :
 
 > On ne doit pas écrire `</ a>` mais `</a>`
 > sans ESPACE. `</a >` à la rigueur, mais jamais jamais jamais

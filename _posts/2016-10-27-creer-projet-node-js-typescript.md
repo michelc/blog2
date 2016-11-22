@@ -36,8 +36,8 @@ Ca dépote !
 ### Créer le fichier tasks.json
 
 * Ctrl+Shift+P et "Configure Task Runner"
-* Sélectionner "TypeScript - Watch Mode : Compiles a TypeScript project
-in watch mode"
+* Sélectionner "TypeScript - Watch Mode : Compiles a TypeScript project in watch
+  mode"
 * Ctrl+Shift+B pour démarrer la tâche
 
 ### Installer le fichier de définition pour Node.js
@@ -76,14 +76,15 @@ Dans certains tutoriels, on trouve une syntaxe utilisant le mot clé `var` :
 var path = require('path');
 ```
 
-Mais dans la documentation de Node.js, c'est bien la syntaxe avec le mot clé `const` qui est utilisée :
+Mais dans la documentation de Node.js, c'est bien la syntaxe avec le mot clé
+`const` qui est utilisée :
 
 ```
 const path = require('path');
 ```
 
-Cependant, pour que Visual Code soit capable de reconnaitre l'objet `path`,
-il faut utiliser la syntaxe d'import des modules de ES6 :
+Cependant, pour que Visual Code soit capable de reconnaitre l'objet `path`, il
+faut utiliser la syntaxe d'import des modules de ES6 :
 
 ```
 import * as path from 'path';
@@ -106,7 +107,7 @@ Et par contre, on dispose maintenant d'une intellisense complète :
 ### Débuguer le code TypeScript
 
 * Ctrl+Shift+D et sélectionner l'environnement "Node.js"
-* Génère le fichier .vscode/launch.json
+* Génère le fichier ".vscode/launch.json"
 
 ```
 {
@@ -164,10 +165,8 @@ Et par contre, on dispose maintenant d'une intellisense complète :
       "sourceMaps": true,
 ```
 
-* Venir sur la ligne `console.log(current_dir);` du fichier "test.ts" puis
-F9
-
-pour mettre un point d'arrêt dessus.
+* Venir sur la ligne `console.log(current_dir);` du fichier "test.ts" puis F9
+  pour mettre un point d'arrêt dessus.
 
 * F5 pour lancer le débugage
 
@@ -175,10 +174,9 @@ pour mettre un point d'arrêt dessus.
 
 * F5 pour continuer l'exécution
 
-Note : une fois le programme terminé, la barre d'outils pour le
-débugage est toujours présente et il faut faire Shift+F5 pour arrêter
-l'exécution. Pour éviter cela, on peut ajouter la ligne suivante à la fin du
-fichier "test.ts" :
+Note : une fois le programme terminé, la barre d'outils pour le débugage est
+toujours présente et il faut faire Shift+F5 pour arrêter l'exécution. Pour
+éviter cela, on peut ajouter la ligne suivante à la fin du fichier "test.ts" :
 
 ```
 process.exit();

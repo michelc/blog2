@@ -1,5 +1,5 @@
 /*
- * voyages-docteur-francus
+ * blog.pagesd.info
  */
 
 
@@ -27,9 +27,8 @@ body {
 
 .container {
   background-color: #fff;
-  xmargin: 0 auto;
   max-width: 48rem;
-  padding: 1rem 1rem;
+  padding: .5rem 1rem;
   text-align: left;
 }
 
@@ -39,12 +38,20 @@ body {
 
 a,
 a:visited {
-  color: blue;
+  color: #2962ff;
   text-decoration: none;
 }
 
 a[href*='//'] {
   color: magenta;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+li p a {
+  text-decoration: none;
 }
 
 a:hover,
@@ -58,27 +65,27 @@ a:focus {
 
 h1 {
   font-size: 1rem;
-  margin: 1.7rem 0;
+  margin: 1.3rem 0;
 }
 
 h1 .title {
+  font-size: 1.3rem;
+  margin: 1.3rem 0;
+}
+
+h2 {
+  color: #c39000;
   font-size: 1.7rem;
   margin: 1.7rem 0;
 }
 
-h2 {
-  color: #d2691e;
-  font-size: 1.6rem;
-  margin: 1.6rem 0;
-}
-
 h2 a,
 h2 a:visited {
-  color: #d2691e;
+  color: #c39000;
 }
 
 h3 {
-  color: #39b449;
+  color: #43a047;
   font-size: 1.3rem;
   margin: 1.1rem 0;
 }
@@ -100,22 +107,9 @@ ol {
   text-align: left;
 }
 
-#toc ol {
-  list-style: upper-roman;
-  margin-left: 3rem;
-}
-
-#toc ol :first-child {
-  list-style: none;
-}
-
 
 /* Texts
    ========================================================================== */
-
-p a {
-  text-decoration: underline;
-}
 
 p img {
   display: block;
@@ -136,8 +130,8 @@ blockquote {
 
 .encart {
   background-color: #eaf7ff;
-  border-top: 1px solid #6b90da;
   border-bottom: 1px solid #6b90da;
+  border-top: 1px solid #6b90da;
   clear: both;
   margin: 20px 0;
   padding: 5px 15px;
@@ -165,10 +159,10 @@ header p span {
 
 pre {
   background-color: #f8f8f8;
-  padding: .4rem .5rem;
-  font-size: .8rem;
-  text-align: left;
   border: 1px #eee solid;
+  font-size: .8rem;
+  padding: .4rem .5rem;
+  text-align: left;
 }
 
 /* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
@@ -207,13 +201,18 @@ nav a:visited {
   text-decoration: none;
 }
 
-nav p :first-child:before {
-  content: '<< ';
+nav a:first-child:before {
+  content: '← ';
 }
 
-nav p :last-child:after {
-  content: ' >>';
+nav a:last-child:after {
+  content: ' →';
 }
+
+nav a:first-child:after {
+  content: '';
+}
+
 
 
 /* Footer
@@ -230,7 +229,7 @@ footer {
 
 @media (min-width: 28rem) {
   html {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
   }
 }
@@ -241,10 +240,10 @@ footer {
 
 @media (min-width: 48rem) {
   html {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1.4;
   }
   .container {
-    padding-left: 3rem;
+    padding-left: 2.5rem;
   }
 }

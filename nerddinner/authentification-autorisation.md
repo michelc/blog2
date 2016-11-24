@@ -53,18 +53,18 @@ de connexion ce qui facilite énormément l'intégration d'un mécanisme de
 sécurité dans un site web.
 
 La page maitre Site.Master affiche un lien "Log On" dans le coin supérieur
-droit des pages lorsque l'utilisateur qui y accède n'est pas authentifié:
+droit des pages lorsque l'utilisateur qui y accède n'est pas authentifié :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image113.png)
 
 Un clic sur ce lien "Log On" conduit l'utilisateur vers l'URL
-/Account/LogOn:
+/Account/LogOn :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image114.png)
 
 Les visiteurs qui ne sont pas encore enregistrés peuvent le faire en
 cliquant sur le lien "Register" qui les conduit vers l'URL /Account/Register et
-leur permet de saisir les informations de leur compte:
+leur permet de saisir les informations de leur compte :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image115.png)
 
@@ -75,7 +75,7 @@ formulaire.
 Lorsqu'un utilisateur est connecté, le fichier Site.master remplace le lien
 "Log On" en haut de l'écran par un message "Welcome [username]!" et un lien
 "Log Off". Le fait de cliquer sur le lien "Log Off" a pour effet de déconnecter
-l'utilisateur:
+l'utilisateur :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image116.png)
 
@@ -84,7 +84,7 @@ décrites ci-dessus sont réalisées au niveau de la classe AccountControllers q
 Visual studio a ajoutée au projet lors de sa création. Toute la partie
 interface utilisateur qui correspond à ce contrôleur AccountController est
 quant à elle implémentée sous forme de vues dans le répertoire
-\Views\Account:
+\Views\Account :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image117.png)
 
@@ -111,7 +111,7 @@ utiliser SQL Express. Elle pointe vers une base de données SQL Express nommée
 ASPNETDB.MDF située dans le répertoire "App_Data" de l'application. Si cette
 base de données n'existe pas lors de la première utilisation de l'API
 Membership, elle sera créée automatiquement par ASP.NET avec toute la structure
-de base de données nécessaire pour cela:
+de base de données nécessaire pour cela :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image118.png)
 
@@ -142,7 +142,7 @@ connexion afin qu'ils puissent s'identifier.
 
 La mise en place de ce contrôle est assez simple. Tout ce que nous avons
 besoin de faire, c'est d'ajouter un filtre [Authorize] aux deux méthodes
-d'action Create() en procédant comme ci-dessous:
+d'action Create() en procédant comme ci-dessous :
 
 ```
 //
@@ -180,7 +180,7 @@ Si besoin, le filtre [Authorize] peut être complété à l'aide des propriété
 l'utilisateur fait parti d'une liste d'utilisateurs autorisés ou qu'il est
 membre d'un rôle donné. Par exemple, dans le code ci-dessous, il n'y a que deux
 utilisateurs particuliers - "scottgu" et "billg" - qui ont le droit d'accéder à
-l'URL /Dinners/Create:
+l'URL /Dinners/Create :
 
 ```
 [Authorize(Users="scottgu,billg")]
@@ -199,7 +199,7 @@ pour gérer des rôles et fourni également un ensemble de fournisseurs pour les
 stocker (dont un pour SQL et un pour Active Directory), le tout permettant de
 simplifier l'association entre utilisateurs et rôles. Avec cela, nous pourrions
 adapter notre code pour autoriser uniquement les utilisateurs appartenant au
-rôle "admin" à accéder à l'URL /Dinners/Create:
+rôle "admin" à accéder à l'URL /Dinners/Create :
 
 ```
 [Authorize(Roles="admin")]
@@ -219,7 +219,7 @@ Create(), nous avions mis une chaîne en dur pour initialiser la valeur de la
 propriété "HostedBy" dans la classe Dinner. Nous pouvons désormais mettre à
 jour ce code pour employer la propriété User.Identity.Name à la place et en
 profiter pour inscrire automatiquement le responsable du dîner au dîner qu'il
-organise:
+organise :
 
 ```
 //
@@ -267,7 +267,7 @@ Dinners.cs que nous avons créée auparavant). Cette méthode renvoie "true" ou
 "false" selon que l'identifiant de l'utilisateur passé en paramètre correspond
 à la valeur de la propriété HostedBy de l'objet Dinner ou non. Tout le côté
 destiné à effectuer une comparaison de chaîne sans tenir compte de la casse est
-traité au niveau de cette méthode helper:
+traité au niveau de cette méthode helper :
 
 ```
 public partial class Dinner {
@@ -288,7 +288,7 @@ Nous pouvons alors ajouter du code au niveau des méthodes Edit pour utiliser
 la méthode helper Dinner.IsHostedBy(username) afin de vérifier que
 l'utilisateur connecté correspond bien au responsable du dîner. Si ce n'est pas
 le cas, nous afficherons une vue "InvalidOwner" pour terminer la requête. Le
-code qui réalise tout cela est le suivant:
+code qui réalise tout cela est le suivant :
 
 ```
 //
@@ -332,7 +332,7 @@ public ActionResult Edit(int id, FormCollection collection) {
 
 Il nous reste alors à faire un clic-droit dans le répertoire \View\Dinner et
 à sélectionner la commande Add-&gt;View pour créer la nouvelle vue
-"InvalidOwner" et à la remplir avec le message d'erreur ci-dessous:
+"InvalidOwner" et à la remplir avec le message d'erreur ci-dessous :
 
 ```
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">
@@ -347,7 +347,7 @@ Il nous reste alors à faire un clic-droit dans le répertoire \View\Dinner et
 ```
 
 Et maintenant, lorsqu'un utilisateur essaie de mettre à jour un dîner dont
-il n'est pas responsable, il tombe sur un message d'erreur:
+il n'est pas responsable, il tombe sur un message d'erreur :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image119.png)
 
@@ -359,7 +359,7 @@ responsable du dîner aura la permission de le supprimer.
 ### Afficher ou masquer les liens Edit et Delete
 
 Notre page Details propose un lien vers les méthodes d'action Edit et Delete
-de la classe DinnersController:
+de la classe DinnersController :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image120.png)
 
@@ -370,7 +370,7 @@ visiteur est l'organisateur du dîner.
 
 Pour l'instant, la méthode d'action Details() du contrôleur
 DinnersController récupère un objet Dinner et le fait passer à la vue
-Details:
+Details :
 
 ```
 //
@@ -388,7 +388,7 @@ public ActionResult Details(int id) {
 
 Nous pouvons donc mettre à jour cette vue afin qu'elle utilise désormais la
 méthode helper Dinner.IsHostedBy() pour afficher ou pour masquer les liens Edit
-et Delete en fonction du résultat de celle-ci:
+et Delete en fonction du résultat de celle-ci :
 
 ```
 <% if (Model.IsHostedBy(Context.User.Identity.Name)) { %>

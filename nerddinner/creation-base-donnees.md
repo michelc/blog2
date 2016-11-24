@@ -18,12 +18,12 @@ Express.
 ### Création d'une nouvelle base de données SQL Server Express
 
 Nous allons commencer par faire un clic droit sur notre projet Web, pour
-sélectionner les commandes **Add -&gt; New Item**:
+sélectionner les commandes **Add -&gt; New Item** :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image024.png)
 
 Cela fait apparaître la boite de dialogue "Add New Item" dans laquelle nous
-sélectionnons la catégorie "Data" puis le modèle "SQL Server Database":
+sélectionnons la catégorie "Data" puis le modèle "SQL Server Database" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image025.png)
 
@@ -35,7 +35,7 @@ répertoire déjà configuré avec des droits ACL en lecture et écriture).
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image026.png)
 
 Cliquons sur "Yes" et notre nouvelle base de données sera créée et ajoutée
-au bon endroit dans l'explorateur de solution:
+au bon endroit dans l'explorateur de solution :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image027.png)
 
@@ -50,21 +50,21 @@ bases de données SQL Server Express stockées dans le répertoire \App_Data de
 notre application apparaissent automatiquement dans l'explorateur de serveurs.
 Nous pouvons éventuellement utiliser l'icône "Connect to Database" en haut de
 la fenêtre de l'explorateur de serveurs pour ajouter d'autres bases de données
-SQL Server (aussi bien locales que distantes) à cette liste:
+SQL Server (aussi bien locales que distantes) à cette liste :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image028.png)
 
-Nous ajouterons deux tables à notre base de données NerdDinner: une pour
+Nous ajouterons deux tables à notre base de données NerdDinner : une pour
 stocker nos dîners et l'autre pour gérer les confirmations de présence (RSVP).
 Nous pouvons créer de nouvelles tables en faisant un clic droit sur la branche
 "Tables" dans le dossier de notre base de données puis en choisissant la
-commande "Add New Table":
+commande "Add New Table" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image029.png)
 
 Cela ouvre une fenêtre avec le concepteur de table qui nous permet de
 définir le schéma de notre nouvelle table. Pour la table des dîners, nous
-allons ajouter les 10 colonnes suivantes:
+allons ajouter les 10 colonnes suivantes :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image030.png)
 
@@ -85,13 +85,13 @@ Cela se configure en sélectionnant la colonne "DinnerID" puis en utilisant
 le panneau "Column Properties" pour configurer la propriété "(Is Identity)" de
 la colonne à "Yes". Nous utiliserons les valeurs standards pour une colonne
 "Identity", à savoir commence à 1 et augmente de 1 à chaque nouvelle ligne
-insérée:
+insérée :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image032.png)
 
 Nous pouvons alors presser Ctrl-S ou utiliser le menu __File -&gt; Save__
 pour enregistrer notre table. Lorsque Visual Studio nous demande de donner un
-nom à notre table, répondre "Dinners":
+nom à notre table, répondre "Dinners" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image033.png)
 
@@ -100,7 +100,7 @@ notre base de données dans l'explorateur de serveurs.
 
 Nous allons répéter les étapes précédentes et créer cette fois-ci une table
 "RSVP" contenant 3 colonnes. Nous paramètrerons la colonne RsvpID en tant que
-clé primaire et colonne "Identity":
+clé primaire et colonne "Identity" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image034.png)
 
@@ -119,19 +119,19 @@ table RSVP pour lui associer une relation de clé étrangère avec la colonne
 Dans l'explorateur de serveurs, double-cliquons sur la table RSVP pour
 l'ouvrir avec le concepteur de tables. On fait ensuite un clic-droit sur la
 colonne "DinnerID" et on sélectionne "Relationships…" dans le menu
-contextuel:
+contextuel :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image035.png)
 
 Cela fait apparaître une boîte de dialogue qui va nous servir pour
-configurer les relations entre les deux tables:
+configurer les relations entre les deux tables :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image036.png)
 
 Cliquons sur le bouton "Add" pour ajouter une nouvelle relation. Une fois
 que la relation a été créée, il faut cliquer sur le bouton "…" en face du
 groupe de propriétés "Tables And Columns Specifications" pour paramétrer notre
-nouvelle relation:
+nouvelle relation :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image037.png)
 
@@ -143,7 +143,7 @@ relation.
 Nous allons sélectionner la table "Dinners" dans la liste déroulante
 "Primary key table", puis la colonne "DinnerID" de la table Dinners comme clé
 primaire. Puis nous choisissons notre table RSVP dans la liste "Foreign key
-table" et associons la colonne "RSVP.DinnerID" comme clé étrangère:
+table" et associons la colonne "RSVP.DinnerID" comme clé étrangère :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image038.png)
 
@@ -159,12 +159,12 @@ s'il existe des lignes de la table RSVP qui correspondent à celle-ci.
 Pour finir, nous allons remplir notre table Dinners avec un jeu d'essai.
 Nous pouvons ajouter des données à une table en faisant un clic-droit sur
 celle-ci dans l'explorateur de serveurs puis en choisissant la commande "Show
-Table Data":
+Table Data" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image039.png)
 
 Insérons quelques lignes dans la table Dinners qui nous servirons par la
-suite lorsque nous commencerons à réaliser l'application:
+suite lorsque nous commencerons à réaliser l'application :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image040.png)
 

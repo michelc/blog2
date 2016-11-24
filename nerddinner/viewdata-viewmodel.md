@@ -11,7 +11,7 @@ la façon de les utiliser pour créer, modifier et supprimer des données (CRUD)
 Nous allons maintenant faire passer notre application au niveau supérieur et
 mettre en œuvre des formulaires encore plus sophistiqués. Cela nous permettra
 d'étudier les deux approches envisageables pour faire passer des informations
-des contrôleurs vers les vues: ViewData et ViewModel.
+des contrôleurs vers les vues : ViewData et ViewModel.
 
 ### Transmettre des données des contrôleurs vers les vues
 
@@ -31,7 +31,7 @@ résultant des données qui lui ont été fournies par le contrôleur.
 
 Pour l'instant, les modèles de données que notre contrôleur
 DinnersController fait passer aux différentes vues sont plutôt simples et
-directs: une liste d'objets Dinners pour l'action Index() et un simple objet
+directs : une liste d'objets Dinners pour l'action Index() et un simple objet
 Dinner dans le cas des actions Details(), Edit(), Create() et Delete(). Si nous
 voulons enrichir l'interface utilisateur de notre application, nous aurons
 généralement besoin de faire passer plus que ces objets basiques pour que les
@@ -72,13 +72,13 @@ public ActionResult Edit(int id) {
 }
 ```
 
-Le constructeur de l'objet SelectList prend deux paramètres: une liste de
+Le constructeur de l'objet SelectList prend deux paramètres : une liste de
 pays pour remplir la liste déroulante ainsi que le code du pays actuellement
 sélectionné.
 
 Nous pouvons alors mettre à jour la vue Edit.aspx pour remplacer le Helper
 Html.TextBox() que nous utilisions jusqu'alors par le helper
-Html.DropDownlist():
+Html.DropDownlist() :
 
 ```
 <%= Html.DropDownList("Country", ViewData["Countries"] as SelectList) %>
@@ -92,14 +92,14 @@ converti en SelectList.
 
 Et maintenant, quand nous lançons l'application pour accéder à l'URL
 /Dinners/Edit/1, nous pouvons constater que l'interface utilisateur a bien été
-modifiée pour afficher une liste déroulante au lieu de la zone de texte:
+modifiée pour afficher une liste déroulante au lieu de la zone de texte :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image097.png)
 
 Etant donné que nous renvoyons aussi la vue Edit dans le cas où l'action
 Edit() est appelée en mode HTTP GET (dans le cas où une erreur s'est produite),
 nous devons faire en sorte que la SelectList soit également ajoutée au
-dictionnaire ViewData avant que la vue soit appelée:
+dictionnaire ViewData avant que la vue soit appelée :
 
 ```
 //
@@ -146,14 +146,14 @@ créer des classes fortement typées que l'on construit en fonction de ce que
 l'on a besoin de faire dans nos vues. Ces classes exposent donc les propriétés
 correspondant au contenu et aux valeurs dynamiques nécessaires dans les vues.
 Notre classe contrôleur va donc initialiser ces classes puis les transmettre
-aux vues qui les utiliseront. Cette technique apporte plusieurs avantages: la
+aux vues qui les utiliseront. Cette technique apporte plusieurs avantages : la
 sécurité du typage de données, la vérification à la compilation et la
 disponibilité de l'IntelliSense dans l'éditeur de vues.
 
 Par exemple, pour gérer des situations où nous voulons la mise à jour des
 dîners, nous pouvons créer une classe "DinnerFormViewModel" qui expose deux
-propriétés fortement typées: un objet Dinner et un objet SelectList pour
-remplir la liste déroulante des pays:
+propriétés fortement typées : un objet Dinner et un objet SelectList pour
+remplir la liste déroulante des pays :
 
 ```
 public class DinnerFormViewModel {
@@ -174,7 +174,7 @@ public class DinnerFormViewModel {
 
 Nous pouvons ensuite mettre à jour l'action Edit() pour qu'elle crée un
 objet DinnerFormViewModel à partir de l'objet Dinner issu du repository, puis
-qu'elle le fasse passer à la vue:
+qu'elle le fasse passer à la vue :
 
 ```
 // GET: /Dinners/Edit/5
@@ -188,7 +188,7 @@ public ActionResult Edit(int id) {
 Il ne nous reste plus qu'à mettre à jour notre vue pour qu'elle attende
 désormais un objet "DinnerFormViewModel" au lieu d'un objet "Dinner" en
 changeant l'attribut "inherits" qui apparait sur la première ligne du fichier
-Edit.aspx:
+Edit.aspx :
 
 ```
 Inherits="System.Web.Mvc.ViewPage<NerdDinner.Controllers.DinnerFormViewModel>
@@ -196,7 +196,7 @@ Inherits="System.Web.Mvc.ViewPage<NerdDinner.Controllers.DinnerFormViewModel>
 
 Une fois que nous avons fait cela, l'IntelliSense disponible au sein de la
 vue est mise à jour pour refléter le type "DinnerFormViewModel" de l'objet
-Model que nous lui passons:
+Model que nous lui passons :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image098.png)
 
@@ -204,9 +204,9 @@ Model que nous lui passons:
 
 Nous pouvons alors mettre à jour le code de notre vue pour en tirer parti.
 Comme vous le remarquez ci-dessous, nous ne modifions pas les noms des zones de
-saisies que nous créons: les différents éléments du formulaire s'appellent
+saisies que nous créons : les différents éléments du formulaire s'appellent
 toujours "Title", "Country"… Par contre, nous avons mis à jour les méthodes
-Helper pour retrouver leurs valeurs depuis la classe "DinnerFormViewModel":
+Helper pour retrouver leurs valeurs depuis la classe "DinnerFormViewModel" :
 
 ```
 <p>
@@ -225,7 +225,7 @@ Helper pour retrouver leurs valeurs depuis la classe "DinnerFormViewModel":
 
 Puis nous mettons à jour la partie HTTP POST de l'action Edit() pour
 utiliser également la classe DinnerFormViewModel dans le cas où nous avons
-besoin de gérer les erreurs de saisie:
+besoin de gérer les erreurs de saisie :
 
 ```
 //
@@ -253,7 +253,7 @@ public ActionResult Edit(int id, FormCollection collection) {
 Nous pouvons aussi utiliser cette classe DinnerFormViewModel au niveau des
 méthodes d'action Create() afin qu'elles utilisent la même liste déroulante des
 pays. Ce qui donne le code suivant pour la partie HTTP GET de l'action
-Create():
+Create() :
 
 ```
 //
@@ -268,7 +268,7 @@ public ActionResult Create() {
 }
 ```
 
-Et pour la partie HTTP POST de l'action Create():
+Et pour la partie HTTP POST de l'action Create() :
 
 ```
 //

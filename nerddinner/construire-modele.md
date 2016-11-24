@@ -15,7 +15,7 @@ fonctionner.
 
 Le framework ASP.NET MVC prend en charge toutes les techniques d'accès aux
 données, et les développeurs peuvent mettre en œuvre leur modèle à partir d'un
-large éventail de solutions: LINQ to Entities, LINQ to SQL, NHibernate, LLBLGen
+large éventail de solutions : LINQ to Entities, LINQ to SQL, NHibernate, LLBLGen
 Pro, SubSonic, WilsonORM, ou tout simplement des DataReader ou des DataSet.
 
 Pour notre application NerdDinner nous utiliserons LINQ to SQL pour créer un
@@ -55,19 +55,19 @@ meilleure qualité.
 ### Ajout des classes LINQ to SQL à notre projet
 
 On commence par un clic droit sur le dossier "Models" de notre projet avant
-de sélectionner la commande **Add -&gt; New Item**:
+de sélectionner la commande **Add -&gt; New Item** :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image041.png)
 
 Cela fait apparaître la boite de dialogue "Add New Item" dans laquelle nous
-choisissons la catégorie "Data" puis le modèle "LINK to SQL Classes":
+choisissons la catégorie "Data" puis le modèle "LINK to SQL Classes" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image042.png)
 
 On donne le nom "NerdDinner" à notre classe puis on clique sur le bouton
 "Add". Visual Studio ajoute alors un fichier NedrDinner.dbml dans le dossier
 \Models puis ouvre celui-ci dans le Concepteur Objet/Relationnel LINQ to
-SQL:
+SQL :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image043.png)
 
@@ -76,14 +76,14 @@ SQL:
 LINQ to SQL permet de créer rapidement des classes de données à partir du
 schéma d'une base de données existante. Pour cela, nous ouvrons la base de
 données NerdDinner dans l'explorateur de serveur pour y sélectionner les tables
-que nous voulons y voir figurer:
+que nous voulons y voir figurer :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image044.png)
 
 On fait alors glisser nos deux tables vers le concepteur LINQ to SQL. En
 faisant cela, LINQ to SQL crée automatiquement les classes Dinner et RSVP en se
 basant sur la structure des tables Dinners et RSVP (en reprenant comme
-propriété de chaque classe les colonnes de la table correspondante):
+propriété de chaque classe les colonnes de la table correspondante) :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image045.png)
 
@@ -106,7 +106,7 @@ qu'il a créé. Par exemple, lorsque nous avons fait glisser les tables Dinners
 et RSVP vers le concepteur LINQ to SQL, le fait que la table RSVP possède une
 clé étrangère vers la table Dinners lui a permis d'en déduire une relation
 un-à-plusieurs entre les deux (qui est représentée par la flèche dans le
-concepteur):
+concepteur) :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image046.png)
 
@@ -119,13 +119,13 @@ retrouver et de mettre à jour les objets RSVP associés à ce dîner.
 
 Ci-dessous vous pouvez voir un exemple d'IntelliSense dans Visual Studio
 lorsque nous créons un nouvel objet RSVP et que nous l'ajoutons à la collection
-RSVPs d'un objet Dinner:
+RSVPs d'un objet Dinner :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image047.png)
 
 Vous pouvez voir que LINQ to SQL a créé une collection "RSVPs" pour l'objet
 Dinner. Nous pouvons l'employer pour associer une relation de clé étrangère
-entre une ligne Dinner et une ligne RSVP dans notre base de données:
+entre une ligne Dinner et une ligne RSVP dans notre base de données :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image048.png)
 
@@ -156,7 +156,7 @@ objets Dinner et RSVP à partir de la base de données.
 
 Le code suivant montre comment instancier un objet NerdDinnerDataContext et
 effectuer une requête LINQ sur celui-ci pour retrouver les dîners qui vont
-bientôt se dérouler:
+bientôt se dérouler :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image049.png)
 
@@ -165,7 +165,7 @@ apportées aux objets Dinner et RSVP récupérés par son intermédiaire et
 simplifie leur enregistrement dans la base de données. Le code ci-dessous
 illustre la façon dont on peut utiliser une requête LINQ pour obtenir  un
 objet Dinner particulier de la base de données, mettre à jour deux de ses
-propriétés, puis enregistrer ces modifications dans la base de données:
+propriétés, puis enregistrer ces modifications dans la base de données :
 
 ```
 NerdDinnerDataContext db = new NerdDinnerDataContext();
@@ -207,7 +207,7 @@ unitaires de l'application en évitant l'utilisation d'une vraie base de
 données.
 
 Pour notre application, nous allons définir une classe DinnerRepository avec
-la signature suivante:
+la signature suivante :
 
 ```
 public class DinnerRepository {
@@ -227,7 +227,7 @@ public class DinnerRepository {
 }
 ```
 
-''Note: plus loin dans ce chapitre, nous génèrerons une interface
+''Note : plus loin dans ce chapitre, nous génèrerons une interface
 IDinnerRepository à partir de cette classe pour adopter l'injection de
 dépendance dans nos contrôleurs. Mais pour l'instant, nous allons au plus
 simple en travaillant directement avec la classe DinnerRepository.''
@@ -235,12 +235,12 @@ simple en travaillant directement avec la classe DinnerRepository.''
 Pour implémenter cette classe, on fait un clic-droit sur le dossier "Models"
 et on choisi la commande **Add -&gt; New Item**. Dans la boite de
 dialogue "Add New Item", nous sélectionnons le modèle "Class" et donnons le nom
-de "DinnerRepository.cs" à notre fichier:
+de "DinnerRepository.cs" à notre fichier :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image050.png)
 
 Nous pouvons créer notre classe DinnerRespository en recopiant le code
-ci-dessous:
+ci-dessous :
 
 ```
 public class DinnerRepository {
@@ -287,12 +287,12 @@ public class DinnerRepository {
 
 Maintenant que nous avons créé notre classe DinnerRepository, jetons un coup
 d'œil à quelques exemples de code pour comprendre à quoi elle va pouvoir nous
-servir:
+servir :
 
 #### Exemple de recherche
 
 Le code ci-dessous retrouve un dîner particulier à partir de la valeur de
-DinnerID:
+DinnerID :
 
 ```
 DinnerRepository dinnerRepository = new DinnerRepository();
@@ -302,7 +302,7 @@ Dinner dinner = dinnerRepository.GetDinner(5);
 ```
 
 Le code ci-dessous retrouve tous les dîners à venir puis fait une boucle sur
-ceux-ci:
+ceux-ci :
 
 ```
 DinnerRepository dinnerRepository = new DinnerRepository();
@@ -323,7 +323,7 @@ ajouts et les modifications dans le repository ne sont pas répercutés dans la
 base de données tant que la méthode "Save()" n'est pas appelée. LINQ to SQL
 englobe automatiquement toutes les modifications de la base de données dans une
 transaction. Ainsi, lorsque le repository est sauvegardé, soit toutes les mises
-à jour sont effectuées, soit aucune:
+à jour sont effectuées, soit aucune :
 
 ```
 DinnerRepository dinnerRepository = new DinnerRepository();
@@ -350,7 +350,7 @@ dinnerRepository.Save();
 
 Le code ci-dessous extrait un objet Dinner puis modifie deux de ses
 propriétés. Les changements apportées sont répercutés dans la base de données
-lorsque la méthode "Save()" du repository est appelée:
+lorsque la méthode "Save()" du repository est appelée :
 
 ```
 DinnerRepository dinnerRepository = new DinnerRepository();
@@ -371,7 +371,7 @@ est réalisé en utilisant la collection RSVPs de l'objet Dinner que LINQ to SQL
 a créé pour nous (grâce à la relation clé primaire / clé étrangère qui existe
 dans la base de données). Cette modification est sauvegardée dans la base de
 données sous la forme d'une nouvelle ligne dans la table RSVP quand on appelle
-la méthode "Save()" de notre repository:
+la méthode "Save()" de notre repository :
 
 ```
 DinnerRepository dinnerRepository = new DinnerRepository();
@@ -394,7 +394,7 @@ dinnerRepository.Save();
 
 Le code ci-dessous retrouve un objet Dinner particulier puis le supprime du
 repository. Par la suite, lorsque la méthode "Save()" est appelée, la
-suppression devient effective au niveau de la base de données:
+suppression devient effective au niveau de la base de données :
 
 ```
 DinnerRepository dinnerRepository = new DinnerRepository();
@@ -436,10 +436,10 @@ lui.
 
 La validation par rapport au type de données est déjà un bon début, mais
 c'est rarement suffisant. Dans la vrai vie, il est nécessaire d'en passer par
-des règles de validation plus poussées: pouvoir tenir compte de plusieurs
+des règles de validation plus poussées : pouvoir tenir compte de plusieurs
 propriétés, exécuter un bout de code, savoir ce que l'on est en train de faire
 (par exemple, est-ce qu'on est en mode création, modification ou suppression ou
-bien dans un cas spécifique à l'application comme un archivage?).
+bien dans un cas spécifique à l'application comme un archivage ?).
 
 Il y a un grand nombre de frameworks et de modèles de conceptions différents
 qui peuvent être employés pour définir et appliquer des règles de validation à
@@ -464,13 +464,13 @@ code saisi manuellement dans la classe d'origine.
 Pour ajouter une nouvelle classe partielle au projet, nous faisons un
 clic-droit sur le dossier \Models puis choisissons la commande "Add New Item"
 pour faire apparaitre la boite de dialogue du même nom. Nous pouvons alors
-sélectionner le modèle "Class" et saisir le nom "Dinner.cs":
+sélectionner le modèle "Class" et saisir le nom "Dinner.cs" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image051.png)
 
 En cliquant sur le bouton "Add", le fichier Dinner.cs est ajouté au projet
 puis ouvert dans l'éditeur de code. Nous pouvons alors écrire un squelette de
-règles et validations de base en y copiant le code ci-dessous:
+règles et validations de base en y copiant le code ci-dessous :
 
 ```
 public partial class Dinner {
@@ -505,7 +505,7 @@ public class RuleViolation {
 }
 ```
 
-Quelques explications sur ce code:
+Quelques explications sur ce code :
 
 * La classe Dinner est précédée du mot clé "partial", ce qui signifie que le
 code qu'elle contient sera combiné avec celui de la classe générée / maintenue
@@ -527,7 +527,7 @@ d'annuler la transaction LINQ to SQL en cours.
 
 Cette approche nous fourni un modèle dans lequel nous pouvons intégrer nos
 contrôles de validité et nos règles métiers. Pour l'instant, nous allons
-ajouter les règles suivantes à notre méthode GetRuleViolations():
+ajouter les règles suivantes à notre méthode GetRuleViolations() :
 
 ```
 public IEnumerable<RuleViolation> GetRuleViolations() {
@@ -568,7 +568,7 @@ est organisé le dîner.
 
 Nous allons utiliser les expressions régulières pour effectuer ce contrôle
 de format. Nous pouvons ajouter le code ci-dessous à notre projet pour gérer
-des règles de validation spécifique selon le pays:
+des règles de validation spécifique selon le pays :
 
 ```
 public class PhoneValidator {
@@ -602,7 +602,7 @@ Regex("(^1300\\d{6}$)|(^1800|1900|1902\\d{6}$)|(^0[2|3|7|8]{1}[0-
 Désormais, lorsque nous essayons de créer ou de mettre à jour un dîner, nos
 règles de validation logiques sont appliquées automatiquement. Il nous est
 possible de les vérifier de nous même et de récupérer la liste de toutes les
-règles non respectées sans que cela soulève d'exception:
+règles non respectées sans que cela soulève d'exception :
 
 ```
 Dinner dinner = dinnerRepository.GetDinner(5);
@@ -623,7 +623,7 @@ levée lorsque nous appelons la méthode Save() de notre classe DinnerRepository
 Cela se produit parce que notre méthode partielle OnValidate() soulève une
 exception dès lors qu'au moins une règle n'est pas respectée. Nous pouvons
 intercepter cette exception pour récupérer une liste des problèmes à
-corriger:
+corriger :
 
 ```
 Dinner dinner = dinnerRepository.GetDinner(5);

@@ -11,21 +11,21 @@ vérifier les fonctionnalités de NerdDinner. A l'avenir, cela nous permettra
 d'apporter des modifications et des améliorations à notre application en toute
 confiance.
 
-### Pourquoi faire des tests unitaires?
+### Pourquoi faire des tests unitaires ?
 
 Un matin, alors que vous allez tranquillement au boulot, vous avez un éclair
-de génie: "Bon sang, mais c'est bien sûr! Si je faisais ce petit truc dans
-l'application, ça serait quelque chose!". Et ce petit truc ça peut être
-n'importe quoi: refactoriser du code pour le simplifier, ajouter une nouvelle
+de génie : "Bon sang, mais c'est bien sûr ! Si je faisais ce petit truc dans
+l'application, ça serait quelque chose !". Et ce petit truc ça peut être
+n'importe quoi : refactoriser du code pour le simplifier, ajouter une nouvelle
 fonctionnalité, corriger un bogue…
 
-Puis vous arrivez devant votre PC et là vous vous dîtes: "Est-ce bien
-raisonnable?". Et si jamais cette modification avait des effets inattendus ou
-qu'elle casse quelque chose? Peut-être bien que la modification est très simple
+Puis vous arrivez devant votre PC et là vous vous dîtes : "Est-ce bien
+raisonnable ?". Et si jamais cette modification avait des effets inattendus ou
+qu'elle casse quelque chose ? Peut-être bien que la modification est très simple
 à faire et qu'elle ne va prendre que quelques minutes, mais si jamais il faut
 ensuite y passer des heures pour tester tous les cas possibles... Et si jamais
-on oubliait un cas et que ça passe en production? Ouille! Est-ce que ça vaut
-vraiment le coup de s'attaquer à cette modification?
+on oubliait un cas et que ça passe en production ? Ouille ! Est-ce que ça vaut
+vraiment le coup de s'attaquer à cette modification ?
 
 Les tests unitaires sont comme un filet de sécurité qui vous permet
 d'améliorer continuellement votre application et qui vous évite le vertige
@@ -46,12 +46,12 @@ puis à programmer en s'appuyant sur ceux-ci.
 
 Quand nous avons créé la solution NerdDinner au tout début de ce tutoriel,
 nous sommes passés par une boite de dialogue qui nous demandait si nous
-voulions créer un projet de test unitaire pour notre application:
+voulions créer un projet de test unitaire pour notre application :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image009.png)
 
 Nous avions conservé l'option "Yes, create a unit test project", ce qui
-avait eu pour effet d'ajouter le projet "NerdDinner.Test" à notre solution:
+avait eu pour effet d'ajouter le projet "NerdDinner.Test" à notre solution :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image142.png)
 
@@ -72,18 +72,18 @@ commande Add-&gt;New Test, ce qui fait apparaitre la boite de dialogue "Add New
 Test" qui nous permet de créer un nouveau test.
 
 Nous pouvons alors créer un nouveau test en choisissant le template "Unit
-Test" et en lui donnant le nom "DinnerTest.cs":
+Test" et en lui donnant le nom "DinnerTest.cs" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image143.png)
 
 Une fois que nous cliquons sur le bouton "OK", Visual Studio va ajouter le
-fichier DinnerTest.cs au projet puis ouvrir celui-ci:
+fichier DinnerTest.cs au projet puis ouvrir celui-ci :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image144.png)
 
 Le contenu par défaut du template "Unit Test" de Visual Studio est un peu
 trop usine à gaz à mon goût. Nous allons donc le nettoyer pour conserver
-uniquement le code ci-dessous:
+uniquement le code ci-dessous :
 
 ```
 using System;
@@ -111,7 +111,7 @@ Voici les deux premiers tests que nous allons ajouter pour contrôler notre
 classe Dinner. Le premier d'entre eux vérifie qu'un objet Dinner n'est pas
 valide s'il est créé sans que l'ensemble de ses propriétés soit défini
 correctement. Le second test vérifie qu'un objet Dinner est valide quand il est
-créé en définissant toutes ses propriétés avec des valeurs correctes:
+créé en définissant toutes ses propriétés avec des valeurs correctes :
 
 ```
 [TestClass]
@@ -170,11 +170,11 @@ définis en fonction de la fonctionnalité qu'ils vérifient. Dans notre code,
 nous avons utilisé une règle de nommage "Nom_Devrait_Verbe".
 
 Nous avons organisé nos tests en suivant le modèle "AAA", c'est-à-dire
-"Arrange, Act, Assert":
+"Arrange, Act, Assert" :
 
-* Arrange: préparation de l'élément à tester
-* Act: réalisation du test et récupération de son résultat
-* Assert: vérification du bon fonctionnement
+* Arrange : préparation de l'élément à tester
+* Act : réalisation du test et récupération de son résultat
+* Assert : vérification du bon fonctionnement
 
 Quand on écrit des tests unitaires, il faut éviter qu'un test individuel
 fasse trop de choses. Au lieu de ça, chaque test doit porter sur un seul
@@ -199,11 +199,11 @@ pour n'exécuter qu'une partie des tests unitaires.
 Pour exécuter les deux tests unitaires que nous venons de définir, il suffit
 donc de placer le curseur dans la classe DinnerTest puis de taper "Ctrl R, T".
 Visual Studio affiche alors une fenêtre "Tests Results" dans laquelle nous
-pouvons voir les résultats pour nos deux tests unitaires:
+pouvons voir les résultats pour nos deux tests unitaires :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image145.png)
 
-Note: la colonne "Class Name" ne s'affiche pas par défaut.
+Note : la colonne "Class Name" ne s'affiche pas par défaut.
 Pour l'ajouter, utilisez la commande "Add/Remove Columns" qui apparait grâce à
 un clic-droit dans la fenêtre "Tests Results".
 
@@ -242,7 +242,7 @@ Nous pouvons alors créer deux méthodes de tests qui vont nous permettre de
 vérifier l'action Details() dans DinnersController. La première vérifiera que
 Details() renvoie une vue lorsqu'on demande un dîner existant. La seconde
 contrôlera que c'est la vue "NotFound" qui est renvoyé quand on demande un
-dîner qui n'existe pas:
+dîner qui n'existe pas :
 
 ```
 [TestClass]
@@ -277,7 +277,7 @@ public class DinnersControllerTest {
 ```
 
 Le code ci-dessus se compile sans problème. Cependant, lorsque nous lançons
-l'exécution des tests, ils échouent tous les deux:
+l'exécution des tests, ils échouent tous les deux :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image146.png)
 
@@ -298,7 +298,7 @@ tests ci-dessus.
 
 Malgré tout, le fait de faire des tests unitaires en utilisant une véritable
 base de données provoque un certain nombre de difficultés, et en
-particulier:
+particulier :
 
 * Cela ralentit considérablement la vitesse d'exécution des tests unitaires.
 Plus le temps d'exécution des tests est long, moins vous serez enclins à les
@@ -320,7 +320,7 @@ pour réaliser les tests.
 
 Pour l'instant, la classe DinnersController est étroitement "liée" à la
 classe DinnerRepository. Cette notion de "lien" fait référence au fait qu'une
-classe dépend explicitement d'une autre classe pour pouvoir fonctionner:
+classe dépend explicitement d'une autre classe pour pouvoir fonctionner :
 
 ```
 public class DinnersController : Controller {
@@ -378,19 +378,19 @@ automatiquement une interface à notre place à partir de la classe
 DinnerRepository existante. Pour extraire cette interface à l'aide de Visual
 Studio, il suffit de placer le curseur dans la classe DinnerRepository puis de
 faire un clic droit pour choisir la commande Refactor-&gt;Extract
-Interface:
+Interface :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image147.png)
 
 Cela va lancer la boite de dialogue "Extraire l'interface" qui nous demande
 de donner un nom à l'interface à créer. Elle nous propose par défaut le nom
 IDinnerRepository et sélectionne automatiquement toutes les méthodes publiques
-de la classe DinnerRepository pour les ajouter à l'interface:
+de la classe DinnerRepository pour les ajouter à l'interface :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image148.png)
 
 Puis quand nous cliquons sur le bouton "OK", Visual Studio ajoute
-l'interface IDinnerRepository à l'application:
+l'interface IDinnerRepository à l'application :
 
 ```
 public interface IDinnerRepository {
@@ -408,7 +408,7 @@ public interface IDinnerRepository {
 ```
 
 Et la classe DinnerRepository existante est mise à jour pour indiquer
-qu'elle implémente l'interface IDinnerRepository:
+qu'elle implémente l'interface IDinnerRepository :
 
 ```
 public class DinnerRepository : IDinnerRepository {
@@ -423,7 +423,7 @@ DinnersController pour qu'elle utilise désormais cette nouvelle interface.
 
 Pour l'instant, il y a du code en "dur" dans la classe DinnersController qui
 fait que le champ "dinnerRepository" est toujours une instance de la classe
-DinnerRepository:
+DinnerRepository :
 
 ```
 public class DinnersController : Controller {
@@ -439,7 +439,7 @@ Nous allons faire un premier changement pour que le type du champ
 nous ajoutons deux constructeurs publics à la classe DinnersController. Un de
 ces constructeurs attend un argument de type IDinnerRepository. L'autre
 constructeur n'a pas d'argument. C'est le constructeur par défaut du contrôleur
-qui utilise une instance de la classe DinnerRepository:
+qui utilise une instance de la classe DinnerRepository :
 
 ```
 public class DinnersController : Controller {
@@ -476,7 +476,7 @@ Nous allons donc voir comment créer une classe FakeDinnerRepository.
 Pour commencer on va créer un répertoire "Fakes" dans notre projet
 NerdDinner.Tests puis on va y ajouter une nouvelle classe FakeDinnerRepository
 en faisant un clic-droit sur ce dossier et en appelant la commande Add-&gt;New
-Class:
+Class :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image149.png)
 
@@ -489,7 +489,7 @@ simplement possible de faire un clic-droit dessus et de choisir la commande
 
 Grâce à cela, Visual studio va ajouter automatiquement tous les membres de
 l'interface IDinnerRepository à la classe FakeDinnerRepository avec pour chacun
-d'entre eux une implémentation par défaut:
+d'entre eux une implémentation par défaut :
 
 ```
 public class FakeDinnerRepository : IDinnerRepository {
@@ -526,7 +526,7 @@ public class FakeDinnerRepository : IDinnerRepository {
 
 Il nous suffit alors de modifier le code de la classe FakeDinnerRepository
 pour qu'il emploie une collection List&lt;Dinner&gt; qui lui sera passé en tant
-qu'argument dans son constructeur:
+qu'argument dans son constructeur :
 
 ```
 public class FakeDinnerRepository : IDinnerRepository {
@@ -584,7 +584,7 @@ Nous pouvons maintenant revenir aux tests unitaires de la classe
 DinnersController qui avaient échoués tout à l'heure étant donné que la base de
 données n'était pas accessible. Nous allons mettre à jour le code de nos
 méthodes de test pour qu'elles utilisent une instance de FakeDinnerRepository
-et qu'elles la fassent passer au contrôleur DinnersController:
+et qu'elles la fassent passer au contrôleur DinnersController :
 
 ```
 [TestClass]
@@ -647,7 +647,7 @@ public class DinnersControllerTest {
 ```
 
 Et maintenant, quand nous relançons nos tests, ils réussissent tous les
-deux:
+deux :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image151.png)
 
@@ -659,7 +659,7 @@ classe DinnersController (depuis la liste jusqu'à la pagination, la fiche
 détail, la création, la modification et la suppression) sans avoir le moindre
 besoin de nous connecter à une vraie base de données.
 
-### Remarque: Les frameworks pour l'injection de dépendance
+### Remarque : Les frameworks pour l'injection de dépendance
 
 Gérer à la main l'injection de dépendance (comme nous l'avons fait
 ci-dessus) marche très bien, mais ça risque de devenir de plus en plus
@@ -672,7 +672,7 @@ dépendances entre les objets. Ces frameworks - généralement connus sous le no
 de "Inversion of Control" (IoC) - offrent des mécanismes qui autorisent un bien
 meilleur niveau de configuration pour définir et transmettre les dépendances
 entre objets au moment de l'exécution, le plus souvent en employant l'injection
-de constructeur. Parmi les frameworks les plus populaires en .NET, on trouve:
+de constructeur. Parmi les frameworks les plus populaires en .NET, on trouve :
 AutoFac, NInject, Spring.NET, StructureMap et Windsor.
 
 ASP.NET MVC fourni des API d'extensions pour permettre aux développeurs
@@ -692,7 +692,7 @@ les fonctionnalités de l'application.
 
 Nous allons maintenant créer quelques tests unitaires pour vérifier la
 fonctionnalité Edit du contrôleur DinnersController. Pour commencer, nous
-allons tester le côté HTTP GET de l'action Edit:
+allons tester le côté HTTP GET de l'action Edit :
 
 ```
 //
@@ -711,7 +711,7 @@ public ActionResult Edit(int id) {
 
 Nous allons réaliser un test destiné à contrôler que l'on obtient bien une
 vue basée sur un objet DinnerFormViewModel quand on fait une requête pour
-consulter un dîner existant:
+consulter un dîner existant :
 
 ```
 [TestMethod]
@@ -756,7 +756,7 @@ NerdDinner, nous allons utiliser un framework open source appelé "Moq" que vous
 pouvez télécharger gratuitement depuis l'adresse <http://www.mockframeworks.com/moq>.
 
 Une fois celui-ci téléchargé, nous pouvons référencer la librairie Moq.dll
-dans notre projet NerdDinner.Tests:
+dans notre projet NerdDinner.Tests :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image152.png)
 
@@ -800,7 +800,7 @@ helper.
 
 Et nous pouvons alors écrire des tests unitaires qui utilisent cette
 nouvelle méthode helper pour réaliser différents scénarios de test autour de
-notre action Edit:
+notre action Edit :
 
 ```
 [TestMethod]
@@ -831,7 +831,7 @@ public void EditAction_Should_Return_InvalidOwnerView_When_InvalidOwner() {
 }
 ```
 
-Et ce coup-ci, nos tests passent avec succès quand nous les lançons:
+Et ce coup-ci, nos tests passent avec succès quand nous les lançons :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image153.png)
 
@@ -839,7 +839,7 @@ Et ce coup-ci, nos tests passent avec succès quand nous les lançons:
 
 Pour l'instant, nous avons donc testé le côté HTTP GET de l'action Edit.
 Nous allons maintenant créer quelques tests pour contrôler le côté HTTP POST de
-cette action:
+cette action :
 
 ```
 //
@@ -942,7 +942,7 @@ améliorer et à enrichir notre application.
 
 Si nous avons abordé les tests unitaires à la fin de ce tutoriel, ce n'est
 absolument pas parce que c'est un truc qu'il ne faut faire qu'au tout dernier
-moment quand on développe! Bien au contraire! En fait, il faudrait écrire vos
+moment quand on développe ! Bien au contraire ! En fait, il faudrait écrire vos
 tests unitaires le plus tôt possible au cours du développement. En procédant
 ainsi, cela vous permet d'avoir un retour immédiat au fur et à mesure que vous
 codez votre application. Cela vous aide à avoir une vision d'ensemble des

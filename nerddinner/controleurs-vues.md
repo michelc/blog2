@@ -27,7 +27,7 @@ consulter les dîners enregistrés sur notre site.
 ### Ajout d'un contrôleur DinnersController
 
 Pour commencer, on fait un clic-droit sur le dossier "Controllers" de notre
-projet web et on sélectionne la commande __Add -&gt; Controller__ (astuce: on
+projet web et on sélectionne la commande __Add -&gt; Controller__ (astuce : on
 peut aussi exécuter cette commande en tapant Ctrl-M, Ctrl-C) :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image052.png)
@@ -113,7 +113,7 @@ et nous recevons la réponse associée :
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image056.png)
 
 Peut-être que vous vous demandez comment ASP.NET MVC sait qu'il faut créer
-notre classe DinnersController et appeler ces méthodes? Pour comprendre cela,
+notre classe DinnersController et appeler ces méthodes ? Pour comprendre cela,
 nous allons jeter un coup d'œil à la façon dont fonctionne le routage.
 
 ### Comprendre le routage dans ASP.NET MVC
@@ -338,8 +338,7 @@ public class DinnersController : Controller {
 }
 ```
 
-La signature de la méthode View() que nous avons utilisée est la
-suivante :
+La signature de la méthode View() que nous avons utilisée est la suivante :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image058.png)
 
@@ -510,43 +509,43 @@ trouvés :
    <fieldset>
      <legend>Fields</legend>
      <p>
-        DinnerID :
+        DinnerID:
         <%= Html.Encode(Model.DinnerID) %>
      </p>
      <p>
-        Title :
+        Title:
         <%= Html.Encode(Model.Title) %>
      </p>
      <p>
-        EventDate :
+        EventDate:
         <%= Html.Encode(String.Format("{0:g}", Model.EventDate)) %>
      </p>
      <p>
-        Description :
+        Description:
         <%= Html.Encode(Model.Description) %>
      </p>
      <p>
-        HostedBy :
+        HostedBy:
         <%= Html.Encode(Model.HostedBy) %>
      </p>
      <p>
-        ContactPhone :
+        ContactPhone:
         <%= Html.Encode(Model.ContactPhone) %>
      </p>
      <p>
-        Address :
+        Address:
         <%= Html.Encode(Model.Address) %>
      </p>
      <p>
-        Country :
+        Country:
         <%= Html.Encode(Model.Country) %>
      </p>
      <p>
-        Latitude :
+        Latitude:
         <%= Html.Encode(String.Format("{0:F}", Model.Latitude)) %>
      </p>
      <p>
-        Longitude :
+        Longitude:
         <%= Html.Encode(String.Format("{0:F}", Model.Longitude)) %>
      </p>
    </fieldset>
@@ -782,7 +781,7 @@ défaut, ASP.NET MVC va rechercher cette vue dans le répertoire
 \Views\[ControllerName] de l'application.
 
 Par exemple, nous avons jusqu'à présent travaillé avec la classe
-DinnersController qui fait explicitement référence à trois vues: "Index",
+DinnersController qui fait explicitement référence à trois vues : "Index",
 "Details" et "NotFound". Pour retrouver ces trois vues, ASP.NET MVC regardera
 par défaut à l'intérieur du répertoire \Views\Dinners :
 
@@ -852,7 +851,7 @@ public class DinnersController : Controller {
 
 Au final, les quelques lignes de code ci-dessus sont tout ce dont nous avons
 besoin pour gérer correctement la fonctionnalité liste / détails de notre
-site
+site.
 
 ---
 Index : [NerdDinner en français](http://tinyurl.com/NerdDinnerFR) - Suite : [Les

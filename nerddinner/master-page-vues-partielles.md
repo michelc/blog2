@@ -12,7 +12,7 @@ d'éviter toute répétition de code ou de traitement et au final de rendre les
 applications plus rapides à développer et plus facile à maintenir.
 
 Au cours de la réalisation de l'application NerdDinner, nous avons souvent
-appliqué l'approche DRY. Quelques exemples: la  validation des données est
+appliqué l'approche DRY. Quelques exemples : la  validation des données est
 réalisée dans la couche modèle, ce qui permet à notre contrôleur de l'employer
 aussi bien lors d'une création que d'une modification; la vue "NotFound" sert
 au niveau des actions Edit, Details et Delete; le respect de conventions de
@@ -29,11 +29,11 @@ Nous employons actuellement deux vues différentes - "Edit.aspx" et
 "Create.aspx" - pour afficher un formulaire de mise à jour des dîners. Un
 simple coup d'œil suffit pour se rendre compte à quel point ils sont
 similaires. Voici tout d'abord ce que donne le formulaire de création d'un
-dîner:
+dîner :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image100.png)
 
-Et maintenant voici à quoi ressemble le formulaire de modification:
+Et maintenant voici à quoi ressemble le formulaire de modification :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image101.png)
 
@@ -60,14 +60,14 @@ nous allons créer une vue partielle "DinnerForm.ascx" qui contiendra le code
 source commun aux deux vues pour assurer la présentation du formulaire et de
 ses contrôles de saisie utilisateur. Pour cela, nous commençons par un clic
 droit dans le répertoire /Views/Dinners afin de sélectionner la commande "Add
--&gt; View":
+-&gt; View" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image102.png)
 
 Cela affiche la boite de dialogue "Add View". Nous allons appeler notre
 nouvelle vue "DinnerForm" puis cocher "Create a partial view (.ascx)" pour
 indiquer qu'il s'agira d'une vue partielle avant de définir que nous lui ferons
-passer un objet DinnerFormViewModel:
+passer un objet DinnerFormViewModel :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image103.png)
 
@@ -77,7 +77,7 @@ fichier "DinnerForm.ascx" dans le répertoire "\Views\Dinners".
 Nous pouvons alors copier le code qui gère la présentation du formulaire et
 les contrôles de saisie utilisateur depuis une des vues Edit.aspx ou
 Create.aspx puis le coller dans notre nouvelle vue partielle
-"DinnerForm.ascx":
+"DinnerForm.ascx" :
 
 ```
 <%= Html.ValidationSummary("Please correct the errors and try again.") %>
@@ -126,7 +126,7 @@ Create.aspx puis le coller dans notre nouvelle vue partielle
 Nous pouvons ensuite mettre à jour les vues "Edit.aspx" et "Create.aspx"
 pour y appeler la vue partielle "DinnerForm.ascx" et ainsi élimer le code en
 double. Pour cela, nous devons utiliser le helper
-Html.RenderPartial("DinnerForm"):
+Html.RenderPartial("DinnerForm") :
 
 #### Create.aspx
 
@@ -178,7 +178,7 @@ de faire passer d'autres objets Model ou un autre dictionnaire ViewData à la
 vue partielle. Cela peut servir dans le cas où vous souhaitez seulement
 transmettre un sous-ensemble de l'objet Model ou ViewModel à la vue.
 
-### Remarque: Pourquoi &lt;% %&gt; et pas &lt;%= %&gt; ?
+### Remarque : Pourquoi &lt;% %&gt; et pas &lt;%= %&gt; ?
 
 Une des petites subtilités que vous avez peut-être remarqué dans le code
 ci-dessus est que nous avons utilisé un bloc &lt;% %&gt; au lieu d'un bloc
@@ -200,13 +200,13 @@ l'application.
 
 Quand on utilise la fonction Html.RenderPartial() dans un bloc &lt;% %&gt;,
 on oublie fréquemment de mettre un point-virgule après celle-ci. Par exemple,
-le code ci-dessous va provoquer une erreur du compilateur:
+le code ci-dessous va provoquer une erreur du compilateur :
 
 ```
 <% Html.RenderPartial("DinnerForm") %>
 ```
 
-Il faut bien faire attention à écrire le code suivant:
+Il faut bien faire attention à écrire le code suivant :
 
 ```
 <% Html.RenderPartial("DinnerForm"); %>
@@ -230,7 +230,7 @@ Prenons par exemple le cas du code ci-dessous tiré du fichier Site.master de
 notre projet (auquel nous nous intéresserons très bientôt). Ce source est
 relativement facile à lire - en partie parce que tout le traitement pour
 afficher le lien login/logout en haut à droite de l'écran est délégué à la vue
-partielle "LogOnUserControl":
+partielle "LogOnUserControl" :
 
 ```
 <div id="header">
@@ -270,15 +270,15 @@ une présentation homogène dans toute l'application.
 
 Quand on crée un nouveau projet ASP.NET MVC, Visual Studio ajoute
 automatiquement une page maître par défaut. Ce fichier d'appelle "Site.master"
-et se trouve dans le répertoire \Views\Shared:
+et se trouve dans le répertoire \Views\Shared :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image104.png)
 
 Ce fichier Site.master ressemble au code source ci-dessous. Il contient le
 code html pour la présentation générale du site avec un menu de navigation en
 haut et il défini deux contrôles ContentPlaceHolder destinés à accueillir le
-contenu spécifique de chaque écran: le premier pour le titre de l'écran et le
-second pour le contenu principal de la page concernée:
+contenu spécifique de chaque écran : le premier pour le titre de l'écran et le
+second pour le contenu principal de la page concernée :
 
 ```
 <%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
@@ -326,7 +326,7 @@ Toutes les vues qui ont été créées dans le cadre de notre application
 NerdDinner ("List", "Details", "Edit", "Create", "NotFound", etc…) sont basées
 sur ce fichier Site.master. C'est ce qu'indique l'attribut "MasterPageFile"
 inséré par défaut dans la directive &lt;%@ Page %&gt; pour chacun des fichiers
-générés via la boite de dialogue "Add View":
+générés via la boite de dialogue "Add View" :
 
 ```
 <%@ Page Language="C#"
@@ -343,7 +343,7 @@ pour que le titre de l'application devienne "NerdDinner" au lieu de "My MVC
 Application". Nous pouvons aussi modifier le menu de navigation pour que son
 premier onglet soit "Find a Dinner" (géré par l'action Index() du contrôleur
 HomeController) et pour lui ajouter un nouvel onglet "Host a Dinner" (géré par
-l'action Create() du contrôleur DinnersController):
+l'action Create() du contrôleur DinnersController) :
 
 ```
 <div id="header">
@@ -368,11 +368,11 @@ l'action Create() du contrôleur DinnersController):
 Après avoir sauvegardé le fichier Site.master puis actualisé l'affichage du
 navigateur, nous pouvons constater que les modifications apportées à l'en-tête
 de page sont bien prises en compte dans les différentes vues de l'application.
-Comme par exemple:
+Comme par exemple :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image105.png)
 
-Ou dans le cas de l'URL /Dinners/Edit/[id]:
+Ou dans le cas de l'URL /Dinners/Edit/[id] :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image106.png)
 

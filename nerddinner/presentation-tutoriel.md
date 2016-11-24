@@ -13,33 +13,33 @@ ASP.NET MVC, et nous servira d'introduction aux principaux concepts de ASP.NET
 MVC.
 
 L'application que nous allons réaliser s'appellera "NerdDinner". Il s'agit
-d'un site web destiné à faciliter la recherche et l'organisation de dîners:
+d'un site web destiné à faciliter la recherche et l'organisation de dîners :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image001.png)
 
 NerdDinner permet aux utilisateurs enregistrés de créer, de modifier et de
 supprimer des dîners. Il applique un ensemble cohérent de règles de validation
-métier dans toute l'application:
+métier dans toute l'application :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image002.png)
 
 Les visiteurs du site peuvent effectuer une recherche pour trouver les
-prochains dîners qui auront lieu près de chez eux:
+prochains dîners qui auront lieu près de chez eux :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image003.png)
 
 En cliquant sur un dîner ils arrivent sur une page où ils ont plus
-d'information sur celui-ci:
+d'information sur celui-ci :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image004.png)
 
 S'ils souhaitent participer à ce dîner, ils peuvent alors se connecter ou
-s'inscrire sur le site:
+s'inscrire sur le site :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image005.png)
 
 Il leur est alors très simple de répondre pour confirmer qu'ils assisteront
-à un dîner:
+à un dîner :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image006.png)
 
@@ -63,7 +63,7 @@ mise en place de tests unitaires automatisés.
 Vous pouvez construire votre propre version de NerdDinner en partant de zéro
 et en réalisant vous-même chacune des étapes présentées dans ce chapitre. Si
 vous le préférez, vous pouvez télécharger une copie terminée du code source à
-l'adresse: <http://tinyurl.com/aspnetmvc>.
+l'adresse : <http://tinyurl.com/aspnetmvc>.
 
 Vous pouvez utiliser Visual Studio 2008 ou sa version gratuite Visual Web
 Developer Express 2008 pour construire l'application. Pour gérer la base de
@@ -72,7 +72,7 @@ Express.
 
 Vous pouvez installer ASP.NET MVC, Visual Web Developer 2008, SQL Server
 Express en utilisant le Microsoft Web Platform Installer qui est disponible à
-l'adresse: <http://www.microsoft.com/web/downloads>.
+l'adresse : <http://www.microsoft.com/web/downloads>.
 
 ---
 Index : [NerdDinner en français](http://tinyurl.com/NerdDinnerFR) - Suite : [Créer

@@ -24,13 +24,13 @@ allons donc créer une vue partielle nommée "Map.ascx" dans le répertoire
 Pour cela, nous devons faire un clic-droit dans le dossier \Views\Dinners et
 sélectionner la commande Add-&gt;View dans le menu qui apparait. Il faut
 ensuite saisir le nom "Map.ascx", cocher pour créer une vue partielle et
-indiquer que nous voulons créer une vue basée sur la classe "Dinners":
+indiquer que nous voulons créer une vue basée sur la classe "Dinners" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image127.png)
 
 La vue partielle est créée après avoir cliqué sur le bouton "Add". Il nous
 suffit alors de modifier le contenu du fichier Map.ascx généré pour y reprendre
-le code suivant:
+le code suivant :
 
 ```
 <script src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2"
@@ -83,14 +83,14 @@ besoin au niveau des scripts clients (sans pour cela nécessiter une requête
 Ajax supplémentaire pour récupérer ces valeurs, ce qui serait plus lent). Les
 blocs &lt;%= %&gt; s'exécutent lorsque la vue est générée par le serveur - et
 par conséquent le HTML final contient bien les valeurs attendues par le
-JavaScript (par exemple: var latitude = 47.64312).
+JavaScript (par exemple : var latitude = 47.64312).
 
-**Note du traducteur:** Cette méthode présente un problème au
-niveau du séparateur décimal sur les systèmes en français: JavaScript attend un
+**Note du traducteur :** Cette méthode présente un problème au
+niveau du séparateur décimal sur les systèmes en français : JavaScript attend un
 "." quelle que soit la culture du système alors que ASP.NET génère une "," dans
 le cadre des instructions &lt;%= Model.Latitude %&gt; et &lt;%= Model.Longitude
 %&gt;. La solution la plus simple est de modifier la section `globalization`
-dans le fichier web.config:
+dans le fichier web.config :
 
 ```
 <configuration>
@@ -100,7 +100,7 @@ dans le fichier web.config:
 </configuration>
 ```
 
-(Source: <http://nerddinner.codeplex.com/Thread/View.aspx?ThreadId=54102>)
+(Source : <http://nerddinner.codeplex.com/Thread/View.aspx?ThreadId=54102>)
 
 ### Créer un script Map.js
 
@@ -114,7 +114,7 @@ pouvons alors sélectionner le type de fichier "JScript" puis lui donner le nom
 
 Nous ajoutons ensuite le code JavaScript ci-dessous à ce fichier Map.js afin
 d'interagir avec Virtual Earth pour afficher notre carte et pouvoir placer des
-punaises sur celle-ci pour repérer les dîners:
+punaises sur celle-ci pour repérer les dîners :
 
 ```
 var map = null;
@@ -215,7 +215,7 @@ Tout ce que nous avons besoin de faire, c'est d'ouvrir la vue partielle
 \Views\Dinners\DinnerForm.ascx et à la mettre à jour pour lui ajouter la vue
 partielle "Map.ascx". Vous pouvez voir ci-dessous à quoi ressemble le code de
 DinnerForm une fois que la carte a été insérée (les éléments du formulaire
-n'apparaissant pas pour rester suffisamment clair):
+n'apparaissant pas pour rester suffisamment clair) :
 
 ```
 <%= Html.ValidationSummary() %>
@@ -263,7 +263,7 @@ La vue partielle DinnerForm ci-dessus est basée sur un objet de type
 d'une SelectList pour remplir la liste des pays) alors que la vue partielle Map
 a seulement besoin d'un objet de type "Dinner". Par conséquent, nous nous
 contentons de lui passer la propriété Dinner de l'objet DinnerFormViewModel
-pour faire le rendu de la vue Map:
+pour faire le rendu de la vue Map :
 
 ```
 <% Html.RenderPartial("Map", Model.Dinner); %>
@@ -283,20 +283,20 @@ par Virtual Earth en fonction de l'adresse que nous lui avons transmise.
 
 Et maintenant, quand nous relançons notre application, un clic sur l'onglet
 "Host Dinner" affiche la carte par défaut en plus des champs de saisie
-habituels d'un dîner:
+habituels d'un dîner :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image128.png)
 
 Quand nous saisissons une adresse, puis que nous passons à la zone de saisie
 suivante, la carte se met à jour de façon dynamique pour afficher l'emplacement
 du dîner et notre gestionnaire d'évènement copie les coordonnées GPS du dîner
-dans les zones latitude et longitude:
+dans les zones latitude et longitude :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image129.png)
 
 Si nous enregistrons ce nouveau dîner puis que nous revenons dessus pour le
 mettre à jour, nous pouvons voir que l'emplacement du dîner est affiché sur la
-carte au chargement de la page:
+carte au chargement de la page :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image130.png)
 
@@ -307,7 +307,7 @@ Maintenant que notre carte affiche l'emplacement du dîner, il n'est plus
 nécessaire que les zones de saisie latitude et longitude soient visibles et
 nous pouvons les transformer en champs cachés puisqu'elles seront mises à jour
 automatiquement à chaque fois que l'adresse change. Pour cela, nous remplaçons
-simplement le helper Html.TextBox() par le helper Html.Hidden():
+simplement le helper Html.TextBox() par le helper Html.Hidden() :
 
 ```
 <p>
@@ -318,7 +318,7 @@ simplement le helper Html.TextBox() par le helper Html.Hidden():
 
 Cela rend nos formulaires un peu plus conviviaux puisque nous n'y faisons
 plus apparaitre des informations purement techniques (tout en continuant à les
-stocker dans la base de données):
+stocker dans la base de données) :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image131.png)
 
@@ -327,10 +327,10 @@ stocker dans la base de données):
 Après avoir réussi à faire apparaitre la carte lorsque nous somme en
 création ou en modification d'un dîner, nous allons aussi l'afficher lors de la
 consultation d'un dîner. Tout ce que nous avons à faire c'est d'appeler &lt;%
-Html.RenderPartial("map"); %&gt; dans la vue Details:
+Html.RenderPartial("map"); %&gt; dans la vue Details :
 
 Une fois la carte ajoutée, le code source complet de la vue Details sera le
-suivant:
+suivant :
 
 ```
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">
@@ -379,7 +379,7 @@ Et maintenant, lorsqu'un visiteur arrive sur une URL /Dinners/Details/[id],
 il peut voir les informations concernant le dîner, l'emplacement du dîner sur
 la carte (représenté par une punaise rouge qui permet d'afficher le titre du
 dîner et son adresse lorsque la souris passe au-dessus) et il dispose d'un lien
-Ajax pour s'inscrire à ce dîner:
+Ajax pour s'inscrire à ce dîner :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image132.png)
 
@@ -388,7 +388,7 @@ Ajax pour s'inscrire à ce dîner:
 Pour finaliser cette cartographie Ajax, nous allons ajouter une dernière
 carte sur la page d'accueil de notre application. Celle-ci servira aux
 visiteurs pour rechercher de façon graphique les dîners qui vont avoir lieu
-dans leur région:
+dans leur région :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image133.png)
 
@@ -404,11 +404,11 @@ Conery a implémentée en utilisant LINQ to SQL (<http://blog.wekeroad.com/2007/
 Pour mettre en œuvre cette méthode, nous devons ouvrir l'explorateur de
 serveurs dans Visual Studio, y sélectionner la base de données NerdDinner,
 faire un clic-droit sur sa branche "Functions" et demander à créer une nouvelle
-"Fonction scalaire":
+"Fonction scalaire" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image134.png)
 
-Nous pouvons alors y coller la fonction DistanceBetween suivante:
+Nous pouvons alors y coller la fonction DistanceBetween suivante :
 
 ```
 CREATE FUNCTION [dbo].[DistanceBetween] (@Lat1 as real,
@@ -449,13 +449,13 @@ END
 ```
 
 Puis nous créons une nouvelle "Fonction table" dans SQL Server que nous
-appellerons "NearestDinners":
+appellerons "NearestDinners" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image135.png)
 
 Cette fonction table "NearestDinners" utilise la fonction helper
 DistanceBetween pour renvoyer tous les dîners à moins de 100 miles des
-coordonnées latitude / longitude que nous lui faisons passer:
+coordonnées latitude / longitude que nous lui faisons passer :
 
 ```
 CREATE FUNCTION [dbo].[NearestDinners]
@@ -473,21 +473,21 @@ AS
 
 Pour appeler cette fonction, nous commençons par ouvrir le concepteur LINQ
 to SQL en double-cliquant sur le fichier NerdDinner.dbml dans le répertoire
-Models:
+Models :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image136.png)
 
 Puis nous déplaçons par drag and drop les fonctions NearestDinners et
 DistanceBetween dans le concepteur LINQ to SQL ce qui a pour effet de les
 ajouter en tant que méthode à la classe NerdDinnerDataContext générée par LINQ
-to SQL:
+to SQL :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image137.png)
 
 Nous pouvons alors ajouter une méthode "FindByLocation" à notre classe
 DinnerRepository qui va utiliser la fonction NearestDinner de la classe
 NerdDinnerDataContext pour renvoyer les dîners à venir qui sont situés dans les
-100 miles de l'emplacement spécifié:
+100 miles de l'emplacement spécifié :
 
 ```
 public IQueryable<Dinner> FindByLocation(float latitude, float longitude) {
@@ -513,7 +513,7 @@ JavaScript côté client.
 Nous devons créer une nouvelle classe "SearchController" en faisant un
 clic-droit dans le répertoire \Controllers et en choisissant la commende
 Add-&gt;Controller. Puis nous pouvons ajouter une action "SearchByLocation"
-dans ce contrôleur en y copiant le code ci-dessous:
+dans ce contrôleur en y copiant le code ci-dessous :
 
 ```
 public class JsonDinner {
@@ -567,7 +567,7 @@ classe Controller pour renvoyer une séquence de dîners en utilisant un format
 JSON. JSON est un format texte standardisé qui sert à représenter des
 structures de données simples. Vous pouvez voir ci-dessous à quoi ressemble une
 liste JSON de deux objets JsonDinner, tels qu'ils sont renvoyés par la méthode
-d'action SearchByLocation():
+d'action SearchByLocation() :
 
 ```
  [{"DinnerID":53,"Title":"Dinner with the Family","Latitude":47.64312,"Longitude":-
@@ -582,7 +582,7 @@ Nous sommes maintenant prêts à compléter la page d'accueil de l'application
 NerdDinner pour exploiter la méthode d'action SearchByLocation du contrôleur
 SearchController. Pour cela, nous allons ouvrir la vue /Views/Home/Index.aspx
 et lui ajouter une zone de saisie, un bouton de recherche, notre carte et un
-élément &lt;div&gt; nommé dinnerList:
+élément &lt;div&gt; nommé dinnerList :
 
 ```
 <script src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2"
@@ -610,7 +610,7 @@ type="text/javascript"></script>
 ```
 
 Nous ajoutons ensuite les deux fonctions JavaScript suivantes à notre
-page:
+page :
 
 ```
 <script type="text/javascript">
@@ -634,7 +634,7 @@ La première fonction JavaScript charge la carte lors du premier chargement
 de la page. La seconde fonction JavaScript défini un évènement "click" pour le
 bouton de recherche. Quand ce bouton est pressé, cela appelle la fonction
 JavaScript FindDinnersGivenLocation() que nous allons ajouter à notre fichier
-Map.js:
+Map.js :
 
 ```
 function FindDinnersGivenLocation(where) {
@@ -662,7 +662,7 @@ dîner pour placer une nouvelle punaise sur la carte. Ces dîners sont égalemen
 insérés dans une liste HTML des dîners qui apparait à droite de la carte. Pour
 finir, elle déclare un évènement "hover" pour afficher des informations
 complémentaires lorsqu'on passe la souris au-dessus des punaises ou de la liste
-HTML:
+HTML :
 
 ```
 function callbackUpdateMapDinners(layer, resultsArray,
@@ -724,18 +724,18 @@ function callbackUpdateMapDinners(layer, resultsArray,
 
 Quand nous relançons l'application, la page d'accueil contient désormais une
 carte. Et quand nous saisissons le nom d'une ville, cette carte affiche les
-dîners prévus dans la région:
+dîners prévus dans la région :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image133.png)
 
 Il suffit alors de passer la souris sur l'un deux pour obtenir des
-informations supplémentaires:
+informations supplémentaires :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image138.png)
 
 Nous pouvons cliquer sur le titre du dîner - aussi bien sur la carte que
 dans la liste HTML latérale - pour consulter le détail d'un dîner, auquel nous
-pouvons éventuellement nous inscrire:
+pouvons éventuellement nous inscrire :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image139.png)
 

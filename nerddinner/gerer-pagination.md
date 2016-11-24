@@ -17,7 +17,7 @@ page en utilisant une méthode qui optimise le référencement.
 ### Rappel sur l'action Index()
 
 La méthode d'action Index() de notre classe DinnersController ressemble
-actuellement à ceci:
+actuellement à ceci :
 
 ```
 //
@@ -31,7 +31,7 @@ public ActionResult Index() {
 ```
 
 Quand on fait une requête vers l'URL /Dinners, ce code retrouve la liste des
-dîners à venir et les présente sous forme de liste:
+dîners à venir et les présente sous forme de liste :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image107.png)
 
@@ -42,7 +42,7 @@ LINQ. Elle permet une exécution différée qui va nous permettre de mettre en
 œuvre la pagination de notre liste.
 
 Dans le DinnerRepository ci-dessous, la méthode FindUpcomingDinners()
-renvoie une séquence &lt;Dinner&gt;IQueryable:
+renvoie une séquence &lt;Dinner&gt;IQueryable :
 
 ```
 public class DinnerRepository {
@@ -72,7 +72,7 @@ uniquement la requête finale lorsqu'on accède aux données.
 
 Pour programmer le traitement de pagination, nous allons modifier notre
 action Index() afin d'appliquer les opérations "Skip" et "Take" à la séquence
-IQueryable&lt;Dinner&gt; obtenue avant d'appeler la méthode ToList():
+IQueryable&lt;Dinner&gt; obtenue avant d'appeler la méthode ToList() :
 
 ```
 //
@@ -103,7 +103,7 @@ Au lieu de coder en dur la page souhaitée, nous allons ajouter un paramètre
 
 Le code suivant montre comment modifier notre action Index() pour gérer le
 paramètre "page" sous forme de Querystring et prendre en compte des URLs sous
-la forme /Dinners?page=2:
+la forme /Dinners?page=2 :
 
 ```
 //
@@ -137,19 +137,19 @@ l'exemple ci-dessus, il nous permet d'employer la valeur 0 lorsque le paramètre
 
 Plutôt que d'utiliser un paramètre en Querystring, il est aussi possible de
 faire apparaitre le numéro de page directement dans l'URL, ce qui pourrait
-donner: /Dinners/Page/2 ou /Dinners/2. ASP.NET MVC dispose d'un moteur de
+donner : /Dinners/Page/2 ou /Dinners/2. ASP.NET MVC dispose d'un moteur de
 routage d'URLs très puissant qui facilite ce genre d'opération.
 
 Nous pouvons ajouter des règles de routage personnalisées à n'importe quelle
 URL ou format d'URL pour les faire pointer vers le contrôleur ou l'action de
 notre choix. La seule chose à faire est d'ouvrir le fichier Global.asax de
-notre projet:
+notre projet :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image108.png)
 
 Nous pouvons alors y enregistrer une nouvelle règle de routage en utilisant
 la méthode MapRoute() comme cela a été fait pour le premier appel à
-routes.MapRoute() dans l'exemple ci-dessous:
+routes.MapRoute() dans l'exemple ci-dessous :
 
 ```
 public void RegisterRoutes(RouteCollection routes) {
@@ -183,7 +183,7 @@ contrôleur DinnersController.
 
 Nous pouvons continuer à utiliser le même code que dans le cas précédent
 avec la Querystring. La seule différence est que désormais le paramètre "page"
-provient de l'URL elle-même alors qu'avant il provenait de la Querystring:
+provient de l'URL elle-même alors qu'avant il provenait de la Querystring :
 
 ```
 //
@@ -202,12 +202,12 @@ public ActionResult Index(int? page) {
 ```
 
 Et maintenant, quand nous lançons l'application et demandons l'URL /Dinners,
-nous voyons uniquement les 10 premiers dîners:
+nous voyons uniquement les 10 premiers dîners :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image109.png)
 
 Et si nous allons à l'URL /Dinners/Page/1, nous obtenons les 10 dîners
-suivants:
+suivants :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image110.png)
 
@@ -269,7 +269,7 @@ Vous pouvez voir dans le code ci-dessus comment sont calculées puis exposées
 les propriétés "PageIndex", "PageSize", "TotalCount" et "TotalPage". La classe
 "PaginatedList" expose également deux autres propriétés "HasPreviousPage" et
 "HasNextPage" qui indiquent s'il existe une page avant ou après la page en
-cours. Le code ci-dessus génèrera l'exécution de deux requêtes SQL: la première
+cours. Le code ci-dessus génèrera l'exécution de deux requêtes SQL : la première
 pour retrouver le nombre total d'objets Dinners (ce qui ne renverra pas tous
 les objets mais exécutera un simple "SELECT COUNT" qui renvoie un entier comme
 résultat) et la seconde pour récupérer uniquement les lignes de données dont
@@ -278,7 +278,7 @@ cours.
 
 Nous pouvons alors mettre à jour l'action DinnersController.Index() pour
 créer un objet PaginatedList&lt;Dinner&gt; à partir du résultat de la méthode
-DinnerRepository.FindUpcomingDinners() et l'envoyer à la vue Index.aspx:
+DinnerRepository.FindUpcomingDinners() et l'envoyer à la vue Index.aspx :
 
 ```
 // GET: /Dinners/
@@ -302,7 +302,7 @@ hérite désormais de
 ViewPage&lt;NerdDinner.Helpers.PaginatedList&lt;Dinner&gt;&gt; au lieu de
 &lt;ViewPage&lt;IEnumerable&lt;Dinner&gt;&gt; avant d'ajouter le code
 ci-dessous à la fin de la vue pour gérer l'affichage et le masquage des boutons
-de navigation:
+de navigation :
 
 ```
 <% if (Model.HasPreviousPage) { %>
@@ -332,7 +332,7 @@ nous garantit que les URLs vers notre action Index() auront la forme
 ci-dessus à partir de la valeur actuelle de PageIndex.
 
 Et maintenant, après avoir relancé l'application, l'affichage présente 10
-dîners:
+dîners :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image111.png)
 
@@ -342,11 +342,11 @@ Et juste après la liste, des liens &lt;&lt;&lt; et
 > d'avancer
 
 ou de revenir en arrière parmi les dîners, en utilisant des URLs optimisées
-pour le référencement par les moteurs de recherches:
+pour le référencement par les moteurs de recherches :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image112.png)
 
-### Remarque: Comprendre les conséquences de IQueryable&lt;T&gt;
+### Remarque : Comprendre les conséquences de IQueryable&lt;T&gt;
 
 IQueryable&lt;T&gt; est une fonctionnalité très puissante qui rend possible
 un grand nombre de traitements d'exécution différée comme dans le cas de la
@@ -365,7 +365,7 @@ exécutée.
 Pour notre fonctionnalité de pagination, cela nous contraindrait à placer
 les traitements liés à la pagination dans la méthode du repository à appeler.
 Dans ce cas de figure, nous pourrions modifier la méthode FindUpcomingDinners()
-pour qu'elle renvoie un objet PaginatedList:
+pour qu'elle renvoie un objet PaginatedList :
 
 ```
 PaginatedList<Dinner> FindUpcomingDinners(int pageIndex, int pageSize) { }
@@ -373,7 +373,7 @@ PaginatedList<Dinner> FindUpcomingDinners(int pageIndex, int pageSize) { }
 
 Ou qu'elle retourne une IList&lt;Dinner&gt; et définisse un paramètre
 "totalCount" passé par référence pour renvoyer le nombre total d'objets
-Dinners:
+Dinners :
 
 ```
 IList<Dinner> FindUpcomingDinners(int pageIndex, int pageSize, out int totalCount) { }

@@ -13,11 +13,11 @@ un traitement en Ajax au niveau de la page détail d'un dîner.
 ### Indiquer si le visiteur est inscrit au dîner
 
 Les utilisateurs peuvent accéder à une URL /Dinners/Details/[id] pour
-consulter les informations sur un dîner particulier:
+consulter les informations sur un dîner particulier :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image121.png)
 
-La méthode d'action Details() est implémentée de la façon suivante:
+La méthode d'action Details() est implémentée de la façon suivante :
 
 ```
 // GET: /Dinners/Details/2
@@ -34,7 +34,7 @@ public ActionResult Details(int id) {
 Notre point de départ pour gérer l'inscription aux dîner va consister à
 ajouter une méthode helper "IsUserRegistered(username)" au niveau de la classe
 partielle Dinners.cs créée un peu plus tôt. Cette méthode helper renvoie "vrai"
-ou "faux" selon que l'utilisateur est actuellement inscrit au dîner ou non:
+ou "faux" selon que l'utilisateur est actuellement inscrit au dîner ou non :
 
 ```
 public partial class Dinner {
@@ -49,7 +49,7 @@ public partial class Dinner {
 
 Nous pouvons alors ajouter le code suivant à la vue Details.aspx pour
 afficher un message d'information indiquant si l'utilisateur est inscrit ou non
-au dîner:
+au dîner :
 
 ```
 <% if (Request.IsAuthenticated) { %>
@@ -68,12 +68,12 @@ au dîner:
 ```
 
 Et désormais, quand un utilisateur consulte un dîner auquel il est inscrit
-il peut voir ce message:
+il peut voir ce message :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image122.png)
 
 Et quand il s'agit d'un dîner auquel il ne s'est pas inscrit, il obtient un
-autre message:
+autre message :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image123.png)
 
@@ -91,7 +91,7 @@ Une fois cette nouvelle classe RSVPController créée, nous y insérons une
 méthode d'action "Register". Cette action attend un argument id représentant un
 dîner, retrouve l'objet Dinner correspondant, vérifie si l'utilisateur connecté
 fait parti des personnes inscrites au dîner et si ce n'est pas le cas, insère
-un objet RSVP pour cet utilisateur:
+un objet RSVP pour cet utilisateur :
 
 ```
 public class RSVPController : Controller {
@@ -128,7 +128,7 @@ la méthode helper Content() disponible au niveau de la classe Controller.
 
 Nous allons utiliser Ajax pour appeler la méthode d'action Register à partir
 de la vue Details. Cette fonctionnalité est assez simple à réaliser. Pour
-commencer, nous devons faire référence à deux librairies JavaScript:
+commencer, nous devons faire référence à deux librairies JavaScript :
 
 ```
 <script src="/Scripts/MicrosoftAjax.js" type="text/javascript"></script>
@@ -144,7 +144,7 @@ helper pour l'Ajax de ASP.NET MVC que nous n'allons pas tarder à utiliser.
 Nous pouvons ensuite mettre à jour le code de la vue Details pour qu'au lieu
 d'afficher un simple message "You are not registered for this event", elle
 renvoie un lien qui génère une requête Ajax pour appeler la méthode d'action
-Register du contrôleur RSVPController afin d'inscrire l'utilisateur:
+Register du contrôleur RSVPController afin d'inscrire l'utilisateur :
 
 ```
 <div id="rsvpmsg">
@@ -181,21 +181,21 @@ balise &lt;div&gt; dont l'identifiant est "rsvpmsg".
 
 Et maintenant, quand un visiteur consulte un dîner auquel il n'est pas
 encore inscrit, il dispose désormais d'un lien pour pouvoir s'inscrire à
-celui-ci:
+celui-ci :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image124.png)
 
 En cliquant sur le lien "RSVP for this event", cela provoque une requête
 Ajax vers l'action Register du contrôleur RSVPController, et une fois que
 celle-ci est terminée, le lien est mis à jour pour afficher une confirmation
-d'inscription:
+d'inscription :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image125.png)
 
 La charge réseau et la bande passante nécessaires pour réaliser cette
 requête Ajax sont extrêmement légères. Quand l'utilisateur clique sur le lien
 "RSVP for this event", seule une mini-requête HTTP POST est exécutée à travers
-le réseau vers l'URL /Dinners/Register/[id]:
+le réseau vers l'URL /Dinners/Register/[id] :
 
 ```
 POST /Dinners/Register/49 HTTP/1.1
@@ -205,7 +205,7 @@ Referer: http://localhost:8080/Dinners/Details/49
 ```
 
 Et en retour, la réponse de la part de la méthode d'action Register est tout
-aussi simple:
+aussi simple :
 
 ```
 HTTP/1.1 200 OK
@@ -235,15 +235,15 @@ Pour utiliser la librairie jQuery, nous devons commencer par ajouter une
 référence à celle-ci. Etant donné que nous prévoyons de l'utiliser un grand
 nombre de fois dans notre application, nous allons ajouter cette référence au
 niveau du fichier Site.master pour que toutes les pages puissent en
-profiter:
+profiter :
 
 ```
 <script src="/Scripts/jQuery-1.3.2.js" type="text/javascript"></script>
 ```
 
-Note: assurez-vous d'avoir installé le correctif de VS 2008
+Note : assurez-vous d'avoir installé le correctif de VS 2008
 SP1 qui permet de mieux gérer l'intellisense dans les sources JavaScript (dont
-ceux en jQuery). Vous pouvez le télécharger depuis l'URL:
+ceux en jQuery). Vous pouvez le télécharger depuis l'URL :
 http://tinyurl.com/vs2008javascripthotfix.
 
 Avec jQuery, on utilise régulièrement la méthode globale "$()" qui sert à
@@ -256,13 +256,13 @@ toutes les zone de saisie de type bouton radio qui sont sélectionnées.
 
 Une fois que vous avez sélectionné des éléments, vous pouvez appeler des
 méthodes de jQuery pour leur appliquer des actions, comme par exemple les
-masquer: $("#rsvpmsg").hide();.
+masquer : $("#rsvpmsg").hide();.
 
 Dans le cas de notre inscription en Ajax, nous allons définir une petite
 fonction JavaScript que nous appellerons "AnimateRSVPMessage". Celle-ci va
 sélectionner l'élément &lt;div&gt; "rsvpmsg" et va agrandir la taille du texte
 qu'il contient. Le code ci-dessous démarre avec une police normale puis
-augmente sa taille dans un intervalle de 400 millisecondes:
+augmente sa taille dans un intervalle de 400 millisecondes :
 
 ```
 <script type="text/javascript">
@@ -277,7 +277,7 @@ augmente sa taille dans un intervalle de 400 millisecondes:
 Nous pouvons maintenant utiliser cette fonction JavaScript pour qu'elle soit
 appelée une fois que notre requête Ajax s'est terminée avec succès. Pour cela,
 il suffit de passer le nom de cette fonction à la méthode helper
-Ajax.ActionLink() au travers de la propriété d'évènement AjaxOptions:
+Ajax.ActionLink() au travers de la propriété d'évènement AjaxOptions :
 
 ```
 <%= Ajax.ActionLink( "RSVP for this event",
@@ -289,7 +289,7 @@ Ajax.ActionLink() au travers de la propriété d'évènement AjaxOptions:
 
 Et maintenant, quand on clique sur le lien "RSVP for this event" et que la
 requête Ajax se termine correctement, le message de confirmation qui a été
-renvoyé est mis en avant grâce à une petite animation jQuery:
+renvoyé est mis en avant grâce à une petite animation jQuery :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image126.png)
 
@@ -297,7 +297,7 @@ En plus de l'évènement "OnSuccess", l'objet AjaxOptions propose également
 les évènements "OnBegin", "OnFailure" et "OnComplete" que vous pouvez tous
 utiliser (ainsi qu'un tas d'autres propriétés et options très utiles).
 
-### Finitions: refactoriser la vue partielle RSVP
+### Finitions : refactoriser la vue partielle RSVP
 
 Notre vue Details commence à tirer en longueur, ce qui avec le temps risque
 de la rendre un peu compliquée à comprendre. Pour améliorer la lisibilité de
@@ -317,7 +317,7 @@ cette fois nous faisons un copier / coller du code de la vue Details qui se
 rapporte aux deux liens Edit et Delete.
 
 Et pour finir, il ne nous reste plus qu'à ajouter deux commandes
-Html.RenderPartial() en haut de notre vue Details:
+Html.RenderPartial() en haut de notre vue Details :
 
 ```
 <% Html.RenderPartial("RSVPStatus"); %>

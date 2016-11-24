@@ -53,24 +53,32 @@ possibilité de parcourir la liste des dîners prévus et qu'ils puissent clique
 sur un de ces dîners pour consulter une fiche détaillée à son sujet. Pour cela,
 nous allons publier les URLs suivantes à partir de notre application:
 
-<table border=\"1\" cellspacing=\"0\" cellpadding=\"0\">
-<tr>
-<td width=\"151\">URL</td>
-<td width=\"463\">Fonction</td>
-</tr>
-<tr>
-<td width=\"151\">/Dinners/</td>
-<td width=\"463\">Affiche une liste HTML des prochains dîners</td>
-</tr>
-<tr>
-<td width=\"151\">/Dinners/Details/[id]</td>
-<td width=\"463\">Affiche des informations détaillées sur le dîner correspondant
-au paramètre "id" contenu dans l'URL, qui correspond à l'identifiant DinnerID
-pour le dîner dans notre base de données. Par exemple, l'URL /Dinners/Details/2
-affichera une page HTML contenant des informations au sujet du dîner avec la
-valeur 2 dans la colonne DinnerID.</td>
-</tr>
+<table>
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>Fonction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/Dinners/</td>
+      <td>Affiche une liste HTML des prochains dîners</td>
+    </tr>
+    <tr>
+      <td>/Dinners/Details/[id]</td>
+      <td>
+        Affiche des informations détaillées sur le dîner correspondant au
+        paramètre "id" contenu dans l'URL, qui correspond à l'identifiant
+        DinnerID pour le dîner dans notre base de données.<br>
+        Par exemple, l'URL /Dinners/Details/2 affichera une page HTML contenant
+        des informations au sujet du dîner avec la valeur 2 dans la colonne
+        DinnerID.
+      </td>
+    </tr>
+  </tbody>
 </table>
+
 Nous pouvons d'ores et déjà publier ces URLs sans rien dedans, en ajoutant
 deux "méthodes action" publiques dans notre classe DinnersControllers.cs:
 
@@ -161,50 +169,55 @@ n'apparaissent pas dans l'URL (contrôleur = "Home", action = "Index" et id =
 Le tableau ci-dessous présente comment différentes URLs sont traitées en
 fonction de la règle de routage "/{controller}/{action}/{id}":
 
-<table border=\"1\" cellspacing=\"0\" cellpadding=\"0\">
-<tr>
-<td width=\"151\">URL</td>
-<td width=\"154\">Classe contrôleur</td>
-<td width=\"154\">Méthode action</td>
-<td width=\"154\">Paramètre envoyé</td>
-</tr>
-<tr>
-<td width=\"151\">/Dinners/Details/2</td>
-<td width=\"154\">DinnersController</td>
-<td width=\"154\">Details(id)</td>
-<td width=\"154\">Id=2</td>
-</tr>
-<tr>
-<td width=\"151\">/Dinners/Edit/5</td>
-<td width=\"154\">DinnersController</td>
-<td width=\"154\">Edit(id)</td>
-<td width=\"154\">Id=5</td>
-</tr>
-<tr>
-<td width=\"151\">/Dinners/Create</td>
-<td width=\"154\">DinnersController</td>
-<td width=\"154\">Create()</td>
-<td width=\"154\">N/A</td>
-</tr>
-<tr>
-<td width=\"151\">/Dinners</td>
-<td width=\"154\">DinnersController</td>
-<td width=\"154\">Index()</td>
-<td width=\"154\">N/A</td>
-</tr>
-<tr>
-<td width=\"151\">/Home</td>
-<td width=\"154\">HomeController</td>
-<td width=\"154\">Index()</td>
-<td width=\"154\">N/A</td>
-</tr>
-<tr>
-<td width=\"151\">/</td>
-<td width=\"154\">HomeController</td>
-<td width=\"154\">Index()</td>
-<td width=\"154\">N/A</td>
-</tr>
+<table>
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>Classe contrôleur</th>
+      <th>Méthode action</th>
+      <th>Paramètre envoyé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/Dinners/Details/2</td>
+      <td>DinnersController</td>
+      <td>Details(id)</td>
+      <td>Id=2</td>
+    </tr>
+    <tr>
+      <td>/Dinners/Edit/5</td>
+      <td>DinnersController</td>
+      <td>Edit(id)</td>
+      <td>Id=5</td>
+    </tr>
+    <tr>
+      <td>/Dinners/Create</td>
+      <td>DinnersController</td>
+      <td>Create()</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>/Dinners</td>
+      <td>DinnersController</td>
+      <td>Index()</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>/Home</td>
+      <td>HomeController</td>
+      <td>Index()</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>HomeController</td>
+      <td>Index()</td>
+      <td>N/A</td>
+    </tr>
+  <tbody>
 </table>
+
 Les trois dernières lignes de ce tableau montrent l'utilisation des valeurs
 par défaut (contrôleur = "Home", action = "Index" et id = ""). Etant donné que
 la méthode "Index" est définie comme étant le nom de l'action par défaut quand

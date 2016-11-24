@@ -28,30 +28,29 @@ consulter les dîners enregistrés sur notre site.
 
 Pour commencer, on fait un clic-droit sur le dossier "Controllers" de notre
 projet web et on sélectionne la commande __Add -&gt; Controller__ (astuce: on
-peut aussi exécuter cette commande en tapant Ctrl-M, Ctrl-C).:
+peut aussi exécuter cette commande en tapant Ctrl-M, Ctrl-C) :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image052.png)
 
-On obtient alors la boite de dialogue "Add Controller":
+On obtient alors la boite de dialogue "Add Controller" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image053.png)
 
 On appelle notre nouveau contrôleur "DinnersController" puis on clique sur
 le bouton "Add". Visual Studio ajoute alors un fichier DinnersController.cs
-dans le répertoire \Controllers:
+dans le répertoire \Controllers :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image054.png)
 
 Et il ouvre automatiquement ce nouveau fichier DinnersController.cs dans
 l'éditeur de code.
 
-### Ajout des méthodes d'action Index() et Details() à notre classe
-contrôleur
+### Ajout des méthodes d'action Index() et Details() à notre classe contrôleur
 
 Nous voulons que les visiteurs qui viennent sur notre site aient la
 possibilité de parcourir la liste des dîners prévus et qu'ils puissent cliquer
 sur un de ces dîners pour consulter une fiche détaillée à son sujet. Pour cela,
-nous allons publier les URLs suivantes à partir de notre application:
+nous allons publier les URLs suivantes à partir de notre application :
 
 <table>
   <thead>
@@ -80,7 +79,7 @@ nous allons publier les URLs suivantes à partir de notre application:
 </table>
 
 Nous pouvons d'ores et déjà publier ces URLs sans rien dedans, en ajoutant
-deux "méthodes action" publiques dans notre classe DinnersControllers.cs:
+deux "méthodes action" publiques dans notre classe DinnersControllers.cs :
 
 ```
 public class DinnersController : Controller {
@@ -104,12 +103,12 @@ public class DinnersController : Controller {
 
 Nous pouvons alors lancer l'application et employer notre navigateur pour la
 tester. Le fait de saisir l'URL "/Dinners/" provoque l'exécution de notre
-méthode *Index()* , ce qui nous renvoie la réponse suivante:
+méthode *Index()*, ce qui nous renvoie la réponse suivante :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image055.png)
 
 En saisissant l'url "/Dinners/Details/2" nous exécutons la méthode Details()
-et nous recevons la réponse associée:
+et nous recevons la réponse associée :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image056.png)
 
@@ -135,12 +134,12 @@ série de règles de routage des URLs déjà enregistrée. Cela nous permet de
 démarrer facilement une nouvelle application sans avoir à paramétrer
 explicitement quoi que ce soit. Les règles de routage par défaut se trouvent
 dans la classe "Application" de notre projet que l'on peut ouvrir en
-double-cliquant sur le fichier "Global.asax" dans la racine du projet:
+double-cliquant sur le fichier "Global.asax" dans la racine du projet :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image057.png)
 
 Les règles de routage par défaut d'ASP.NET MVC sont enregistrées au niveau
-de la méthode "RegisterRoutes" de cette classe:
+de la méthode "RegisterRoutes" de cette classe :
 
 ```
 public void RegisterRoutes(RouteCollection routes)
@@ -167,7 +166,7 @@ n'apparaissent pas dans l'URL (contrôleur = "Home", action = "Index" et id =
 "").
 
 Le tableau ci-dessous présente comment différentes URLs sont traitées en
-fonction de la règle de routage "/{controller}/{action}/{id}":
+fonction de la règle de routage "/{controller}/{action}/{id}" :
 
 <table>
   <thead>
@@ -215,7 +214,7 @@ fonction de la règle de routage "/{controller}/{action}/{id}":
       <td>Index()</td>
       <td>N/A</td>
     </tr>
-  <tbody>
+  </tbody>
 </table>
 
 Les trois dernières lignes de ce tableau montrent l'utilisation des valeurs
@@ -249,7 +248,7 @@ Plus loin dans ce chapitre, nous aborderons le concept de "l'injection de
 dépendance" et verrons une autre façon pour fournir à nos contrôleurs une
 référence à la classe DinnerRepository qui sera plus pratique pour réaliser des
 tests unitaires. Mais pour le moment, nous nous contentons d'instancier notre
-classe DinnerRepository comme ci-dessous:
+classe DinnerRepository comme ci-dessous :
 
 ```
 using System;
@@ -309,7 +308,7 @@ Afin d'indiquer que nous utilisons une vue pour renvoyer la réponse HTML,
 nous devons modifier nos deux méthodes actions pour qu'elles ne retournent plus
 un "void" mais un objet de type "ViewResult". Nous pouvons alors utiliser la
 méthode "View()" héritée de la classe Controller pour renvoyer un objet de type
-"ViewResult":
+"ViewResult" :
 
 ```
 public class DinnersController : Controller {
@@ -340,7 +339,7 @@ public class DinnersController : Controller {
 ```
 
 La signature de la méthode View() que nous avons utilisée est la
-suivante:
+suivante :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image058.png)
 
@@ -352,7 +351,7 @@ le code HTML à renvoyer.
 Dans la méthode action Index(), nous appelons la méthode View() en indiquant
 que nous voulons renvoyer une liste HTML des dîners en utilisant la vue
 "Index". Et nous passons à notre vue une séquence d'objets Dinner à partir de
-laquelle elle pourra générer la liste HTML:
+laquelle elle pourra générer la liste HTML :
 
 ```
 //
@@ -373,7 +372,7 @@ voulons utiliser la vue "Détails" pour afficher cet objet Dinner. Par contre,
 si le dîner obtenu n'est pas valide, nous renvoyons un message d'erreur pour
 expliquer que ce dîner n'existe pas. Pour cela, nous utilisons une vue
 "NotFound" en appelant une version surchargée de la méthode View() qui n'attend
-que le nom de la vue en paramètre:
+que le nom de la vue en paramètre :
 
 ```
 //
@@ -401,7 +400,7 @@ message d'erreur pour indiquer que le dîner demandé n'a pas été trouvé.
 Pour créer une nouvelle vue, nous pouvons placer notre curseur à l'intérieur
 du code d'une méthode action de notre contrôleur avant de faire un clic-droit
 pour choisir la commande "Add View" (on peut aussi taper Ctrl-M puis Ctrl-V au
-clavier):
+clavier) :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image059.png)
 
@@ -409,18 +408,18 @@ Cela fait alors apparaître la boite de dialogue "Add View" ci-dessous. Par
 défaut, le nom de la vue à créer est pré-rempli avec le nom de la méthode
 action à l'intérieur de laquelle se trouvait le curseur ("Details" dans notre
 cas). Mais comme nous voulons d'abord implémenter la vue "NotFound", nous
-remplaçons le nom "Details" pour y mettre "NotFound":
+remplaçons le nom "Details" pour y mettre "NotFound" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image060.png)
 
 Quand nous cliquons sur le bouton "Add", Visual Studio crée un nouveau
 fichier vue "NotFound.aspx" dans le répertoire "\Views\Dinners" (qu'il va créer
-s'il n'existait pas déjà):
+s'il n'existait pas déjà) :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image061.png)
 
 Notre nouvelle vue "NotFound.aspx" est alors directement chargée dans
-l'éditeur de code:
+l'éditeur de code :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image062.png)
 
@@ -430,7 +429,7 @@ la page HTML renvoyée à l'utilisateur et la seconde contiendra le contenu
 principal de cette page.
 
 Pour construire notre vue "NotFound", nous allons ajouter le code
-ci-dessous:
+ci-dessous :
 
 ```
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">
@@ -449,7 +448,7 @@ ci-dessous:
 Nous pouvons dès maintenant faire un essai en appelant l'URL
 "/Dinners/Details/9999" dans notre navigateur. Etant donné que cette URL fait
 référence à un dîner qui n'existe pas dans la base de données, notre méthode
-action DinnersController.Details() va renvoyer la vue "NotFound":
+action DinnersController.Details() va renvoyer la vue "NotFound" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image063.png)
 
@@ -466,7 +465,7 @@ code HTML qui sert à afficher un dîner.
 
 Pour cela, nous positionnons le curseur à l'intérieur de la méthode action
 Détails, puis nous cliquons avec le bouton droit et choisissons la commande
-"Add View" (ou Ctrl-M, Ctrl-V au clavier):
+"Add View" (ou Ctrl-M, Ctrl-V au clavier) :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image064.png)
 
@@ -474,7 +473,7 @@ Après apparition de la boite de dialogue "Add View", nous conservons le nom
 proposé par défaut, puis nous cochons "Create a strongly-typed View" pour
 pouvoir définir le type d'objet que le contrôleur va transmettre à la vue. Dans
 notre cas, nous allons passer un objet Dinner dont le nom de classe complet est
-"NerdDinner.Models.Dinner":
+"NerdDinner.Models.Dinner" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image065.png)
 
@@ -489,7 +488,7 @@ paramètre. C'est une technique extrêmement rapide pour obtenir le point de
 départ de notre vue.
 
 Lorsque nous cliquons sur le bouton "Add", Visual Studio va créer un nouveau
-fichier "Details.aspx" dans le répertoire "\Views\Dinners":
+fichier "Details.aspx" dans le répertoire "\Views\Dinners" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image066.png)
 
@@ -498,7 +497,7 @@ code. Celui-ci correspond à une première ébauche d'une vue de type détail
 construite à partir du type d'objet que nous lui avons passé. Le moteur de
 scaffolding utilise la reflection pour retrouver les propriétés publiques de la
 classe transmise et génère le code approprié en fonction des types de données
-trouvés:
+trouvés :
 
 ```
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">
@@ -511,43 +510,43 @@ trouvés:
    <fieldset>
      <legend>Fields</legend>
      <p>
-        DinnerID:
+        DinnerID :
         <%= Html.Encode(Model.DinnerID) %>
      </p>
      <p>
-        Title:
+        Title :
         <%= Html.Encode(Model.Title) %>
      </p>
      <p>
-        EventDate:
+        EventDate :
         <%= Html.Encode(String.Format("{0:g}", Model.EventDate)) %>
      </p>
      <p>
-        Description:
+        Description :
         <%= Html.Encode(Model.Description) %>
      </p>
      <p>
-        HostedBy:
+        HostedBy :
         <%= Html.Encode(Model.HostedBy) %>
      </p>
      <p>
-        ContactPhone:
+        ContactPhone :
         <%= Html.Encode(Model.ContactPhone) %>
      </p>
      <p>
-        Address:
+        Address :
         <%= Html.Encode(Model.Address) %>
      </p>
      <p>
-        Country:
+        Country :
         <%= Html.Encode(Model.Country) %>
      </p>
      <p>
-        Latitude:
+        Latitude :
         <%= Html.Encode(String.Format("{0:F}", Model.Latitude)) %>
      </p>
      <p>
-        Longitude:
+        Longitude :
         <%= Html.Encode(String.Format("{0:F}", Model.Longitude)) %>
      </p>
    </fieldset>
@@ -562,7 +561,7 @@ trouvés:
 Nous pouvons maintenant appeler l'URL "/Dinners/Details/1" pour voir ce que
 donne cette génération automatique. Cette page va afficher le premier dîner que
 nous avons inséré manuellement dans notre base de données lors de sa
-création:
+création :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image067.png)
 
@@ -581,12 +580,12 @@ A l'intérieur de notre vue, nous pouvons écrire du code qui accède à l'objet
 "Dinner" que nous lui avons fait passer depuis le contrôleur à l'aide de la
 propriété fortement typée "Model". Nous bénéficions ainsi de l'IntelliSense
 lorsque nous utilisons la propriété "Model" dans l'éditeur de Visual
-Studio:
+Studio :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image068.png)
 
 Modifions quelque peu notre code pour qu'au final la vue Details.aspx
-ressemble au code source ci-dessous:
+ressemble au code source ci-dessous :
 
 ```
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">
@@ -625,7 +624,7 @@ ressemble au code source ci-dessous:
 ```
 
 Lorsque nous rappelons l'url "/Dinners/Details/1", nous obtenons maintenant
-la présentation suivante:
+la présentation suivante :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image069.png)
 
@@ -642,7 +641,7 @@ choisissons de générer automatiquement un template de vue "List" et nous
 sélectionnons "NerdDinner.Models.Dinner" pour la classe de données à
 transmettre à notre vue. Et comme nous avons indiqué que nous allions créer une
 vue de type "List", la boite de dialogue "Add View" détermine que notre
-contrôleur doit faire passer une séquence d'objets Dinner à notre vue:
+contrôleur doit faire passer une séquence d'objets Dinner à notre vue :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image070.png)
 
@@ -652,7 +651,7 @@ première implémentation qui utilise une table HTML pour afficher la liste des
 dîners que nous avons passée à la vue.
 
 Quand nous lançons l'application pour accéder à l'URL "/Dinners", notre
-liste des dîners se présente sous la forme suivante:
+liste des dîners se présente sous la forme suivante :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image071.png)
 
@@ -660,7 +659,7 @@ La table ci-dessus fourni une grille qui reprend toutes les colonnes de la
 base de données. Ceci n'est pas exactement ce que nous souhaitons présenter aux
 utilisateurs. Nous pouvons modifier le code du template Index.aspx pour qu'il
 ne contienne pas toutes les colonnes du modèle Dinners et pour qu'il utilise
-une balise &lt;ul&gt; au lieu d'une balise &lt;table&gt;:
+une balise &lt;ul&gt; au lieu d'une balise &lt;table&gt; :
 
 ```
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
@@ -692,12 +691,12 @@ compilateur sait déterminer implicitement le bon type pour l'objet "Dinner" à
 partir du type de la propriété "Model" (qui est
 "&lt;IEnumerable&lt;Dinner&gt;"). Il peut donc en déduire que la variable
 locale "dinner" est du type "Dinner", ce qui nous permet de profiter pleinement
-de l'IntelliSense et du contrôle de code pendant la saisie:
+de l'IntelliSense et du contrôle de code pendant la saisie :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image072.png)
 
 Lorsque nous rafraichissons l'URL "/Dinners" dans le navigateur, la liste
-des dîners se présente désormais de la façon suivante:
+des dîners se présente désormais de la façon suivante :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image073.png)
 
@@ -708,13 +707,13 @@ l'action "Details" du contrôleur DinnersController.
 
 Nous pouvons générer des liens hypertextes dans la vue Index de deux façons.
 La première méthode est de créer manuellement des balises &lt;a&gt; dans
-lesquelles nous insèrerons des blocs de code &lt;%%&gt; comme ci-dessous:
+lesquelles nous insèrerons des blocs de code &lt;%%&gt; comme ci-dessous :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image074.png)
 
 Une autre manière de procéder est d'employer la méthode helper
 "Html.ActionLink()" qui permet de générer une balise &lt;a&gt; qui établi un
-lien vers une action du contrôleur:
+lien vers une action du contrôleur :
 
 ```
 <%= Html.ActionLink(dinner.Title, "Details", new { id=dinner.DinnerID }) %>
@@ -729,7 +728,7 @@ type anonyme sous forme de paires de propriétés nom / valeur. Dans notre
 exemple, nous déclarons un paramètre dont le nom est "id" en lui donnant comme
 valeur l'identifiant du dîner que nous voulons lier. Etant donné que par défaut
 la règle de routage est "{controller}/{action}/{id}", le helper
-"Html.ActionLink()" va générer le code HTML suivant:
+"Html.ActionLink()" va générer le code HTML suivant :
 
 ```
 <a href="/Dinners/Details/1">.NET Futures</a>
@@ -737,7 +736,7 @@ la règle de routage est "{controller}/{action}/{id}", le helper
 
 Nous allons utiliser la solution basée sur le helper Html.ActionLink() pour
 faire en sorte que chaque dîner de notre liste pointe vers l'URL qui détaille
-son contenu:
+son contenu :
 
 ```
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">
@@ -764,12 +763,12 @@ son contenu:
 ```
 
 Et maintenant, lorsque nous appelons l'URL "/Dinners", notre liste ressemble
-à ça:
+à ça :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image075.png)
 
 Quand nous cliquons sur un des dîners proposé dans cette liste, le lien
-qu'il contient nous conduit vers la fiche complète du dîner:
+qu'il contient nous conduit vers la fiche complète du dîner :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image076.png)
 
@@ -785,7 +784,7 @@ défaut, ASP.NET MVC va rechercher cette vue dans le répertoire
 Par exemple, nous avons jusqu'à présent travaillé avec la classe
 DinnersController qui fait explicitement référence à trois vues: "Index",
 "Details" et "NotFound". Pour retrouver ces trois vues, ASP.NET MVC regardera
-par défaut à l'intérieur du répertoire \Views\Dinners:
+par défaut à l'intérieur du répertoire \Views\Dinners :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image077.png)
 
@@ -819,7 +818,7 @@ automatiquement que nous souhaitons utiliser la vue
 \Views\[ControllerName]\[ActionName].
 
 Cela nous permet d'alléger quelque peu le code de notre contrôleur et
-d'éviter de répéter les mêmes noms plusieurs fois dans le code:
+d'éviter de répéter les mêmes noms plusieurs fois dans le code :
 
 ```
 public class DinnersController : Controller {

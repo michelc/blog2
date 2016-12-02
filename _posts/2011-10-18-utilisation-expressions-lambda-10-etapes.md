@@ -95,7 +95,7 @@ type
 * 10° étape : Utilisation de paramètres optionnels
 
 Consulter éventuellement la version PDF pour voir en détail comment se sont
-déroulées ces étapes : [Utilisation_Expressions_Lambda_en_10_etapes.pdf](http://bit.ly/qsAcx1).
+déroulées ces étapes : [Utilisation_Expressions_Lambda_en_10_etapes.pdf](/public/2011/Utilisation_Expressions_Lambda_en_10_etapes.pdf).
 
 ### Le résultat
 

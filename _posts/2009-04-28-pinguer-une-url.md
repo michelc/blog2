@@ -23,41 +23,93 @@ J'en ai donc profité pour améliorer le code et le publier si jamais cela
 intéresse quelqu'un.
 
 ```
-namespace Altrr.Tools.UrlPing {
+using System;
+using System.Net;
 
-  using System;
-  using System.Net;
-
-  class Start {
-
+namespace Altrr.Tools.UrlPing
+{
+  class Start
+  {
     [STAThread]
-    static void Main(string[] args) {
-
-      if (args.Length == 1) {
+    static void Main(string[] args)
+    {
+      if (args.Length == 1)
+      {
         string url = args[0];
         Console.Write(url + " : ");
-        try {
-          HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+        try
+        {
+          var request = (HttpWebRequest)HttpWebRequest.Create(url);
           request.CookieContainer = new CookieContainer();
           request.Method = "HEAD";
-          HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+          var response = (HttpWebResponse)request.GetResponse();
           Console.WriteLine("OK (" + Convert.ToInt32(response.StatusCode) + " - " + response.StatusDescription + ")");
+
           string urlr = response.ResponseUri.ToString();
           if (url != urlr) {
-            Console.WriteLine("-------
-" + urlr);
+            Console.WriteLine("-------\n" + urlr);
           }
-        } catch (Exception ex) {
-          Console.WriteLine("KO
--------
-" + ex.Message);
         }
-      } else {
+        catch (Exception ex)
+        {
+          Console.WriteLine("KO\n-------\n" + ex.Message);
+        }
+      }
+      else
+      {
         Console.WriteLine("Syntax : UrlPing url");
       }
-
     }
-
   }
 }
 ```
+
+## Mises à jour
+
+Si jamais le site visé renvoie une erreur `401 - Non autorisé` et que
+l'authentification est basé sur Active Directory, il faut initialiser l'objet
+`HttpWebRequest` de la façon suivante :
+
+```
+          request.Method = "GET";
+          request.UseDefaultCredentials = true;
+          request.PreAuthenticate = true;
+          request.Credentials = CredentialCache.DefaultCredentials;
+```
+
+Dans le cas où l'utilisateur en cours n'aurait pas les droits nécessaires, c'est
+juste un petit peu plus compliqué :
+
+```
+          request.Method = "GET";
+          request.UseDefaultCredentials = false;
+          request.PreAuthenticate = true;
+          var cache = new CredentialCache();
+          cache.Add(new Uri(url)
+                  , "NTLM"
+                  , new NetworkCredential("username", "password", "domain"));
+          request.Credentials = cache;
+```
+
+Et pour mémoire, ça ne marche pas du tout avec `request.Method = "GET";` !
+
+## Version PowerShell
+
+```
+# Crée un objet PSCredential
+# (pour ne pas avoir à saisir login/motpasse interactivement)
+
+$mon_password = ConvertTo-SecureString "password" -AsPlainText -Force
+$mon_credential = New-Object System.Management.Automation.PSCredential ("domain\username", $mon_password)
+
+# Pingue l'URL
+
+$mon_url = "http://www.mon-intranet.com/"
+Invoke-RestMethod -Uri $mon_url -Credential $mon_credential
+```
+
+Sources :
+
+* https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.utility/invoke-restmethod
+* https://blogs.msdn.microsoft.com/koteshb/2010/02/12/powershell-how-to-create-a-pscredential-object/

@@ -92,7 +92,7 @@ juste un petit peu plus compliqué :
           request.Credentials = cache;
 ```
 
-Et pour mémoire, ça ne marche pas du tout avec `request.Method = "GET";` !
+Et pour mémoire, ça ne marche pas du tout avec `request.Method = "HEAD";` !
 
 ## Version PowerShell
 
@@ -111,5 +111,5 @@ Invoke-RestMethod -Uri $mon_url -Credential $mon_credential
 
 Sources :
 
-* https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.utility/invoke-restmethod
-* https://blogs.msdn.microsoft.com/koteshb/2010/02/12/powershell-how-to-create-a-pscredential-object/
+* <https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.utility/invoke-restmethod>
+* <https://blogs.msdn.microsoft.com/koteshb/2010/02/12/powershell-how-to-create-a-pscredential-object/>

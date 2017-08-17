@@ -46,6 +46,10 @@ a[href*='//'] {
   color: magenta;
 }
 
+footer a[href*='//'] {
+  color: #2962ff;
+}
+
 p a {
   text-decoration: underline;
 }

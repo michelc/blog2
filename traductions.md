@@ -118,3 +118,6 @@ César Intriago avait publié sous forme d'une série de 3 articles.
 * [Je peux le dire : Vous devriez apprendre MVC]({% post_url 2010-01-12-vous-devriez-apprendre-mvc %}) (12/01/2010) - Un
 plaidoyer pour ASP.NET MVC de Rob Conery qui se résume en 3 mots :
 "WebForms is a lie"
+* [Comment transformer votre site web en PWA]({% post_url 2017-08-18-transformer-site-web-pwa %}) (18/08/2017) - Un billet très didactique de Max Böck qui donne une vision
+claire sur la façon de procéder pour créer une première Application Web
+progressive à partir d'un simple site internet.

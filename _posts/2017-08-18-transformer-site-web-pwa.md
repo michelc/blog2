@@ -28,15 +28,15 @@ répandues en ce qui concerne les PWAs.
 #### 1) PWA ≠ "Application"
 
 Une Application Web Progressive peut aussi bien être un blog, un site de
-présentation, une boutique ou une gallerie de petits chats trop mignons. Une
-PWA est avant tout un moyen d'optimiser votre site pour plus de rapidité et un
+présentation, une boutique ou une galerie de petits chats trop mignons. Une PWA
+est avant tout un moyen d'optimiser votre site pour plus de rapidité et un
 meilleur rendu. Vous pouvez (et vous devriez) profiter de ces nouvelles
 techniques quel que soit votre contenu.
 
 *Remarque : le terme "Application" dans PWA est [source de discussion](https://adactio.com/journal/12461),
 car certains trouvent qu'il ne véhicule pas le bon concept. Pour moi, ça n'est
 qu'un nom. Et de toute façon, il est de plus en plus difficile de définir ce qui
-différencie un site internet d'une "applications web".*
+différencie un site internet d'une "application web".*
 
 #### 2) PWA ≠ Javascript + Application web monopage
 
@@ -61,7 +61,7 @@ juste ce bon vieux web.
 #### 4) PWA = prêt et sûr dès aujourd'hui
 
 Dans PWA, il y a un "P" pour progressif ! Ce "P" signifie que toutes ces
-techniques ne sont que des améliorations accssoires. Si un ancien navigateur ne
+techniques ne sont que des améliorations accessoires. Si un ancien navigateur ne
 gère pas telle amélioration, il ne va pas planter. Il se contentera d'afficher
 le site web de base.
 
@@ -139,7 +139,7 @@ dont est hébergé votre site. Globalement, il existe deux cas de figures.
 👉 Si vous gérez **votre propre serveur** ou que vous avez un accès root à
 celui-ci, voyez du côté de [LetsEncrypt](https://letsencrypt.org/). C'est une
 autorité de certification gratuite, ouverte et simple qui permet à tout le monde
-de commencer à utiliser HTTPS. C'est assez facile à mettre en oeuvre et aussi
+de commencer à utiliser HTTPS. C'est assez facile à mettre en œuvre et aussi
 sécurisé que les autres fournisseurs.
 
 👉 Si vous êtes sur un **hébergement mutualisé**, la plupart d'entre eux ne
@@ -154,7 +154,7 @@ détaillé de KeyCDN](https://www.keycdn.com/blog/http-to-https/) ou suivre
 l'[article de Chris Coyier](https://css-tricks.com/moving-to-https-on-wordpress/)
 pour migrer un site WordPress.
 
-Quand tout sera ok, vous serez récompensé par un joli cadenas vert juste devant
+Quand tout sera ok, vous serez gratifié d'un joli cadenas vert juste devant
 votre URL :
 
 ![Icone HTTPS](/public/2017/mxb-lock-icon.png)
@@ -214,7 +214,7 @@ self.addEventListener('install', e => {
    // Après l'installation du service worker,
    // ouvre un nouveau cache
    caches.open('mon-cache-pwa').then(cache => {
-     // Ajoute toues les URLs des éléments à mettre en cache
+     // Ajoute toutes les URLs des éléments à mettre en cache
      return cache.addAll([
        '/',
        '/index.html',

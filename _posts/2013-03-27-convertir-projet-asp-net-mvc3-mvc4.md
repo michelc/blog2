@@ -287,18 +287,23 @@ Zut ! J'avais complètement oublié ça : [SqlException on EF 5 w/ .NET 4.5](htt
 table](http://stackoverflow.com/questions/11979026/entity-framework-5-expects-createdon-column-from-migrationhistory-table).
 
 Mais moi j'utilise SQL Server CE, alors ça le fait pas avec le truc pour
-"System.Data.SqlClient.SqlException". Sous Visual Studio, il faut donc faire
-Déboguer / Exceptions... puis [ Ajouter... ] et :
-
-* Type : Common Language Runtime Exceptions
-* Nom : System.Data.SqlServerCe.SqlCeException
-* Puis décocher les 2 cases ("Levé" et "Non géré par l'utilisateur")
+"System.Data.SqlClient.SqlException". Sous Visual Studio, il faut donc aller
+dans Debug / Windows / Exception Settings. Dans l'entrée "Common Language
+Runtime Exceptions", il faut ajouter l'exception
+"System.Data.SqlServerCe.SqlCeException" et ne pas cocher la case "Break When
+Thrown" puis clic-droit dessus pour vérifier que l'action "Continue when
+unhandled in user code" n'est pas activée.
 
 Et enfin tout marche !!!!
 
+Quoique. Pour que le déploiement fonctionne sur AppHarbor, il faut s'assurer que
+le Build Action des 2 fichiers "Web.Debug.config" et "Web.Release.config" est
+bien à "Content" (et pas à "None").
+
+
 ### Rebrancher Git
 
-C'est là que la magie opèpe : copier le dossier ".git" et les fichiers
+C'est là que la magie opère : copier le dossier ".git" et les fichiers
 ".gitattributes", ".gitignore" et "readme.md" de l'ancien projet
 C:\MVC\Repertoir3 vers le nouveau projet dans C:\MVC\Repertoir. C'est pas avec
 SourceSafe qu'on pourrait jouer à des trucs pareils...

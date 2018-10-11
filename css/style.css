@@ -264,3 +264,21 @@ footer {
     padding-left: 2.5rem;
   }
 }
+
+
+/* Pubs & impression
+   ========================================================================== */
+
+.pub { margin-top: 1rem; }
+
+@media (min-width: 62rem) {
+  .pub {
+    margin-left: 46rem;
+    position: fixed;
+    top: 1rem;
+  }
+}
+
+@media print {
+  div > header, nav, .pub { display: none; }
+}

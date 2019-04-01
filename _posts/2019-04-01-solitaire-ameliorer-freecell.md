@@ -13,7 +13,7 @@ solitaires et aux évolutions que je souhaite y apporter :
 3. [Améliorer FreeCell]({% post_url 2019-03-30-solitaire-ameliorer-freecell %})
 4. Drag & drop sans jQuery UI
 
-![microsoft-freecell](/public/2019/freecell.jpg "Microsoft FreeCell - Windows 3.1")
+![Microsoft FreeCell - Windows 3.1](/public/2019/freecell.jpg)
 
 Côté jeux, je viens de mettre en production
 [FreeCell](https://www.solitaire-play.com/freecell/), un jeu incontournable sur

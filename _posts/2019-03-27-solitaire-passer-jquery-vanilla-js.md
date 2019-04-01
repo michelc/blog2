@@ -10,7 +10,7 @@ solitaires et aux évolutions que je souhaite y apporter :
 
 1. [Introduction]({% post_url 2019-03-23-solitaire-feuille-route-javascript %})
 2. [Passer de jQuery à Vanilla JS]({% post_url 2019-03-27-solitaire-passer-jquery-vanilla-js %})
-3. [Améliorer FreeCell]({% post_url 2019-03-30-solitaire-ameliorer-freecell %})
+3. [Améliorer FreeCell]({% post_url 2019-04-01-solitaire-ameliorer-freecell %})
 4. Drag & drop sans jQuery UI
 
 ![Vanille Bourbon - La Réunion](/public/2019/vanille.jpg)

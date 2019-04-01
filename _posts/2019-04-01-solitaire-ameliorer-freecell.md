@@ -56,7 +56,7 @@ ne sert plus à rien de laisser sur le tableau :
 * les Quatre, dès que les Trois de couleur opposée ne sont plus sur le tableau
 * etc...
 
-Cela sera suffisant pour reproduire un "AutoMove" du niveau de celui du FreeCell
+Cela sera suffisant pour reproduire un "AutoPlay" du niveau de celui du FreeCell
 de Microsoft. Comme j'ai déjà un système de conseils, cela devrait être assez
 simple à programmer. Par contre, le problème principal sera de faire en sorte
 que le joueur puisse se rendre compte de ce qui se passe...
@@ -66,15 +66,15 @@ Par exemple, si je faisais ça maintenant, voici comment cela se déroulerait :
 * Le joueur fait un déplacement qui libère une carte pouvant être jouée
   automatiquement
 * Cette carte est __instantanément__ ajoutée à la fondation correspondante
-* Le joueur doit réfléchir pour comprendre qu'un "AutoMove" vient d'avoir
+* Le joueur doit réfléchir pour comprendre qu'un "AutoPlay" vient d'avoir
   lieu...
 
-Pour rendre cet "AutoMove" plus parlant et compréhensible, il faudrait que
-j'ajoute une temporisation et même un effet visuel quand un "AutoMove" se
+Pour rendre cet "AutoPlay" plus parlant et compréhensible, il faudrait que
+j'ajoute une temporisation et même un effet visuel quand un "AutoPlay" se
 produit. De cette façon, le joueur serait averti de ce qui se passe et se
 rendrait compte qu'un coup vient d'être joué en automatique...
 
 Dans l'immédiat, la suite pour moi c'est d'attaquer les modifications pour la
-partie "SuperMove". En ce qui concerne le côté "AutoMove", cela devra attendre
+partie "SuperMove". En ce qui concerne le côté "AutoPlay", cela devra attendre
 un peu. Il faudrait que je commence par creuser du côté des "effets spéciaux" et
 des animations en JavaScript et CSS avant d'aller plus loin.

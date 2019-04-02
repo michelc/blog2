@@ -13,7 +13,7 @@ solitaires et aux évolutions que je souhaite y apporter :
 3. [Améliorer FreeCell]({% post_url 2019-04-01-solitaire-ameliorer-freecell %})
 4. Drag & drop sans jQuery UI
 
-![Vanille Bourbon - La Réunion](/public/2019/vanille.jpg)
+![vanille-bourbon](/public/2019/vanille.jpg "Vanille Bourbon - La Réunion")
 
 Au départ, j'ai utilisé [jQuery](https://jquery.com/) (et
 [jQuery UI](https://jqueryui.com/)) parce que c'était encore ce qui se faisait

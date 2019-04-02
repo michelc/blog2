@@ -9,7 +9,7 @@ J'ai un peu beaucoup délaissé ce blog parce que j'ai lancé un site de jeux de
 [Solitaire-Play](https://www.solitaire-play.com/), qui au final m'occupe et m'inspire plus que
 la rédaction ou la traduction de billets...
 
-![Paul Emile Félix - Le Solitaire](/public/2019/solitaire.jpg)
+![joueuse-solitaire](/public/2019/solitaire.jpg "Paul Emile Félix - Le Solitaire")
 
 Comme mon site commence à avoir pas mal de jeux, il faut que je réfléchisse à ce qui est
 faisable ou pas, pour éviter que cela parte dans tous les sens et deviennent moins amusant.

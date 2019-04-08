@@ -14,7 +14,10 @@ solitaires et aux évolutions que je souhaite y apporter :
 4. [Ajouter des animations CSS]({% post_url 2019-04-08-solitaire-ajouter-animations-css %})
 5. Drag & drop sans jQuery UI
 
-![microsoft-freecell](/public/2019/freecell.jpg "Microsoft FreeCell - Windows 3.1")
+<figure>
+  <img src="/public/2019/freecell.jpg" alt="microsoft-freecell" />
+  <figcaption>Microsoft FreeCell - Windows 3.1</figcaption>
+</figure>
 
 Côté jeux, je viens de mettre en production
 [FreeCell](https://www.solitaire-play.com/freecell/), un jeu incontournable sur

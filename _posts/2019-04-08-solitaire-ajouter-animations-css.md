@@ -15,9 +15,9 @@ solitaires et aux évolutions que je souhaite y apporter :
 5. Drag & drop sans jQuery UI
 
 <figure>
-  <img src="/public/2019/animation.jpg" alt="" />
+  <img src="/public/2019/animation.jpg" alt="victoire-solitaire" />
   <figcaption>
-    <a href="http://www.skrekkogle.com/projects/solitaire/">Skrekkogle / Solitaire Win Sculpture</a>
+    <a href="http://www.skrekkogle.com/projects/solitaire/">Skrekkogle - Solitaire Win Sculpture</a>
   </figcaption>
 </figure>
 

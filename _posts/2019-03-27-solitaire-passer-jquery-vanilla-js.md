@@ -14,7 +14,10 @@ solitaires et aux évolutions que je souhaite y apporter :
 4. [Ajouter des animations CSS]({% post_url 2019-04-08-solitaire-ajouter-animations-css %})
 5. Drag & drop sans jQuery UI
 
-![vanille-bourbon](/public/2019/vanille.jpg "Vanille Bourbon - La Réunion")
+<figure>
+  <img src="/public/2019/vanille.jpg" alt="vanille-bourbon" />
+  <figcaption>Vanille Bourbon - La Réunion</figcaption>
+</figure>
 
 Au départ, j'ai utilisé [jQuery](https://jquery.com/) (et
 [jQuery UI](https://jqueryui.com/)) parce que c'était encore ce qui se faisait

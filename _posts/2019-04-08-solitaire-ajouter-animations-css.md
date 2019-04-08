@@ -43,7 +43,7 @@ perdu...
 
 Et donc, un autre effet judicieux serait de "montrer" le déplacement d'une carte
 d'une pile vers une autre. Comme vu dans le billet sur les
-[améliorations de FreeCell]({% post_url 2019-03-30-solitaire-ameliorer-freecell %}),
+[améliorations de FreeCell]({% post_url 2019-04-01-solitaire-ameliorer-freecell %}),
 cela serait très utile pour que le joueur voit ce qui se passe quand un
 "AutoPlay" a lieu.
 

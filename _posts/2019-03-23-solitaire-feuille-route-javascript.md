@@ -20,6 +20,9 @@ et les évolutions que je souhaite réaliser :
 1. [Introduction]({% post_url 2019-03-23-solitaire-feuille-route-javascript %})
 2. [Passer de jQuery à Vanilla JS]({% post_url 2019-03-27-solitaire-passer-jquery-vanilla-js %})
 3. [Améliorer FreeCell]({% post_url 2019-04-01-solitaire-ameliorer-freecell %})
-4. Drag & drop sans jQuery UI
+4. [Ajouter des animations CSS]({% post_url 2019-04-08-solitaire-ajouter-animations-css %})
+5. Drag & drop sans jQuery UI
 
-C'est parti...
+Et tout ça en faisant différents trucs en parallèle : ajouter d'autres jeux,
+corriger les bugs, rendre le code plus générique, moderniser les sources
+(TypeScript ?), ...

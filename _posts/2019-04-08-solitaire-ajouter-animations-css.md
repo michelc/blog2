@@ -12,7 +12,7 @@ solitaires et aux évolutions que je souhaite y apporter :
 2. [Passer de jQuery à Vanilla JS]({% post_url 2019-03-27-solitaire-passer-jquery-vanilla-js %})
 3. [Améliorer FreeCell]({% post_url 2019-04-01-solitaire-ameliorer-freecell %})
 4. [Ajouter des animations CSS]({% post_url 2019-04-08-solitaire-ajouter-animations-css %})
-5. Drag & drop sans jQuery UI
+5. [Drag and drop sans jQuery UI]({% post_url 2019-04-15-solitaire-drag-and-drop-sans-jquery-ui %})
 
 <figure>
   <img src="/public/2019/animation.jpg" alt="victoire-solitaire" />

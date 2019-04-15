@@ -37,40 +37,37 @@ animations...
 Pour remplacer jQuery UI, il faut déjà que je trouve une librairie Vanilla JS
 qui soit super simple pour gérer le glisser / déposer. Pour l'instant, j'ai
 repéré les 5 librairies JavaScript suivantes qui gèrent les navigateurs récents
-mais aussi Internet Explorer et les écrans tactiles.
+mais aussi Internet Explorer et les écrans tactiles...
 
 
-## Dragula
+## [Dragula](https://bevacqua.github.io/dragula/)
 
 Dragula est une librairie JavaScript simple et sans aucune dépendance. Elle
 permet d'ajouter du drag & drop  aux éléments du DOM. Elle gère les
 périphériques tactiles et fonctionne aussi avec IE7+.
 
-* Démonstration : https://bevacqua.github.io/dragula/
-* Sources : https://github.com/bevacqua/dragula
+* Sources : [https://github.com/bevacqua/dragula](https://github.com/bevacqua/dragula)
 * Dernière mise à jour : 18/12/2018
 * Dernière release : 12/09/2016
 
 
-## Draggabilly
+## [Draggabilly](https://draggabilly.desandro.com/)
 
 Draggabilly est une librairie JavaScript avec pour seul objectif de faire que
 le drag and drop marche. Elle fonctionne avec IE10+ et les appareils tactiles.
 
-* Démonstration : https://draggabilly.desandro.com/
-* Sources : https://github.com/desandro/draggabilly
+* Sources : [https://github.com/desandro/draggabilly](https://github.com/desandro/draggabilly)
 * Dernière mise à jour : 27/09/2018
 * Dernière release : 27/03/2018
 
 
-## Draggable JS
+## [Draggable JS](https://shopify.github.io/draggable/)
 
 Draggable JS est une bibliothèque JavaScript complètement paramétrable pour
 gérer tout ce qui est drag & drop, tri ou permutation. C'est une librairie
 orientée ES6 qui est compatible IE11+.
 
-* Démonstration : https://shopify.github.io/draggable/
-* Sources : https://github.com/Shopify/draggable
+* Sources : [https://github.com/Shopify/draggable](https://github.com/Shopify/draggable)
 * Dernière mise à jour : 03/04/2019
 * Dernière release : 07/09/2018 (beta)
 
@@ -78,26 +75,24 @@ A l'origine, c'était un projet issu de la plateforme de eCommerce Shopify, mais
 il est désormais géré par d'autres personnes.
 
 
-## Interact.js
+## [Interact.js](http://interactjs.io/)
 
 Interact.js est une librairie JavaScript légère et autonome pour gérer le
 glisser / déposer et le redimensionnement sur les navigateurs modernes. Elle
 fonctionne avec IE9+.
 
-* Démonstration : http://interactjs.io/
-* Sources : https://github.com/taye/interact.js
+* Sources : [https://github.com/taye/interact.js](https://github.com/taye/interact.js)
 * Dernière mise à jour : 07/04/2019
 * Dernière release : 05/04/2019
 
 
-## SortableJS
+## [SortableJS](https://sortablejs.github.io/Sortable/)
 
 SortableJS est une librairie JavaScript simple et légère qui permet de trier une
 liste d'éléments du DOM. Elle fonctionne avec tous les navigateurs et appareils
 tactiles, dont IE9+.
 
-* Démonstration : https://sortablejs.github.io/Sortable/
-* Sources : https://github.com/SortableJS/Sortable
+* Sources : [https://github.com/SortableJS/Sortable](https://github.com/SortableJS/Sortable)
 * Dernière mise à jour : 12/04/2019
 * Dernière release : 11/03/2019
 

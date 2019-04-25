@@ -25,6 +25,7 @@ et les évolutions que je souhaite réaliser :
 3. [Améliorer FreeCell]({% post_url 2019-04-01-solitaire-ameliorer-freecell %})
 4. [Ajouter des animations CSS]({% post_url 2019-04-08-solitaire-ajouter-animations-css %})
 5. [Drag and drop sans jQuery UI]({% post_url 2019-04-15-solitaire-drag-and-drop-sans-jquery-ui %})
+6. [Remplacer AjaxMin, etc...]({% post_url 2019-04-25-solitaire-remplacer-ajaxmin %})
 
 Et tout ça en faisant différents trucs en parallèle : ajouter d'autres jeux,
 corriger les bugs, rendre le code plus générique, moderniser les sources

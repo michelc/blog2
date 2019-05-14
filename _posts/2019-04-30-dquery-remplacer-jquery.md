@@ -9,6 +9,10 @@ Ce billet est le premier d'une nouvelle petite série consacrée au développeme
 de "dQuery.js", une librairie JavaScript ultra simple pour remplacer en partie
 jQuery.
 
+1. [Comment j'ai (bientôt) remplacé jQuery]({% post_url 2019-04-30-dquery-remplacer-jquery %})
+2. [Une version compatible IE9 / ES5]({% post_url 2019-05-07-dquery-compatibilite-ie9-es5 %})
+3. [Ma librairie pour manipuler le DOM]({% post_url 2019-05-14-dquery-librairie-js-manipulation-dom %})
+
 Cela faisait déjà un petit moment que je voulais "abandonner" jQuery, ou plus
 exactement voir ce qui était faisable en Vanilla JS.
 

@@ -6,12 +6,13 @@ title: "dQuery - Comment j'ai (bientôt) remplacé jQuery"
 ---
 
 Ce billet est le premier d'une nouvelle petite série consacrée au développement
-de "dQuery.js", une librairie JavaScript ultra simple pour remplacer en partie
-jQuery.
+de "dQuery.js", une mini-librairie JavaScript ultra simple pour remplacer en
+partie jQuery.
 
 1. [Comment j'ai (bientôt) remplacé jQuery]({% post_url 2019-04-30-dquery-remplacer-jquery %})
 2. [Une version compatible IE9 / ES5]({% post_url 2019-05-07-dquery-compatibilite-ie9-es5 %})
 3. [Ma librairie pour manipuler le DOM]({% post_url 2019-05-14-dquery-librairie-js-manipulation-dom %})
+4. [La délégation des évènements en JS]({% post_url 2019-05-21-dquery-delegation-evenement-javascript %})
 
 Cela faisait déjà un petit moment que je voulais "abandonner" jQuery, ou plus
 exactement voir ce qui était faisable en Vanilla JS.
@@ -167,7 +168,7 @@ bidouilles dans le code source pour arriver au "bon" résultat.
 
 Malgré tout, une telle simplicité c'était une véritable révélation. J'ai compris
 qu'il fallait que je m'accroche et que je continue sur cette voie. Avec NanoJS,
-j'avais enfin trouvé le bon truc qui me permettrais d'aller jusqu'au bout et de
+j'avais enfin trouvé le bon truc qui me permettrait d'aller jusqu'au bout et de
 remplacer jQuery.
 
 Pour l'instant, `git push` et c'est publié. On verra plus tard pour la suite de

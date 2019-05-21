@@ -5,13 +5,14 @@ tags: javascript, jquery
 title: "dQuery - Une version compatible IE9 / ES5"
 ---
 
-Cette série de billets retrace quelques unes des étapes pour développer une
-librairie JavaScript qui remplacera(it) un jour jQuery sur mon site de jeux de
-solitaires.
+Cette série de billets retrace quelques-unes des étapes pour développer une
+mini-librairie JavaScript qui remplacera(it) un jour jQuery sur mon site de jeux
+de solitaires.
 
 1. [Comment j'ai (bientôt) remplacé jQuery]({% post_url 2019-04-30-dquery-remplacer-jquery %})
 2. [Une version compatible IE9 / ES5]({% post_url 2019-05-07-dquery-compatibilite-ie9-es5 %})
 3. [Ma librairie pour manipuler le DOM]({% post_url 2019-05-14-dquery-librairie-js-manipulation-dom %})
+4. [La délégation des évènements en JS]({% post_url 2019-05-21-dquery-delegation-evenement-javascript %})
 
 Pour l'instant, je m'accorde encore le besoin d'être compatible avec IE9, et
 par conséquent EcmaScript 5.

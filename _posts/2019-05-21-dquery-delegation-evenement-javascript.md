@@ -18,7 +18,7 @@ La délégation d'évènements. Comment dire ? C'est pas compliqué, mais c'est 
 si facile que ça... Et puis il faut s'en rappeler tout le temps !
 
 
-## Etape 1 : Premier re-découverte
+### Etape 1 : Premier re-découverte
 
 Revenons au tout début de [Solitaire-Play](https://www.solitaire-play.com/).
 Au cours de mes premiers essais, je gérais le clic sur les cartes de façon
@@ -71,7 +71,7 @@ y a fort longtemps, genre "[How JavaScript Event Delegation Works](https://david
 ou "[Utiliser la délégation d'évènements...](https://delicious-insights.com/fr/articles/dix-bonnes-pratiques-javascript/#4-utiliser-la-d-l-gation-d-v-nements-plut-t-que-des-tas-de-gestionnaires-troits)".
 
 
-## Etape 2 : Deuxième re-découverte
+### Etape 2 : Deuxième re-découverte
 
 Les années passent et un jour je tombe sur
 [NanoJS](https://github.com/vladocar/nanoJS/) et je me mets en tête de
@@ -102,7 +102,7 @@ Et c'est là que j'ai re-re-découvert un peu brutalement qu'il y avait un truc
 qui s'appellerait la délégation d'évènements...
 
 
-## Etape 3 : Un peu d'aide
+### Etape 3 : Un peu d'aide
 
 Pffuuuuuuu ! Je cherche comment m'en sortir et je fini par tomber sur le blogue
 de [Jesmo Drazik](http://jesmodrazik.fr/), avec des billets en français très
@@ -136,7 +136,7 @@ function delegate(element, eventType, selector, callback) {
 ```
 
 
-## Etape 4 : Je peux le faire
+### Etape 4 : Je peux le faire
 
 Je passe les détails, mais après beaucoup d'essais, pas mal de lectures et
 quelques âneries, je fini par arriver à remplacer la courte méthode `.on()`
@@ -178,7 +178,7 @@ on: function (type, filter, fn) {
 ```
 
 
-## Etape 5 : Ne pas laisser IE9 de côté
+### Etape 5 : Ne pas laisser IE9 de côté
 
 Malheureusement, la méthode `.matches()` n'existe pas sous IE9. Il faut donc
 passer par un "polyfill" prêt à l'emploi :

@@ -82,23 +82,21 @@ h2 {
   font-size: 1.7rem;
   margin: 1.7rem 0;
 }
-
-h2 a,
-h2 a:visited {
-  color: #c39000;
-}
+h2 a, h2 a:visited { color: #c39000; }
 
 h3 {
   color: #43a047;
   font-size: 1.3rem;
   margin: 1.1rem 0;
 }
+h3 a, h3 a:visited { color: #43a047; }
 
 h4 {
   color: #777;
   font-size: 1.1rem;
   margin: 1.1rem 0;
 }
+h4 a, h4 a:visited { color: #777; }
 
 
 /* Lists

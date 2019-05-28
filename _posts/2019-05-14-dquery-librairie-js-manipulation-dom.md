@@ -13,6 +13,7 @@ de solitaires.
 2. [Une version compatible IE9 / ES5]({% post_url 2019-05-07-dquery-compatibilite-ie9-es5 %})
 3. [Ma librairie pour manipuler le DOM]({% post_url 2019-05-14-dquery-librairie-js-manipulation-dom %})
 4. [La délégation des évènements en JS]({% post_url 2019-05-21-dquery-delegation-evenement-javascript %})
+5. [Délégation d'évènements et « event.target »]({% post_url 2019-05-28-dquery-delegation-evenement-event-target %})
 
 Au cours de mes essais et des évolutions / améliorations apportées à la
 librairie [NanoJS](https://github.com/vladocar/nanoJS/), je me suis accordé un

@@ -43,7 +43,7 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 * [How to delete a file from a repo directly on GitHub – 015](https://saraford.net/2017/01/15/how-to-delete-a-file-from-a-repo-directly-on-github-015/)
 
-* [How to show user documents and other content (readme) at the bottom of your GitHub repo homepage – 016](https://saraford.net)/2017/01/16/how-to-show-user-documents-and-other-content-readme-at-the-bottom-of-your-github-repo-homepage-016/
+* [How to show user documents and other content (readme) at the bottom of your GitHub repo homepage – 016](https://saraford.net/2017/01/16/how-to-show-user-documents-and-other-content-readme-at-the-bottom-of-your-github-repo-homepage-016/)
 
 * [How to switch branches on a repo using the GitHub UI – 017](https://saraford.net/2017/01/17/how-to-switch-branches-on-a-repo-using-the-github-ui-017/)
 
@@ -98,7 +98,7 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 * [How to merge from a remote tracking branch into your local branch in command line – 124](https://saraford.net/2017/05/04/how-to-merge-from-a-remote-tracking-branch-into-your-local-branch-in-command-line-124/)
 
-* [How to git pull to download and merge new changes from remote branch into your local branch via command line – 125](https://saraford.net)/2017/05/05/how-to-git-pull-to-download-and-merge-new-changes-from-remote-branch-into-your-local-branch-via-command-line-125/
+* [How to git pull to download and merge new changes from remote branch into your local branch via command line – 125](https://saraford.net/2017/05/05/how-to-git-pull-to-download-and-merge-new-changes-from-remote-branch-into-your-local-branch-via-command-line-125/)
 
 * [How to view newly added branches on a remote – 126](https://saraford.net/2017/05/06/how-to-view-newly-added-branches-on-a-remote-126/)
 

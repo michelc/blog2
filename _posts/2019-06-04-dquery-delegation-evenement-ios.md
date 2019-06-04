@@ -1,5 +1,5 @@
 ---
-date: 2019-05-28 12:27:44
+date: 2019-06-04 12:37:50
 layout: post
 tags: javascript, jquery
 title: "dQuery - Délégation d'évènements et IOS"

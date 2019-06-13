@@ -78,7 +78,61 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 ### Février
 
-...
+* [How to paste an image directly into an Issue on GitHub – 032](https://saraford.net/2017/02/01/how-to-paste-an-image-directly-into-an-issue-on-github-032/)
+
+* [How to fork a repo on GitHub – 033](https://saraford.net/2017/02/02/how-to-fork-a-repo-on-github-033/)
+
+* [How to create or update a readme from a forked repo on your own repo- 034](https://saraford.net/2017/02/03/how-to-create-or-update-a-readme-from-a-forked-repo-on-your-own-repo-034/)
+
+* [How to submit a pull request to a forked repo whenever you are ready – 035](https://saraford.net/2017/02/04/how-to-submit-a-pull-request-to-a-forked-repo-whenever-you-are-ready-035/)
+
+* [How to turn on word wrap when editing a file on GitHub.com – 036](https://saraford.net/2017/02/05/how-to-turn-on-word-wrap-when-editing-a-file-on-github-com-036/)
+
+* [How to still create a Pull Request for a branch in your forked repo if the recently pushed branches button isn’t showing – 037](https://saraford.net/2017/02/06/how-to-still-create-a-pull-request-for-a-branch-in-your-forked-repo-if-the-recently-pushed-branches-button-isnt-showing-037/)
+
+* [How to setup your GitHub credentials (and handle 2FA) on Windows using GitHub Desktop – 038](https://saraford.net/2017/02/07/how-to-setup-your-github-credentials-and-handle-2fa-on-windows-using-github-desktop-038/)
+
+* [How to use your preferred command line interface from GitHub Desktop – 039](https://saraford.net/2017/02/08/how-to-use-your-preferred-command-line-interface-from-github-desktop-039/)
+
+* [How to clone your forked GitHub repository using via a command line interface – 040](https://saraford.net/2017/02/09/how-to-clone-your-forked-github-repository-using-via-a-command-line-interface-040/)
+
+* [How to create a new branch on your forked GitHub repo via the command line – 041](https://saraford.net/2017/02/10/how-to-create-a-new-branch-on-your-forked-github-repo-via-the-command-line-041/)
+
+* [How to push a new branch to your repo on GitHub via the command line – 042](https://saraford.net/2017/02/11/how-to-push-a-new-branch-to-your-repo-on-github-via-the-command-line-042/)
+
+* [How to link directly to a line of code in a file hosted on GitHub – 043](https://saraford.net/2017/02/12/how-to-link-directly-to-a-line-of-code-in-a-file-hosted-on-github-043/)
+
+* [How to create a pull request for a bug fix on a branch on a forked repo that you’ve pushed to GitHub – 044](https://saraford.net/2017/02/13/how-to-create-a-pull-request-for-a-bug-fix-on-a-branch-on-a-forked-repo-that-youve-pushed-to-github-044/)
+
+* [How to have pull requests added to an Issue’s timeline – 045](https://saraford.net/2017/02/14/how-to-have-pull-requests-added-to-an-issues-timeline-045/)
+
+* [How to automatically close Issue(s) when you push a commit to GitHub – 046](https://saraford.net/2017/02/15/how-to-automatically-close-issues-when-you-push-a-commit-to-github-046/)
+
+* [How to add a license (and choose your own licensing adventure) when you first create a repository on GitHub – 047](https://saraford.net/2017/02/16/how-to-add-a-license-and-choose-your-own-licensing-adventure-when-you-first-create-a-repository-on-github-047/)
+
+* [How to add a license to a repo (and have it be recognized) for an existing GitHub repo – 048](https://saraford.net/2017/02/17/how-to-add-a-license-to-a-repo-and-have-it-be-recognized-for-an-existing-github-repo-048/)
+
+* [How to use Git.io to shorten GitHub URLs and create vanity URLs – 049](https://saraford.net/2017/02/18/how-to-use-git-io-to-shorten-github-urls-and-create-vanity-urls-049/)
+
+* [How to hide your email address in your Git commits but still get contributions to show up on your GitHub profile – 050](https://saraford.net/2017/02/19/how-to-hide-your-email-address-in-your-git-commits-but-still-get-contributions-to-show-up-on-your-github-profile-050/)
+
+* [How to view the name and email that is associated with a commit on GitHub via the web browser – 051](https://saraford.net/2017/02/20/how-to-view-the-name-and-email-that-is-associated-with-a-commit-on-github-via-the-web-browser-051/)
+
+* [How to press ‘y’ to navigate to the permalink for a file’s exact commit ID on GitHub.com – 052](https://saraford.net/2017/02/21/how-to-press-y-to-navigate-to-the-permalink-for-a-files-exact-commit-id-on-github-com-052/)
+
+* [How to find and use different Octocat images from the Octodex – 053](https://saraford.net/2017/02/22/how-to-find-and-use-different-octocat-images-from-the-octodex-053/)
+
+* [How to view diffs of images in a GitHub repo – 054](https://saraford.net/2017/02/23/how-to-view-diffs-of-images-in-a-github-repo-053/)
+
+* [How to view and diff a 3D model hosted on GitHub – 055](https://saraford.net/2017/02/24/how-to-view-and-diff-a-3d-model-hosted-on-github-055/)
+
+* [How to render a CSV and TSV file as an interactive table on GitHub – 056](https://saraford.net/2017/02/25/how-to-render-a-csv-and-tsv-file-as-an-interactive-table-on-github-056/)
+
+* [How to write your repo README in a markup language other than markdown – 057](https://saraford.net/2017/02/26/how-to-write-your-repo-readme-in-a-markup-language-other-than-markdown-057/)
+
+* [How to upload your speaker slides to your GitHub repo – 058](https://saraford.net/2017/02/27/how-to-upload-your-speaker-slides-to-your-github-repo-058/)
+
+* [How to use Blame on GitHub to find the commit that changed that line or block of code – 059](https://saraford.net/2017/02/28/how-to-use-blame-on-github-to-find-the-commit-that-changed-that-line-or-block-of-code-059/)
 
 ### Mars
 

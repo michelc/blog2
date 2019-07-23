@@ -33,17 +33,13 @@ moment d'afficher la popup qui signale la fin d'une partie :
 * c'est plus festif
 
 Mais c'était surtout un bon premier pas pour voir ce qui est faisable en matière
-d'animation de pas web, avec uniquement du CSS.
-
-A l'époque, j'imaginais très bien dans ma tête ce que je voulais obtenir et je
-présumais que cela devait être réalisable en CSS pur.
+d'animation de pas web, avec uniquement du CSS. A l'époque, j'imaginais très bien
+dans ma tête ce que je voulais obtenir et je présumais que cela devait être
+réalisable en CSS pur.
 
 Je ne m'étais pas trompé et il était très facile de faire ça avec uniquement du
-CSS, sans un brin de JavaScript.
-
-Par contre, j'ai eu un peu de mal à trouver un exemple d'animation qui fasse un
-truc ressemblant à ce que je souhaitais.
-
+CSS, sans un brin de JavaScript. Par contre, j'ai eu un peu de mal à trouver un
+exemple d'animation qui fasse un truc ressemblant à ce que je souhaitais. 
 Finalement, j'ai fini par trouver quelque chose d'assez fidèle à ce que j'avais
 en tête sur le site de
 [W3Schools](https://www.w3schools.com/howto/howto_css_shake_image.asp) :)
@@ -64,7 +60,7 @@ en tête sur le site de
 }
 ```
 
-Si je décortique ce code 'et que j'ai bien tout compris au système', voici ce à
+Si je décortique ce code (et que j'ai bien tout compris au système), voici ce à
 quoi ça sert :
 
 * L'animation est définie grâce à une règle CSS
@@ -97,9 +93,30 @@ appliquer 2 fonctions de transformation :
 * [rotate()](https://developer.mozilla.org/fr/docs/Web/CSS/transform-function/rotate)
   pour faire tourner la popup d'un petit degré dans un sens ou dans l'autre.
 
-Je pense que j'ai à peu près compris le truc, et que ça doit être plus ou moins
-çà. Quoiqu'il en soit, le résultat une fois mis en production me va très bien
-et ça fait maintenant plusieurs mois que ça tourne sans que je m'en sois lassé.
+Ca c'était pour la partie définition / description de l'animation. Il faut ensuite
+appliquer cette animation à un élément du DOM, en l'occurence la fenêtre popup que
+j'affiche à la fin d'une partie de solitaire.
+
+Pour faire ça, c'est super facile. Il suffit d'ajouter une propriété `animation` aux
+règles CSS de ma fenêtre :
+
+```
+#popup {
+  ...
+  animation: shake 0.5s;
+  ...
+}
+```
+
+Cette règle comprend 2 arguments :
+
+* `shake` : le nom de l'animation à appliquer
+* `0.5s` : la durée totale de l'animation
+
+Au final, je pense que j'ai à peu près compris le truc, et que ça doit être plus
+ou moins çà. Quoiqu'il en soit, le résultat une fois mis en production me va très
+bien et ça fait maintenant plusieurs mois que ça tourne sans que je m'en sois 
+lassé.
 
 Il faudrait peut-être que j'utilise les versions préfixées `-o-transform`,
 `-moz-transform`, `-webkit-transform` ... pour que cela fonctionne avec les

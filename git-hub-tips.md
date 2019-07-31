@@ -13,17 +13,17 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 ### Janvier
 
-* [How to see the language percentage breakdown of a repository – #001](https://saraford.net/2017/01/01/how-to-see-the-language-percentage-breakdown-of-a-repo-001/)
+* [How to see the language percentage breakdown of a repository – 001](https://saraford.net/2017/01/01/how-to-see-the-language-percentage-breakdown-of-a-repo-001/)
 
-* [How to add a new file directly from the repo UI itself – #002](https://saraford.net/2017/01/02/how-to-add-a-new-file-directly-from-the-repo-ui-itself-002/)
+* [How to add a new file directly from the repo UI itself – 002](https://saraford.net/2017/01/02/how-to-add-a-new-file-directly-from-the-repo-ui-itself-002/)
 
-* [How to add a Readme to a newly created repo if you forgot to check the Readme box – #003](https://saraford.net/2017/01/03/how-to-add-a-readme-to-a-newly-created-repo-if-you-forgot-to-check-the-readme-box-003/)
+* [How to add a Readme to a newly created repo if you forgot to check the Readme box – 003](https://saraford.net/2017/01/03/how-to-add-a-readme-to-a-newly-created-repo-if-you-forgot-to-check-the-readme-box-003/)
 
-* [How to edit a file directly from the GitHub repository UI – #004](https://saraford.net/2017/01/04/how-to-edit-a-file-from-the-github-repo-ui-004/)
+* [How to edit a file directly from the GitHub repository UI – 004](https://saraford.net/2017/01/04/how-to-edit-a-file-from-the-github-repo-ui-004/)
 
-* [How to have the preview render markdown instead of plain text – #005](https://saraford.net/2017/01/05/how-to-have-the-preview-render-markdown-instead-of-plain-text-005/)
+* [How to have the preview render markdown instead of plain text – 005](https://saraford.net/2017/01/05/how-to-have-the-preview-render-markdown-instead-of-plain-text-005/)
 
-* [How to add a new folder from the repo UI–#006](https://saraford.net/2017/01/06/how-to-add-a-new-folder-from-the-repo-ui-006/)
+* [How to add a new folder from the repo UI – 006](https://saraford.net/2017/01/06/how-to-add-a-new-folder-from-the-repo-ui-006/)
 
 * [How to commit an optional extended description from command line (Git Bash) – 007](https://saraford.net/2017/01/07/how-to-commit-an-optional-extended-description-from-command-line-git-bash-007/)
 
@@ -75,14 +75,13 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 * [How to view the diff of a markdown (.md) file as its rendered content – 031](https://saraford.net/2017/01/31/how-to-view-the-diff-of-a-markdown-md-file-as-its-rendered-content-031/)
 
-
 ### Février
 
 * [How to paste an image directly into an Issue on GitHub – 032](https://saraford.net/2017/02/01/how-to-paste-an-image-directly-into-an-issue-on-github-032/)
 
 * [How to fork a repo on GitHub – 033](https://saraford.net/2017/02/02/how-to-fork-a-repo-on-github-033/)
 
-* [How to create or update a readme from a forked repo on your own repo- 034](https://saraford.net/2017/02/03/how-to-create-or-update-a-readme-from-a-forked-repo-on-your-own-repo-034/)
+* [How to create or update a readme from a forked repo on your own repo – 034](https://saraford.net/2017/02/03/how-to-create-or-update-a-readme-from-a-forked-repo-on-your-own-repo-034/)
 
 * [How to submit a pull request to a forked repo whenever you are ready – 035](https://saraford.net/2017/02/04/how-to-submit-a-pull-request-to-a-forked-repo-whenever-you-are-ready-035/)
 
@@ -136,11 +135,129 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 ### Mars
 
-...
+* [How to clone a public GitHub repository without signing into GitHub from Visual Studio – 060](https://saraford.net/2017/03/01/how-to-clone-a-public-github-repository-without-signing-into-github-from-visual-studio-060/)
+
+* [How to change the default local location for your Git repos in Team Explorer – 061](https://saraford.net/2017/03/02/how-to-change-the-default-local-location-for-your-git-repos-in-team-explorer-061/)
+
+* [How to create your own local Git remote repo that’s not hosted on a Git server (–bare option) – 062](https://saraford.net/2017/03/03/how-to-create-your-own-local-git-remote-repo-thats-not-hosted-on-a-git-server-bare-option-062/)
+
+* [How to interpret the blue pad lock icon when using Git in Solution Explorer – 063](https://saraford.net/2017/03/04/how-to-interpret-the-blue-pad-lock-icon-when-using-git-in-solution-explorer-063/)
+
+* [How to view changes to your working directory in Visual Studio (and via command line) – 064](https://saraford.net/2017/03/05/how-to-view-changes-to-your-working-directory-in-visual-studio-and-via-command-line-064/)
+
+* [How to review changes in a pull request without switching branches in Visual Studio – 065](https://saraford.net/2017/03/06/how-to-review-changes-in-a-pull-request-without-switching-branches-in-visual-studio-065/)
+
+* [How to use the GitHub tool window to make changes to a Pull Request from a contributor in Visual Studio – 066](https://saraford.net/2017/03/07/how-to-use-the-github-tool-window-to-make-changes-to-a-pull-request-from-a-contributor-in-visual-studio-066/)
+
+* [How to make quick edits in the diff view in Visual Studio – 067](https://saraford.net/2017/03/08/how-to-make-quick-edits-in-the-diff-view-in-visual-studio-065/)
+
+* [How to stage changes in Visual Studio in separate files – 068](https://saraford.net/2017/03/09/how-to-stage-changes-in-visual-studio-in-separate-files-066/)
+
+* [How to stage multiple changes within same file using Visual Studio – 069](https://saraford.net/2017/03/10/how-to-stage-multiple-changes-within-same-file-using-visual-studio-069/)
+
+* [How to undo all the changes to a specific file in your working directory using Visual Studio – 070](https://saraford.net/2017/03/11/how-to-undo-all-the-changes-to-a-specific-file-in-your-working-directory-using-visual-studio-070/)
+
+* [How to undo changes to a file that has been staged in Visual Studio – 071](https://saraford.net/2017/03/12/how-to-undo-changes-to-a-file-that-has-been-staged-in-visual-studio-071/)
+
+* [How not to quit your career when Git opens a vi editor – 072](https://saraford.net/2017/03/13/how-not-to-quit-your-career-when-git-opens-a-vi-editor-072/)
+
+* [How to amend your most recent commit message on your local repo from the command line – 073](https://saraford.net/2017/03/14/how-to-amend-your-most-recent-commit-message-on-your-local-repo-from-the-command-line-073/)
+
+* [How to amend changes to your code in your most recent commit – 074](https://saraford.net/2017/03/15/how-to-amend-changes-to-your-code-in-your-most-recent-commit-074/)
+
+* [How to open files in a repo that doesn’t contain a solution in Visual Studio 2015 – 075](https://saraford.net/2017/03/16/how-to-open-files-in-a-repo-that-doesnt-contain-a-solution-in-visual-studio-2015-075/)
+
+* [How to view a git log graph from the command line that looks like Visual Studio View History – 076](https://saraford.net/2017/03/17/how-to-view-a-git-log-graph-from-the-command-line-that-looks-like-visual-studio-view-history-076/)
+
+* [How to use `git log –first-parent` to only view commits that happened on a given branch – 077](https://saraford.net/2017/03/18/how-to-use-git-log-first-parent-to-only-view-commits-that-happened-on-a-given-branch-077/)
+
+* [How to use the arrows in the View History graphs in Visual Studio – 078](https://saraford.net/2017/03/19/how-to-use-the-arrows-in-the-view-history-graphs-in-visual-studio-078/)
+
+* [How to open a GitHub repo that does not contain a solution in Visual Studio 2017 – 079](https://saraford.net/2017/03/20/how-to-open-a-github-repo-that-does-not-contain-a-solution-in-visual-studio-2017-079/)
+
+* [How to find when a line was last changed in Visual Studio – 080](https://saraford.net/2017/03/21/how-to-find-when-a-line-was-last-changed-in-visual-studio-080/)
+
+* [How to demystify Git commands using Visualizing Git – 081](https://saraford.net/2017/03/22/how-to-demystify-git-commands-using-visualizing-git/)
+
+* [How to fix the "oh no! I’ve accidentally committed on master instead of a branch" – 082](https://saraford.net/2017/03/23/how-to-fix-the-oh-no-ive-accidentally-committed-on-master-instead-of-a-branch-082/)
+
+* [How to use the VS status bar buttons as a shortcut to Team Explorer panes – 083](https://saraford.net/2017/03/24/how-to-use-the-vs-status-bar-buttons-as-a-shortcut-to-team-explorer-panes-083/)
+
+* [How to use git revert to undo a previous commit – 084](https://saraford.net/2017/03/25/how-to-use-git-revert-to-undo-a-previous-commit-084/)
+
+* [How to revert changes in Visual Studio – 085](https://saraford.net/2017/03/26/how-to-revert-changes-in-visual-studio-085/)
+
+* [How to write a Bash or PowerShell script to quickly create test repos – 086](https://saraford.net/2017/03/27/how-to-write-a-bash-or-powershell-script-to-quickly-create-test-repos-086/)
+
+* [How to recover from the "oh no! I did a git reset and now my files are gone!" – 087](https://saraford.net/2017/03/28/how-to-recover-from-the-oh-no-i-did-a-git-reset-and-now-my-files-are-gone-087/)
+
+* [How to create a branch in Visual Studio – 088](https://saraford.net/2017/03/29/how-to-create-a-branch-in-visual-studio-088/)
+
+* [How to commit and visualize code on different branches in Visual Studio – 089](https://saraford.net/2017/03/30/how-to-commit-and-visualize-code-on-different-branches-in-visual-studio-089/)
+
+* [How to fix the "I’ve started making changes on master. How do I get those to another branch?" using Visual Studio – 090](https://saraford.net/2017/03/31/how-to-fix-the-ive-started-making-changes-on-master-how-do-i-get-those-to-another-branch-using-visual-studio-090/)
 
 ### Avril
 
-...
+* [Should I read anything on the Internet on April 1? – 091](https://saraford.net/2017/04/01/should-i-read-anything-on-the-internet-on-april-1-091/)
+
+* [How to do a fast forward merge in Visual Studio – 092](https://saraford.net/2017/04/02/how-to-do-a-fast-forward-merge-in-visual-studio-092/)
+
+* [How to do a non-fast forward merge in Visual Studio – 093](https://saraford.net/2017/04/03/how-to-do-a-non-fast-forward-merge-in-visual-studio-093/)
+
+* [How to not quit your career when Git (via Visual Studio) adds <<<< HEAD into your code – 094](https://saraford.net/2017/04/04/how-to-not-quit-your-career-when-visual-studio-adds-head-into-your-code-094/)
+
+* [How to practice getting into and out of a detached HEAD state – 095](https://saraford.net/2017/04/05/how-to-practice-getting-into-and-out-of-a-detached-head-state-095/)
+
+* [How to practice getting into and out of a detached HEAD state via command line – 096](https://saraford.net/2017/04/06/how-to-practice-getting-into-and-out-of-a-detached-head-state-via-command-line-096/)
+
+* [How to think about what the HEAD thingy actually is in Git – 097](https://saraford.net/2017/04/07/how-to-think-about-what-the-head-thingy-actually-is-in-git-097/)
+
+* [How to make a commit in a detached HEAD state – 098](https://saraford.net/2017/04/08/how-to-make-a-commit-in-a-detached-head-state-098/)
+
+* [How to stay cool when Debug – Start is disabled and Select Startup Item is shown instead in VS 2017 – 099](https://saraford.net/2017/04/09/how-to-stay-cool-when-debug-start-is-disabled-and-select-startup-item-is-shown-instead-in-vs-2017-099/)
+
+* [How to fix the oh no! I committed on master from within Visual Studio – 100](https://saraford.net/2017/04/10/how-to-fix-the-oh-no-i-committed-on-master-from-within-visual-studio-100/)
+
+* [How to know that a merge creates a git commit whereas a fast-forward does not – 101](https://saraford.net/2017/04/11/how-to-know-that-a-merge-creates-a-git-commit-whereas-a-fast-forward-does-not-101/)
+
+* [How to practice not freaking out when you see (master|MERGING) by using git merge –abort – 102](https://saraford.net/2017/04/12/how-to-practice-not-freaking-out-when-you-see-mastermerging-by-using-abort-102/)
+
+* [How to manually commit your own merge commit – 103](https://saraford.net/2017/04/13/how-to-manually-commit-your-own-merge-commit-103/)
+
+* [How to configure an external diff and merge tool in Git – 104](https://saraford.net/2017/04/14/how-to-configure-an-external-diff-and-merge-tool-in-git-104/)
+
+* [How to use Visual Studio as your external Git difftool – 105](https://saraford.net/2017/04/15/how-to-use-visual-studio-as-your-external-git-difftool-105/)
+
+* [How to use Visual Studio as your external merge tool – 106](https://saraford.net/2017/04/16/how-to-use-visual-studio-as-your-external-merge-tool-106/)
+
+* [How to diff a file between two branches using VS as your difftool – 107](https://saraford.net/2017/04/17/how-to-diff-a-file-between-two-branches-using-vs-as-your-difftool-107/)
+
+* [How to know what the capitalized letter means in [Y/n] – 108](https://saraford.net/2017/04/18/how-to-know-what-the-capitalized-letter-means-in-yn-108/)
+
+* [How to add Git Bash to your Visual Studio menu – 109](https://saraford.net/2017/04/19/how-to-add-git-bash-to-your-visual-studio-menu-109/)
+
+* [How to add a custom Git command to your Visual Studio menu – 110](https://saraford.net/2017/04/20/how-to-add-a-custom-git-command-to-your-visual-studio-menu-110/)
+
+* [How to visualize a rebase in the Git Visualization tool – 111](https://saraford.net/2017/04/21/how-to-visualize-a-rebase-in-the-git-visualization-tool-111/)
+
+* [How to practice a rebase on the command line – 112](https://saraford.net/2017/04/22/how-to-practice-a-rebase-on-the-command-line-112/)
+
+* [How to understand the "current branch is up-to-date" error when rebasing – 113](https://saraford.net/2017/04/23/how-to-understand-the-current-branch-is-up-to-date-error-when-rebasing-113/)
+
+* [How to do a rebase in Visual Studio – 114](https://saraford.net/2017/04/24/how-to-do-a-rebase-in-visual-studio-114/)
+
+* [How to resolve a conflict during a rebase in Visual Studio – 115](https://saraford.net/2017/04/25/how-to-resolve-a-conflict-during-a-rebase-in-visual-studio-115/)
+
+* [How to create a local copy of a remote branch in Visual Studio – 116](https://saraford.net/2017/04/26/how-to-create-a-local-copy-of-a-remote-branch-in-visual-studio-116/)
+
+* [How to download changes from a remote branch (e.g. GitHub) into your local branch in Visual Studio – 117](https://saraford.net/2017/04/27/how-to-download-changes-from-a-remote-branch-e-g-github-into-your-local-branch-in-visual-studio-117/)
+
+* [How to download and merge commits from a remote branch on your local branch – 118](https://saraford.net/2017/04/28/how-to-download-and-merge-commits-from-a-remote-branch-on-your-local-branch-118/)
+
+* [How to deal with a merge conflict when doing a Pull from a remote branch into a local branch in Visual Studio – 119](https://saraford.net/2017/04/29/how-to-deal-with-a-merge-conflict-when-doing-a-pull-from-a-remote-branch-into-a-local-branch-in-visual-studio-119/)
+
+* [How to view your branches from the command line – 120](https://saraford.net/2017/04/30/how-to-view-your-branches-from-the-command-line-120/)
 
 ### Mai
 

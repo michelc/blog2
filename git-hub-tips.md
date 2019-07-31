@@ -221,7 +221,7 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 * [How to know that a merge creates a git commit whereas a fast-forward does not – 101](https://saraford.net/2017/04/11/how-to-know-that-a-merge-creates-a-git-commit-whereas-a-fast-forward-does-not-101/)
 
-* [How to practice not freaking out when you see (master|MERGING) by using git merge –abort – 102](https://saraford.net/2017/04/12/how-to-practice-not-freaking-out-when-you-see-mastermerging-by-using-abort-102/)
+* [How to practice not freaking out when you see \(master\|MERGING\) by using git merge –abort – 102](https://saraford.net/2017/04/12/how-to-practice-not-freaking-out-when-you-see-mastermerging-by-using-abort-102/)
 
 * [How to manually commit your own merge commit – 103](https://saraford.net/2017/04/13/how-to-manually-commit-your-own-merge-commit-103/)
 

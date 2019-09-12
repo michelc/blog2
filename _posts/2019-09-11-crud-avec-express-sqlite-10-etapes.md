@@ -1228,7 +1228,7 @@ app.post("/create", (req, res) => {
 ## 9. Supprimer une fiche
 
 
-### Les vues "delete.ejs" et "_diplay.ejs"
+### Les vues "delete.ejs" et "_display.ejs"
 
 La vue principale pour pouvoir supprimer une fiche doit en premier lieu afficher
 les informations du livre sélectionné pour permettre à l'utilisateur de

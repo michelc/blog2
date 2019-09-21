@@ -12,7 +12,7 @@ apprendre comment :
 * Gérer la mise à jour d'une base de données SQL (PostgreSQL en l'occurence).
 
 <figure>
-  <img src="./../public/2019/elephant-bookshelf.jpg" alt="elephant-bookshelf" />
+  <img src="/public/2019/elephant-bookshelf.jpg" alt="elephant-bookshelf" />
   <figcaption>An elephant in the room with book shelves - Victor Zastolskiy</figcaption>
 </figure>
 

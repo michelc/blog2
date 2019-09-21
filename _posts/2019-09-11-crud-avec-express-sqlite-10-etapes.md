@@ -1,7 +1,7 @@
 ---
 date: 2019-09-11 12:14:22
 layout: post
-tags: CSS
+tags: javascript, node, sql
 title: "Application CRUD avec Express et SQlite en 10 étapes"
 ---
 
@@ -33,6 +33,11 @@ Pour l'instant, il n'y a pas de site de démonstration du projet terminé. Je n'
 pas (encore) trouvé de solution facile pour l'héberger (surtout avec une base de
 données SQlite). Je ferai peut-être un autre tutoriel le jour où je m'attaquerai
 à ce problème.
+
+Note : J'ai depuis rédigé un deuxième tutoriel qui reprend exactement celui-ci,
+mais en se connectant à une base de données PostgreSQL à la place : [Application
+CRUD avec Express et PostgreSQL en 10
+étapes]({% post_url 2019-09-21-crud-avec-express-postgresql-10-etapes %}).
 
 **Sommaire**
 
@@ -103,7 +108,7 @@ Wrote to E:\Code\AppTest\package.json:
 {
   "name": "AppTest",
   "version": "1.0.0",
-  "description": "Application CRUD avec Express et SQlite en 10 étapes",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -167,7 +172,7 @@ section "dependencies" qui enregistre la liste des dépendances du projet :
 {
   "name": "AppTest",
   "version": "1.0.0",
-  "description": "Application CRUD avec Express et SQlite en 10 étapes",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -355,7 +360,7 @@ Ce qui donne (sans oublier la virgule en bout de ligne) :
 {
   "name": "AppTest",
   "version": "1.0.0",
-  "description": "Application CRUD avec Express et SQlite en 10 étapes",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -412,7 +417,7 @@ Note : Ces trois fichiers doivent être enregistrés dans un dossier "views" qui
 doit donc être créé en premier lieu.
 
 
-### Vue partielle "_header.ejs"
+### Vue partielle "views/_header.ejs"
 
 ```
 <!doctype html>
@@ -446,7 +451,7 @@ doit donc être créé en premier lieu.
 ```
 
 
-### Vue "index.ejs"
+### Vue "views/index.ejs"
 
 ```
 <%- include("_header") -%>
@@ -457,7 +462,7 @@ doit donc être créé en premier lieu.
 ```
 
 
-### Vue partielle "_header.ejs"
+### Vue partielle "views/_footer_.ejs"
 
 ```
     <footer>
@@ -526,7 +531,9 @@ Note : Il n'y a pas besoin d'installer auparavant le module `path` par NPM,
 parce que c'est un module standard de Node JS.
 
 * Indiquer que les fichiers statiques sont enregistrés dans le dossier "public"
-et ses sous-répertoires.
+et ses sous-répertoires. C'est un paramétrage qui est nécessaire pour que le
+fichier "bootstrap.min.css" copié précédemment dans "public/css" soit
+accessible.
 
 ```
 app.use(express.static(path.join(__dirname, "public")));
@@ -907,8 +914,8 @@ initiales pour les noms des colonnes.
 
 Maintenant que la méthode pour afficher la liste des livres fonctionne, on va
 améliorer la présentation de ces données. La vue de l'étape précédente utilisait
-une simple liste "ul / li" pour afficher les livres. Le code de cette vue va
-être totalement modifié pour employer une table HTML.
+une simple liste "ul / li" pour afficher les livres. Le code de cette vue
+"livres.ejs" va être totalement modifié pour employer une table HTML.
 
 ```
 <%- include("_header") -%>
@@ -970,7 +977,7 @@ l'utilisateur validera les modifications apportées via le bouton [Modifier] en
 bas du formulaire de saisie.
 
 
-### Les vues "edit.ejs" et "_editor.ejs"
+### Les vues "views/edit.ejs" et "views/_editor.ejs"
 
 La vue principale pour pouvoir modifier une fiche est un formulaire Bootstrap
 assez classique.
@@ -1040,8 +1047,10 @@ l'objet `Request` du framework Express, dans la liste de ses paramètres :
 On peut alors faire une requête "SELECT ..." pour obtenir la fiche correspondant
 à cet identifiant. Cette requête est exécutée via la méthode `db.get()` de
 SQlite3 qui renvoie un seul résultat et qu'il est donc plus pratique d'utiliser
-que la méthode `db.all()` lorsqu'on fait un SELECT par identifiant. Lorsque la
-requête est terminé, la fonction callback peut à son tour transmettre le
+que la méthode `db.all()` lorsqu'on fait un SELECT par identifiant. Dans ce cas,
+on passe en 2° paramètre l'identifiant du livre à afficher parce qu'on a utilisé
+une requête paramétrée (via le "... = ?") pour éviter l'injection SQL. Lorsque
+la requête est terminée, la fonction callback peut à son tour transmettre le
 résultat obtenu à la vue.
 
 ```
@@ -1134,7 +1143,7 @@ place, mais ce n'est plus utile depuis la version 4.1.6 de Express.
 ## 8. Créer une nouvelle fiche
 
 
-### La vue "create.ejs"
+### La vue "views/create.ejs"
 
 La vue principale pour enregistrer un nouveau livre ressemble beaucoup à la vue
 codée pour modifier une fiche. Comme elle, elle fait appel à la vue partielle
@@ -1228,7 +1237,7 @@ app.post("/create", (req, res) => {
 ## 9. Supprimer une fiche
 
 
-### Les vues "delete.ejs" et "_diplay.ejs"
+### Les vues "views/delete.ejs" et "views/_diplay.ejs"
 
 La vue principale pour pouvoir supprimer une fiche doit en premier lieu afficher
 les informations du livre sélectionné pour permettre à l'utilisateur de

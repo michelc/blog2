@@ -402,7 +402,7 @@ toujours aussi court et simple :
 
 ```
 // Vanilla JS table filter
-// Source: https://blog.pagesd.info/posts/2019-09-30-rechercher-filtrer-table-vanilla-js.md
+// Source: https://blog.pagesd.info/2019/09/30/rechercher-filtrer-table-javascript/
 
 (function () {
   "use strict";

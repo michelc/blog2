@@ -5,6 +5,13 @@ tags: javascript, jquery
 title: "Rechercher et filtrer une table en JavaScript"
 ---
 
+<div class="encart">
+
+English version: [Search and filter a table with JavaScript]({% post_url
+2019-10-01-search-filter-table-javascript %}).
+
+</div>
+
 Il y a quelque temps, j'ai eu besoin de proposer une recherche simple dans un
 tableau. Normalement, je préfère le bon vieux `Ctrl+F` mais ça ne plaît pas à
 tout le monde (et aussi le but était plus de limiter l'affichage aux seules
@@ -355,7 +362,7 @@ balise correspondant à cet attribut, soit `<span id="count">...</span>` dans
 l'exemple ci-dessous :
 
 ```
-<h2>Liste des livres (<span id="count"><%= Model.Livres.Count %></span>)
+<h2>Liste des livres (<span id="count"><%= model.length %></span>)
 <p>
   Filtrer : <input type="text" class="table-filter" data-table=".livres" data-count="#count">
 </p>

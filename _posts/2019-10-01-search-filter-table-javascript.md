@@ -7,7 +7,7 @@ title: "Search and filter a table with JavaScript"
 
 <div class="encart">
 
-Version en français : [Rechercher et filtrer une table en JavaScript]({% post_url 2019-09-30-rechercher-filtrer-table-javascript %}).
+Version en français : [Rechercher et filtrer une table en JavaScript](https://blog.pagesd.info/2019/09/30/rechercher-filtrer-table-javascript/).
 
 </div>
 
@@ -21,7 +21,7 @@ and found a very simple and easily understandable example with a demonstration
 on [codepen.io](https://codepen.io/priyankamalviya/pen/zzWZEa).
 
 
-## The original script
+### The original script
 
 First of all, the script as developed by
 [Priyanka Malviya](https://twitter.com/priyankamalvi18) before explaining what

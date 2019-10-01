@@ -7,8 +7,7 @@ title: "Search and filter a table with JavaScript"
 
 <div class="encart">
 
-Version en français : [Rechercher et filtrer une table en JavaScript]({%
-post_url 2019-09-30-rechercher-filtrer-table-javascript %}).
+Version en français : [Rechercher et filtrer une table en JavaScript]({% post_url 2019-09-30-rechercher-filtrer-table-javascript %}).
 
 </div>
 

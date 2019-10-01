@@ -5,11 +5,8 @@ tags: javascript, jquery
 title: "Search and filter a table with JavaScript"
 ---
 
-<div class="encart">
-
-Version en français : [Rechercher et filtrer une table en JavaScript](https://blog.pagesd.info/2019/09/30/rechercher-filtrer-table-javascript/).
-
-</div>
+{:.encart}
+Version en français : [Rechercher et filtrer une table en JavaScript]({% post_url 2019-09-30-rechercher-filtrer-table-javascript %}).
 
 Some time ago, I needed to propose a simple search in a table. Normally, I
 prefer the good old `Ctrl+F` but not everyone likes it (and also the goal was

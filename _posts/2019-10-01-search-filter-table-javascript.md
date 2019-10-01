@@ -257,7 +257,7 @@ function dquery(selector) {
 ```
 
 Note: This is copy/paste from my JavaScript mini-library
-[dQuery]({% post_url 2019-04-30-dquery-replace-jquery %}) (post in french).
+[dQuery]({% post_url 2019-04-30-dquery-remplacer-jquery %}) (post in french).
 
 Then I was able to change the way the relevant input fields were selected:
 

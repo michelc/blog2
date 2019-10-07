@@ -178,7 +178,8 @@ J'ai pour habitude de mettre les mots-clés SQL en majucule et les noms de
 tables, colonnes, vues, séquences... en PascalCase.
 
 Ca marche très bien en C# avec ADO.NET / Dapper. En Ruby, je n'ai pas eu de
-problèmes (sans doute parce que j'ai toujours utilisé DataMapper ou Sequelize).
+problèmes (sans doute parce que j'ai toujours utilisé
+[DataMapper](https://datamapper.org/) ou [Sequel](https://sequel.jeremyevans.net/)).
 Mais en JavaScript ça devient embêtant vu qu'il est très sensitif sur la casse.
 
 Donc, dans les 2 tutoriels, j'avais créé une table de test de la façon suivante :

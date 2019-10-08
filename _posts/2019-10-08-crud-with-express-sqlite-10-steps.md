@@ -605,7 +605,7 @@ app.get("/data", (req, res) => {
 
 <a id="crud6"></a>
 
-## First steps with the SQlite3 module
+## 6. First steps with the SQlite3 module
 
 Note: If this had not been done at the beginning of the project, it would have been necessary to install the SQlite3 module by an `npm install sqlite3` to be able to access a SQlite database under Node.
 
@@ -682,7 +682,7 @@ db.run(sql_create, err => {
 });
 ```
 
-This code uses the `.run ()` method of the `Database` object fom the SQlite3 module. This method executes the SQL query that is passed to it in 1st parameter then calls the callback function corresponding to the 2nd parameter, by passing it an object `err` to be able to check if the execution of the request was proceeded correctly.
+This code uses the `.run()` method of the `Database` object fom the SQlite3 module. This method executes the SQL query that is passed to it in 1st parameter then calls the callback function corresponding to the 2nd parameter, by passing it an object `err` to be able to check if the execution of the request was proceeded correctly.
 
 Note: The table will only be created if it does not exist yet, thanks to the SQL clause "IF NOT EXISTS". It wouldn't be great for a real application, right now it's just a tutorial.
 
@@ -719,8 +719,6 @@ If we don't have a SQlite client, it can be done in JavaScript, just after creat
 Normally, it is not necessary to define identifiers during INSERTs, but in this case, it prevents the data from being re-inserted each time the server starts.
 
 The first time, the console displays "Successful creation of 3 books" and the following times the error "SQLITE_CONSTRAINT: UNIQUE constraint failed: Books.Book_ID" since all 3 lines already exist.
-
-The first time, the console displays "Successful creation of 3 books" and the following times the error "SQLITE_CONSTRAINT: UNIQUE constraint failed: Books.Book_ID" since the 3 lines already exist.
 
 Now, the "Books" table contains the following 3 lines:
 
@@ -775,7 +773,7 @@ To display this list of books, we can firts create a view "books.ejs" in the fol
 
 After restarting the application with `npm start`, the following result is obtained by clicking on the "Books" menu:
 
-![List of books](/public/2019/crud-05-list.png))
+![List of books](/public/2019/crud-05-list.png)
 
 Note: Be careful and write "book.Title" and not "book.title" because the "Books" table was created using capital letters as initials for column names.
 

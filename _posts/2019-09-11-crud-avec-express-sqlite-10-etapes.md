@@ -5,6 +5,9 @@ tags: javascript, node, sql
 title: "Application CRUD avec Express et SQlite en 10 étapes"
 ---
 
+{:.encart}
+English version: [CRUD application with Express and SQlite in 10 steps]({% post_url 2019-10-08-crud-with-express-sqlite-10-steps %}).
+
 Le but de ce projet ultra simple est de développer une application Node JS pour
 apprendre comment :
 

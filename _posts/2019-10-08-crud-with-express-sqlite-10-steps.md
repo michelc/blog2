@@ -14,7 +14,7 @@ The goal of this very simple project is to develop a Node JS application to lear
 * Manage an SQL database (SQlite in this case).
 
 <figure>
-  <img src="https://blog.pagesd.info/public/2019/library-bookshelf.jpg" alt="library-bookshelf" />
+  <img src="/public/2019/library-bookshelf.jpg" alt="library-bookshelf" />
   <figcaption>
     <a href="https://www.flickr.com/photos/opengridscheduler/22468805072">Library Bookshelf - Open Grid Scheduler</a>
   </figcaption>
@@ -25,6 +25,8 @@ This post is only a tutorial to understand how it works and to have a starting p
 The final JavaScript code is visible in the appendix at the end of the post. The complete code of the application (in french) is available on [GitHub](https://github.com/michelc/AppTest).
 
 At the moment, there is no demonstration site for the completed project. I have not (yet) found an easy solution to host it (especially with an SQlite database). Maybe I'll do another tutorial the day I deal with this problem.
+
+Note: I have since written a second tutorial like this one, but by connecting to a PostgreSQL database instead: CRUD application with Express and PostgreSQL in 10 steps]({% post_url 2019-10-15-crud-with-express-postgres-10-steps %}).
 
 
 **Table of Contents**
@@ -228,7 +230,7 @@ All we have to do now is check that it really works:
 
 The message "Hello world..." should appear as below:
 
-![Home page to test...](https://blog.pagesd.info/public/2019/crud-01-test.png)
+![Home page to test...](/public/2019/crud-01-test.png)
 
 It's OK => stop the server by typing Ctrl+C in the Visual Code terminal.
 
@@ -484,7 +486,7 @@ app.get("/", (req, res) => { {
 * Navigate to "http://localhost:3000/" with Chrome
 * The following page should appear:
 
-![Home page with the "index.ejs" view](https://blog.pagesd.info/public/2019/crud-02-vues.png)
+![Home page with the "index.ejs" view](/public/2019/crud-02-vues.png)
 
 
 ### Add the "/about" path
@@ -518,7 +520,7 @@ app.get("/about", (req, res) => {
 
 * Click on the "About" menu, which gives you:
 
-![About page with the "about.ejs" view](https://blog.pagesd.info/public/2019/crud-03-about.png)
+![About page with the "about.ejs" view](/public/2019/crud-03-about.png)
 
 
 ### Send data from the server to the view
@@ -559,7 +561,7 @@ Note: The purpose of this tutorial is not too much to explain how EJS works. I c
 
 And now, when you navigate to "http://localhost:3000/data" after restarting the site, you get:
 
-![Data sent to the view](https://blog.pagesd.info/public/2019/crud-04-data.png)
+![Data sent to the view](/public/2019/crud-04-data.png)
 
 
 ### The updated "index.js" file
@@ -820,7 +822,7 @@ Now that the method for displaying the list of books works, we will improve the 
 
 There you go! Ctrl+C if necessary, `npm start` and then navigate to the URL "http://localhost:3000/books" to have a real Bootstrap table.
 
-[Books in table form](/public/2019/crud-06-table.png)
+![Books in table form](/public/2019/crud-06-table.png)
 
 The advantage of this new view is to provide [Add], [Edit] and [Delete] buttons to update the Books table, which is essential for the rest of the tutorial.
 
@@ -907,7 +909,7 @@ app.get("/edit/:id", (req, res) => {
 
 After restarting the server, here is the input form that now appears when the user clicks an [Edit] button in the book list:
 
-[Book updating form](/public/2019/crud-07-edit.png)
+![Book updating form](/public/2019/crud-07-edit.png)
 
 
 ### The POST /edit/xxx route
@@ -1013,7 +1015,7 @@ app.get("/create", (req, res) => {
 
 As can be seen below, the entry form for adding a new book is quite similar to the one for updating a record. This is one of the advantages of the partial view "_editor.ejs".
 
-[Book creation form](/public/2019/crud-08-create.png)
+![Book creation form](/public/2019/crud-08-create.png)
 
 
 ### The POST /create route
@@ -1114,7 +1116,7 @@ app.get("/delete/:id", (req, res) => {
 
 The user interface is quite similar to the usual input form. Ironically enough, the three input fields are in fact not selectable (and therefore grayed out according to Bootstrap conventions):
 
-[Book delete form](/public/2019/crud-09-delete.png)
+![Book delete form](/public/2019/crud-09-delete.png)
 
 
 ### The POST /delete/xxx route

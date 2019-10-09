@@ -465,7 +465,7 @@ doit donc être créé en premier lieu.
 ```
 
 
-### Vue partielle "views/_footer_.ejs"
+### Vue partielle "views/_footer.ejs"
 
 ```
     <footer>
@@ -858,7 +858,7 @@ alors transmettre ces résultats à la vue.
 
 ```
 app.get("/livres", (req, res) => {
-  const sql = "SELECT * FROM Livres ORDER BY Titre"
+  const sql = "SELECT * FROM Livres ORDER BY Titre";
   db.all(sql, [], (err, rows) => {
     if (err) {
       return console.error(err.message);

@@ -5,6 +5,9 @@ tags: javascript, node, sql
 title: "Application CRUD avec Express et PostgreSQL en 10 étapes"
 ---
 
+{:.encart}
+English version: [CRUD application with Express and PostgresSQL in 10 steps]({% post_url 2019-10-15-crud-with-express-postgresql-10-steps %}).
+
 Le but de ce projet ultra simple est de développer une application Node JS pour
 apprendre comment :
 

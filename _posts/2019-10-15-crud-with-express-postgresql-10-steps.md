@@ -1,9 +1,12 @@
-﻿---
-date: 2019-10-15 12:25:46
+---
+date: 2019-10-15 10:59:46
 layout: post
 tags: javascript, node, sql
 title: "CRUD application with Express and PostgresSQL in 10 steps"
 ---
+
+{:.encart}
+Version en français : [Application CRUD avec Express et PostgreSQL en 10 étapes]({% post_url 2019-09-21-crud-avec-express-postgresql-10-etapes %}).
 
 The goal of this very simple project is to develop a Node JS application to learn how to:
 
@@ -23,7 +26,7 @@ The final JavaScript code is visible in the appendix at the end of the post. The
 
 At the moment, there is no demonstration site for the completed project. I have not (yet) found an easy solution to host it. Maybe I'll do another tutorial the day I deal with this problem.
 
-Note: This tutorial is pretty much a copy/paste of the tutorial [CRUD application with Express and SQlite in 10 steps]({% 2019-10-08-crud-with-express-sqlite-10-steps %}). If, like me, you have already followed it, it will go quite quickly and it's a good review of what was presented there. Otherwise, it's not much more complicated and as everything is re-explained, it's not necessary to have followed the first tutorial with SQlite before starting this one with Express and PostgreSQL.
+Note: This tutorial is pretty much a copy/paste of the tutorial [CRUD application with Express and SQlite in 10 steps]({% post_url 2019-10-08-crud-with-express-sqlite-10-steps %}). If, like me, you have already followed it, it will go quite quickly and it's a good review of what was presented there. Otherwise, it's not much more complicated and as everything is re-explained, it's not necessary to have followed the first tutorial with SQlite before starting this one with Express and PostgreSQL.
 
 
 **Table of Contents**

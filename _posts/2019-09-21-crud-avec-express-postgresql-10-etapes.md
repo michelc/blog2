@@ -13,7 +13,9 @@ apprendre comment :
 
 <figure>
   <img src="/public/2019/elephant-bookshelf.jpg" alt="elephant-bookshelf" />
-  <figcaption>An elephant in the room with book shelves - Victor Zastolskiy</figcaption>
+  <figcaption>
+    <a href="https://www.instagram.com/victorzastolskiy/">An elephant in the room with book shelves - Victor Zastolskiy</a>
+  </figcaption>
 </figure>
 
 Ce billet n'est qu'un tutoriel pour voir comment ça marche et avoir une base de

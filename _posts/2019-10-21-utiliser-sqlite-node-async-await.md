@@ -11,7 +11,7 @@ ExpressJS. J'ai déjà vu comment accéder à une base de données
 [SQlite]({% post_url 2019-09-11-crud-avec-express-sqlite-10-etapes %}), puis à
 [PostgreSQL]({% post_url 2019-09-21-crud-avec-express-postgresql-10-etapes %}).
 Dans le tutoriel précédent, j'ai comparé la façon d'accéder à [SQlite et
-PostgreSQL avec Express]({ post_url 2019-10-07-comparaison-sqlite-postgresql-express })
+PostgreSQL avec Express]({% post_url 2019-10-07-comparaison-sqlite-postgresql-express %})
 pour parvenir à écrire le même code pour accéder aux deux bases de données.
 
 Dans ce tutoriel, je vais modifier le code existant pour ne plus avoir à

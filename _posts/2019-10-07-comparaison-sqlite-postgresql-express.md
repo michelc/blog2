@@ -11,6 +11,13 @@ Après avoir rédigé deux tutoriels sur Express pour accéder à des bases de d
 j'ai pu me rendre compte qu'il n'y avait pas de si gros écarts que çà entre les
 deux systèmes.
 
+<figure>
+  <img src="/public/2019/microscope.jpg" alt="microscope" />
+  <figcaption>
+    <a href="https://unsplash.com/photos/6q5QG8iIgRo">Observing samples under the microscope - Trust "Tru" Katsande</a>
+  </figcaption>
+</figure>
+
 Pour l'instant, j'ai compté 5 différences, plus ou moins importantes :
 
 * Le marqueur pour les paramètres SQL : "$1" ou "?"

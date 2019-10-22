@@ -5,6 +5,9 @@ tags: javascript, node, sql
 title: "Comparaison de l'utilisation de SQlite ou PostgreSQL avec Express"
 ---
 
+{:.encart}
+English version: [Comparing SQlite or PostgreSQL with Express]({% post_url 2019-10-22-comparing-sqlite-postgresql-express %}).
+
 Après avoir rédigé deux tutoriels sur Express pour accéder à des bases de données
 [SQlite]({% post_url 2019-09-11-crud-avec-express-sqlite-10-etapes %}) puis
 [PostgreSQL]({% post_url 2019-09-21-crud-avec-express-postgresql-10-etapes %}),
@@ -184,8 +187,8 @@ Et de quatre !
 J'ai pour habitude de mettre les mots-clés SQL en majucule et les noms de
 tables, colonnes, vues, séquences... en PascalCase.
 
-Ca marche très bien en C# avec ADO.NET / Dapper. En Ruby, je n'ai pas eu de
-problèmes (sans doute parce que j'ai toujours utilisé
+Ca marche très bien en C# avec ADO.NET / [Dapper](https://stackexchange.github.io/Dapper/).
+En Ruby, je n'ai pas eu de problèmes (sans doute parce que j'ai toujours utilisé
 [DataMapper](https://datamapper.org/) ou [Sequel](https://sequel.jeremyevans.net/)).
 Mais en JavaScript ça devient embêtant vu qu'il est très sensitif sur la casse.
 

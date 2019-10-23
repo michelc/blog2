@@ -44,7 +44,7 @@ db.run("UPDATE Books SET Title = $1 WHERE Book_ID = $2", [title, id], callback);
 One!
 
 
-## SQL parameters in tabular form
+### SQL parameters in tabular form
 
 When there is only one SQL parameter, the SQlite3 module accepts that this unique data is transmitted as a value, and not within an array:
 
@@ -77,7 +77,7 @@ It's even better, because that way you're sure you haven't forgotten a parameter
 Two.
 
 
-## .query() vs .run(), .all() and .get()
+### .query() vs .run(), .all() and .get()
 
 The SQlite3 module defines 3 methods:
 
@@ -113,7 +113,7 @@ pool.query("SELECT * FROM Books", [], callback);
 Three...
 
 
-## Callback function parameters
+### Callback function parameters
 
 The `.query()` method of the node-postgres module always returns 2 objects to the callback function that it chains:
 
@@ -156,7 +156,7 @@ xxx.query("SELECT * FROM Books", [], (err, result) => {});
 It's four!
 
 
-## The lowercase problem
+### The lowercase problem
 
 I usually write SQL keywords in capital letters and the names of tables, columns, views, sequences ... in PascalCase.
 
@@ -232,7 +232,7 @@ CREATE TABLE IF NOT EXISTS books (
 And five => no more difference.
 
 
-## Use a "common" object
+### Use a "common" object
 
 Currently, I do not use the same way to connect to databases:
 
@@ -272,7 +272,7 @@ console.log("Successful connection to the database");
 Note: I should search how to isolate this confusing things in 2 separate files. But later...
 
 
-## Conclusion
+### Conclusion
 
 I solved all problems related to the fact that SQlite3 and node-postgres modules work a little differently. It only took a few modifications to successfully develop a simple enough solution to have exactly the same code for both databases:
 
@@ -303,7 +303,7 @@ db.query = function (sql, params, callback) {
 Note: It must slow down a tad, but we're in development, it gives us time to think.
 
 
-## The complete code for "index.js"
+### The complete code for "index.js"
 
 As always, the entire "index.js" file to get an overview of the new system.
 
@@ -350,7 +350,7 @@ if (process.env.NODE_ENV === "production") {
     });
   };
 }
-console.log("Connexion réussie à la base de données");
+console.log("Successful connection to the database");
 
 // Creating the Books table (Book_ID, Title, Author, Comments)
 const sql_create = `CREATE TABLE IF NOT EXISTS books (
@@ -425,8 +425,8 @@ app.get("/create", (req, res) => {
 
 // POST /create
 app.post("/create", (req, res) => {
-  const sql = "INSERT INTO Books (Title, Author, Comments) VALUES (?, ?, ?)";
-  const book = [req.body.Title, req.body.Author, req.body.Comments];
+  const sql = "INSERT INTO Books (Title, Author, Comments) VALUES ($1, $2, $3)";
+  const book = [req.body.title, req.body.author, req.body.comments];
   db.run(sql, book, err => {
     if (err) {
       return console.error(err.message);
@@ -438,7 +438,7 @@ app.post("/create", (req, res) => {
 // GET /edit/5
 app.get("/edit/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "SELECT * FROM Books WHERE Book_ID = ?";
+  const sql = "SELECT * FROM Books WHERE Book_ID = $1";
   db.get(sql, id, (err, row) => {
     if (err) {
       return console.error(err.message);
@@ -450,8 +450,8 @@ app.get("/edit/:id", (req, res) => {
 // POST /edit/5
 app.post("/edit/:id", (req, res) => {
   const id = req.params.id;
-  const book = [req.body.Title, req.body.Author, req.body.Comments, id];
-  const sql = "UPDATE Books SET Title = ?, Author = ?, Comments = ? WHERE (Book_ID = ?)";
+  const book = [req.body.title, req.body.author, req.body.comments, id];
+  const sql = "UPDATE Books SET Title = $1, Author = $2, Comments = $3 WHERE (Book_ID = $4)";
   db.run(sql, book, err => {
     if (err) {
       return console.error(err.message);
@@ -463,7 +463,7 @@ app.post("/edit/:id", (req, res) => {
 // GET /delete/5
 app.get("/delete/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "SELECT * FROM Books WHERE Book_ID = ?";
+  const sql = "SELECT * FROM Books WHERE Book_ID = $1";
   db.get(sql, id, (err, row) => {
     if (err) {
       return console.error(err.message);
@@ -475,7 +475,7 @@ app.get("/delete/:id", (req, res) => {
 // POST /delete/5
 app.post("/delete/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "DELETE FROM Books WHERE Book_ID = ?";
+  const sql = "DELETE FROM Books WHERE Book_ID = $1";
   db.run(sql, id, err => {
     if (err) {
       return console.error(err.message);

@@ -254,7 +254,7 @@ db.query(sql_create, [], (err, result) => {
     await db.query(sql_create, []);
     console.log("Création réussie de la table 'Livres'");
     // Alimentation de la table
-    const result = await db.query("SELECT COUNT(*) AS count FROM Livres", [], (err, result) => {
+    const result = await db.query("SELECT COUNT(*) AS count FROM Livres", []);
     const count = result.rows[0].count;
     if (count === 0) {
       const sql_insert = `INSERT INTO Livres ... `;

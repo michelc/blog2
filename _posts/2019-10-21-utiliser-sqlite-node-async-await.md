@@ -5,6 +5,9 @@ tags: javascript, node, sql
 title: "Utiliser SQlite3 en mode async / await"
 ---
 
+{:.encart}
+English version: [Use SQlite3 in async / await mode]({% post_url 2019-10-29-use-sqlite-node-async-await %}).
+
 Je continue ma série de tutoriels pour apprendre Node JS et plus
 particulièrement voir comment développer de petites applications web avec
 ExpressJS. J'ai déjà vu comment accéder à une base de données

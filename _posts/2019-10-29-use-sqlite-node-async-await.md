@@ -8,7 +8,7 @@ title: "Use SQlite3 in async / await mode"
 {:.encart}
 Version en français : [Utiliser SQlite3 en mode async / await]({% post_url 2019-10-21-utiliser-sqlite-node-async-await %}).
 
-I go on my series of tutorials to learn Node JS and more specifically how to develop small web applications with ExpressJS. I have already seen how to access a [SQlite]({% post_url 2019-09-11-crud-avec-express-sqlite-10-etapes %}) database, then [PostgreSQL]({% post_url 2019-09-21-crud-avec-express-postgresql-10-etapes %}). In the previous tutorial, I compared how to access [SQlite and PostgreSQL with Express]({% post_url 2019-10-07-comparaison-sqlite-postgresql-express %}) to be able to write the same code to access both databases.
+I go on my series of tutorials to learn Node JS and more specifically how to develop small web applications with ExpressJS. I have already seen how to access a [SQlite]({% post_url 2019-10-08-crud-with-express-sqlite-10-steps %}) database, then [PostgreSQL]({% post_url 2019-10-15-crud-with-express-postgresql-10-steps %}). In the previous tutorial, I compared how to access [SQlite and PostgreSQL with Express]({% post_url 2019-10-22-comparing-sqlite-postgresql-express %}) to be able to write the same code to access both databases.
 
 In this tutorial, I will modify the existing code so that I no longer have to use a callback function when I make a query on the database.
 

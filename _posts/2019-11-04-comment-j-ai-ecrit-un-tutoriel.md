@@ -12,6 +12,13 @@ avec Express et SQlite en 10 étapes]({% post_url 2019-09-11-crud-avec-express-s
 et j'ai fait un peu de publicité dessus en espérant que ça puisse servir à
 d'autres que moi.
 
+<figure>
+  <img src="/public/2019/ididitmyself.jpg" alt="#ididitmyself" />
+  <figcaption>
+    <a href="https://commons.wikimedia.org/wiki/File:Dirty_dishes.jpg">C'est moi qui l'ait fait !</a>
+  </figcaption>
+</figure>
+
 Mais de toute façon, j'ai écrit ce tutoriel avant tout pour mon propre compte.
 J'essaie de m'améliorer petit à petit en JavaScript (et donc Node) et mon
 objectif est de parvenir à réaliser quelques programmes console ou de petites

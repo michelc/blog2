@@ -38,7 +38,7 @@ le framework le plus populaire sur le marché. Je n'ai pas trop de temps à y
 consacrer, donc pas la peine de m'égarer avec Koa, Hapi, Polka et consorts...
 
 Le rêve, ça aurait été de trouver un truc qui fasse tilt, comme lorsque j'avais
-découvert Sinatra avec "[I did it my way]({% post_url 2010-07-22-installer-sinatra-windows-7 %}".
+découvert Sinatra avec "[I did it my way]({% post_url 2010-07-22-installer-sinatra-windows-7 %})".
 Mais bon, [Darren Jones](https://twitter.com/daz4126) ne semble pas décidé à
 refaire le coup avec Node :)
 

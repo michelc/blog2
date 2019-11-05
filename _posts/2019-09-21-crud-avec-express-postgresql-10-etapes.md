@@ -1,23 +1,23 @@
 ---
-date: 2019-09-11 12:14:22
+date: 2019-09-21 15:11:46
 layout: post
 tags: javascript, node, sql
-title: "Application CRUD avec Express et SQlite en 10 étapes"
+title: "Application CRUD avec Express et PostgreSQL en 10 étapes"
 ---
 
 {:.encart}
-English version: [CRUD application with Express and SQlite in 10 steps]({% post_url 2019-10-08-crud-with-express-sqlite-10-steps %}).
+English version: [CRUD application with Express and PostgresSQL in 10 steps]({% post_url 2019-10-15-crud-with-express-postgresql-10-steps %}).
 
 Le but de ce projet ultra simple est de développer une application Node JS pour
 apprendre comment :
 
 * Créer réellement un site web très-très basique avec Express.
-* Gérer la mise à jour d'une base de données SQL (SQlite en l'occurence).
+* Gérer la mise à jour d'une base de données SQL (PostgreSQL en l'occurence).
 
 <figure>
-  <img src="/public/2019/library-bookshelf.jpg" alt="library-bookshelf" />
+  <img src="/public/2019/elephant-bookshelf.jpg" alt="elephant-bookshelf" />
   <figcaption>
-    <a href="https://www.flickr.com/photos/opengridscheduler/22468805072">Library Bookshelf - Open Grid Scheduler</a>
+    <a href="https://www.instagram.com/victorzastolskiy/">An elephant in the room with book shelves - Victor Zastolskiy</a>
   </figcaption>
 </figure>
 
@@ -30,17 +30,20 @@ Express ou SQL...
 
 Le code JavaScript final est visible dans l'[annexe](#annexe) en fin de billet.
 Le code complet de l'application est disponible sur
-[GitHub](https://github.com/michelc/AppTest).
+[GitHub](https://github.com/michelc/AppTestPG).
 
 Pour l'instant, il n'y a pas de site de démonstration du projet terminé. Je n'ai
-pas (encore) trouvé de solution facile pour l'héberger (surtout avec une base de
-données SQlite). Je ferai peut-être un autre tutoriel le jour où je m'attaquerai
+pas (encore) trouvé de solution facile pour l'héberger.
+Je ferai peut-être un autre tutoriel le jour où je m'attaquerai
 à ce problème.
 
-Note : J'ai depuis rédigé un deuxième tutoriel qui reprend exactement celui-ci,
-mais en se connectant à une base de données PostgreSQL à la place : [Application
-CRUD avec Express et PostgreSQL en 10
-étapes]({% post_url 2019-09-21-crud-avec-express-postgresql-10-etapes %}).
+Note : Ce tutoriel est un quasi copier / coller du tutoriel [Application CRUD
+avec Express et SQlite en 10 étapes]({% post_url 2019-09-11-crud-avec-express-sqlite-10-etapes %}).
+Si comme moi vous l'avez déjà suivi, cela ira assez vite et c'est une bonne
+révision de ce qui y avait été présenté. Sinon, ce n'est finalement pas beaucoup
+plus compliqué et comme tout est ré-expliqué, il n'est pas nécessaire d'avoir
+suivi le premier tutoriel avec SQlite avant d'aborder celui avec Express et
+PostgreSQL.
 
 **Sommaire**
 
@@ -49,7 +52,7 @@ CRUD avec Express et PostgreSQL en 10
 1. [Créer l'application Express](#crud3)
 1. [Ajouter des vues EJS](#crud4)
 1. [Utiliser les vues dans Express](#crud5)
-1. [Premiers pas avec le module SQlite3](#crud6)
+1. [Premiers pas avec le module node-postgres](#crud6)
 1. [Modifier une fiche](#crud7)
 1. [Créer une nouvelle fiche](#crud8)
 1. [Supprimer une fiche](#crud9)
@@ -68,21 +71,21 @@ sous Windows) :
 
 ```
 E:\> cd Code
-E:\Code> mkdir AppTest
+E:\Code> mkdir AppTestPG
 ```
 
-Cela crée un sous-dossier "AppTest" dans mon répertoire "E:\Code" qui sert pour
+Cela crée un sous-dossier "AppTestPG" dans mon répertoire "E:\Code" qui sert pour
 tester différents trucs.
 
 
 ### Ouvrir le dossier sous Visual Code
 
 Toujours en ligne de commande, lancer Visual Code pour ouvrir le dossier
-"AppTest" :
+"AppTestPG" :
 
 ```
-E:\Code> cd AppTest
-E:\Code\AppTest> code .
+E:\Code> cd AppTestPG
+E:\Code\AppTestPG> code .
 ```
 
 A partir de là, l'invite de commande de Windows ne sert plus à rien et peut être
@@ -100,16 +103,16 @@ Pour cela, il faut ouvrir le terminal de Visual Code et lancer la commande
 =>
 
 ```
-PS E:\Code\AppTest> npm init -y
+PS E:\Code\AppTestPG> npm init -y
 ```
 
 =>
 
 ```
-Wrote to E:\Code\AppTest\package.json:
+Wrote to E:\Code\AppTestPG\package.json:
 
 {
-  "name": "AppTest",
+  "name": "AppTestPG",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -127,7 +130,7 @@ init --yes`) que de taper <Entrée> à chaque question pour accepter la valeur p
 défaut.
 
 Dans Visual Code, il apparait maintenant le fichier "package.json" créé par
-NPM dans le dossier racine du projet ("E:\Code\AppTest" dans le cas présent).
+NPM dans le dossier racine du projet ("E:\Code\AppTestPG" dans le cas présent).
 
 
 <a id="crud2"></a>
@@ -145,10 +148,10 @@ Express a besoin d'un système de templates pour générer les vues. Pour ne pas
 compliquer la vie, je choisis [EJS](https://github.com/mde/ejs/) : il y a du
 vrai HTML dedans et ça ressemble énormément à la syntaxe d'ASP (d'avant Razor).
 
-Pour gérer la base de données le plus simplement possible,
-[SQlite](https://sqlite.org/) sera suffisant. Surtout c'est ce qu'il y a de plus
-facile : pas de serveur à installer et zéro problème sous Windows. Avec Node JS,
-c'est le module SQlite3 qui sert d'interface pour SQlite.
+Pour gérer la base de données, ce coup-ci je part sur un choix assez classique,
+à savoir [PostgreSQL](https://www.postgresql.org/). Avec Node JS, c'est le
+module "[node-postgres](https://node-postgres.com/)" qui sert d'interface pour
+PostgreSQL.
 
 
 ### Installer les dépendances
@@ -156,15 +159,18 @@ c'est le module SQlite3 qui sert d'interface pour SQlite.
 Cela se fait en ligne de commande, dans le terminal de Visual Code :
 
 ```
-PS E:\Code\AppTest> npm install express
-PS E:\Code\AppTest> npm install ejs
-PS E:\Code\AppTest> npm install sqlite3
+PS E:\Code\AppTestPG> npm install express
+PS E:\Code\AppTestPG> npm install ejs
+PS E:\Code\AppTestPG> npm install pg
 ```
+
+Note : Assez bizarrement, il faut bien utiliser le nom/identifiant "pg" pour
+installer le module "node-postgres".
 
 Ou pour aller plus vite :
 
 ```
-PS E:\Code\AppTest> npm install express ejs sqlite3
+PS E:\Code\AppTestPG> npm install express ejs pg
 ```
 
 Lorsque l'installation de ces trois dépendances (et de leurs propres
@@ -173,7 +179,7 @@ section "dependencies" qui enregistre la liste des dépendances du projet :
 
 ```
 {
-  "name": "AppTest",
+  "name": "AppTestPG",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -186,7 +192,7 @@ section "dependencies" qui enregistre la liste des dépendances du projet :
   "dependencies": {
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "sqlite3": "^4.1.0"
+    "pg": "^7.12.1"
   }
 }
 ```
@@ -211,7 +217,7 @@ dépendances
 Pour tester, on peut supprimer le dossier "node_modules" :
 
 ```
-PS E:\Code\AppTest> rd node_modules /s /q
+PS E:\Code\AppTestPG> rd node_modules /s /q
 ```
 
 Note : Sous Windows, les options `/s /q` permettent de tout supprimer sans se
@@ -220,7 +226,7 @@ poser de question.
 Puis on installe toutes les dépendances listées dans le fichier "package.json" :
 
 ```
-PS E:\Code\AppTest> npm install
+PS E:\Code\AppTestPG> npm install
 ```
 
 
@@ -251,7 +257,7 @@ app.get("/", (req, res) => {
 Puis, dans le terminal de Visual Code :
 
 ```
-PS E:\Code\AppTest> node index
+PS E:\Code\AppTestPG> node index
 ```
 
 =>
@@ -266,7 +272,7 @@ Il ne reste plus qu'à contrôler que ça marche réellement :
 * Aller à l'URL "http://localhost:3000/"
 * Le message "Bonjour le monde..." doit apparaitre comme ci-dessous :
 
-![Page d'accueil pour tester...](/public/2019/crud-01-test.png)
+![Page d'accueil pour tester...](/public/2019/crud-pg-01-test.png)
 
 C'est OK => arrêter le serveur en tapant Ctrl+C dans le terminal de Visual Code.
 
@@ -361,7 +367,7 @@ Ce qui donne (sans oublier la virgule en bout de ligne) :
 
 ```
 {
-  "name": "AppTest",
+  "name": "AppTestPG",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -375,7 +381,7 @@ Ce qui donne (sans oublier la virgule en bout de ligne) :
   "dependencies": {
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "sqlite3": "^4.1.0"
+    "pg": "^7.12.1"
   }
 }
 ```
@@ -383,13 +389,13 @@ Ce qui donne (sans oublier la virgule en bout de ligne) :
 On peut maintenant lancer le programme par :
 
 ```
-PS E:\Code\AppTest> npm start
+PS E:\Code\AppTestPG> npm start
 ```
 
 =>
 
 ```
-> AppTest@1.0.0 start E:\Code\AppTest
+> AppTestPG@1.0.0 start E:\Code\AppTestPG
 > node index.js
 
 Serveur démarré (http://localhost:3000/) !
@@ -429,7 +435,7 @@ doit donc être créé en premier lieu.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>AppTest</title>
+  <title>AppTestPG</title>
   <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 
@@ -438,7 +444,7 @@ doit donc être créé en premier lieu.
   <div class="container">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">AppTest</a>
+      <a class="navbar-brand" href="/">AppTestPG</a>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="/about">A propos</a>
@@ -469,7 +475,7 @@ doit donc être créé en premier lieu.
 
 ```
     <footer>
-      <p>&copy; 2019 - AppTest</p>
+      <p>&copy; 2019 - AppTestPG</p>
     </footer>
 
   </div>
@@ -559,7 +565,7 @@ app.get("/", (req, res) => {
 * Naviguer vers "http://localhost:3000/" avec Chrome
 * La page suivante doit apparaitre :
 
-![Page d'accueil avec la vue "index.ejs"](/public/2019/crud-02-vues.png)
+![Page d'accueil avec la vue "index.ejs"](/public/2019/crud-pg-02-vues.png)
 
 
 ### Ajouter un chemin "/about"
@@ -584,7 +590,7 @@ les deux vues partielles).
 ```
 <%- include("_header") -%>
 
-<h1>A propos de AppTest</h1>
+<h1>A propos de AppTestPG</h1>
 
 <p>Bla bla bla ...</p>
 
@@ -600,7 +606,7 @@ compte les modifications apportées au projet).
 
 * Cliquer sur le menu "A propos", ce qui donne :
 
-![Page d'à propos avec la vue "about.ejs"](/public/2019/crud-03-about.png)
+![Page d'à propos avec la vue "about.ejs"](/public/2019/crud-pg-03-about.png)
 
 
 ### Envoyer des données du serveur vers la vue
@@ -650,7 +656,7 @@ c'est du JavaScript (d'où le nom Embedded JavaScript).
 Et maintenant, quand on navigue vers "http://localhost:3000/data" après avoir
 redémarré le site, on obtient :
 
-![Données envoyées à la vue](/public/2019/crud-04-data.png)
+![Données envoyées à la vue](/public/2019/crud-pg-04-data.png)
 
 
 ### Le fichier "index.js" mis à jour
@@ -669,7 +675,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Démarrage du serveur
 app.listen(3000, () => {
-    console.log("Serveur démarré (http://localhost:3000/) !");
+  console.log("Serveur démarré (http://localhost:3000/) !");
 });
 
 // GET /
@@ -696,47 +702,88 @@ app.get("/data", (req, res) => {
 
 <a id="crud6"></a>
 
-## 6. Premiers pas avec le module SQlite3
+## 6. Premiers pas avec le module node-postgres
 
 Note : Si cela n'avait pas été fait en début de projet, il aurait été nécessaire
-d'installer le module SQlite3 par un `npm install sqlite3` pour pouvoir accéder
-à une base de données SQlite sous Node.
+d'installer le module node-postgres par un `npm install pg` pour pouvoir accéder
+à une base de données PostgreSQL sous Node.
 
 
-### Déclarer le module SQlite3
+### Accéder à une base de données PostgreSQL
 
-Il faut commencer par référencer "sqlite3" en tête du programe "index.js", avec
+C'est la partie un peu compliquée par rapport à SQlite. On va dire qu'on a trois
+solutions :
+
+* Installer PostgreSQL => c'est non (ce n'est pas le but de ce tutoriel).
+* Avoir déjà un serveur PostgreSQL sous la main => c'est parfait (et vous devez
+vous y connaitre suffisament).
+* Utiliser un serveur dans le cloud => ça en jette (mais c'est un peu plus long).
+
+S'il faut en passer par une base de données PostgreSQL dans le cloud, je vous
+propose de voir brièvement comment faire avec ElephantSQL (c'est très simple,
+vous devriez vous en sortie sans moi) :
+
+* Aller sur le site [https://www.elephantsql.com/](https://www.elephantsql.com/)
+* Cliquer sur le bouton "Get a managed database today"
+* Choisir l'instance "Tiny Turtle" qui est gratuite
+* Arrivé sur l'écran de connexion, cliquer sur le lien "Sign Up" en bas
+* Entrer votre adresse mél et cliquer sur le nouveau bouton "Sign Up"
+* Dans le mél de confirmation reçu, cliquer sur le bouton "Confirm Email"
+* Arrivé sur l'écran pour "Create an account", il faut :
+  * Entrer un mot 2 passe (et le confirmer)
+  * Accepter leurs conditions
+  * Accepter ou refuser les emails de leur part
+  * Cliquer sur le bouton "Submit"
+* Arrivé sur la liste de vos instance (vide), cliquer sur le bouton "+ Create
+New Instance" et suivre les 4 étapes
+  * 1 : "Select a plan and name" => rester sur "Tiny Turtle" et donner un nom
+  * 2 : "Select a region and data center" => choisir le plus près de chez
+vous (mais ils ne sont pas tous disponibles pour l'offre gratuite)
+  * 3 : "Configure" => grisé car réservé aux plans dédiés
+  * 4 : "Confirm new instance" => y'a plus qu'à
+
+On revient alors sur la liste des instances qui contient désormais l'instance
+que l'on vient de créer. Il faut alors cliquer sur son nom pour obtenir les
+informations de connection dont vous aurez besoin dans la partie suivante :
+
+* server : xxxxx.elephantsql.com
+* user & default database : mystere
+* password : untrucsecretquinarienafaireici
+
+
+### Déclarer le module node-postgres
+
+Il faut commencer par référencer "pg" en tête du programe "index.js", avec
 les deux autres déclarations pour "express" et "path".
 
 ```
-const sqlite3 = require("sqlite3").verbose();
+const { Pool } = require("pg");
 ```
 
-La méthode ".verbose()" permet d'avoir plus d'informations en cas de problème.
 
-
-### Connexion à la base de données SQlite
+### Connexion à la base de données PostgreSQL
 
 Ajouter ensuite le code pour se connecter à la base de données, juste avant de
 démarrer le serveur Express.
 
 ```
-const db_name = path.join(__dirname, "data", "apptest.db");
-const db = new sqlite3.Database(db_name, err => {
-  if (err) {
-    return console.error(err.message);
-  }
-  console.log("Connexion réussie à la base de données 'apptest.db'");
+const pool = new Pool({
+  user: "mystere",
+  host: "xxxxx.elephantsql.com",
+  database: "mystere",
+  password: "untrucsecretquinarienafaireici",
+  port: 5432
 });
+console.log("Connexion réussie à la base de données");
 ```
 
-La base de données sera enregistrée dans le dossier "data", sous le nom
-"apptest.db". Elle est créée automatiquement si elle n'existe pas encore. Par
-contre, il est quand même nécessaire de créer le dossier "data" depuis Visual
-Code.
+Note : Il ne faut bien entendu pas écrire toutes ces informations de connexion à
+la base de données comme ça en clair dans le code. Dans une vraie application,
+elles seraient par défaut récupérées à partir de variables d'environnement ou
+paramétrées dans un fichier ".env" à l'aide du module "dotenv".
 
-Après que ce code ait été exécuté, la variable "db" est un objet `Database` du
-module SQlite3 qui représente la connexion à la base de données. Cet objet va
+Après que ce code ait été exécuté, la variable "pool" est un objet `Pool` du
+module node-postgres qui représente une connexion à la base de données. Cet objet va
 servir par la suite à accéder au contenu de la base de données et à effectuer
 des requêtes sur cette base de données.
 
@@ -750,11 +797,11 @@ Pour ce tutoriel, on va créer une table de livres avec 4 colonnes :
 * Auteur : l'auteur du livre
 * Commentaires : un champ mémo avec quelques notes sur le livre
 
-La requête SQL pour créer une telle table sous SQlite est la suivante :
+La requête SQL pour créer une telle table sous PostgreSQL est la suivante :
 
 ```
 CREATE TABLE IF NOT EXISTS Livres (
-  Livre_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+  Livre_ID SERIAL PRIMARY KEY,
   Titre VARCHAR(100) NOT NULL,
   Auteur VARCHAR(100) NOT NULL,
   Commentaires TEXT
@@ -763,7 +810,7 @@ CREATE TABLE IF NOT EXISTS Livres (
 
 Ce qui donne :
 
-![Structure de la table Livres](/public/2019/crud-00-desc.png)
+![Structure de la table Livres](/public/2019/crud-pg-00-desc.png)
 
 Pour savoir comment on peut faire ça dans Node, on va créer la table depuis
 l'application. A cette fin, il suffit d'ajouter le code ci-dessous juste après
@@ -771,13 +818,13 @@ s'être connecté à la base de données.
 
 ```
 const sql_create = `CREATE TABLE IF NOT EXISTS Livres (
-  Livre_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+  Livre_ID SERIAL PRIMARY KEY,
   Titre VARCHAR(100) NOT NULL,
   Auteur VARCHAR(100) NOT NULL,
   Commentaires TEXT
 );`;
 
-db.run(sql_create, err => {
+pool.query(sql_create, [], (err, result) => {
   if (err) {
     return console.error(err.message);
   }
@@ -785,11 +832,11 @@ db.run(sql_create, err => {
 });
 ```
 
-Ce code utilise la méthode `.run()` de l'objet `Database` du module SQlite3.
+Ce code utilise la méthode `.query()` de l'objet `Pool` du module node-postgres.
 Cette méthode exécute la requête SQL qui lui est passé en 1° paramètre puis
-appelle la fonction callback correspondant au 2° paramètre, en lui passant un
+appelle la fonction callback correspondant au 3° paramètre, en lui passant un
 objet `err` pour pouvoir vérifier si l'exécution de la requête s'est déroulée
-correctement.
+correctement et un objet `result` contenant le résultat de la requête.
 
 Note : La table ne sera créée que si elle n'existe pas encore, grâce à la clause
 SQL "IF NOT EXISTS". Ça ne serait pas super pour une vraie application, mais là
@@ -799,17 +846,18 @@ c'est juste un tutoriel.
 ### Alimenter la table "Livres"
 
 Pour faciliter la suite du tutoriel, il est plus pratique d'insérer dès
-maintenant quelques livres dans la base de données. Sous SQlite, on pourrait
+maintenant quelques livres dans la base de données. Sous PostgreSQL, on pourrait
 passer la requête suivante :
 
 ```
 INSERT INTO Livres (Livre_ID, Titre, Auteur, Commentaires) VALUES
-(1, 'Mrs. Bridge', 'Evan S. Connell', 'Premier de la série'),
-(2, 'Mr. Bridge', 'Evan S. Connell', 'Second de la série'),
-(3, 'L''ingénue libertine', 'Colette', 'Minne + Les égarements de Minne');
+  (1, 'Mrs. Bridge', 'Evan S. Connell', 'Premier de la série'),
+  (2, 'Mr. Bridge', 'Evan S. Connell', 'Second de la série'),
+  (3, 'L''ingénue libertine', 'Colette', 'Minne + Les égarements de Minne')
+ON CONFLICT DO NOTHING;
 ```
 
-Si on a pas de client SQlite sous la main, c'est faisable en JavaScript, juste
+Si on a pas de client PostgreSQL sous la main, c'est faisable en JavaScript, juste
 après avoir crée la table "Livres" (parce qu'il ne faut pas que l'insertion des
 livres ait lieu avant la création la table) :
 
@@ -818,14 +866,21 @@ livres ait lieu avant la création la table) :
   console.log("Création réussie de la table 'Livres'");
   // Alimentation de la table
   const sql_insert = `INSERT INTO Livres (Livre_ID, Titre, Auteur, Commentaires) VALUES
-  (1, 'Mrs. Bridge', 'Evan S. Connell', 'Premier de la série'),
-  (2, 'Mr. Bridge', 'Evan S. Connell', 'Second de la série'),
-  (3, 'L''ingénue libertine', 'Colette', 'Minne + Les égarements de Minne');`;
-  db.run(sql_insert, err => {
+    (1, 'Mrs. Bridge', 'Evan S. Connell', 'Premier de la série'),
+    (2, 'Mr. Bridge', 'Evan S. Connell', 'Second de la série'),
+    (3, 'L''ingénue libertine', 'Colette', 'Minne + Les égarements de Minne')
+  ON CONFLICT DO NOTHING;`;
+  pool.query(sql_insert, [], (err, result) => {
     if (err) {
       return console.error(err.message);
     }
-    console.log("Alimentation réussie de la table 'Livres'");
+    const sql_sequence = "SELECT SETVAL('Livres_Livre_ID_Seq', MAX(Livre_ID)) FROM Livres;";
+    pool.query(sql_sequence, [], (err, result) => {
+      if (err) {
+        return console.error(err.message);
+      }
+      console.log("Alimentation réussie de la table 'Livres'");
+    });
   });
 ```
 
@@ -833,13 +888,14 @@ Normalement, il n'est pas utile de définir les identifiants lors des INSERT,
 mais dans ce cas, cela permet d'éviter que les données soient ré-insérées à
 chaque fois que le serveur démarre.
 
-La première fois, la console affiche "Alimentation réussie de la table 'Livres'"
-et les fois suivantes l'erreur "SQLITE_CONSTRAINT: UNIQUE constraint failed:
-Livres.Livre_ID" puisque les 3 lignes existent déjà.
+Mais pour que par la suite PostgreSQL puisse s'y retrouver, il est nécessaire de
+ré-initialiser la séquence qui sert à alimenter l'identifiant "Livre_ID". C'est
+ce qui est fait en exécutant la requête "SELECT SETVAL('Livres_Livre_ID_Seq',
+MAX(Livre_ID)) FROM Livres;".
 
 A présent, la table "Livres" contient les 3 lignes suivantes :
 
-![Contenu de la table Livres](/public/2019/crud-00-livres.png)
+![Contenu de la table Livres](/public/2019/crud-pg-00-livres.png)
 
 
 ### Afficher la liste des livres
@@ -850,25 +906,26 @@ lire la liste des livres enregistrés dans la base de données et à afficher ce
 liste dans la vue.
 
 Pour lire la liste des livres, c'est assez simple. On fait une requête du style
-"SELECT * FROM ..." que l'on exécute via la méthode `db.all()` du module
-SQlite3. Une fois la requête terminée, cette méthode `db.all()` appelle une
-fonction callback en lui passant éventuellement une erreur et la liste des
-résultats obtenus par la requête SQL. Si tout va bien, la fonction callback peut
+"SELECT * FROM ..." que l'on exécute également via la méthode `pool.query()` du module
+node-postgres. Une fois la requête terminée, cette méthode `pool.query()` appelle une
+fonction callback en lui passant éventuellement une erreur et le résultat de la
+requête, avec entre autres la liste des
+livres obtenus par la requête SQL. Si tout va bien, la fonction callback peut
 alors transmettre ces résultats à la vue.
 
 ```
 app.get("/livres", (req, res) => {
   const sql = "SELECT * FROM Livres ORDER BY Titre";
-  db.all(sql, [], (err, rows) => {
+  pool.query(sql, [], (err, result) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("livres", { model: rows });
+    res.render("livres", { model: result.rows });
   });
 });
 ```
 
-Quelques explications sur la ligne de code `db.all(sql, [], (err, rows) => { ...
+Quelques explications sur la ligne de code `pool.query(sql, [], (err, result) => { ...
 }` :
 
 * Le 1° paramètre est la requête SQL à exécuter
@@ -877,9 +934,10 @@ Ici, la valeur "[]"  est employée parce que la requête n'a pas besoin de
 variable.
 * Le 3° paramètre est une fonction callback appelée après l'exécution de la
 requête SQL.
-* "(err, rows)" correspond aux paramètres passés à la fonction callback. "err"
-contient éventuellement un objet erreur et "rows" est un tableau contenant la
-liste des lignes renvoyées par le SELECT.
+* "(err, result)" correspond aux paramètres passés à la fonction callback. "err"
+contient éventuellement un objet erreur et "result" est un objet contenant des
+informations sur le résultat de l'exécution de la requête, dont un tableau "rows"
+correspondant à la liste des lignes renvoyées par le SELECT.
 
 Pour afficher cette liste de livres, on peut dans un premier temps créer une vue
 "livres.ejs" dans le dossier "views" avec le code suivant :
@@ -893,8 +951,8 @@ Pour afficher cette liste de livres, on peut dans un premier temps créer une vu
 
   <% for (const book of model) { %>
     <li>
-      <%= book.Titre %>
-      <em>(<%= book.Auteur %>)</em>
+      <%= book.titre %>
+      <em>(<%= book.auteur %>)</em>
     </li>
   <% } %>
 
@@ -906,11 +964,11 @@ Pour afficher cette liste de livres, on peut dans un premier temps créer une vu
 Après avoir relancé l'application par `npm start`, on obtient le résultat
 suivant en cliquant sur le menu "Livres" :
 
-![La liste des livres](/public/2019/crud-05-list.png)
+![La liste des livres](/public/2019/crud-pg-05-list.png)
 
-Note : Il faut faire attention et bien écrire "book.Titre" et pas "book.titre"
-parce que la table "Livres" a été créée en utilisant des majuscules comme
-initiales pour les noms des colonnes.
+Note : Il faut faire attention et bien écrire "book.titre" et pas "book.Titre"
+parce que même si la la table "Livres" a été créée en utilisant des majuscules comme
+initiales pour les noms des colonnes, PostgreSQL a transformé ces noms en minuscules.
 
 
 ### Afficher les livres sous forme de tableau
@@ -940,12 +998,12 @@ une simple liste "ul / li" pour afficher les livres. Le code de cette vue
     <tbody>
       <% for (const book of model) { %>
         <tr>
-          <td><%= book.Titre %></td>
-          <td><%= book.Auteur %></td>
-          <td><%= book.Commentaires %></td>
+          <td><%= book.titre %></td>
+          <td><%= book.auteur %></td>
+          <td><%= book.commentaires %></td>
           <td class="d-print-none">
-            <a class="btn btn-sm btn-warning" href="/edit/<%= book.Livre_ID %>">Modifier</a>
-            <a class="btn btn-sm btn-danger" href="/delete/<%= book.Livre_ID %>">Effacer</a>
+            <a class="btn btn-sm btn-warning" href="/edit/<%= book.livre_id %>">Modifier</a>
+            <a class="btn btn-sm btn-danger" href="/delete/<%= book.livre_id %>">Effacer</a>
           </td>
         </tr>
       <% } %>
@@ -959,7 +1017,7 @@ une simple liste "ul / li" pour afficher les livres. Le code de cette vue
 Et voilà ! Ctrl+C si nécessaire, `npm start` puis naviguer vers l'URL
 "http://localhost:3000/livres" pour avoir une vraie table Bootstrap.
 
-![Les livres sous forme de table](/public/2019/crud-06-table.png)
+![Les livres sous forme de table](/public/2019/crud-pg-06-table.png)
 
 L'avantage de cette nouvelle vue est de fournir des boutons [Ajouter],
 [Modifier] et [Effacer] pour mettre à jour la table des livres, ce qui est
@@ -990,7 +1048,7 @@ assez classique.
 
 <h1>Modifier une fiche</h1>
 
-<form action="/edit/<%= model.Livre_ID %>" method="post">
+<form action="/edit/<%= model.livre_id %>" method="post">
   <div class="form-horizontal">
 
     <%- include("_editor") -%>
@@ -1016,21 +1074,21 @@ code HTML dédié aux différents champs de saisie. Cette vue partielle servira
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="Titre">Titre</label>
   <div class="col-sm-8">
-    <input autofocus class="form-control" name="Titre" value="<%= model.Titre %>" />
+    <input autofocus class="form-control" name="Titre" value="<%= model.titre %>" />
   </div>
 </div>
 
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="Auteur">Auteur</label>
   <div class="col-sm-7">
-    <input class="form-control" name="Auteur" value="<%= model.Auteur %>" />
+    <input class="form-control" name="Auteur" value="<%= model.auteur %>" />
   </div>
 </div>
 
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="Commentaires">Commentaires</label>
   <div class="col-sm-10">
-    <textarea class="form-control" cols="20" name="Commentaires" maxlength="32000" rows="7"><%= model.Commentaires %></textarea>
+    <textarea class="form-control" cols="20" name="Commentaires" maxlength="32000" rows="7"><%= model.commentaires %></textarea>
   </div>
 </div>
 ```
@@ -1048,22 +1106,21 @@ l'objet `Request` du framework Express, dans la liste de ses paramètres :
 `req.params.id`.
 
 On peut alors faire une requête "SELECT ..." pour obtenir la fiche correspondant
-à cet identifiant. Cette requête est exécutée via la méthode `db.get()` de
-SQlite3 qui renvoie un seul résultat et qu'il est donc plus pratique d'utiliser
-que la méthode `db.all()` lorsqu'on fait un SELECT par identifiant. Dans ce cas,
-on passe en 2° paramètre l'identifiant du livre à afficher parce qu'on a utilisé
-une requête paramétrée (via le "... = ?") pour éviter l'injection SQL. Lorsque
-la requête est terminée, la fonction callback peut à son tour transmettre le
-résultat obtenu à la vue.
+à cet identifiant. Cette requête est encore une fois exécutée via la méthode
+`pool.query()` de node-postgres. Dans ce cas, on lui passe en paramètre
+l'identifiant du livre à afficher parce qu'on a utilisé une requête paramétrée
+(via le "... = $1") pour éviter l'injection SQL. Lorsque la requête est
+terminée, la fonction callback peut à son tour transmettre le résultat obtenu à
+la vue.
 
 ```
 // GET /edit/5
 app.get("/edit/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "SELECT * FROM Livres WHERE Livre_ID = ?";
-  db.get(sql, id, (err, row) => {
+  const sql = "SELECT * FROM Livres WHERE Livre_ID = $1";
+  pool.query(sql, [id], (err, result) => {
     // if (err) ...
-    res.render("edit", { model: row });
+    res.render("edit", { model: result.rows[0] });
   });
 });
 ```
@@ -1072,7 +1129,7 @@ Après redémarrage du serveur, voici le formulaire de saisie qui s'affiche
 désormais lorsque l'utilisateur clique sur un bouton [Modifier] dans la liste
 des livres :
 
-![Formulaire de modification d'un livre](/public/2019/crud-07-edit.png)
+![Formulaire de modification d'un livre](/public/2019/crud-pg-07-edit.png)
 
 
 ### La route POST /edit/xxx
@@ -1090,21 +1147,21 @@ Note : pour que `Request.body` récupère les valeurs postées, il est nécessai
 d'ajouter un middleware à la configuration du serveur. Ce point sera expliqué
 plus précisément dans la partie suivante...
 
-La modification en base de donnée se fait via une requête "UPDATE ..." exécutée
-avec la méthode `db.run()` de SQlite3 à laquelle on passe également le tableau
+La modification en base de donnée se fait via une requête "UPDATE ...", toujours exécutée
+avec la méthode `pool.query` de node-postgres à laquelle on passe cette fois le tableau
 contenant les donnés modifiées et l'identifiant du livre à mettre à jour.
 
-Après avoir exécuté la requête "UPDATE ..." avec la méthode `db.run()` de
-SQlite3, la fonction callback redirige l'utilisateur vers la liste des livres à
+Après avoir exécuté la requête "UPDATE ..." avec la méthode `pool.query()` de
+node-postgres, la fonction callback redirige l'utilisateur vers la liste des livres à
 l'aide de la méthode `Response.redirect()` d'Express.
 
 ```
 // POST /edit/5
 app.post("/edit/:id", (req, res) => {
   const id = req.params.id;
-  const book = [req.body.Titre, req.body.Auteur, req.body.Commentaires, id];
-  const sql = "UPDATE Livres SET Titre = ?, Auteur = ?, Commentaires = ? WHERE (Livre_ID = ?)";
-  db.run(sql, book, err => {
+  const book = [req.body.titre, req.body.auteur, req.body.commentaires, id];
+  const sql = "UPDATE Livres SET Titre = $1, Auteur = $2, Commentaires = $3 WHERE (Livre_ID = $4)";
+  pool.query(sql, book, (err, result) => {
     // if (err) ...
     res.redirect("/livres");
   });
@@ -1206,7 +1263,7 @@ Comme on peut le voir ci-dessous, le formulaire de saisie pour ajouter un
 nouveau livre ressemble pas mal à celui pour modifier une fiche. C'est un des
 avantages de la vue partielle "_editor.ejs".
 
-![Formulaire de création d'un livre](/public/2019/crud-08-create.png)
+![Formulaire de création d'un livre](/public/2019/crud-pg-08-create.png)
 
 
 ### La route POST /create
@@ -1218,16 +1275,16 @@ modification d'une fiche :
 
 * Elle récupère les données saisies via la propriété `body` de l'objet `Request`
 du framework Express.
-* La méthode `db.run()` de SQlite3 sert pour exécuter une requête "INSERT INTO
+* La méthode `pool.query()` de node-postgres sert pour exécuter une requête "INSERT INTO
 ...".
 * La fonction callback redirige l'utilisateur vers la liste des livres.
 
 ```
 // POST /create
 app.post("/create", (req, res) => {
-  const sql = "INSERT INTO Livres (Titre, Auteur, Commentaires) VALUES (?, ?, ?)";
-  const book = [req.body.Titre, req.body.Auteur, req.body.Commentaires];
-  db.run(sql, book, err => {
+  const sql = "INSERT INTO Livres (Titre, Auteur, Commentaires) VALUES ($1, $2, $3)";
+  const book = [req.body.titre, req.body.auteur, req.body.commentaires];
+  pool.query(sql, book, (err, result) => {
     // if (err) ...
     res.redirect("/livres");
   });
@@ -1240,7 +1297,7 @@ app.post("/create", (req, res) => {
 ## 9. Supprimer une fiche
 
 
-### Les vues "views/delete.ejs" et "views/_display.ejs"
+### Les vues "views/delete.ejs" et "views/_diplay.ejs"
 
 La vue principale pour pouvoir supprimer une fiche doit en premier lieu afficher
 les informations du livre sélectionné pour permettre à l'utilisateur de
@@ -1252,7 +1309,7 @@ beaucoup aux vues "edit.ejs" et "create.ejs".
 
 <h1>Effacer une fiche ?</h1>
 
-<form action="/delete/<%= model.Livre_ID %>" method="post">
+<form action="/delete/<%= model.livre_id %>" method="post">
   <div class="form-horizontal">
 
     <%- include("_display") -%>
@@ -1279,21 +1336,21 @@ saisie sont en "readonly".
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="Titre">Titre</label>
   <div class="col-sm-8">
-    <input readonly class="form-control" id="Titre" value="<%= model.Titre %>" />
+    <input readonly class="form-control" id="Titre" value="<%= model.titre %>" />
   </div>
 </div>
 
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="Auteur">Auteur</label>
   <div class="col-sm-7">
-    <input readonly class="form-control" id="Auteur" value="<%= model.Auteur %>" />
+    <input readonly class="form-control" id="Auteur" value="<%= model.auteur %>" />
   </div>
 </div>
 
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="Commentaires">Commentaires</label>
   <div class="col-sm-10">
-    <textarea readonly class="form-control" cols="20" id="Commentaires" maxlength="32000" rows="7"><%= model.Commentaires %></textarea>
+    <textarea readonly class="form-control" cols="20" id="Commentaires" maxlength="32000" rows="7"><%= model.commentaires %></textarea>
   </div>
 </div>
 ```
@@ -1313,10 +1370,10 @@ vue "delete.ejs" plutôt que la vue "edit.ejs".
 // GET /delete/5
 app.get("/delete/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "SELECT * FROM Livres WHERE Livre_ID = ?";
-  db.get(sql, id, (err, row) => {
+  const sql = "SELECT * FROM Livres WHERE Livre_ID = $1";
+  pool.query(sql, [id], (err, result) => {
     // if (err) ...
-    res.render("delete", { model: row });
+    res.render("delete", { model: result.rows[0] });
   });
 });
 ```
@@ -1325,7 +1382,7 @@ L'interface utilisateur est assez proche du formulaire de saisie habituel. Assez
 ironiquement, les trois zones de saisie ne sont en fait pas saisissables (et
 donc grisés selon les conventions de Bootstrap) :
 
-![Formulaire de suppression d'un livre](/public/2019/crud-09-delete.png)
+![Formulaire de suppression d'un livre](/public/2019/crud-pg-09-delete.png)
 
 
 ### La route POST /delete/xxx
@@ -1335,7 +1392,7 @@ suite au clic sur le bouton [Effacer] pour confirmer la suppression du livre.
 Son code ressemble à pas mal de ce qui a déjà été vu jusqu'ici :
 
 * Elle retrouve l'identifiant du livre à supprimer via `req.params.id`.
-* La méthode `db.run()` de SQlite3 exécute une requête "DELETE ..." pour cet
+* La méthode `pool.query()` de node-postgres exécute une requête "DELETE ..." pour cet
 identifiant.
 * La fonction callback redirige l'utilisateur vers la liste des livres.
 
@@ -1343,8 +1400,8 @@ identifiant.
 // POST /delete/5
 app.post("/delete/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "DELETE FROM Livres WHERE Livre_ID = ?";
-  db.run(sql, id, err => {
+  const sql = "DELETE FROM Livres WHERE Livre_ID = $1";
+  pool.query(sql, [id], (err, result) => {
     // if (err) ...
     res.redirect("/livres");
   });
@@ -1356,7 +1413,7 @@ app.post("/delete/:id", (req, res) => {
 
 ## 10. Conclusion
 
-Personnellement, ce tutoriel m'a permis de bien avancer. J'ai enfin écrit une
+Personnellement, ce tutoriel m'a permis de bien avancer. J'ai écrit une deuxième
 application web permettant de mettre à jour une base de données SQL avec Node JS
 qui ressemble à ce que je peux faire avec Sinatra pour de petits trucs. Cela
 m'a donné un bon aperçu de tout ce qui est nécessaire et de voir que finalement
@@ -1391,17 +1448,15 @@ passées en revue.
 * utilisation de vues partielles pour se simplifier le travail
 * et EJS ressemble beaucoup à ce qui se fait avec ASP ou aux vues ERB de Sinatra
 
-Côté base de données, le programme a montré comment gérer une base SQlite et que
-c'est suffisament simple pour commencer (du moins quand on connait SQL). Mais
-cela semble assez spécifique au module SQlite3 et il reste à voir comment faire
-avec PostgreSQL, MySQL, Oracle ou Sql Server... L'idéal serait d'avoir quelque
+Côté base de données, le programme a montré comment gérer une base PostgreSQL et que
+ce n'est pas plus compliqué qu'avec SQlite (du moins quand on connait SQL). Là
+encore, le code semble assez spécifique au module node-postgres et il reste à
+voir comment cela se passe avec d'autres bases de données. L'idéal serait d'avoir quelque
 chose comme ADO.NET (ou ODBC à la rigueur) avant de passer à un véritable ORM.
 
-* new sqlite3.Database() pour se connecter à la base de données (voire la créer)
-* db.run(sql, [ params ], callback) pour exécuter des requêtes de mise à jour
-* db.all(sql, [ params ], callback) pour une requête SELECT renvoyant plusieurs
-lignes
-* db.get(sql, [ params ], callback) pour un SELECT par identifant
+* new Pool() pour se connecter à la base de données
+* pool.query(sql, [ params ], callback) pour exécuter tout type de requêtes
+(mise à jour, SELECT renvoyant plusieurs lignes, SELECT par identifant...)
 
 Pour ce qui est de JavaScript lui-même, cette application a surtout eu
 l'avantage de mettre en pratique quelques-unes des "nouveautés" du langage.
@@ -1421,17 +1476,17 @@ Ce n'est pas pour rallonger le billet, mais pour ceux qui comme moi aiment avoir
 une vue d'ensemble d'un programme. Et autant en profiter pour mettre en avant
 quelques petits chiffres :
 
-* 148 lignes de codes
-* 3 dépendances NPM (ejs, express et sqlite3)
-* 3 modules importés (express, path et sqlite3)
+* 156 lignes de codes
+* 3 dépendances NPM (ejs, express et pg)
+* 3 modules importés (express, path et pg)
 
 Note : Le code complet de l'application est également disponible sur
-[GitHub](https://github.com/michelc/AppTest).
+[GitHub](https://github.com/michelc/AppTestPG).
 
 ```
 const express = require("express");
 const path = require("path");
-const sqlite3 = require("sqlite3").verbose();
+const { Pool } = require("pg");
 
 // Création du serveur Express
 const app = express();
@@ -1442,37 +1497,45 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 
-// Connexion à la base de donnée SQlite
-const db_name = path.join(__dirname, "data", "apptest.db");
-const db = new sqlite3.Database(db_name, err => {
-  if (err) {
-    return console.error(err.message);
-  }
-  console.log("Connexion réussie à la base de données 'apptest.db'");
+// Connexion à la base de donnée PostgreSQL
+const pool = new Pool({
+  user: "mystere",
+  host: "xxxxx.elephantsql.com",
+  database: "mystere",
+  password: "untrucsecretquinarienafaireici",
+  port: 5432
 });
+console.log("Connexion réussie à la base de données");
 
 // Création de la table Livres (Livre_ID, Titre, Auteur, Commentaires)
 const sql_create = `CREATE TABLE IF NOT EXISTS Livres (
-  Livre_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+  Livre_ID SERIAL PRIMARY KEY,
   Titre VARCHAR(100) NOT NULL,
   Auteur VARCHAR(100) NOT NULL,
   Commentaires TEXT
 );`;
-db.run(sql_create, err => {
+pool.query(sql_create, [], (err, result) => {
   if (err) {
     return console.error(err.message);
   }
   console.log("Création réussie de la table 'Livres'");
   // Alimentation de la table
   const sql_insert = `INSERT INTO Livres (Livre_ID, Titre, Auteur, Commentaires) VALUES
-  (1, 'Mrs. Bridge', 'Evan S. Connell', 'Premier de la série'),
-  (2, 'Mr. Bridge', 'Evan S. Connell', 'Second de la série'),
-  (3, 'L''ingénue libertine', 'Colette', 'Minne + Les égarements de Minne');`;
-  db.run(sql_insert, err => {
+    (1, 'Mrs. Bridge', 'Evan S. Connell', 'Premier de la série'),
+    (2, 'Mr. Bridge', 'Evan S. Connell', 'Second de la série'),
+    (3, 'L''ingénue libertine', 'Colette', 'Minne + Les égarements de Minne')
+  ON CONFLICT DO NOTHING;`;
+  pool.query(sql_insert, [], (err, result) => {
     if (err) {
       return console.error(err.message);
     }
-    console.log("Alimentation réussie de la table 'Livres'");
+    const sql_sequence = "SELECT SETVAL('Livres_Livre_ID_Seq', MAX(Livre_ID)) FROM Livres;";
+    pool.query(sql_sequence, [], (err, result) => {
+      if (err) {
+        return console.error(err.message);
+      }
+      console.log("Alimentation réussie de la table 'Livres'");
+    });
   });
 });
 
@@ -1504,11 +1567,11 @@ app.get("/data", (req, res) => {
 // GET /livres
 app.get("/livres", (req, res) => {
   const sql = "SELECT * FROM Livres ORDER BY Titre";
-  db.all(sql, [], (err, rows) => {
+  pool.query(sql, [], (err, result) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("livres", { model: rows });
+    res.render("livres", { model: result.rows });
   });
 });
 
@@ -1519,9 +1582,9 @@ app.get("/create", (req, res) => {
 
 // POST /create
 app.post("/create", (req, res) => {
-  const sql = "INSERT INTO Livres (Titre, Auteur, Commentaires) VALUES (?, ?, ?)";
-  const book = [req.body.Titre, req.body.Auteur, req.body.Commentaires];
-  db.run(sql, book, err => {
+  const sql = "INSERT INTO Livres (Titre, Auteur, Commentaires) VALUES ($1, $2, $3)";
+  const book = [req.body.titre, req.body.auteur, req.body.commentaires];
+  pool.query(sql, book, (err, result) => {
     if (err) {
       return console.error(err.message);
     }
@@ -1532,21 +1595,21 @@ app.post("/create", (req, res) => {
 // GET /edit/5
 app.get("/edit/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "SELECT * FROM Livres WHERE Livre_ID = ?";
-  db.get(sql, id, (err, row) => {
+  const sql = "SELECT * FROM Livres WHERE Livre_ID = $1";
+  pool.query(sql, [id], (err, result) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("edit", { model: row });
+    res.render("edit", { model: result.rows[0] });
   });
 });
 
 // POST /edit/5
 app.post("/edit/:id", (req, res) => {
   const id = req.params.id;
-  const book = [req.body.Titre, req.body.Auteur, req.body.Commentaires, id];
-  const sql = "UPDATE Livres SET Titre = ?, Auteur = ?, Commentaires = ? WHERE (Livre_ID = ?)";
-  db.run(sql, book, err => {
+  const book = [req.body.titre, req.body.auteur, req.body.commentaires, id];
+  const sql = "UPDATE Livres SET Titre = $1, Auteur = $2, Commentaires = $3 WHERE (Livre_ID = $4)";
+  pool.query(sql, book, (err, result) => {
     if (err) {
       return console.error(err.message);
     }
@@ -1557,20 +1620,20 @@ app.post("/edit/:id", (req, res) => {
 // GET /delete/5
 app.get("/delete/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "SELECT * FROM Livres WHERE Livre_ID = ?";
-  db.get(sql, id, (err, row) => {
+  const sql = "SELECT * FROM Livres WHERE Livre_ID = $1";
+  pool.query(sql, [id], (err, result) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("delete", { model: row });
+    res.render("delete", { model: result.rows[0] });
   });
 });
 
 // POST /delete/5
 app.post("/delete/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "DELETE FROM Livres WHERE Livre_ID = ?";
-  db.run(sql, id, err => {
+  const sql = "DELETE FROM Livres WHERE Livre_ID = $1";
+  pool.query(sql, [id], (err, result) => {
     if (err) {
       return console.error(err.message);
     }

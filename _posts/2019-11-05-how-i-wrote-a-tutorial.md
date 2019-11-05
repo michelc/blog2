@@ -25,7 +25,7 @@ But sometimes it's still difficult to "really" get started. For example, for the
 
 So I had been trying to develop a small web application with Node for a while. This meant using Express since it is the most popular framework on the market. I don't have too much time to devote to it, so don't bother getting lost with Koa, Hapi, Polka and others...
 
-The dream would have been to find something that tinkered with, like when I discovered Sinatra with "[I did it my way]({% post_url 2010-07-22-installer-sinatra-windows-7 %})". But well, Darren Jones doesn't seem determined to do it again with Node :)
+The dream would have been to find something that tinkered with, like when I discovered Sinatra with "[I did it my way]({% post_url 2010-07-22-installer-sinatra-windows-7 %})". But well, [Darren Jones](https://twitter.com/daz4126)  doesn't seem determined to do it again with Node :)
 
 One day (I had just finished a quick application with ASP.NET MVC 5 and Bootstrap 4 that I could have done in Node if I had known how), I told myself that apart from time, I didn't really need much to get around it:
 

@@ -1088,7 +1088,7 @@ app.post("/create", (req, res) => {
 ## 9. Delete a row
 
 
-### The "views/delete.ejs" and "views/_diplay.ejs" views
+### The "views/delete.ejs" and "views/_display.ejs" views
 
 The main view to be able to delete a record must first display the information of the selected book to allow the user to confirm its deletion in full knowledge. It therefore looks a lot like the "edit.ejs" and "create.ejs" views.
 

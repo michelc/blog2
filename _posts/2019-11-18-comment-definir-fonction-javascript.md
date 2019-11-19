@@ -5,6 +5,9 @@ tags: javascript
 title: "Comment définir une fonction JavaScript"
 ---
 
+{:.encart}
+English version: [How to define a JavaScript function]({% post_url 2019-11-19-how-to-define-javascript-function %}).
+
 Comme j'ai toujours un peu de mal à me rappeler de tout et aussi parce qu'il y a
 un petit côté collection que j'aime bien, voici un récapitulatif sommaire des
 différentes façons qui existent pour définir des fonctions en JavaScript.

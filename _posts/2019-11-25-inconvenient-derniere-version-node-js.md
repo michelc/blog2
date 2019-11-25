@@ -133,8 +133,10 @@ Tant pis ! Je n'ai plus qu'à désinstaller Node 13.1.0 puis à réinstaller la
 version 12.13.0 :
 
 ```
-choco uninstall -y nodejs (et répondre Y pour désinstaller nodejs.install aussi)
-choco install -y nodejs --version=12.13.0
+E:\Code\AppTestAA>choco uninstall -y nodejs
+    (et répondre Y pour désinstaller nodejs.install aussi)
+E:\Code\AppTestAA>choco install -y nodejs --version=12.13.0
+
 E:\Code\AppTestAA>npm install
 
 > sqlite3@4.1.0 install E:\Code\AppTestAA\node_modules\sqlite3

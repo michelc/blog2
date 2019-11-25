@@ -9,6 +9,13 @@ Depuis que j'ai commencé à faire quelques trucs avec Node, j'ai toujours
 travaillé avec la toute dernière version de Node. Pour cela, j'ai l'habitude de
 faire des `choco upgrade -y nodejs` assez régulièrement.
 
+<figure>
+  <img src="/public/2019/le-corniaud.jpg" alt="le-corniaud" />
+  <figcaption>
+    <a href="https://fr.wikipedia.org/wiki/Le_Corniaud">Elle va marcher beaucoup moins bien... - Le Corniaud</a>
+  </figcaption>
+</figure>
+
 Cela me permet de tester les dernières nouveautés de JavaScript sans passer par
 Babel ou TypeScript. Ca marche parce que je ne fais que des bouts d'essais et
 que je code et j'exécute tout en local. Sans doute que le jour où je voudrai

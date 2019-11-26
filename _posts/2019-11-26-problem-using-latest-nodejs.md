@@ -1,37 +1,27 @@
 ---
-date: 2019-11-25 12:16:55+200
+date: 2019-11-26 12:28:44+200
 layout: post
 tags: javascript
-title: "De l'inconvénient d'utiliser aveuglément la dernière version de Node"
+title: "The problem with blindly using the latest Node"
 ---
 
 {:.encart}
-English version: [The problem with blindly using the latest Node]({% post_url 2019-11-26-problem-using-latest-nodejs %}).
+Version en français : [De l'inconvénient d'utiliser aveuglément la dernière version de Node]({% post_url 2019-11-25-inconvenient-derniere-version-node-js %}).
 
-Depuis que j'ai commencé à faire quelques trucs avec Node, j'ai toujours
-travaillé avec la toute dernière version de Node. Pour cela, j'ai l'habitude de
-faire des `choco upgrade -y nodejs` assez régulièrement.
+Since I started doing some testing with Node, I've always worked with the latest version of Node. And that's why I am used to do `choco upgrade -y nodejs` quite regularly.
 
 <figure>
   <img src="/public/2019/le-corniaud.jpg" alt="le-corniaud" />
   <figcaption>
-    <a href="https://fr.wikipedia.org/wiki/Le_Corniaud">Elle va marcher beaucoup moins bien... - Le Corniaud</a>
+    <a href="https://en.wikipedia.org/wiki/The_Sucker">It will not work as well... - Le Corniaud</a>
   </figcaption>
 </figure>
 
-Cela me permet de tester les dernières nouveautés de JavaScript sans passer par
-Babel ou TypeScript. Ca marche parce que je ne fais que des bouts d'essais et
-que je code et j'exécute tout en local. Sans doute que le jour où je voudrai
-mettre en production et déployer mon code, j'aurai à revoir ce mode de
-fonctionnement.
+This allows me to use the latest JavaScript features without going through Babel or TypeScript. It works because I only do test runs and code and execute everything locally. No doubt that the day I want to put my code into production and deploy it, I will have to review this mode of operation.
 
-Mais je n'avais jamais eu le moindre problème jusqu'à présent (et pourtant je
-travaille sous Windows). J'étais donc passé de la version 12.13.0 de Node à la
-version 13.0.0 puis 13.1.0 sans m'inquiéter, d'autant plus que je faisais un
-petit break côté Node.
+But I had never had any problems until now (and yet I work under Windows). So I went from version 12.13.0 of Node to version 13.0.0.0 and then 13.1.0 without worrying, especially since I was taking a little break on the Node side.
 
-Et quand j'ai voulu me remettre à mes essais avec le module "express-validator",
-j'ai eu la désagréable surprise de constater que plus rien ne fonctionnait...
+And when I wanted to get back to my tests with the "express-validator" module, I was surprised to find that nothing was working anymore...
 
 ```
 E:\Code\AppTestAA>npm start
@@ -73,13 +63,9 @@ npm ERR!     C:\Users\michel\AppData\Roaming\npm-cache\_logs\2019-11-20T14_43_27
 E:\Code\AppTestAA>
 ```
 
-J'ai d'abord pensé avoir tout cassé avec mes derniers essais et je suis reparti
-d'une version "propre" du projet. Mais quand j'ai voulu la lancer avant de
-modifier quoique ce soit, rebelote !
+At first I thought I had broken everything with my last attempts. So I start again from a "clean" version of the project. I tried to launch this clean code, and here it comes again!
 
-Après avoir regardé vite fait les messages d'erreurs, je me suis dit que j'avais
-peut-être une incompatibilité de version et j'ai essayé de réinstaller tous les
-packages du projet :
+After a quick look at the error messages, I found I might have a version mismatch and tried to reinstall all the packages:
 
 ```
 PS E:\Code\AppTestAA> rd node_modules /s /q
@@ -133,18 +119,13 @@ npm ERR! A complete log of this run can be found in:
 npm ERR!     C:\Users\michel\AppData\Roaming\npm-cache\_logs\2019-11-20T14_45_17_020Z-debug.log
 ```
 
-Encore pire ! J'étudie alors un peu mieux les messages d'erreurs et il
-semblerait donc que c'est le module "SQlite3" qui pose problème. En creusant, il
-s'avère que le "binding" n'est pas à jour et qu'il n'existe pas encore pour la
-version 13 de Node JS. Et je ne dois pas voir les bons trucs pour que NPM soit
-capable de le builder à partir des sources...
+Even worse! I read the error messages a little better and it seems that the "SQlite3" module is the problem. While digging, it turns out that the binding isn't up to date and that it doesn't yet exist for Node 13. And that my configuration can't build it from sources...
 
-Tant pis ! Je n'ai plus qu'à désinstaller Node 13.1.0 puis à réinstaller la
-version 12.13.0 :
+Never mind! All I have to do is uninstall Node 13 and then reinstall version 12.13.0:
 
 ```
 E:\Code\AppTestAA>choco uninstall -y nodejs
-    (et répondre Y pour désinstaller nodejs.install aussi)
+    (and answer Y to uninstall nodejs.install too)
 E:\Code\AppTestAA>choco install -y nodejs --version=12.13.0
 
 E:\Code\AppTestAA>npm install
@@ -160,8 +141,6 @@ added 174 packages from 135 contributors and audited 303 packages in 4.332s
 found 0 vulnerabilities
 ```
 
-Et ce coup-ci, `npm start` réussi à lancer correctement l'application.
+And this time, `npm start` successfully launched the application.
 
-Conclusion : il faudrait qu'à l'avenir je fasse un peu plus attention à ce que
-j'utilise et aux problèmes de compatibilité que cela peut causer. Mais d'un
-autre côté, c'est la première fois que je rencontre un tel problème...
+Conclusion: I should pay a little more attention in the future to what I use and the compatibility problems it can cause. But on the other hand, it's the first time I've encountered such a problem...

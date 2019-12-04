@@ -6,7 +6,7 @@ title: "Generate a random number with JavaScript"
 ---
 
 {:.encart}
-Version en français : [Générer un nombre aléatoire en JavaScript]({% post_url 2019-12-02-generer-nombre-aleatoire-javascript %}).
+Version en français : [Générer un nombre aléatoire en JavaScript]({% post_url 2019-12-03-generer-nombre-aleatoire-javascript %}).
 
 ### The "Math.random()" method
 

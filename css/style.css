@@ -167,6 +167,10 @@ p img {
   margin: 0 auto;
 }
 
+li p {
+  margin: 0 auto; /* page archives génère des <li><p>...</p></li> */
+}
+
 blockquote {
   background-color: #fbfaea;
   border-color: #e3d0aa;
@@ -188,7 +192,7 @@ blockquote {
 header p {
   color: #777;
   font-size: small;
-  margin-top: -1.5rem;
+  margin-top: -1rem;
 }
 
 header p span {

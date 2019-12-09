@@ -5,6 +5,8 @@ tags: javascript, jquery
 title: "dQuery - Délégation d'évènements et « event.target »"
 ---
 
+<div class="encart">
+
 Cette série de billets retrace quelques-unes des étapes pour développer une
 mini-librairie JavaScript qui remplacera(it) un jour jQuery sur mon site de jeux
 de solitaires.
@@ -15,6 +17,8 @@ de solitaires.
 4. [La délégation des évènements en JS]({% post_url 2019-05-21-dquery-delegation-evenement-javascript %})
 5. [Délégation d'évènements et « event.target »]({% post_url 2019-05-28-dquery-delegation-evenement-event-target %})
 6. [Délégation d'évènements et iOS]({% post_url 2019-06-04-dquery-delegation-evenement-ios %})
+
+</div>
 
 Je résume : après avoir implémenté la délégation d'évènement en pur JavaScript
 dans ma librairie dQuery, mon jeu ne se comportait toujours pas correctement. La

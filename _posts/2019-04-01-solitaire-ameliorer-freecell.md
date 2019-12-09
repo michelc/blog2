@@ -5,6 +5,8 @@ tags: javascript
 title: "Solitaire - Améliorer FreeCell"
 ---
 
+<div class="encart">
+
 Ce billet fait partie d'une série consacrée au travail en cours sur mon site de
 solitaires et aux évolutions que je souhaite y apporter :
 
@@ -14,6 +16,8 @@ solitaires et aux évolutions que je souhaite y apporter :
 4. [Ajouter des animations CSS]({% post_url 2019-04-08-solitaire-ajouter-animations-css %})
 5. [Drag and drop sans jQuery UI]({% post_url 2019-04-15-solitaire-drag-and-drop-sans-jquery-ui %})
 6. [Remplacer AjaxMin, etc...]({% post_url 2019-04-25-solitaire-remplacer-ajaxmin %})
+
+</div>
 
 <figure>
   <img src="/public/2019/freecell.jpg" alt="microsoft-freecell" />

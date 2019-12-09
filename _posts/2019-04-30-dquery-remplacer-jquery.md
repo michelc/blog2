@@ -5,6 +5,8 @@ tags: javascript, jquery
 title: "dQuery - Comment j'ai (bientôt) remplacé jQuery"
 ---
 
+<div class="encart">
+
 Ce billet est le premier d'une nouvelle petite série consacrée au développement
 de "dQuery.js", une mini-librairie JavaScript ultra simple pour remplacer en
 partie jQuery.
@@ -15,6 +17,8 @@ partie jQuery.
 4. [La délégation des évènements en JS]({% post_url 2019-05-21-dquery-delegation-evenement-javascript %})
 5. [Délégation d'évènements et « event.target »]({% post_url 2019-05-28-dquery-delegation-evenement-event-target %})
 6. [Délégation d'évènements et iOS]({% post_url 2019-06-04-dquery-delegation-evenement-ios %})
+
+</div>
 
 Cela faisait déjà un petit moment que je voulais "abandonner" jQuery, ou plus
 exactement voir ce qui était faisable en Vanilla JS.

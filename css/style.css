@@ -14,40 +14,45 @@
 }
 
 html {
-  font: 14px/1.4 "Century Gothic", "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
-  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
   background-color: #fff;
-  color: #444;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   background-color: #fff;
-  max-width: 48rem;
-  padding: .5rem 1rem;
+  margin: 0 auto;
+  max-width: 56rem;
+  padding: 1rem;
   text-align: left;
+  width: 100%;
 }
 
 
 /* Links
    ========================================================================== */
 
-a,
-a:visited {
+a, a:visited {
   color: #2962ff;
   text-decoration: none;
 }
 
 a[href*='//'] {
-  color: magenta;
+  font-weight: 600;
 }
 
-footer a[href*='//'] {
-  color: #2962ff;
+figcaption a, footer a[href*='//'] {
+  font-weight: normal !important;
 }
 
 p a {
@@ -58,8 +63,7 @@ li p a {
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
   text-decoration: underline;
 }
 
@@ -69,41 +73,86 @@ a:focus {
 
 h1 {
   font-size: 1rem;
-  margin: 1.3rem 0;
+  font-weight: 300;
+  margin: 0;
 }
 
 h1 .title {
-  font-size: 1.3rem;
-  margin: 1.3rem 0;
+  font-weight: 600;
+}
+
+article header {
+  margin: 1rem 0 2.5rem;
+  text-align: center;
 }
 
 h2 {
   color: #c39000;
-  font-size: 1.7rem;
-  margin: 1.7rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -.5px;
+  line-height: 1;
+  margin: 1.75rem 0;
 }
 h2 a, h2 a:visited { color: #c39000; }
 
 h3 {
   color: #43a047;
-  font-size: 1.3rem;
-  margin: 1.1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  margin: 2rem 0 1rem 0;
 }
 h3 a, h3 a:visited { color: #43a047; }
 
 h4 {
   color: #777;
   font-size: 1.1rem;
+  line-height: 1;
   margin: 1.1rem 0;
 }
 h4 a, h4 a:visited { color: #777; }
 
 
+/* Blocks
+   ========================================================================== */
+
+blockquote, pre, .encart {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  clear: both;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  margin: 1rem -1rem;
+  padding: .5rem 1rem;
+  text-align: left;
+}
+
+
+/* Figure
+   ========================================================================== */
+
+figure {
+  margin: 1rem -1rem;
+  padding: 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+figcaption {
+  font-size: small;
+  line-height: 1;
+}
+
+
 /* Lists
    ========================================================================== */
 
-ul,
-ol {
+ul, ol {
   margin: 0 0 0 1.3rem;
   padding: 0;
   text-align: left;
@@ -118,34 +167,14 @@ p img {
   margin: 0 auto;
 }
 
-li p {
-  margin: 0 auto;
-}
-
 blockquote {
   background-color: #fbfaea;
-  border-left: 5px solid #e3d0aa;
-  clear: both;
-  margin: 20px 0;
-  padding: 5px 15px;
-}
-
-figure {
-  margin: 1em 0;
-  text-align: center;
-}
-
-figure img {
-  max-width: 100%;
+  border-color: #e3d0aa;
 }
 
 .encart {
   background-color: #eaf7ff;
-  border-bottom: 1px solid #6b90da;
-  border-top: 1px solid #6b90da;
-  clear: both;
-  margin: 20px 0;
-  padding: 5px 15px;
+  border-color: #6b90da;
 }
 
 .accroche {
@@ -163,9 +192,9 @@ header p {
 }
 
 header p span {
-  background-color: #f8f8f8;
-  margin-right: .5rem;
-  padding: 1px 3px;
+  background-color: #f0f0f0;
+  margin: 0 .25rem;
+  padding: 2px 5px;
 }
 
 
@@ -174,29 +203,23 @@ header p span {
 
 pre {
   background-color: #f8f8f8;
-  border: 1px #eee solid;
-  font-size: .8rem;
-  padding: .4rem .5rem;
-  text-align: left;
-}
-
-/* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
-pre {
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap !important;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
+  border-color: #eee;
+  font-size: small;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 code {
-  background-color: #f8f8f8;
-  border: 1px #eee solid;
+  background-color: #f0f0f0;
+  color: #444;
+  letter-spacing: -1px;
   padding: 0 2px;
 }
 
 pre code {
-  border: none;
+  background-color: #f8f8f8;
+  color: #000;
+  letter-spacing: -.25px;
   padding: 0;
 }
 
@@ -206,12 +229,11 @@ pre code {
 
 nav {
   font-size: small;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   text-align: center;
 }
 
-nav a,
-nav a:visited {
+nav a, nav a:visited {
   margin: 0 .5rem;
   text-decoration: none;
 }
@@ -229,54 +251,67 @@ nav a:first-child:after {
 }
 
 
-
 /* Footer
    ========================================================================== */
 
 footer {
-  margin: 2rem 0;
+  margin: 1rem 0 0 0;
   text-align: center;
 }
 
 
-/* Smartphone (landscape)
-   ========================================================================== */
-
-@media (min-width: 28rem) {
-  html {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-}
-
-
 /* Tablet & desktop
-   ========================================================================== */
+    ========================================================================== */
 
-@media (min-width: 48rem) {
-  html {
-    font-size: 17px;
-    line-height: 1.4;
+@media screen and (min-width: 48rem) {
+  body {
+    background-color: #eee;
   }
   .container {
-    padding-left: 2.5rem;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  blockquote, pre, .encart {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  figure {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+  /* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
+  pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
   }
 }
 
 
-/* Pubs & impression
+/* Print
    ========================================================================== */
 
 .pub { margin-top: 1rem; }
 
-@media (min-width: 62rem) {
-  .pub {
-    margin-left: 46rem;
-    position: fixed;
-    top: 1rem;
-  }
-}
-
 @media print {
-  div > header, nav, .pub { display: none; }
+  div > header, nav, .cover, .pub { display: none; }
+  .container {
+    max-width: 100rem;
+    padding: .1rem 0 !important;
+  }
+  /* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
+  pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+  }
 }

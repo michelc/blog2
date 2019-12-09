@@ -5,7 +5,7 @@ tags: javascript, jquery
 title: "dQuery - Comment j'ai (bientôt) remplacé jQuery"
 ---
 
-<div class="encart">
+<div class="encart" markdown="1">
 
 Ce billet est le premier d'une nouvelle petite série consacrée au développement
 de "dQuery.js", une mini-librairie JavaScript ultra simple pour remplacer en

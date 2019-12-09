@@ -5,7 +5,7 @@ tags: javascript
 title: "Solitaire - Ajouter des animations CSS"
 ---
 
-<div class="encart">
+<div class="encart" markdown="1">
 
 Ce billet fait partie d'une série consacrée au travail en cours sur mon site de
 solitaires et aux évolutions que je souhaite y apporter :

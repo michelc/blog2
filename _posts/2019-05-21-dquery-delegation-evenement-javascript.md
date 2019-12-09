@@ -5,7 +5,7 @@ tags: javascript, jquery
 title: "dQuery - La délégation des évènements en JS"
 ---
 
-<div class="encart">
+<div class="encart" markdown="1">
 
 Cette série de billets retrace quelques-unes des étapes pour développer une
 mini-librairie JavaScript qui remplacera(it) un jour jQuery sur mon site de jeux

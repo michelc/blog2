@@ -288,7 +288,7 @@ footer {
     margin-left: -3rem;
     margin-right: -3rem;
   }
-  /* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
+  /* https://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag */
   pre {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap !important;
@@ -304,13 +304,17 @@ footer {
 
 .pub { margin-top: 1rem; }
 
+@page {
+  margin: 1.5cm 1cm; /* en cm pour IE */
+}
+
 @media print {
   div > header, nav, .cover, .pub { display: none; }
   .container {
     max-width: 100rem;
-    padding: .1rem 0 !important;
+    padding: 0 !important;
   }
-  /* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
+  /* https://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag */
   pre {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap !important;

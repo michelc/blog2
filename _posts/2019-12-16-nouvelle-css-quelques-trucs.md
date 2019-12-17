@@ -2,8 +2,11 @@
 date: 2019-12-16 12:09:42
 layout: post
 tags: css
-title: "Nouvelle CSS et 5 trucs bons a savoir"
+title: "Nouvelle CSS et 5 trucs bons à savoir"
 ---
+
+{:.encart}
+English version: [A new CSS and 5 tips to know]({% post_url 2019-12-17-new-css-tips-to-know %}).
 
 Pour la nouvelle année à venir, j'ai un peu rafraichi la charte graphique de mon
 blogue. Outre le côté "tout nouveau, tout beau", cela m'a permis de voir 2 ou 3
@@ -220,7 +223,7 @@ présenter une table des matières. Par exemple :
 </div>
 ```
 
-Bon, ben ça ça ne marche pas... Le code Markdown à l'intérieur de la balise
+Bon, ben ça, ça ne marche pas... Le code Markdown à l'intérieur de la balise
 `div` n'est pas transformé en html :( Pour les cas les plus simples avec un seul
 lien, j'avais pris l'habitude de bidouiller en remplaçant la balise `div.encart`
 par son équivalent en Markdown, grâce à la syntaxe `{:.encart}` :

@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Working copy of images for dev.to
+public/2019/dev/
+public/2020/dev/
+

@@ -6,6 +6,9 @@ tags: code-snippets, sql
 title: "Mise à jour d'une table à partir d'une autre"
 ---
 
+{:.encart}
+English version: [Updating a table from another table]({% post_url 2019-12-23-update-table-from-another-table %}).
+
 Pour mettre à jour un champ d'une table à partir du champ équivalent d'une
 autre table, Access accepte deux noms de tables pour la commande UPDATE, mais
 pas Sql Server.

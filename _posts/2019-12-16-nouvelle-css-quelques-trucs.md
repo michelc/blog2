@@ -1,5 +1,5 @@
 ---
-date: 2019-12-16 12:09:42
+date: 2019-12-16 12:09:42+200
 layout: post
 tags: css
 title: "Nouvelle CSS et 5 trucs bons à savoir"

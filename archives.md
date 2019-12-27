@@ -34,8 +34,7 @@ title: "Archives"
   {% when "10" %}Octobre
   {% when "11" %}Novembre
   {% when "12" %}Décembre
-{% endcase %}
-{{ post.date | date: " %Y" }}
+{% endcase %}{{ post.date | date: " %Y" }}
   {% endif %}
 
 * [{{ post.title }}]({{ post.url | relative_url }})

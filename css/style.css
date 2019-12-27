@@ -241,26 +241,26 @@ pre code {
 /* Navigation
    ========================================================================== */
 
-nav {
+nav.paginate {
   font-size: small;
   padding-top: 1.5rem;
   text-align: center;
 }
 
-nav a, nav a:visited {
+nav.paginate a, nav.paginate a:visited {
   margin: 0 .5rem;
   text-decoration: none;
 }
 
-nav a:first-child:before {
+nav.paginate a:first-child:before {
   content: '← ';
 }
 
-nav a:last-child:after {
+nav.paginate a:last-child:after {
   content: ' →';
 }
 
-nav a:first-child:after {
+nav.paginate a:first-child:after {
   content: '';
 }
 
@@ -319,7 +319,7 @@ footer {
 }
 
 @media print {
-  div > header, nav, .cover, .pub { display: none; }
+  div > header, nav.paginate, .cover, .pub { display: none; }
   .container {
     max-width: 100rem;
     padding: 0 !important;

@@ -20,3 +20,7 @@ gems:
 
 feed:
   path: atom.xml
+
+kramdown:
+  syntax_highlighter_opts:
+    disable : true

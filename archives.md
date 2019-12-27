@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Archives
+layout: page
 permalink: archives/
+title: "Archives"
 ---
 
 <!-- http://alanwsmith.com/jekyll-liquid-date-formatting-examples -->

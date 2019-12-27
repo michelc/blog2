@@ -21,20 +21,24 @@ title: "Archives"
   {% capture month %}{{ post.date | date: "%m" }}{% endcapture %}
   {% if current_month != month %}
     {% assign current_month = month %}
-### {% case month %}
-  {% when "01" %}Janvier
-  {% when "02" %}Février
-  {% when "03" %}Mars
-  {% when "04" %}Avril
-  {% when "05" %}Mai
-  {% when "06" %}Juin
-  {% when "07" %}Juillet
-  {% when "08" %}Août
-  {% when "09" %}Septembre
-  {% when "10" %}Octobre
-  {% when "11" %}Novembre
-  {% when "12" %}Décembre
-{% endcase %}{{ post.date | date: " %Y" }}
+    {% capture month_year %}
+      {% case month %}
+        {% when "01" %}Janvier
+        {% when "02" %}Février
+        {% when "03" %}Mars
+        {% when "04" %}Avril
+        {% when "05" %}Mai
+        {% when "06" %}Juin
+        {% when "07" %}Juillet
+        {% when "08" %}Août
+        {% when "09" %}Septembre
+        {% when "10" %}Octobre
+        {% when "11" %}Novembre
+        {% when "12" %}Décembre
+      {% endcase %}
+      {{ post.date | date: " %Y" }}
+    {% endcapture %}
+### {{ month_year }}
   {% endif %}
 
 * [{{ post.title }}]({{ post.url | relative_url }})

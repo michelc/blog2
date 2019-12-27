@@ -46,7 +46,7 @@ Pour la fonction qui génère le Hash, j'ai testé pas mal de trucs pour voir
 ce que Ruby permet de faire et essayer de m'éloigner un peu de mon style de
 CSharpiste, ex VB6isste.
 
-### 1° essai - ce qui m'est venu naturellement (basique mais ça marche)
+## 1° essai - ce qui m'est venu naturellement (basique mais ça marche)
 
 ```
 def v1_pagination_lien(texte, destination = nil, page_courante = 0)
@@ -66,7 +66,7 @@ def v1_pagination_lien(texte, destination = nil, page_courante = 0)
 end
 ```
 
-### 2° essai - ce qui pourrait se faire (je me lache)
+## 2° essai - ce qui pourrait se faire (je me lache)
 
 ```
 def v2_pagination_lien(texte, destination = nil, page_courante = 0)
@@ -83,7 +83,7 @@ def v2_pagination_lien(texte, destination = nil, page_courante = 0)
 end
 ```
 
-### 3° essai - ce qui ferait moins compact (bof bof bof)
+## 3° essai - ce qui ferait moins compact (bof bof bof)
 
 ```
 def v3_pagination_lien(texte, destination = nil, page_courante = 0)
@@ -107,7 +107,7 @@ def v3_pagination_lien(texte, destination = nil, page_courante = 0)
 end
 ```
 
-### 4° essai - ce qui me parait le plus lisible (à ce jour)
+## 4° essai - ce qui me parait le plus lisible (à ce jour)
 
 ```
 def pagination_lien(texte, destination = nil, page_courante = 0)

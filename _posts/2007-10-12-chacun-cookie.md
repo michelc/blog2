@@ -32,7 +32,7 @@ différents cela ne provoque pas d'erreur, mais le 2° connecté récupère les
 droits du 1° connecté puisqu'en fait on lit le cookie créé pour le 1°
 login.
 
-### Solution temporaire et qui n'a que trop durée
+## Solution temporaire et qui n'a que trop durée
 
 Au tout début du développement, le problème crucial c'était de tester que la
 gestion des droits fonctionnait sans bugs. Il fallait donc au minimum pouvoir
@@ -56,7 +56,7 @@ ou des sous-domaines différents,
 * c'est limite faille de sécurité que de faire apparaitre en clair le login
 dans le nom du cookie.
 
-### Première tentative d'amélioration
+## Première tentative d'amélioration
 
 Après presque 3 ans à temporiser, le fait de ne pas pouvoir se connecter à
 plusieurs répertoires virtuels en même temps commençait à devenir pesant. Il
@@ -79,7 +79,7 @@ marche enfin,
 encore testé,
 * et la faille de sécurité est toujours là.
 
-### Dernière tentative bonne pour la route
+## Dernière tentative bonne pour la route
 
 Le soucis de sécurité venant du fait que le login utilisateur apparait en
 clair dans le nom du cookie, il suffit de le crypter pour résoudre ce problème.
@@ -100,7 +100,7 @@ est lui aussi commun à toutes les sessions locales, mais dans la pratique ce
 n'est ni bloquant ni foncièrement génant. J'ai seulement changé son nom en
 "ap_adminVisible".
 
-### Quelques explications supplémentaires après coup.
+## Quelques explications supplémentaires après coup.
 
 Bonne nouvelle : ça marche dans le cas de domaines ou de sous-domaines
 différents. Ouf!

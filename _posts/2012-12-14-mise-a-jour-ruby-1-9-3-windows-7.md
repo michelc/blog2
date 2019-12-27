@@ -9,7 +9,7 @@ title: "Mise à jour Ruby 1.9.3 sous Windows 7"
 Je viens enfin de mettre à jour mon installation Ruby 1.9.2 alors je note
 pour le jour où Ruby 2.0 sortira.
 
-### Etape 1 : désinstaller Ruby 1.9.2
+## Etape 1 : désinstaller Ruby 1.9.2
 
 Je procède à quelques sauvegardes personnelles avant de lancer la
 désinstallation.
@@ -21,7 +21,7 @@ notes)
 
 Puis désinstaller Ruby 1.9.2 et supprimer le répertoire C:\Ruby.
 
-### Etape 2 : Installer Ruby 1.9.3
+## Etape 2 : Installer Ruby 1.9.3
 
 Installer Ruby 1.9.3 (depuis [RubyInstaller pour Windows](http://rubyinstaller.org/))
 
@@ -54,7 +54,7 @@ Mettre à jour les quelques gems installées par défaut
 * gem update --system
 * gem update
 
-### Etape 3 : Installer Sinatra
+## Etape 3 : Installer Sinatra
 
 Sinatra lui-même
 

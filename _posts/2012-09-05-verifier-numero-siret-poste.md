@@ -10,7 +10,7 @@ title: "Vérifier un numéro de siret de la Poste"
 à identifier les sociétés et les Siret (14 chiffres) les établissements de ces
 sociétés.
 
-### Formule de Luhn
+## Formule de Luhn
 
 La vérification de la validité d'un Siren ou d'un Siret est basé sur la
 [formule de Luhn](http://fr.wikipedia.org/wiki/Système_d'identification_du_répertoire_des_établissements#Calcul_et_validit.C3.A9_d.27un_num.C3.A9ro_SIRET).
@@ -19,7 +19,7 @@ Pour cela, on multiplie les chiffres de rang impair à partir de la droite
 par 1, ceux de rang pair par 2. La somme des chiffres obtenus doit être
 <s>congru au modulo 10</s> multiple de 10.
 
-### Vérifier la clé du siret 73282932000074
+## Vérifier la clé du siret 73282932000074
 
 ```
 73282932000074 -.
@@ -55,7 +55,7 @@ prend 1 + 4 = 5
 * Il existe un "truc" pour calculer cette somme de 2 chiffres, c'est d'oter 9
 du nombre obtenu : 7 x 2 = 14 => on prend 14 - 9 = 5
 
-### Cas des siret de La Poste
+## Cas des siret de La Poste
 
 Ca c'est le truc habituel. Sauf que depuis que la Poste a changé de statut
 et qu'elle est devenue une société anonyme, elle n'a plus droit qu'à un seul
@@ -73,12 +73,12 @@ XXXXX est le suivant :
 
 > La somme simple des chiffres du SIRET doit être congrue à 0 modulo 5, c'est
 > à dire qu'elle doit être un multiple de 5.
-> 
+>
 > *Frédéric Tardieu - Chef de la division Répertoire Inter-administratif
 > Sirene au sein de la direction des Statistiques d'Entreprises de
 > l'Insee.*
 
-### Vérifier la clé du siret 35600000049837
+## Vérifier la clé du siret 35600000049837
 
 ```
 35600000049837 --.

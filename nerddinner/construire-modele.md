@@ -25,7 +25,7 @@ métiers. Nous réaliserons aussi une classe Repository qui nous permettra de
 bien séparer la gestion de la persistance des données du reste de l'application
 et simplifiera la réalisation de tests unitaires.
 
-### LINQ to SQL
+## LINQ to SQL
 
 LINQ to SQL est un ORM (un mapping objet-relationnel) qui fait parti de
 ASP.NET 3.5.
@@ -52,7 +52,7 @@ Dinner et RSVP. Cela diminue la quantité de code spécifique aux données que
 nous devons écrire, ce qui nous permet de construire des applications de
 meilleure qualité.
 
-### Ajout des classes LINQ to SQL à notre projet
+## Ajout des classes LINQ to SQL à notre projet
 
 On commence par un clic droit sur le dossier "Models" de notre projet avant
 de sélectionner la commande **Add -&gt; New Item** :
@@ -71,7 +71,7 @@ SQL :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image043.png)
 
-### Création de classes de modèle de données avec LINQ to SQL
+## Création de classes de modèle de données avec LINQ to SQL
 
 LINQ to SQL permet de créer rapidement des classes de données à partir du
 schéma d'une base de données existante. Pour cela, nous ouvrons la base de
@@ -138,7 +138,7 @@ d'association par défaut fonctionnent bien par rapport au modèle de données d
 classes que nous réalisons et nous pouvons donc conserver le comportement par
 défaut.
 
-### La classe NerdDinnerDataContext
+## La classe NerdDinnerDataContext
 
 Visual Studio génère automatiquement des classes .NET qui représentent le
 modèle et les relations de la base de données définie avec le concepteur LINQ
@@ -187,7 +187,7 @@ nous a permis de retrouver. Quand nous appelons la méthode "SubmitChanges()",
 elle exécute la commande SQL "UPDATE" qui va bien pour sauvegarder les
 modifications dans la base de données.
 
-### Création d'une classe DinnerRepository
+## Création d'une classe DinnerRepository
 
 Pour de petites applications, ce n'est pas bien gênant que les contrôleurs
 attaquent directement les classes DataContext de LINQ to SQL et que les
@@ -283,7 +283,7 @@ public class DinnerRepository {
 }
 ```
 
-### Utilisation de la classe DinnerRepository
+## Utilisation de la classe DinnerRepository
 
 Maintenant que nous avons créé notre classe DinnerRepository, jetons un coup
 d'œil à quelques exemples de code pour comprendre à quoi elle va pouvoir nous
@@ -409,7 +409,7 @@ dinnerRepository.Delete(dinner);
 dinnerRepository.Save();
 ```
 
-### Ajout du contrôle des données et de règles métiers à nos classes
+## Ajout du contrôle des données et de règles métiers à nos classes
 
 Le fait de valider les données et d'appliquer des règles métiers est un
 aspect essentiel dès lors que l'on développe des applications qui traitent des

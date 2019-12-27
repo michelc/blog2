@@ -21,7 +21,7 @@ retrouver à chaque fois à partir de Request.ApplicationPath),
 connecté,
 * une pour faire passer des données d'une page à l'autre.
 
-### Trop facile !
+## Trop facile !
 
 Dans le 1° cas, une simple variable statique a fait l'affaire. Je ne vois
 d'ailleurs vraiment pas pourquoi j'avais utilisé une variable de session alors
@@ -42,7 +42,7 @@ public static string applicationPath {
 private static string _applicationPath;
 ```
 
-### Quoique ?
+## Quoique ?
 
 Ca a été un peu moins simple en ce qui concerne le stockage des informations
 sur l'utilisateur connecté puisque dans ce cas il s'agit bel et bien
@@ -108,7 +108,7 @@ sont mises en cache dans le cookie (pour quelques minutes),
 * le nom et le mél qui proviennent du cookie sont mis en cache dans la
 collection Context.Items (pour la durée de vie de la page).
 
-### Plus qu'une...
+## Plus qu'une...
 
 Et de deux! Reste plus qu'à se débarrasser de la dernière variable de
 session qui me sert à passer des données d'une page à une autre.
@@ -144,7 +144,7 @@ Après quelques essais j'ai finalement décidé de remplacer la variable
 application par l'utilisation de cache (Context.Cache) parce qu'il a en plus la
 faculté d'expirer tout seul.
 
-### Et ça marche :)
+## Et ça marche :)
 
 Une dernière recompilation générale, une ligne &lt;sessionState mode="Off"
 /&gt; dans le Web.config, un test complet et ça marche ou presque.

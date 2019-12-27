@@ -11,7 +11,7 @@ de les utiliser pour mettre en place une interface utilisateur de type liste /
 détails. Notre prochaine étape ira un cran plus loin en intégrant l'ajout, la
 modification et la suppression de dîners à notre classe DinnersController.
 
-### Les URLs prises en compte par DinnersController
+## Les URLs prises en compte par DinnersController
 
 Nous avons déjà ajouté à DinnersController les méthodes d'action pour gérer
 deux types d'URLs : /Dinners et /Dinners/Details/[id].
@@ -96,7 +96,7 @@ classe DinnerRepository (et de là de la base de données).
 
 Commençons donc par nous intéresser au scénario "Edit".
 
-### Mettre en œuvre l'action Edit en mode GET
+## Mettre en œuvre l'action Edit en mode GET
 
 Nous allons commencer par programmer la fonctionnalité http GET de la
 méthode d'action Edit. Cette méthode sera exécutée quand l'URL
@@ -217,7 +217,7 @@ HTML &lt;input type="text" /&gt; a été générée :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image082.png)
 
-### Les helpers Html.BeginForm() et Html.TextBox()
+## Les helpers Html.BeginForm() et Html.TextBox()
 
 Notre vue "Edit.aspx" utilise plusieurs méthodes "Html.Helper" :
 Html.ValidationSummary(), Html.BeginForm(), Html.TextBox(), et
@@ -313,7 +313,7 @@ d'attribut :
 <%= Html.TextBox("Title", Model.Title, new { size=30, @class="myclass" } )%>
 ```
 
-### Implémenter le mode POST de l'action Edit
+## Implémenter le mode POST de l'action Edit
 
 Nous avons pour l'instant réalisé la version http GET de notre action
 Edit(). Quand un utilisateur demande l'URL "/Dinners/Edit/1", il obtient une
@@ -444,7 +444,7 @@ informations :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image084.png)
 
-### Gestion des erreurs de saisie
+## Gestion des erreurs de saisie
 
 La façon dont nous avons géré le POST est tout à fait satisfaisante, sauf en
 cas d'erreur.
@@ -524,7 +524,7 @@ nouvelle, c'est qu'il n'y a rien de sorcier là-dessous. Tout cela vient
 simplement du fait que nous avons utilisé certaines des fonctions d'ASP.NET MVC
 prévues pour faciliter la validation des données et la gestion des erreurs.
 
-### Présentation du ModelState et des helpers de validation
+## Présentation du ModelState et des helpers de validation
 
 Les classes Controller disposent d'une collection "ModelState" qui sert à
 indiquer que le modèle d'objet passé à la vue contient des erreurs. Chaque
@@ -655,7 +655,7 @@ la liste détaillée des erreurs :
 Il est possible de personnaliser la présentation de la liste des erreurs
 grâce aux CSS.
 
-### Utiliser un helper AddRuleViolation
+## Utiliser un helper AddRuleViolation
 
 Le bloc catch de la première version de notre action Edit en mode HTTP POST
 utilisait une boucle  foreach sur la liste des violations des règles de
@@ -695,7 +695,7 @@ public static class ControllerHelpers {
 Nous pouvons ensuite mettre à jour notre action HTTP POST Edit pour utiliser
 cette méthode d'extension afin d'alimenter la collection ModelState.
 
-### Le code complet pour l'action Edit
+## Le code complet pour l'action Edit
 
 Voici tout le code nécessaire pour réaliser la partie contrôleur de la mise
 à jour des dîners :
@@ -740,7 +740,7 @@ de la vue pour qu'elles soient prises en compte. Cela procure une très grande
 souplesse pour faire évoluer facilement notre application avec un minimum de
 modifications dans le code.
 
-### Implémenter l'action HTTP GET Create
+## Implémenter l'action HTTP GET Create
 
 Nous avons terminé la réalisation de la fonctionnalité "Edit" de notre
 classe DinnersController. Passons maintenant à la gestion du "Create" qui
@@ -856,7 +856,7 @@ nous renvoie l'écran ci-dessous :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image090.png)
 
-### Implémenter l'action HTTP POST Create
+## Implémenter l'action HTTP POST Create
 
 Nous venons de réaliser le côté HTTP GET de la méthode d'action Create.
 Quand un utilisateur clique sur le bouton "Save" cela publie le formulaire vers
@@ -977,7 +977,7 @@ qui nous présente le détail du dîner que nous venons de créer :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image092.png)
 
-### Implémenter l'action HTTP GET Delete
+## Implémenter l'action HTTP GET Delete
 
 Ajoutons maintenant la prose en compte du Delete par notre classe
 DinnersController.
@@ -1051,7 +1051,7 @@ renvoyé :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image094.png)
 
-### Remarque : Pourquoi faire un POST ?
+## Remarque : Pourquoi faire un POST ?
 
 Vous devez vous demander pourquoi se compliquer la vie et passer par un
 formulaire dans notre écran de confirmation ? Pourquoi ne pas utiliser un simple
@@ -1066,7 +1066,7 @@ qu'ils ne sont pas supposés suivre les URLs de type HTTP POST.
 Une bonne habitude est de faire attention à toujours placer les traitements
 de suppression ou de modification derrière des requêtes HTTP POST.
 
-### Implémenter l'action HTTP POST Delete
+## Implémenter l'action HTTP POST Delete
 
 Nous avons pour l'instant développé la partie HTTP GET de notre méthode
 d'action Delete qui nous permet d'afficher un écran de confirmation. Lorsque un
@@ -1134,7 +1134,7 @@ puis affiche notre vue "Deleted" :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image096.png)
 
-### Sécuriser le binding formulaire / objet
+## Sécuriser le binding formulaire / objet
 
 Nous avons vu deux façons pour lier les saisies des formulaires aux objets.
 La première consiste à employer UpdateModel () pour mettre à jour les
@@ -1226,7 +1226,7 @@ RSVPs, ni celui des propriétés DinnerID ou HostedBy. Pour plus de sécurité, 
 éléments seront uniquement manipulés via du code écrit explicitement pour
 cela.
 
-### Petit récapitulatif
+## Petit récapitulatif
 
 ASP.NET MVC offre un certain nombre de fonctionnalités dédiées pour
 faciliter l'exploitation de formulaires de saisie. Nous avons utilisé plusieurs

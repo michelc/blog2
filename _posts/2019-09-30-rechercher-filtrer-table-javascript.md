@@ -19,7 +19,7 @@ compréhensible avec une démonstration sur
 [codepen.io](https://codepen.io/priyankamalviya/pen/zzWZEa).
 
 
-### Le script de départ
+## Le script de départ
 
 Tout d'abord, le script tel que développé par
 [Priyanka Malviya](https://twitter.com/priyankamalvi18) avant d'expliquer ce que
@@ -64,7 +64,7 @@ Tout d'abord, le script tel que développé par
 })();
 ```
 
-### Comment ça marche ?
+## Comment ça marche ?
 
 Pour pouvoir utiliser ce code, il faut ajouter à la page une zone de saisie en
 la décorant avec la classe "table-filter" :
@@ -153,7 +153,7 @@ Le fait de cacher / afficher une ligne se fait via la propriété CSS `display`
 que l'on défini selon le cas à "none" ou "table-row".
 
 
-### 1° modification : prise en main
+## 1° modification : prise en main
 
 Après avoir étudié le fonctionnement de ces quelques lignes, j'ai procédé à une
 très petite modification qui m'a permis de bien comprendre comment fonctionnait
@@ -208,7 +208,7 @@ Avantages :
 * Le texte à rechercher n'est plus transformé en minuscule à chaque ligne testée.
 
 
-### 2° modification : une petite amélioration
+## 2° modification : une petite amélioration
 
 Mon tableau affiche une liste de livres. Le système de filtre fonctionne à
 merveille : je peux taper quelques trucs et le tableau ne présente plus que les
@@ -240,7 +240,7 @@ zone de saisie n'est pas vide, et si c'est le cas, déclenche l'évènement en
 lui passant la zone de saisie en cours.
 
 
-### 3° modification : un peu de modernité
+## 3° modification : un peu de modernité
 
 Une fois que je procrastinais, j'ai décidé de remplacer les
 `document.getElementsByClassName()` par des `document.querySelectorAll()`
@@ -293,7 +293,7 @@ classe qui était attendu par `.getElementsByClassName()`) doit désormais être
 modifié en ".livres" (un sélecteur CSS qui est destiné à `.querySelectorAll()`).
 
 
-### 4° modification : une légère optimisation
+## 4° modification : une légère optimisation
 
 A chaque fois qu'on déclenche une recherche, toutes les lignes de la table sont
 transformées en minuscule pour pouvoir effectuer la comparaison... Supposons que
@@ -319,7 +319,7 @@ Note : Vu la taille des tableaux sur lesquels j'utilise "js-table-filter.js",
 c'est plus par sens du détail que pour une réelle optimisation.
 
 
-### 5° modification : une fonctionnalité de plus
+## 5° modification : une fonctionnalité de plus
 
 Ce coup-ci, j'ai fait une modification un peu plus utile. Le titre de la table
 est "Liste des livres", suivi du nombre de livres entre parenthèses.
@@ -369,7 +369,7 @@ Note : Si l'attribut "data-count" n'existe pas, alors le test `if (writer)
 { ... }` permet d'éviter de chercher à compter les lignes dans ce cas.
 
 
-### 6° modification : simplifications
+## 6° modification : simplifications
 
 A cette occasion, on peut aussi remarquer que la classe "table-filter" n'est
 pas vraiment indispensable. On peut aussi bien se baser sur la présence de
@@ -397,7 +397,7 @@ var inputs = dquery("input[data-table]");
 ```
 
 
-### Le fichier "js-table-filter.js" à ce jour
+## Le fichier "js-table-filter.js" à ce jour
 
 Voilà où j'en suis (en attendant de travailler à une recherche et un filtrage
 sans tenir compte des accents). Et avec quelques commentaires, le code est

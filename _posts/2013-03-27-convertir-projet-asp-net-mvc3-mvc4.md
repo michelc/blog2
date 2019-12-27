@@ -12,7 +12,7 @@ J'ai migré mon application [Répertoir](http://repertoir.apphb.com/) vers ASP.N
 > copy all the views, controllers, code, and content files from the existing MVC
 > 3 project to the new project. [Upgrading an ASP.NET MVC 3 Project to ASP.NET MVC 4](http://www.asp.net/whitepapers/mvc4-release-notes#_Toc303253806)
 
-### Créer un projet ASP.NET MVC 4 réellement vide
+## Créer un projet ASP.NET MVC 4 réellement vide
 
 Note : le projet vide est déjà pas mal vide, mais il
 intègre Web API par défaut et je n'en ai pas l'utilité.
@@ -71,7 +71,7 @@ Application_Start().
   - Générer / Regénérer la solution
   - => La regénération globale a réussi
 
-### Ajouter quelques packages
+## Ajouter quelques packages
 
 Avant de commencer, faire un clic-droit sur la solution "Repertoir" et
 sélectionner "Activer la restauration du package NuGet".
@@ -103,7 +103,7 @@ Vérifier que tout est OK :
 * Générer / Regénérer la solution
 * => La regénération globale a réussi
 
-### Copier les sources du projet MVC 3 vers MVC 4
+## Copier les sources du projet MVC 3 vers MVC 4
 
 Dans le cas du projet Repertoir, cela consiste à copier :
 
@@ -247,7 +247,7 @@ Revérifier que tout est OK
 
 => La regénération globale a réussi
 
-### Lancer les tests unitaires
+## Lancer les tests unitaires
 
 Test / Exécuter / Tous les tests de la solution
 
@@ -274,7 +274,7 @@ Test / Exécuter / Tous les tests de la solution
 
 => 151/151 réussi(s)
 
-### Lancer l'application
+## Lancer l'application
 
 Boum !
 
@@ -301,7 +301,7 @@ le Build Action des 2 fichiers "Web.Debug.config" et "Web.Release.config" est
 bien à "Content" (et pas à "None").
 
 
-### Rebrancher Git
+## Rebrancher Git
 
 C'est là que la magie opère : copier le dossier ".git" et les fichiers
 ".gitattributes", ".gitignore" et "readme.md" de l'ancien projet

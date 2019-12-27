@@ -15,7 +15,7 @@ noter tout ça pour la prochaine fois où je pourrais en avoir besoin.
 Concrètement, je n'ai rien inventé et tout vient du billet de Phil
 Haack : [ASP.NET MVC on IIS 6 Walkthrough](http://haacked.com/archive/2008/11/26/asp.net-mvc-on-iis-6-walkthrough.aspx).
 
-### Ajouter l'extension .aspx aux routes MVC
+## Ajouter l'extension .aspx aux routes MVC
 
 Pour que MVC fonctionne sur un IIS 6 où ASP.NET s'attend à avoir des URLs
 avec des extensions ".aspx", il faut commencer par mettre à jour les routes
@@ -83,14 +83,14 @@ URLs. Sauf si on a codé en dur des liens au lieu d'utiliser les helpers
 Html.ActionLink() ou Url.Action() qui vont bien... Mais ça, c'est le métier qui
 rentre.
 
-### Installer ASP.NET MVC sur le serveur IIS 6
+## Installer ASP.NET MVC sur le serveur IIS 6
 
 Je rigole. C'est beaucoup trop compliqué à faire.
 
 Par contre, ce qui est beaucoup plus fastoche, c'est de copier
 System.Web.Mvc.dll dans le répertoire "bin" de l'application !
 
-### Un dernier truc
+## Un dernier truc
 
 Tant qu'à faire de modifier le Web.Config, autant en profiter pour lui
 ajouter la ligne :

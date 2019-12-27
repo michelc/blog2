@@ -14,7 +14,7 @@ Ceci est le premier billet d'une série consacrée à la prochaine sortie de
 ASP.NET MVC 2. Ce billet présente les nouveaux helpers fortement typés qui ont
 fait leur apparition dans ASP.NET MVC 2.
 
-### Les helpers HTML actuels
+## Les helpers HTML actuels
 
 ASP.NET MVC 1 est fourni avec un certain nombre de helpers HTML que vous
 pouvez utiliser dans les vues pour simplifier la génération de l'interface
@@ -30,7 +30,7 @@ Ce helper aura comme effet de produire le code HTML suivant :
 
 ![](http://weblogs.asp.net/blogs/scottgu/image_thumb_51D8B3CD.png)
 
-### Les nouveaux helpers HTML fortement typés
+## Les nouveaux helpers HTML fortement typés
 
 Une des fonctionnalités qui nous a le plus été demandée était de gérer des
 helpers HTML fortement typés basés sur des expressions lambda pour référencer
@@ -67,7 +67,7 @@ dans le premier exemple :
 
 ![](http://weblogs.asp.net/blogs/scottgu/image_thumb_51D8B3CD.png)
 
-### Les helpers HTML fortement typés fournis avec ASP.NET MVC 2
+## Les helpers HTML fortement typés fournis avec ASP.NET MVC 2
 
 ASP.NET MVC 2 intègre d'ores et déjà les helpers HTML fortement typés
 suivants :
@@ -98,7 +98,7 @@ verrons aussi le helper Html.ValidationMessageFor() dans le prochain billet de
 cette série qui présentera les nouveautés en matière de validation apportées
 par ASP.NET MVC 2.
 
-### Les helpers HTML fortement typés et le Scaffolding
+## Les helpers HTML fortement typés et le Scaffolding
 
 VS 2008 et VS 2010 utilisent désormais tous les deux les nouveaux helpers
 fortement typés pour auto-générer les vues fortement typées à partir de la
@@ -123,7 +123,7 @@ Product :
 
 ![](http://weblogs.asp.net/blogs/scottgu/image_thumb_1815CE49.png)
 
-### Conclusion
+## Conclusion
 
 Les helpers HTML fortement typés intégrés avec ASP.NET MVC 2 fournissent une
 méthode pratique pour obtenir un contrôle du type de données à l'intérieur de

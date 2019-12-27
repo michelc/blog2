@@ -16,7 +16,7 @@ Après un premier billet pour [comparer SQL et LINQ]({% post_url 2010-02-22-conv
 présenter comment gérer des clauses plus spécifiques du SQL, en commençant par
 deux des clauses les plus importantes : FROM et SELECT.
 
-### La clause FROM
+## La clause FROM
 
 Une commande SQL SELECT débute toujours par une clause SELECT suivie d'une
 clause FROM. Dans le cas de LINQ, une expression commence toujours par une
@@ -51,7 +51,7 @@ from Contact in ClientListe
 select Contact
 ```
 
-### Utiliser un alias dans le FROM
+## Utiliser un alias dans le FROM
 
 En SQL, il est possible de définir un alias sur une table au niveau de la
 partie FROM de la requête. Cela permet ensuite de faire référence aux colonnes
@@ -73,7 +73,7 @@ from Contact in ClientListe
 select new { Contact.ClientID, Contact.Telephone }
 ```
 
-### La clause SELECT
+## La clause SELECT
 
 En SQL, les commandes SELECT contiennent une liste des valeurs à
 sélectionner parmi les informations disponibles (Nom, Telephone, Ville…). De la
@@ -102,7 +102,7 @@ from Contact in ClientListe
 select new { Contact.Nom, Contact.ClientID }
 ```
 
-### Utiliser un alias dans le SELECT
+## Utiliser un alias dans le SELECT
 
 Toujours en SQL, il est possible de définir des alias pour les différents
 éléments que vous sélectionnez au niveau de la clause SELECT, ce qui permet

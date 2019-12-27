@@ -11,7 +11,7 @@ partie du tutoriel pour gérer des contacts]({% post_url 2009-10-06-test-driven-
 Programmation Pilotée par les Tests (ou Test-Driven Development en
 anglais).
 
-### Point de départ
+## Point de départ
 
 Jusqu'ici, j'ai donc abordé les deux premières étapes sur les trois que
 compte la méthode TDD :
@@ -32,7 +32,7 @@ fonctionnalités attendues (et ces tests échouent car non compilables)
 * Etape 2 : on écrit le minimum de code pour que les tests unitaires
 réussissent
 
-### Refactoring
+## Refactoring
 
 J'en arrive donc à l'étape 3 : revoir l'architecture du code
 (refactoriser). Aux deux premières étapes du TDD, l'objectif est de se
@@ -66,7 +66,7 @@ service et repository, est-ce que ce n'est pas plus long de se souvenir comment
 * Et surtout, il n'y a pas de 4° étape dans le TDD et pourtant je n'ai encore
 rien qui gère des groupes de contacts pour de "vrai" !
 
-### Coup d'oeil en arrière
+## Coup d'oeil en arrière
 
 Sinon, cette partie du tutoriel m'a fait prendre conscience d'un truc auquel
 je n'avais pas fait attention lors de la partie sur le refactoring. En fait, la
@@ -86,7 +86,7 @@ Mais je suppose qu'il n'est pas totalement incongru d'avoir des "sous"
 repository pour différents tables (ou peut-être des classes partielles ?). A
 voir...
 
-### Sous le coude
+## Sous le coude
 
 Je vais continuer avec la suite de cette 6° partie qui va enfin s'attaquer à
 la réalisation des fonctionnalités pour de "vrai". Mais si j'ai un peu de

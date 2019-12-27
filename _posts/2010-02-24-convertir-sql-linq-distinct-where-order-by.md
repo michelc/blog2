@@ -16,7 +16,7 @@ Ce troisième billet de la série continue la [description des clauses spécifiq
 façon de transformer les clauses DISTINCT, WHERE et ORDER BY en clauses
 LINQ.
 
-### La clause DISTINCT
+## La clause DISTINCT
 
 Les commandes SQL SELECT peuvent contenir un mot-clé `DISTINCT`
 qui sert à supprimer tous les doublons dans les résultats renvoyés. Avec le
@@ -41,7 +41,7 @@ var ListeRegions = (from Contact in ClientListe
                    select Contact.Region).Distinct();
 ```
 
-### La clause WHERE
+## La clause WHERE
 
 Comme pour une requête SQL, une expression LINQ permet elle aussi de filtrer
 les résultats renvoyés en ajoutant une clause "`where`". Cette
@@ -63,7 +63,7 @@ where Contact.Region == "PACA"
 select Contact
 ```
 
-### Utiliser un opérateur
+## Utiliser un opérateur
 
 Avec SQL, les clauses `WHERE` contiennent très souvent d'autres
 opérateurs comme `AND` par exemple. Il existe généralement un
@@ -133,7 +133,7 @@ var ContactsSud = from Contact in ClientListe
                   select Contact
 ```
 
-### La clause ORDER BY
+## La clause ORDER BY
 
 La clause `ORDER BY` du SQL peut elle aussi être représentée par
 une expression LINQ. La cause "`orderby`" du langage LINQ sert à
@@ -158,7 +158,7 @@ orderby Contact.Telephone
 select Contact
 ```
 
-### Définir l'ordre du tri
+## Définir l'ordre du tri
 
 La clause SQL `ORDER BY` peut aussi contenir les mots-clés
 `ASC` ou `DESC` pour préciser sir le tri doit de faire de
@@ -182,7 +182,7 @@ orderby Contact.Telephone ascending, Contact.Nom descending
 select Contact
 ```
 
-### Conclusion
+## Conclusion
 
 Avec ce nouveau billet et les deux billets précédents, il vous est possible
 de convertir des requêtes SQL basiques en requêtes LINQ. Dans le prochain

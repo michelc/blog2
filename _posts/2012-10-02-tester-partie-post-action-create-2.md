@@ -6,7 +6,7 @@ tags: ef, mvc, unit-test
 title: "Tester la partie POST d'une action Create() - 2/2"
 ---
 
-### L'action à tester
+## L'action à tester
 
 Après avoir codé la [première partie des tests unitaires du POST sur l'action
 Create()]({% post_url 2012-10-01-tester-partie-post-action-create %}) dans le cas où la saisie est incorrecte, je vais maintenant
@@ -61,7 +61,7 @@ return RedirectToAction(...);
 => redirige l'utilisateur vers l'affichage du contact créé (pattern
 PRG).
 
-### 1° test : Si ok Alors on crée le nouveau contact
+## 1° test : Si ok Alors on crée le nouveau contact
 
 Ce premier test unitaire va consister à contrôler que lorsque la saisie est
 correcte, le nouveau contact est bien créé dans la base de données, ce qui
@@ -137,7 +137,7 @@ Assert.IsNotNull(contact, "...");
 données, ce qui signifie donc que l'action l'a correctement inséré dans la
 table des contacts et par conséquent que le test est réussi.
 
-### 2° test : Si ok Alors on initialise un message de réussite
+## 2° test : Si ok Alors on initialise un message de réussite
 
 Ce deuxième test unitaire va vérifier que l'action Create() défini un
 message "flash" lorsque la saisie est correcte.
@@ -206,7 +206,7 @@ Note : J'essaierai de faire un autre billet pour
 présenter comment je gère les messages "flash" et éventuellement comment je
 créée des objets mock pour tester ce qui se rapporte au contexte HTTP.
 
-### 3° test : Si ok Alors on redirige vers la fiche créée
+## 3° test : Si ok Alors on redirige vers la fiche créée
 
 Ce dernier test unitaire va servir à contrôler que lorsque la saisie est
 correcte, l'utilisateur est bien redirigé vers la fiche du contact qui vient
@@ -277,7 +277,7 @@ Assert.IsNotNull(result.RouteValues["id"], "...");
 => tests pour vérifier que la redirection défini les paramètres attendus
 par l'action Details().
 
-### Conclusion
+## Conclusion
 
 Je dispose désormais de 6 tests unitaires pour contrôler que le code de la
 partie POST de mon action Create() fonctionne correctement. Si j'y fait des

@@ -36,7 +36,7 @@ ou l'identifiant de la session
 A partir de ces informations, je considère que le modèle de données suivant
 devrait convenir.
 
-### Albums
+## Albums
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenThedatamodel_14/image_thumb_1.png)
 
@@ -49,14 +49,14 @@ l'identifiant de l'artiste.
 ne gérons aucune information sur les artistes, si ce n'est leur nom, et je ne
 vois donc pas de raison pour définir un document Artist pour l'instant.
 
-### Genre
+## Genre
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenThedatamodel_14/image_thumb_3.png)
 
 Le document Genre est la réplique exacte de la table Genre, rien
 d'extraordinaire à ce niveau.
 
-### Cart
+## Cart
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenThedatamodel_14/image_thumb_7.png)
 
@@ -66,7 +66,7 @@ relationnel contient un ensemble de lignes. Vous pouvez voir que le
 UserIdentifier nous sert pour stocker l'identifiant de l'utilisateur ou celui
 de la session pour le panier.
 
-### Orders
+## Orders
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenThedatamodel_14/image_thumb_8.png)
 
@@ -74,11 +74,11 @@ Order constitue une autre document plutôt standard. Nous regroupons toutes
 les information de la commande dans un simple document et nous stockons les
 informations liées à celle-ci (Address) dans un noeud spécifique.
 
-### Artist
+## Artist
 
 Il n'y a pas de document Artist.
 
-### Pourquoi un document pour Genre et pas pour Artist ?
+## Pourquoi un document pour Genre et pas pour Artist ?
 
 Pour la bonne raison que l'application va faire quelque chose avec les
 Genres (en plus d'afficher leur description) alors que la seule chose que l'on

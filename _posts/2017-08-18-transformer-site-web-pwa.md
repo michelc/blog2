@@ -65,7 +65,7 @@ techniques ne sont que des améliorations accessoires. Si un ancien navigateur n
 gère pas telle amélioration, il ne va pas planter. Il se contentera d'afficher
 le site web de base.
 
-### OK, mais pourquoi moi ?
+## OK, mais pourquoi moi ?
 
 Transformer votre site internet en PWA offre pas mal d'avantages :
 
@@ -81,7 +81,7 @@ même beaucoup à gagner à faire le saut. En fait, toutes les étapes nécessai
 pour transformer votre site en PWA vont améliorer votre site internet et sont
 communément considérées comme de bonnes pratiques du web.
 
-### Étape 1 : Le Manifeste
+## Étape 1 : Le Manifeste
 
 Un *manifeste* est un simple fichier JSON qui décrit toutes les métadonnées de
 votre PWA. Il contient des choses telles que le nom, la langue et l'icône de
@@ -124,7 +124,7 @@ logo par exemple) et rendez-vous sur [Real Favicon Generator](http://realfavicon
 Ils génèrent les différentes tailles nécessaires, les balises méta et vous
 fournissent un fichier manifeste tout prêt. Excellent !
 
-### Étape 2 : Passez à HTTPS
+## Étape 2 : Passez à HTTPS
 
 Les Applications Web Progressives doivent être servies via une connexion
 sécurisée, ce qui signifie un **protocole HTTPS**. HTTPS encrypte les données
@@ -159,7 +159,7 @@ votre URL :
 
 ![Icone HTTPS](/public/2017/mxb-lock-icon.png)
 
-### Étape 3 : Le Service Worker
+## Étape 3 : Le Service Worker
 
 C'est là que la magie opère. Un Service Worker est essentiellement un bout de
 code Javascript qui sert d'intermédiaire entre le navigateur et l'hôte. Il
@@ -269,7 +269,7 @@ votre site.
 *PS : Pour traiter le support du mode déconnecté de façon plus exhaustive,
 n'hésitez pas à lire "[The Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/)" de Jake Archibald.*
 
-### Testez votre PWA
+## Testez votre PWA
 
 Chrome [Lighthouse Extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
 est un outil de test pour vérifier les Applications Web Progressives, en ce qui
@@ -292,7 +292,7 @@ Vous pouvez au choix installer l'extension Lighthouse depuis le
 [Chrome Web Store](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk),
 ou bien utiliser Chrome Canary, où cette extension est déjà présente par défaut.
 
-### Lectures complémentaires
+## Lectures complémentaires
 
 J'espère vous avoir donné un bon aperçu pour démarrer avec les PWA. Si vous
 souhaitez approfondir le sujet, voici quelques liens intéressants pour en

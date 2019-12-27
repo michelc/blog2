@@ -68,7 +68,7 @@ pour m'envoyer le correctif.
 J'aurais lui donner mon adresse GMail parce que ça fait une demi-heure et je
 ne vois toujours rien venir...
 
-### Mise à jour 24 heures après
+## Mise à jour 24 heures après
 
 Toujours pas de nouvelle de Microsoft. Et pourtant, j'ai aussi mis sur le
 coup un ex-collègue qui a travaillé à Dublin dans un centre d'appel à

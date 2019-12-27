@@ -6,7 +6,7 @@ tags: sql
 title: "Créer une vue sous Access"
 ---
 
-### Mon problème
+## Mon problème
 
 Pour simplifier un vieux traitement, j'ai eu besoin de créer une vue
 légèrement compliquée sous Access.
@@ -68,7 +68,7 @@ Et là, ça passe comme une lettre à la poste et si je regarde la liste des
 requêtes dans Access, j'y trouve bien ma "vue"
 `dir_TagsByPlaces`.
 
-### La documentation Access
+## La documentation Access
 
 #### CREATE PROCEDURE, instruction
 
@@ -102,7 +102,7 @@ UPDATE, DELETE, INSERT, CREATE TABLE, DROP TABLE, etc.
 ```
 CREATE PROCEDURE Sales_By_CountryRegion ([Beginning Date] DateTime, [Ending Date] DateTime)
 AS
-SELECT Customer, [Ship Address] 
+SELECT Customer, [Ship Address]
 WHERE [Shipped Date] Between [Beginning Date] And [Ending Date]
 ```
 

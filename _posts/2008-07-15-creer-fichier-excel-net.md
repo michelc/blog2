@@ -14,7 +14,7 @@ Comme la vie dans un openspace bondé exige une bonne dose de civilité et
 pour éviter les éclaboussures j'ai fait comme les autres et j'ai donc essayé de
 le sortir de ce mauvais pas.
 
-### Générer de l'Excel
+## Générer de l'Excel
 
 Habituellement, on répond à ce genre de besoin en générant un bête fichier
 CSV (en tout cas moi c'est ce que je fais à chaque fois) ou dans les cas les
@@ -35,7 +35,7 @@ pourquoi pas avoir à l'acheter en plus ?
 * vérifier une fois pour toute si le provider OleDb permet aussi d'écrire
 dans un fichier Excel : ah ouaih ça c'est marrant !
 
-### Lire depuis un fichier Excel
+## Lire depuis un fichier Excel
 
 Pour commencer, créer vite fait un petit fichier Excel pour se rappeler
 comment on fait pour lire ce genre de truc :
@@ -98,7 +98,7 @@ F5 => ça marche => au suivant!
 le classeur Excel et pour l'utiliser en tant que table il faut ajouter un $ au
 bout et mettre le tout entre crochets)
 
-### Ecrire dans un fichier Excel
+## Ecrire dans un fichier Excel
 
 Et maintenant, le saut dans l'inconnu, à savoir tenter d'écrire dans un
 fichier Excel via une connexion OleDb (de l'inédit pour moi) :
@@ -158,7 +158,7 @@ F5 => ça marche aussi !
 On tente la même chose sur le serveur (de prod ! quand y'a des têtes en
 jeux on a vraiment plus peur de rien) et ça marche encore !!!
 
-### Que demander de plus ?
+## Que demander de plus ?
 
 On peut même utiliser des paramètres au lieu de commandes SQL en "dur"
 
@@ -224,13 +224,13 @@ l'on veut :
 * Commencer par un "`CREATE TABLE [Feuil1$] ...`" plante
 aussi
 
-### Fin de la récréation
+## Fin de la récréation
 
 C'est ennuyeux, mais comme cela n'a strictement aucune importante dans le
 cas qui nous occupait au départ, on ne va pas y passer plus que la pause de
 midi.
 
-### Post-Scriptum
+## Post-Scriptum
 
 Super astuce : même si on ne peut pas créer un fichier Excel
 directement, on peut :

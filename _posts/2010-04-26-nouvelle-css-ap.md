@@ -20,7 +20,7 @@ Par conséquent, ce coup-ci j'ai préféré prendre le problème à l'envers et
 plutôt que de repartir à zéro pour tout changer, j'y suis allé par petites
 touches même si le résultat final est moins spectaculaire.
 
-### Améliorer la lisibilité
+## Améliorer la lisibilité
 
 Pour commencer, j'ai défini une couleur fond différente pour le body (gris
 très clair) et la partie contenu (blanc). Pour cela, j'ai utilisé une image de
@@ -60,7 +60,7 @@ Lean](http://webhost.bridgew.edu/etribou/layouts/skidoo/lean/) pour gérer au mi
 de recherche (là j'ai aussi dû modifier le traitement dans les sources du
 programme)
 
-### Augmenter les espacements
+## Augmenter les espacements
 
 Après avoir mis ces premières modifications en production et vérifié pendant
 quelque jours que ça ne posait pas de problème, j'ai pu m'attaquer à une
@@ -128,7 +128,7 @@ Après ça, je me suis un peu reposé en me contentant d'espacer légèrement
 l'en-tête et le pied de page et en simplifiant certains bouts de CSS par ci ou
 par là.
 
-### Fignoler la présentation
+## Fignoler la présentation
 
 Pour finir, je suis revenu sur le système que j'avais utilisé au début pour
 donner un effet de large bordure autour du contenu des pages.
@@ -193,7 +193,7 @@ html
 }
 ```
 
-### Idées pour la suite
+## Idées pour la suite
 
 Même si à première vue les nombreuses modifications apportées ne sautent pas
 aux yeux, je suis malgré tout extrêmement satisfait des résultats que j'ai

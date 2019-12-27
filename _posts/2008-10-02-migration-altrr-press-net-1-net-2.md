@@ -6,7 +6,7 @@ tags: .net, ap
 title: "Migration de Altrr-Press de .NET 1 vers .NET 2"
 ---
 
-### Carnet de route
+## Carnet de route
 
 #### Les pré-requis
 
@@ -67,7 +67,7 @@ suivantes dans le cadres de (ou ça pourrait faire l'objet d'une version 2.1
   - les méthodes d'extensions
   - etc...
 
-### Les premières tentatives
+## Les premières tentatives
 
 Après les tous premiers essais de migration qui furent un peu difficile, la
 situation est maintenant pas mal rodée pour finaliser la mise à jour du code
@@ -170,7 +170,7 @@ Maintenant que je me remet à faire du XML, il faudra bien que je trouve une
 solution. Mais en attendant, il faut encore supporter les 3 avertissements que
 cela génère.
 
-### Ce que ça apporte
+## Ce que ça apporte
 
 Pour l'instant, pas grand chose à part du boulot en plus et un
 ralentissement perceptible dû au fait de travailler sous VS 2005 au lieu de VS
@@ -212,7 +212,7 @@ considérer qu'il n'est pas correctement dimensionné pour travailler avec le
 Et si je trouve le temps, j'essaierai de faire un nouveau chronométrage sur
 un PC un peu plus récent.
 
-### Est-ce que ça marche ?
+## Est-ce que ça marche ?
 
 Ca dépend.
 

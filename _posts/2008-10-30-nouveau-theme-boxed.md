@@ -27,7 +27,7 @@ Malheureusement, l'adaptation sous Dotclear n'était pas si évidente que ça,
 parce que la structure de base pour Skidoo Redux est un peu différente de celle
 générée par défaut dans le cas d'un [Gandi Blog](http://www.gandi.fr/domaine/blog/).
 
-### Squelette html pour Skidoo Redux
+## Squelette html pour Skidoo Redux
 
 ```
 <body>
@@ -62,7 +62,7 @@ générée par défaut dans le cas d'un [Gandi Blog](http://www.gandi.fr/domaine
 </body>
 ```
 
-### Squelette html pour Gandi Blog
+## Squelette html pour Gandi Blog
 
 ```
 <body>
@@ -158,7 +158,7 @@ en :
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
-  }               
+  }
 }
 ```
 

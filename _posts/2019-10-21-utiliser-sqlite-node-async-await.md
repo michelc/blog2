@@ -29,7 +29,7 @@ utiliser de fonction callback quand je fais une requête sur la base de données
 </figure>
 
 
-### Fonctionnement asynchrone / callback
+## Fonctionnement asynchrone / callback
 
 La dernière fois, j'ai trouvé comment avoir le même code JavaScript pour accéder
 aux deux bases de données :
@@ -77,7 +77,7 @@ Note : C'est difficile à lire, c'est difficile à écrire, et c'est aussi
 difficile à expliquer.
 
 
-### Fonctionnement async / await
+## Fonctionnement async / await
 
 C'est pour ça que JavaScript a régulièrement évolué jusqu'à permettre
 aujourd'hui d'utiliser un fonctionnement async / await qui, bien que faisant la
@@ -160,7 +160,7 @@ TypeError: callback is not a function
 ```
 
 
-### Async / Await avec le module SQlite3
+## Async / Await avec le module SQlite3
 
 Je suppose que c'était sa façon à lui de dire que le module SQlite3 ne gère pas
 un fonctionnement async / await.
@@ -219,7 +219,7 @@ Je re...teste : http://localhost:3000/livres
 Ça marche :)
 
 
-### Conclusion
+## Conclusion
 
 Personnellement, la syntaxe async / await ça me plait beaucoup plus. C'est plus
 beau, ça parait plus naturel et ça évite les indentations de la mort :
@@ -273,7 +273,7 @@ db.query(sql_create, [], (err, result) => {
 => Miam ?
 
 
-### Le code complet de "index.js"
+## Le code complet de "index.js"
 
 Et pour finir, l'intégralité du fichier "index.js" pour avoir une vue d'ensemble
 des modifications apportées.

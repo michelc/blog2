@@ -12,7 +12,7 @@ aujourd'hui, au lieu de partir d'un contact pour accéder au groupe auquel il
 est lié, je vais explorer l'autre côté de la relation entre les deux tables et
 partir d'un groupe puis accéder aux contacts qui lui sont rattachés.
 
-### Essai numéro 1
+## Essai numéro 1
 
 Je commence doucement avec une requête LINQ toute simple :
 
@@ -27,9 +27,9 @@ NHibernate génère la requête SQL suivante :
 
 ```
 SELECT top 1
-       this_.Id as Id0_0_, 
-       this_.Name as Name0_0_ 
-FROM   Groups this_ 
+       this_.Id as Id0_0_,
+       this_.Name as Name0_0_
+FROM   Groups this_
 WHERE  this_.Id = @p0; // @p0 = 1
 ```
 
@@ -44,22 +44,22 @@ NHibernate génère alors une seconde requête SQL afin de charger la liste des
 contacts associés au groupe :
 
 ```
-SELECT contacts0_.groupId as groupId1_, 
-       contacts0_.Id as Id1_, 
-       contacts0_.Id as Id1_0_, 
-       contacts0_.FirstName as FirstName1_0_, 
-       contacts0_.LastName as LastName1_0_, 
-       contacts0_.Phone as Phone1_0_, 
-       contacts0_.Email as Email1_0_, 
-       contacts0_.groupId as groupId1_0_ 
-FROM   Contacts contacts0_ 
+SELECT contacts0_.groupId as groupId1_,
+       contacts0_.Id as Id1_,
+       contacts0_.Id as Id1_0_,
+       contacts0_.FirstName as FirstName1_0_,
+       contacts0_.LastName as LastName1_0_,
+       contacts0_.Phone as Phone1_0_,
+       contacts0_.Email as Email1_0_,
+       contacts0_.groupId as groupId1_0_
+FROM   Contacts contacts0_
 WHERE  contacts0_.groupId=@p0; // @p0 = 1
 ```
 
 Jusqu'ici, c'est tout pareil par rapport aux résultats que que j'avais
 obtenus au cours de mon premier essai dans l'autre sens.
 
-### Essai numéro 2
+## Essai numéro 2
 
 Comme lors de mes premiers tests, ce deuxième essai va consister à utiliser
 la méthode Extend("Entité") pour vérifier que cela fonctionne à peu près de la
@@ -77,18 +77,18 @@ apparaitre une jointure avec la table Contacts dans la requête SQL qui est
 générée par NHibernate :
 
 ```
-SELECT top 1 
-       this_.Id as Id0_1_, 
-       this_.Name as Name0_1_, 
-       contacts2_.groupId as groupId3_, 
-       contacts2_.Id as Id3_, 
-       contacts2_.Id as Id1_0_, 
-       contacts2_.FirstName as FirstName1_0_, 
-       contacts2_.LastName as LastName1_0_, 
-       contacts2_.Phone as Phone1_0_, 
-       contacts2_.Email as Email1_0_, 
-       contacts2_.groupId as groupId1_0_ 
-FROM   Groups this_ 
+SELECT top 1
+       this_.Id as Id0_1_,
+       this_.Name as Name0_1_,
+       contacts2_.groupId as groupId3_,
+       contacts2_.Id as Id3_,
+       contacts2_.Id as Id1_0_,
+       contacts2_.FirstName as FirstName1_0_,
+       contacts2_.LastName as LastName1_0_,
+       contacts2_.Phone as Phone1_0_,
+       contacts2_.Email as Email1_0_,
+       contacts2_.groupId as groupId1_0_
+FROM   Groups this_
        left outer join Contacts contacts2_ on this_.Id=contacts2_.groupId
 WHERE  this_.Id = @p0; // @p0 = 1
 ```
@@ -104,7 +104,7 @@ int count2 = linq2.Contacts.Count();
 Jusqu'ici, tout va toujours bien puisque NHibernate se comporte toujours
 rigoureusement de la même façon dans les deux sens de la relation.
 
-### Interlude
+## Interlude
 
 Pour rester le plus synchro possible avec mon billet précédent, voici le
 fichier de mapping NHibernate que j'ai défini pour les groupes :
@@ -140,7 +140,7 @@ rapport à la simple balise `<many-to-one ... />` d'hier, il
 faut utiliser un élément `<bag ... />` pour représenter le
 fait qu'à un groupe sont liés plusieurs contacts.
 
-### Essai numéro 3
+## Essai numéro 3
 
 Dans le fichier de mapping Group.hbm.xml, le fait que je fasse du
 lazy-loading est pour l'instant défini de façon explicite grâce à l'attribut
@@ -175,25 +175,25 @@ groupe et la seconde permet de charger les données correspondantes aux contacts
 qui sont rattachés au groupe :
 
 ```
-SELECT top 1 
-       this_.Id as Id0_0_, 
-       this_.Name as Name0_0_ 
-FROM   Groups this_ 
+SELECT top 1
+       this_.Id as Id0_0_,
+       this_.Name as Name0_0_
+FROM   Groups this_
 WHERE  this_.Id = @p0; // @p0 = 1
 
-SELECT contacts0_.groupId as groupId1_, 
-       contacts0_.Id as Id1_, 
-       contacts0_.Id as Id1_0_, 
-       contacts0_.FirstName as FirstName1_0_, 
-       contacts0_.LastName as LastName1_0_, 
-       contacts0_.Phone as Phone1_0_, 
-       contacts0_.Email as Email1_0_, 
-       contacts0_.groupId as groupId1_0_ 
-FROM   Contacts contacts0_ 
+SELECT contacts0_.groupId as groupId1_,
+       contacts0_.Id as Id1_,
+       contacts0_.Id as Id1_0_,
+       contacts0_.FirstName as FirstName1_0_,
+       contacts0_.LastName as LastName1_0_,
+       contacts0_.Phone as Phone1_0_,
+       contacts0_.Email as Email1_0_,
+       contacts0_.groupId as groupId1_0_
+FROM   Contacts contacts0_
 WHERE  contacts0_.groupId=@p0; // @p0 = 1
 ```
 
-### Deuxième bilan
+## Deuxième bilan
 
 Ce qui est vraiment bien, c'est que ça fonctionne exactement de la même
 façon dans les deux sens ! Et donc normalement, une fois que je serai un

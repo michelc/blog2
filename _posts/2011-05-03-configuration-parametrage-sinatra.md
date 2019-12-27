@@ -9,7 +9,7 @@ title: "Configuration et paramétrage avec Sinatra"
 {:.encart}
 Ceci est la traduction du tutoriel "[Sinatra Settings and Configuration](http://ididitmyway.herokuapp.com/past/2010/11/9/sinatra_settings_and_configuration/)" de Darren Jones.
 
-### Définir des paramètres
+## Définir des paramètres
 
 Pour définir des variables session d'application qui seront accessible
 partout dans une application, on peut utiliser la commande `set` en
@@ -84,7 +84,7 @@ set :twitter, false
 La [documentation officielle de Sinatra](http://www.sinatrarb.com/configuration.html) fourni d'autres explications et
 des exemple, entre autre la liste des paramètres internes de Sinatra.
 
-### Les blocs de configuration
+## Les blocs de configuration
 
 Sinatra permet de regrouper un ensemble de paramètres dans un bloc de
 configuration :
@@ -121,7 +121,7 @@ Comme vous pouvez le voir, j'ai configuré Sass pour que sa sortie soit
 compressée en production et que le fichier généré soit le plus petit possible.
 Il existe tout un tas d'autres options pour [Sass](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#options) et [Haml](http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html#options) qui peuvent être initialisées de cette façon.
 
-### Gérer des paramètres d'environnement sur Heroku
+## Gérer des paramètres d'environnement sur Heroku
 
 Pour finir, on a la possibilité de définir des variables d'environnement
 directement sur Heroku, ce qui nous évite d'avoir à rendre la valeur de

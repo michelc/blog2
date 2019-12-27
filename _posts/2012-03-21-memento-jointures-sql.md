@@ -25,7 +25,7 @@ absolument pas :
 * le cross join : je ne savais pas qu'il existait un mot clé dédié pour
 faire ça de son plein gré
 
-### Création de 2 tables pour les essais (sous Oracle)
+## Création de 2 tables pour les essais (sous Oracle)
 
 #### 1° table
 
@@ -65,7 +65,7 @@ id  caption
 4   Four
 ```
 
-### INNER JOIN
+## INNER JOIN
 
 On ne prend que ce qui existe des 2 côtés
 
@@ -103,7 +103,7 @@ ID  Libelle  Caption
 2   Deux     Two
 ```
 
-### CROSS JOIN
+## CROSS JOIN
 
 On prend tout des 2 côtés sans faire de correspondance <=> produit
 cartésien
@@ -140,7 +140,7 @@ ID  Libelle  Caption
 3   Trois    Four
 ```
 
-### LEFT OUTER JOIN
+## LEFT OUTER JOIN
 
 On prend tout ce qui est à gauche (ie la 1° table) et l'autre suit
 
@@ -171,7 +171,7 @@ ID  Libelle  Caption
 3   Trois
 ```
 
-### RIGHT OUTER JOIN
+## RIGHT OUTER JOIN
 
 On prend tout ce qui est à droite (ie la 2° table) et l'autre suit
 
@@ -202,7 +202,7 @@ ID  Libelle  Caption
              Four
 ```
 
-### FULL OUTER JOIN
+## FULL OUTER JOIN
 
 On prend ce qui existe des 2 côtés
 

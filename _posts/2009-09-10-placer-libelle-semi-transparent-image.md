@@ -9,7 +9,7 @@ title: "Placer un libellé semi-transparent sur une image"
 J'avais vu ça il y a pas mal de temps, alors ce coup-ci je blogue pour
 essayer de ne pas oublier comment faire.
 
-### Côté Html
+## Côté Html
 
 ```
 <div class="img-desc">
@@ -18,7 +18,7 @@ essayer de ne pas oublier comment faire.
 </div>
 ```
 
-### Côté CSS
+## Côté CSS
 
 ```
 .img-desc {
@@ -41,7 +41,7 @@ essayer de ne pas oublier comment faire.
 }
 ```
 
-### Sources et exemples
+## Sources et exemples
 
 * [5 Ways to Spice up Your Images with CSS](http://www.sohtanaka.com/web-design/spice-up-your-images-with-css/) : c'est le dernier effet
 présenté (Image with Caption)

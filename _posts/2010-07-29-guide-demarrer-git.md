@@ -20,7 +20,7 @@ Dans ce nouveau tutoriel, Darren présente les bases de Git et aborde les
 * Les repositories distants
 * Quelques ressources sur Git
 
-### Qu'est-ce que Git ?
+## Qu'est-ce que Git ?
 
 Git est un système de contrôle de version qui vous de garder une trace de
 toutes les modifications que l'on fait quand on travaille sur un projet. Git
@@ -35,7 +35,7 @@ l'objet d'un [autre billet](http://ididitmyway.herokuapp.com/past/2010/1/16/depl
 Git utilise la ligne de commande pour son interface utilisateur, mais pour
 ceux qui préfèrent, il existe aussi de nombreux outils visuels.
 
-### Installer et configurer Git
+## Installer et configurer Git
 
 Pour commencer, vous avez besoin d'installer Git.
 
@@ -81,7 +81,7 @@ C:\Ruby\projets\reverse dans l'explorateur de Windows, on peut constater qu'il
 contient désormais un sous-répertoire ".git" qui sert va servir à Git pour
 stocker le repository.
 
-### Ajouter et Commiter avec Git
+## Ajouter et Commiter avec Git
 
 A présent, nous allons ajouter tous les fichiers et les sous-répertoire de
 notre projet Reverse dans le repository que nous venons de créer. On effectue
@@ -173,7 +173,7 @@ repository Git :
 $ git commit -a -m "Suppression fichier inutile"
 ```
 
-### Les Branches
+## Les Branches
 
 En ce qui me concerne, c'est LE truc de Git. Quand vous créez une branche,
 c'est en gros comme si vous faisiez une copie de votre code en cours. Vous
@@ -322,7 +322,7 @@ $ git checkout master
 $ git merge development
 ```
 
-### Les Tags
+## Les Tags
 
 Vous pouvez créer un tag pour un projet à n'importe quel moment, en
 utilisant la commande suivante :
@@ -354,7 +354,7 @@ sera la copie exacte de ce qu'était le projet lorsque vous aviez créé le tag
 "v1.0", sans que cela vous fasse perdre quoique ce soit de votre code
 actuel.
 
-### Les repositories distants
+## Les repositories distants
 
 [Github](http://github.com/) est un service
 extraordinaire qui vous permet de conserver votre code dans un repository
@@ -386,7 +386,7 @@ collaborer sur un même projet, dans la mesure où il permet aux gens de corrige
 des bugs dans votre code, d'améliorer votre code ou de développer un projet
 totalement nouveau.
 
-### Quelques ressources sur Git
+## Quelques ressources sur Git
 
 Daren a collecté un certain nombre de ressources consacrées à Git que vous
 pouvez retrouver sur le [tutoriel d'origine](http://ididitmyway.herokuapp.com/past/2010/1/14/git_beginners_guide/).

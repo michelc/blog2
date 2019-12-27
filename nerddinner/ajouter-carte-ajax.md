@@ -12,7 +12,7 @@ celle-ci, la personne qui veut créer un dîner, le modifier ou simplement le
 consulter aura la possibilité de visualiser graphiquement l'endroit où celui-ci
 va avoir lieu.
 
-### Créer une vue partielle Map.ascx
+## Créer une vue partielle Map.ascx
 
 Nous utiliserons ce système de carte dans plusieurs parties de notre
 application. Pour que notre code reste fidèle au principe DRY, nous allons
@@ -102,7 +102,7 @@ dans le fichier web.config :
 
 (Source : <http://nerddinner.codeplex.com/Thread/View.aspx?ThreadId=54102>)
 
-### Créer un script Map.js
+## Créer un script Map.js
 
 Nous allons maintenant créer le fichier Map.js qui va nous servir à
 regrouper toutes les fonctionnalités JavaScript de notre système de carte
@@ -200,7 +200,7 @@ function clearMap() {
 }
 ```
 
-### Afficher la carte dans les formulaires Edit et Create
+## Afficher la carte dans les formulaires Edit et Create
 
 Nous allons maintenant faire apparaitre une carte lors de la création et de
 la modification des dîners. La bonne nouvelle, c'est que ce n'est vraiment pas
@@ -322,7 +322,7 @@ stocker dans la base de données) :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image131.png)
 
-### Intégrer la carte à la vue Details
+## Intégrer la carte à la vue Details
 
 Après avoir réussi à faire apparaitre la carte lorsque nous somme en
 création ou en modification d'un dîner, nous allons aussi l'afficher lors de la
@@ -383,7 +383,7 @@ Ajax pour s'inscrire à ce dîner :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image132.png)
 
-### Ajouter la recherche d'emplacement dans la base et dans le repository
+## Ajouter la recherche d'emplacement dans la base et dans le repository
 
 Pour finaliser cette cartographie Ajax, nous allons ajouter une dernière
 carte sur la page d'accueil de notre application. Celle-ci servira aux
@@ -501,7 +501,7 @@ public IQueryable<Dinner> FindByLocation(float latitude, float longitude) {
 }
 ```
 
-### Ajouter une action Ajax qui renvoie des données JSON
+## Ajouter une action Ajax qui renvoie des données JSON
 
 Nous allons maintenant ajouter une nouvelle méthode d'action qui va
 s'appuyer sur cette méthode FindByLocation() du repository pour renvoyer une
@@ -576,7 +576,7 @@ Dinner","Latitude":47.632546,"Longitude":-122.21201,"Description":"Dinner with
 Friends","RSVPCount":3}]
 ```
 
-### Appeler l'action Ajax qui renvoie des données JSON via jQuery
+## Appeler l'action Ajax qui renvoie des données JSON via jQuery
 
 Nous sommes maintenant prêts à compléter la page d'accueil de l'application
 NerdDinner pour exploiter la méthode d'action SearchByLocation du contrôleur

@@ -7,7 +7,7 @@ image: "/public/2019/hamburger-menu.jpg"
 excerpt: "Bootstrap 4 c'est super pour le côté responsive, mais 57 ko de JavaScript juste pour gérer le menu hamburger, c'est trop."
 ---
 
-### Présentation
+## Présentation
 
 J'ai développé il y a quelque temps une petite application en ASP.NET MVC pour
 laquelle j'ai déjà eu besoin de [filtrer les tables en JavaScript]({% post_url
@@ -75,7 +75,7 @@ que la `div#navbarSupportedContent` perd sa classe "show" :
 ```
 
 
-### Le problème qu'il y a
+## Le problème qu'il y a
 
 Pour l'instant, c'est la seule fonctionnalité de Bootstrap que j'utilise dans
 cette application et qui ait besoin du script "bootstrap.min.js". Mais malgré
@@ -96,7 +96,7 @@ d'un moment. Sans parler des 57 ko de "bootstrap.min.js" qui lui ne me sert
 strictement à rien d'autre qu'au menu hamburger...
 
 
-### La solution (à base de jQuery)
+## La solution (à base de jQuery)
 
 C'est pourquoi j'ai décidé d'écrire mon propre script "navbar-toggler.js".
 
@@ -131,7 +131,7 @@ Bonus : J'ai perdu la partie animation à l'affichage ou au masquage du menu
 hamburger, mais ça c'est meilleur pour ma tension.
 
 
-### La même solution (en Vanilla JS)
+## La même solution (en Vanilla JS)
 
 Pour être parfait, ce mini script ne devrait même pas compter sur jQuery. C'est
 donc ce à quoi je vais m'attaquer maintenant.
@@ -156,7 +156,7 @@ servant à switcher le sous-menu
 classe "show" de cette div, ce qui permet de l'afficher ou de la masquer
 
 
-### Le fichier "js-navbar-toggler.js" final
+## Le fichier "js-navbar-toggler.js" final
 
 Ce qui donne le fichier source suivant, prêt à être intégré via un `<script
 src="/js/js-navbar-toggler.js"></script>` :

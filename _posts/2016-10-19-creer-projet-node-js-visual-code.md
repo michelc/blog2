@@ -8,7 +8,7 @@ title: "Créer un projet Node.js sous Visual Code"
 
 Source : <https://code.visualstudio.com/docs/runtimes/nodejs>
 
-### Créer un projet
+## Créer un projet
 
 ```
 C:\Code> md Test2
@@ -16,20 +16,20 @@ C:\Code> cd Test2
 C:\Code\Test2> _
 ```
 
-### Ouvrir ce projet
+## Ouvrir ce projet
 
 ```
 C:\Code\Test2> code .
 ```
 
-### Créer un fichier test.js
+## Créer un fichier test.js
 
 ```
 var msg = 'Hello World';
 console.log(msg);
 ```
 
-### Exécuter le fichier test.js
+## Exécuter le fichier test.js
 
 A faire depuis le terminal intégré de Visual Studio Code (Ctrl+ù) ou depuis
 l'invite de commande de Windows :
@@ -43,7 +43,7 @@ c:\Code\Test2> _
 
 Il est possible de débuguer ce code de la même façon que pour le projet Test1.
 
-### Créer le fichier jsconfig.json
+## Créer le fichier jsconfig.json
 
 Le fichier "jsconfig.json" sert à indiquer que le répertoire dans lequel il se
 situe est un projet JavaScript.
@@ -71,7 +71,7 @@ fichier "jsconfig.json" par défaut :
 }
 ```
 
-### Installer le fichier de définition pour Node.js
+## Installer le fichier de définition pour Node.js
 
 Par défaut, l'intellisense de Visual Studio Code reconnait le code JavaScript
 mais pas le code spécifique à Node.js.

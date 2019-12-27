@@ -18,33 +18,33 @@ les méthodes où le passage sous Raven n'apporte rien de nouveau puis je mettra
 l'accent sur une différence de conception plutôt intéressante entre les deux
 implémentations.
 
-### Code d'origine
+## Code d'origine
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenStoreManagerC_DCF0/image_thumb.png)
 
-### Portage sous Raven
+## Portage sous Raven
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenStoreManagerC_DCF0/image_thumb_1.png)
 
 Le code pour Raven est beaucoup plus court pour la bonne et simple raison
 que j'ai fait disparaitre tout la pseudo gestion d'erreur qu'il contenait.
 
-### Code d'origine
+## Code d'origine
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenStoreManagerC_DCF0/image_thumb_5.png)
 
-### Portage sous Raven
+## Portage sous Raven
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenStoreManagerC_DCF0/image_thumb_6.png)
 
 Là encore, le fait de faire disparaitre une gestion d'erreur qui n'est là
 que pour la gallerie a un impact plus que certain sur la taille du code.
 
-### Code d'origine
+## Code d'origine
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenStoreManagerC_DCF0/image_thumb_7.png)
 
-### Portage sous Raven
+## Portage sous Raven
 
 ![](http://ayende.com/Blog/images/ayende_com/Blog/WindowsLiveWriter/PortingMVCMusicStoretoRavenStoreManagerC_DCF0/image_thumb_8.png)
 

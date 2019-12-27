@@ -10,7 +10,7 @@ Ce billet est avant tout une sorte de message de service qui est
 essentiellement destiné à tenir deux collègues au courant de tout ce qui s'est
 passé sur PI et AP ces derniers temps.
 
-### Les modifications de PI (Pages d'Infos)
+## Les modifications de PI (Pages d'Infos)
 
 #### Les cinémas
 
@@ -132,7 +132,7 @@ Sinon, j'avais commencé à ajouter du code pour gérer la version 2 des Pages
 d'Infos (avec notamment une nouvelle charte graphique plus moderne), mais ça
 fait un bon bout de temps que je n'ai rien fait dessus.
 
-### Les modifications de AP (Altrr-Press)
+## Les modifications de AP (Altrr-Press)
 
 #### Moins de code
 

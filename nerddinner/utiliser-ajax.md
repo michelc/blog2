@@ -10,7 +10,7 @@ Nous allons maintenant ajouter une fonctionnalité qui permettra aux
 utilisateurs connectés de s'inscrire à un dîner. Nous ferons cela en ajoutant
 un traitement en Ajax au niveau de la page détail d'un dîner.
 
-### Indiquer si le visiteur est inscrit au dîner
+## Indiquer si le visiteur est inscrit au dîner
 
 Les utilisateurs peuvent accéder à une URL /Dinners/Details/[id] pour
 consulter les informations sur un dîner particulier :
@@ -77,7 +77,7 @@ autre message :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image123.png)
 
-### Réaliser l'action Register
+## Réaliser l'action Register
 
 Nous allons maintenant écrire le code nécessaire pour permettre aux
 utilisateurs de s'inscrire à un dîner à partir de la page détail dans laquelle
@@ -124,7 +124,7 @@ de notre méthode d'action Register. Nous aurions pu englober ce message dans
 une vue, mais étant donné qu'il est si petit, nous nous contentons d'utiliser
 la méthode helper Content() disponible au niveau de la classe Controller.
 
-### Appeler l'action Register en Ajax
+## Appeler l'action Register en Ajax
 
 Nous allons utiliser Ajax pour appeler la méthode d'action Register à partir
 de la vue Details. Cette fonctionnalité est assez simple à réaliser. Pour
@@ -217,7 +217,7 @@ Thanks - we'll see you there!
 Cet échange est donc très léger et donnera satisfaction même en cas de
 lenteur du réseau.
 
-### Ajouter une animation jQuery
+## Ajouter une animation jQuery
 
 La fonctionnalité Ajax que nous venons d'implémenter fonctionne vite et
 bien. Si rapidement qu'il est possible que certains utilisateurs aient du mal à
@@ -297,7 +297,7 @@ En plus de l'évènement "OnSuccess", l'objet AjaxOptions propose également
 les évènements "OnBegin", "OnFailure" et "OnComplete" que vous pouvez tous
 utiliser (ainsi qu'un tas d'autres propriétés et options très utiles).
 
-### Finitions : refactoriser la vue partielle RSVP
+## Finitions : refactoriser la vue partielle RSVP
 
 Notre vue Details commence à tirer en longueur, ce qui avec le temps risque
 de la rendre un peu compliquée à comprendre. Pour améliorer la lisibilité de

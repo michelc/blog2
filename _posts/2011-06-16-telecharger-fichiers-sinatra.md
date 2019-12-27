@@ -15,7 +15,7 @@ vais vous présenter le code nécessaire pour télécharger des fichiers avec vo
 application Sinatra. C'est une solution toute simple, mais ça fait ce qu'on lui
 demande.
 
-### L'application Sinatra
+## L'application Sinatra
 
 Pour commencer, nous avons besoin de créer une application Sinatra basique
 avec une page "upload" :
@@ -98,7 +98,7 @@ contenu du fichier, on aurait pu utiliser la méthode `cp` (ou
   FileUtils.cp(tmpfile.path, fullname)
 ```
 
-### Heroku
+## Heroku
 
 Le code présenté ci-dessus est tout à fait correct et fonctionnel, mais
 Heroku ne vous permet pas de stocker beaucoup de fichiers sur leurs serveurs
@@ -110,7 +110,7 @@ pour un coût extrêmement minime. Heroku étant également hébergé sur les
 serveurs Amazon, en y hébergeant vos propres fichiers vous devriez réduire au
 maximum les temps de latence pour récupérer vos fichiers.
 
-### Inscription à Amazon S3
+## Inscription à Amazon S3
 
 La première chose à faire, c'est de vous enregistrer sur S3, ce que vous
 pouvez faire en vous rendant sur le site et en cliquant le bouton
@@ -124,7 +124,7 @@ vos fichiers. Et vous pouvez créer des dossiers à l'intérieur de chaque
 compartiment. Personnellement, j'ai l'habitude de définir un compartiment pour
 chacun de mes sites web.
 
-### Le code source Sinatra
+## Le code source Sinatra
 
 Maintenant que vous disposez d'un compte Amazon S3 en état de marche, vous
 allez pouvoir y enregistrer vos fichiers en utilisant son interface web et en
@@ -184,7 +184,7 @@ post '/upload' do
     AWS::S3::Base.establish_connection!(
       :access_key_id     => settings.s3_key,
       :secret_access_key => settings.s3_secret)
-    AWS::S3::S3Object.store(name,open(tmpfile),settings.bucket,:access => :public_read)     
+    AWS::S3::S3Object.store(name,open(tmpfile),settings.bucket,:access => :public_read)
   end
  'terminé'
 end

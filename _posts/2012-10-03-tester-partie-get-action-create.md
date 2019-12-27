@@ -15,7 +15,7 @@ Normalement, la version GET venant avant le POST, j'aurais pu réfléchir et
 présenter les tests dans le "bon" ordre, d'autant plus que certains des tests
 se retrouvent dans les 2 versions. Mais bon, mieux vaut tard que jamais...
 
-### L'action à tester
+## L'action à tester
 
 ```
 //
@@ -50,7 +50,7 @@ une société donnée. Ca me permet de gérer un bouton "Ajouter une personne à
 cette société" dans la vue société et ainsi faciliter la vie de l'utilisateur
 quand il veut créer des contacts pour une société.
 
-### 1° test : vérifier que l'action renvoie la vue par défaut
+## 1° test : vérifier que l'action renvoie la vue par défaut
 
 ```
 [TestMethod]
@@ -133,7 +133,7 @@ Rappel : Je n'ai pas à tester le fait que la vue par
 défaut sera bien Create.cshtml. Ca, c'est le travail de ceux qui ont développé
 ASP.NET MVC.
 
-### 2° test : vérifier que Create renvoie l'objet attendu par la vue
+## 2° test : vérifier que Create renvoie l'objet attendu par la vue
 
 La vue pour créer une personne a besoin d'un objet ViewPerson. Ce test va
 donc servir à contrôler que l'action Create() transmet bien cet objet à la
@@ -186,7 +186,7 @@ ou :
 return View(42);
 ```
 
-### 3° test : vérifier que Create rempli la liste des sociétés
+## 3° test : vérifier que Create rempli la liste des sociétés
 
 La vue s'attend à ce que la propriété Companies de l'objet ViewPerson
 qu'elle reçoit du contrôleur lui permette de générer une liste déroulante
@@ -231,7 +231,7 @@ Note : en rédigeant ce billet, je me demande si c'est
 person.Companies = new SelectList("".ToArray()); // TODO
 ```
 
-### 3° test bis : vérifier que Create rempli la liste des sociétés
+## 3° test bis : vérifier que Create rempli la liste des sociétés
 
 ```
 [TestMethod]
@@ -285,7 +285,7 @@ var check = ... / Assert.IsTrue(check > 0, "...");
 présentes en base de données. Mais je me demande aussi si ça fait pas un tout
 petit peu trop ?
 
-### 4° test : vérifier que Create gère une société parente
+## 4° test : vérifier que Create gère une société parente
 
 Lorsque l'action Create() reçoit un paramètre ParentID, il faut qu'elle le
 gère pour que côté vue, la société correspondante soit pré-sélectionnée dans la
@@ -344,7 +344,7 @@ ce n'est pas l'action Create() qui s'occupe de ça. Par contre, il faut que je
 prévoie de faire des tests unitaires pour ma fonction ListCompanies() dont
 c'est le boulot.
 
-### Conclusion
+## Conclusion
 
 Je suis assez satisfait car j'ai l'impression de faire des
 progrès :

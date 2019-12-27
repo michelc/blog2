@@ -19,7 +19,7 @@ comprendre comment cela fonctionnait :
 La suite de ce billet récapitule le fonctionnement propre à chacune de ces
 méthodes.
 
-### ELMAH + Sql Server Compact en automatique
+## ELMAH + Sql Server Compact en automatique
 
 Sous NuGet, je recherche "elmah" puis choisis le package "ELMAH on MS SQL
 Server Compact". Sa description indique qu'il s'agit d'une configuration pour
@@ -94,7 +94,7 @@ Et trois :
 </elmah>
 ```
 
-### Rollback
+## Rollback
 
 Je désinstalle le package "ELMAH on MS SQL Server Compact" (mais pas les
 packages dont il dépend) puis le package "SqlServerCompact".
@@ -103,7 +103,7 @@ Puis je retourne sur elmah.axd où je peux constater que je suis bien revenu
 à mon point de départ : `"This log is provided by the In-Memory Error
 Log."`. Parfait !
 
-### ELMAH + Sql Server en semi-automatique
+## ELMAH + Sql Server en semi-automatique
 
 Ce coup-ci je fais un essai avec l'installation du package NuGet "ELMAH on
 MS SQL Server (requires manual config)".
@@ -128,7 +128,7 @@ Un :
 ```
 <connectionStrings>
   ...
-  <add name="elmah-sqlserver" 
+  <add name="elmah-sqlserver"
        connectionString="Data Source=****;User ID=****;Password=****;Initial Catalog=****;"
        providerName="System.Data.SqlClient" />
 </connectionStrings>
@@ -138,7 +138,7 @@ Et deux :
 
 ```
 <elmah>
-  <errorLog type="Elmah.SqlErrorLog, Elmah" 
+  <errorLog type="Elmah.SqlErrorLog, Elmah"
             connectionStringName="elmah-sqlserver" />
 </elmah>
 ```
@@ -166,7 +166,7 @@ Je peux alors relancer l'application, provoquer une erreur et aller que la
 page elmah.axd et vérifier que `"This log is provided by the Microsoft SQL
 Server Error Log."`. Bravo !
 
-### ELMAH + Sql Server Compact en manuel
+## ELMAH + Sql Server Compact en manuel
 
 Après désinstallation du package "ELMAH on MS SQL Server (requires manual
 config)", je me retrouve à nouveau avec un ELMAH tout simple qui stocke ses
@@ -200,7 +200,7 @@ Je relance l'application, tente d'accéder à l'URL index.html qui n'existe
 pas puis direction elmah.axd et ça marche : `"This log is provided by
 the SQL Server Compact Error Log"`. Magnifique !
 
-### Conclusions
+## Conclusions
 
 Déjà, le système des packages NuGet est bien foutu (au moins en ce qui
 concerne ELMAH) :

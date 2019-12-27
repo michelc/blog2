@@ -20,7 +20,7 @@ As I always have a little trouble remembering everything and also because there 
 </figure>
 
 
-### Through a declaration
+## Through a declaration
 
 The classic method dates back to the origins of JavaScript and simply consists of declaring the function with the keyword `function`.
 
@@ -33,7 +33,7 @@ function hello (firstname) {
 This function has the name "hello", which makes it a named function.
 
 
-### Through an expression
+## Through an expression
 
 A more modern method that highlights the fact that functions are objects like any other and can also be assigned to variables.
 
@@ -51,7 +51,7 @@ Even if this is not obvious, this function is anonymous:
 Note: Since this is an assignment to a variable (in this case it's a function that is assigned), the command ends with a semicolon, exactly as is the case for all other assignments: `const pi = 3.14;`.
 
 
-### Through the arrow syntax
+## Through the arrow syntax
 
 With ES6 came the new syntax "arrow" to declare functions via an expression:
 

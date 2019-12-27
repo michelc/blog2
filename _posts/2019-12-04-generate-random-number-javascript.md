@@ -10,7 +10,7 @@ excerpt: "How to generate random numbers with Math.random() + How to force chanc
 {:.encart}
 Version en français : [Générer un nombre aléatoire en JavaScript]({% post_url 2019-12-03-generer-nombre-aleatoire-javascript %}).
 
-### The "Math.random()" method
+## The "Math.random()" method
 
 <figure>
   <img src="{{ page.image }}" alt="random-number" />
@@ -38,7 +38,7 @@ const cardNumber = 1 + Math.floor(52 * Math.random());
 Note: We talk about "pseudo" random number, because for a computer, it's not easy to reproduce chance, so it's easier to simulate.
 
 
-### The "Math.seedrandom()" module
+## The "Math.seedrandom()" module
 
 Aside from my real work (C# + Oracle), I have a side project and I run a solitaire games website: [Solitaire-Play](https://www.solitaire-play.com/), with solitaires like Klondike, Canfield, Freecell, Golf...
 

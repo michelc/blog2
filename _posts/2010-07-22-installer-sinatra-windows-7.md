@@ -17,7 +17,7 @@ C'est l'occasion pour se mettre à [Sinatra](http://www.sinatrarb.com/) et je me
 outils nécessaires à son utilisation, en suivant un des premiers
 tutoriels : [Installing Sinatra](http://ididitmyway.herokuapp.com/past/2010/1/10/installing_sinatra/).
 
-### Installer Ruby sur Windows
+## Installer Ruby sur Windows
 
 il faut commencer par installer Ruby étant donné que ce n'est pas quelque
 chose de déjà présent sur mon PC. C'est pas compliqué du tout. Il suffit
@@ -41,7 +41,7 @@ and .rbw files with this Ruby installation".
 L'installation est très rapide et au final on se retrouve avec un répertoire
 "C:\Ruby" d'une cinquantaine de méga.
 
-### Installer Sinatra sur Windows
+## Installer Sinatra sur Windows
 
 On entre ensuite dans le vif du sujet qui consiste à installer Sinatra. Pour
 cela, il faut ouvrir une "Invite de commandes" et aller dans le
@@ -68,7 +68,7 @@ C:\Ruby>
 
 Ca y est, mon PC devrait contenir Ruby + Sinatra !
 
-### Créer une première application Sinatra
+## Créer une première application Sinatra
 
 On va alors pouvoir tester que ça marche en codant notre toute première
 application Sinatra. Pour cela, il suffit d'ouvrir Notepad pour créer le

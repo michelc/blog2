@@ -31,7 +31,7 @@ Pour l'instant, j'ai compté 5 différences, plus ou moins importantes :
 * Les noms des colonnes en minuscules
 
 
-### Marqueurs pour les paramètres SQL
+## Marqueurs pour les paramètres SQL
 
 Généralement, les exemples pour SQlite utilisent des " ?, ?, ? ... " pour
 répérer les paramètres dans les requêtes paramétrées. J'ai donc suivi cette
@@ -52,7 +52,7 @@ db.run("UPDATE Livres SET Titre = $1 WHERE Livre_ID = $2", [titre, id], callback
 Et d'un !
 
 
-### Paramètres SQL sous forme de tableau
+## Paramètres SQL sous forme de tableau
 
 Lorsqu'il n'y a qu'un paramètre SQL, le module SQlite3 accepte que celui-ci soit
 transmis en tant que valeur, et pas via un tableau :
@@ -91,7 +91,7 @@ de paramètre par erreur.
 Et de deux.
 
 
-### .query() vs .run(), .all() et .get()
+## .query() vs .run(), .all() et .get()
 
 Le module SQlite3 défini 3 méthodes :
 
@@ -128,7 +128,7 @@ pool.query("SELECT * FROM Livres", [], callback);
 Et de trois...
 
 
-### Paramètres de la fonction callback
+## Paramètres de la fonction callback
 
 La méthode `.query()` du module node-postgres renvoie toujours 2 objets à la
 fonction callback qu'elle enchaine :
@@ -183,7 +183,7 @@ xxx.query("SELECT * FROM Livres", [], (err, result) => {});
 Et de quatre !
 
 
-### Le problème des minuscules
+## Le problème des minuscules
 
 J'ai pour habitude de mettre les mots-clés SQL en majucule et les noms de
 tables, colonnes, vues, séquences... en PascalCase.
@@ -269,7 +269,7 @@ CREATE TABLE IF NOT EXISTS livres (
 Et de cinq => plus de différence.
 
 
-### Créer un objet "commun"
+## Créer un objet "commun"
 
 Actuellement, je ne me connecte pas aux 2 bases de données de la même façon :
 
@@ -312,7 +312,7 @@ Note : Il faudrait voir comment isoler ce système un peu confus dans 2 fichiers
 séparés. Mais chaque chose en son temps.
 
 
-### Conclusion
+## Conclusion
 
 J'ai résolu les problèmes liés au fait que les modules SQlite3 et node-postgres
 fonctionnent un peu différement. Il a suffit de quelques modifications pour
@@ -354,7 +354,7 @@ Note : Ca doit bien ralentir un chouilla, mais on est en développement, ça
 laisse du temps pour réfléchir.
 
 
-### Le code complet de "index.js"
+## Le code complet de "index.js"
 
 Comme toujours, l'intégralité du fichier "index.js" pour avoir une vue
 d'ensemble du nouveau fonctionnement.

@@ -27,7 +27,7 @@ L'application que nous allons développer s'appellera [Superdo](http://superdo.h
 et déjà voir ce qu'elle donnera sur la version que Darren à déployé sur
 [Heroku](http://heroku.com/).
 
-### Installer SQLite et Datamapper
+## Installer SQLite et Datamapper
 
 Dans ce tutoriel, nous allons utiliser [SQLite](http://www.sqlite.org/) comme base de données et [DataMapper](http://datamapper.org/) comme ORM pour nous
 connecter à notre base de données.
@@ -135,7 +135,7 @@ Successfully installed dm-sqlite-adapter-1.0.2
 Après cela, tout est en place pour pouvoir développer une application web
 avec du contenu dynamique.
 
-### Se connecter à la base de données
+## Se connecter à la base de données
 
 La première chose à faire est de créer un répertoire nommé "todo" pour notre
 application et de commencer par y enregistrer un fichier "main.rb" avec le code
@@ -386,7 +386,7 @@ excellente entrée en matière pour faire des essais et tester notre base de
 données. Mais notre objectif étant de créer une application internet, il est
 temps de développer une interface pour toutes ces actions.
 
-### Associer des URLs RESTful aux actions CRUD
+## Associer des URLs RESTful aux actions CRUD
 
 L'interface web que nous allons créer pour interagir avec notre base de
 données suivra une architecture [REST](http://fr.wikipedia.org/wiki/Representational_State_Transfer). Cela consiste à utiliser les verbes http POST, GET, PUT et
@@ -485,7 +485,7 @@ Nous pouvons alors utiliser notre navigateur pour consulter l'URL
 
 ![](/public/2010/todo-1.png)
 
-### Créer de nouvelles tâches
+## Créer de nouvelles tâches
 
 Passons maintenant à la création d'une nouvelle tâche par l'intermédiaire
 d'un formulaire web. La façon standard de faire ça est de découper l'action de
@@ -611,7 +611,7 @@ end
 DataMapper.auto_upgrade!
 ```
 
-### Afficher la liste des tâches
+## Afficher la liste des tâches
 
 Pour l'instant, nous pouvons créer de nouvelles tâches et les afficher une
 par une. Nous allons maintenant afficher une liste qui contiendra toutes les
@@ -658,7 +658,7 @@ l'écran suivant :
 
 ![](/public/2010/todo-3.png)
 
-### Modifier des tâches
+## Modifier des tâches
 
 Il ne nous reste plus que quelques traitements à gérer, à savoir la
 modification et la suppression. Nous allons pour l'instant permettre aux
@@ -743,7 +743,7 @@ vais pouvoir modifier le nom en "Faire du velo" puis cliquer sur le bouton
 
 ![](/public/2010/todo-4.png)
 
-### Supprimer des tâches.
+## Supprimer des tâches.
 
 Le dernier traitement à prendre en compte est la suppression de tâches
 existantes. Nous allons faire cela en deux étapes. En premier lieu, nous allons
@@ -805,7 +805,7 @@ ajouter le code suivant à notre fichier "main.rb" :
 # Supprimer une tâche
 delete '/task/:id' do
   Task.get(params[:id]).destroy
-  redirect '/tasks'  
+  redirect '/tasks'
 end
 ```
 
@@ -889,7 +889,7 @@ end
 # Supprimer une tâche
 delete '/task/:id' do
   Task.get(params[:id]).destroy
-  redirect '/tasks'  
+  redirect '/tasks'
 end
 
 # Afficher une tâche
@@ -911,7 +911,7 @@ Celui-ci contient à présent les 7 handlers REST traditionnels : index,
 show, new, create, edit, update et delete ainsi qu'une action supplémentaire
 pour faire confirmer la suppression.
 
-### Améliorer l'interface utilisateur
+## Améliorer l'interface utilisateur
 
 Notre application est maintenant complète, mais il reste encore quelques
 points où pouvons encore l'améliorer. Comme je l'ai indiqué auparavant, son
@@ -1038,7 +1038,7 @@ end
 # Supprimer une tâche
 delete '/task/:id' do
   Task.get(params[:id]).destroy
-  redirect '/'  
+  redirect '/'
 end
 
 # Afficher toutes les tâches
@@ -1075,7 +1075,7 @@ beaucoup plus intuitive :
 
 ![](/public/2010/todo-6.png)
 
-### Améliorer le code
+## Améliorer le code
 
 Après ces modifications visibles par l'utilisateur, je vais réaliser
 quelques modifications destinées à simplifier le code de l'application. Pour
@@ -1212,7 +1212,7 @@ ressembler à la copie d'écran ci-dessous :
 
 ![](/public/2010/todo-7.png)
 
-### Conclusion
+## Conclusion
 
 Ce tutoriel correspond à une application de base de données toute simple,
 mais cela constitue un bon point de départ. Notre application n'est peut être

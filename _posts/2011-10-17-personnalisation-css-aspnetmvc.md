@@ -19,7 +19,7 @@ projet avant de repartir de plus belle.
 
 ![](/public/2011/mysite01.png)
 
-### Normalize
+## Normalize
 
 Avant toute chose, et pour partir du bon pied, je démarre par un petit
 [reset.css](http://meyerweb.com/eric/tools/css/reset/), ou ces derniers temps un [normalize.css](http://necolas.github.com/normalize.css/) dans
@@ -34,7 +34,7 @@ la vue _Layout.cshtml :
 </head>
 ```
 
-### Undo
+## Undo
 
 Comme j'aime très moyennement les coins arrondis, je commence par m'en
 débarrasser. Ca m'amuse toujours de commencer de façon radicale en lançant un
@@ -47,7 +47,7 @@ styles `xxxxx-border-radius` à 0.
 ```
 /* Suppression des coinzarrondis */
 #main,
-footer, 
+footer,
 #footer,
 ul#menu li a
 {
@@ -72,7 +72,7 @@ header h1,
 }
 ```
 
-### Font
+## Font
 
 Une fois défoulé, j'apporte encore quelques modifications encore plus
 personnelles pour obtenir un résultat un peu plus à mon goût.
@@ -89,7 +89,7 @@ body
 }
 ```
 
-### Color
+## Color
 
 Puis, même si j'aime beaucoup le bleu assez soutenu utilisé comme couleur de
 fond, je le change pour une couleur plus claire et neutre.
@@ -115,7 +115,7 @@ ul#menu li a:hover { background-color: #d2691e; } /* Et survolé en chocolat */
 ul#menu { border-bottom: 0; } /* Tant qu'à faire */
 ```
 
-### Table
+## Table
 
 Une fois zen, je pars à l'assaut des tables. Déjà c'est du n'importe quoi.
 Pour éviter de m'emporter, je commence par un `table { width : 100%
@@ -193,7 +193,7 @@ tbody tr:hover
 }
 ```
 
-### Form
+## Form
 
 Là aussi, il y aurait pas mal à dire du choix du balisage. Le problème,
 c'est que c'est tout un ensemble entre les helpers et le système de validation

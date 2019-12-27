@@ -20,7 +20,7 @@ simple qui va se contenter d'afficher un texte à l'envers, d'où son nom :
 peut déjà apprendre quelques trucs sur le fonctionnement de Sinatra, voire sur
 Ruby si on débute comme moi.
 
-### C'est parti
+## C'est parti
 
 Pour commencer, j'ai créé un répertoire C:\Ruby\projets\reverse puis un
 fichier main.rb à l'intérieur :
@@ -89,7 +89,7 @@ end
 Avec Sinatra, c'est pas plus compliqué que ça pour créer des actions
 correspondant à différentes routes.
 
-### Ajouter une vue
+## Ajouter une vue
 
 Pour l'instant, on va rester sur notre route `'/'` et essayer
 de faire un peu mieux que de seulement renvoyer une ligne de texte. Pour cela,
@@ -126,7 +126,7 @@ main.rb` et on réaffiche la page http://localhost:4567 :
 
 ![](/public/2010/reverse-3.png)
 
-### Créer une vue externe
+## Créer une vue externe
 
 En fait, on n'est pas obligé de stocker les vues dans le même fichier. Il
 est bien plus pratique de les enregistrer dans un sous-répertoire "views" de
@@ -156,7 +156,7 @@ end
 Il ne reste plus qu'à contrôler que tout est ok : Ctrl-C, ruby main.rb,
 rafraichir la page et vérifier que rien n'a changé.
 
-### Créer un layout
+## Créer un layout
 
 D'un point de vue visuel, on peut faire encore mieux en définissant un
 "layout" qui servira de gabarit pour englober toutes les vues. Cela permet
@@ -203,7 +203,7 @@ Comme vous pouvez le constater, le sous-titre "Home" et le message
 "Reverse" et le paragraphe "The first app...", soit exactement là où se situait
 la ligne `<%= yield %>` dans le fichier "layout.erb".
 
-### ERB
+## ERB
 
 La balise `<%= yield %>` est un exemple d'**embedded
 ruby** (ou erb en abrégé). On peut ainsi ajouter du code ruby dans les
@@ -236,7 +236,7 @@ cette variable et affiche sa valeur. Même si cet exemple est ultra simple, dans
 la vrai vie on peut faire des tas de chose très utile grâce à l'embedded
 ruby.
 
-### Définir une variable
+## Définir une variable
 
 Plus concrètement, nous allons utiliser embeded ruby pour définir le titre
 de notre page. Dans un premier temps, on met à jour le code de
@@ -337,7 +337,7 @@ Il faut aussi changer la ligne `erb:home` par
 serveur et de ré-afficher la page http://localhost:4567/frank pour voir ce que
 cela donne.
 
-### Poster quelque chose
+## Poster quelque chose
 
 Jusqu'à présent on n'a pas fait grand chose d'autre que des pages statiques.
 Mais quand on crée une application web, c'est quand même pour avoir un peu
@@ -449,7 +449,7 @@ chaines de caractères. Et cette méthode fait exactement ce que son nom laisse
 supposer, soit inverser l'ordre des caractères d'une phrase. Coup de bol, c'est
 aussi ce à quoi notre application était destinée !
 
-### Faire un postback
+## Faire un postback
 
 On peut pousser le bouchon encore plus loin et utiliser la même URL pour nos
 deux pages (l'affichage du formulaire et l'affichage du résultat de notre
@@ -528,7 +528,7 @@ l'écran suivant :
 
 ![](/public/2010/reverse-8.png)
 
-### Les paramètres nommés
+## Les paramètres nommés
 
 On pourrait en rester là puisque l'application fait ce qui était prévu. Mais
 on peut faire mieux, comme par exemple permettre à l'utilisateur d'indiquer la
@@ -579,7 +579,7 @@ l'envers, comme dans la copie d'écran ci-dessous :
 
 ![](/public/2010/reverse-9.png)
 
-### Voilà c'est fini
+## Voilà c'est fini
 
 Et ainsi se termine le tutoriel consacré à la première application Sinatra
 proposée par Darren Jones ([@daz4126](http://twitter.com/daz4126)) dont ce billet constitue une traduction très très libre.

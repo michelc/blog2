@@ -13,7 +13,7 @@ Vous avez enfin terminé votre super application web, mais ça n'a pas
 beaucoup d'intérêt si personne en peut s'en servir. Ce qu'il vous faut, c'est
 lancer votre application à l'assaut d'internet !
 
-### Heroku
+## Heroku
 
 [Heroku](http://heroku.com/) est de très loin la
 façon la plus simple pour déployer des applications Sinatra. Il s'agit d'un
@@ -28,12 +28,12 @@ tout accompagné d'un excellent support et d'une large documentation.
 **Avant d'aller plus loin, vous devez avoir [installé Git]({% post_url 2010-07-29-guide-demarrer-git %}) étant donné qu'il est nécessaire pour faire un
 déploiement sur Heroku.**
 
-### Inscription
+## Inscription
 
 Pour commencer, vous devez créer un compte sur Heroku en vous enregistrant
 gratuitement à l'adresse <http://heroku.com/signup>.
 
-### Installer le gem Heroku
+## Installer le gem Heroku
 
 On part du principe que vous avez déjà [installé Ruby, Gems et Sinatra]({% post_url 2010-07-22-installer-sinatra-windows-7 %}) et par conséquent vous n'avez
 plus qu'à lancer la commande suivante à partir d'une invite de
@@ -59,7 +59,7 @@ Il s'agit d'une petite application en ligne de commande qui va vous
 permettre d'interagir avec vos sites hébergés sur Heroku. Vous pouvez consulter
 sa documentation à l'adresse <http://docs.heroku.com/heroku-command>.
 
-### Envoyer votre clé SSH
+## Envoyer votre clé SSH
 
 Pour pouvoir communiquer avec Heroku, vous devez utiliser une clé SSH. Si
 vous n'en avez pas encore, vous pouvez en générez une en tapant la commande
@@ -78,15 +78,15 @@ Une fois que vous disposez d'une clé SSH, vous devez l'enregistrer dans
 votre compte Heroku, en utilisant la ligne de commande :
 
 ```
-C:\Ruby>heroku keys:add 
+C:\Ruby>heroku keys:add
 ```
 
 Ce qui devrait vous renvoyer le message suivant :
 
 ```
-Enter your Heroku credentials. 
-Email: youremail@gmail.com 
-Password: 
+Enter your Heroku credentials.
+Email: youremail@gmail.com
+Password:
 ```
 
 Répondez à la question qui vous est posée et vous obtiendrez le message
@@ -102,7 +102,7 @@ A partir de maintenant, vous n'aurez plus qu'à effectuer les étapes décrites
 dans la suite de ce tutoriel à chaque fois que vous souhaiterez mettre en ligne
 une de vos applications Sinatra.**
 
-### Le fichier rackup
+## Le fichier rackup
 
 Pour déployer une application Sinatra, vous avez besoin d'un fichier rackup.
 Celui-ci doit être créé dans la racine de votre application et doit se nommer
@@ -123,7 +123,7 @@ Il faut ensuite penser à ajouter ce fichier au référentiel Git :
 $ git commit -a -m "Ajout du fichier rackup pour déployer sur Heroku"
 ```
 
-### Le manifeste gem
+## Le manifeste gem
 
 Pour définir les dépendances gems de votre application, il faut également
 configurer un fichier de manifeste. Il s'agit d'un simple fichier texte nommé
@@ -153,7 +153,7 @@ data_mapper
 dm-postgres-adapter
 ```
 
-### Ajouter votre site sur Heroku
+## Ajouter votre site sur Heroku
 
 La dernière étape consiste à placer votre site sur Heroku. Ouvrez une invite
 de commande et accédez au répertoire de votre application "Reverse". Vous devez
@@ -204,7 +204,7 @@ Et maintenant, il est enfin possible de naviguer vers l'URL
 "http://appname.heroku.com/" pour voir votre application prendre son envol sur
 internet !
 
-### Mise à jour du site
+## Mise à jour du site
 
 Il vous suffit d'une ligne de commande Git pour pouvoir déployer les
 modifications que vous avez apportées à votre application (à condition de les

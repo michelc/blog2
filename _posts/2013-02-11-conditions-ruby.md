@@ -6,7 +6,7 @@ tags: ruby
 title: "Les conditions en Ruby"
 ---
 
-### Le mot clé "if"
+## Le mot clé "if"
 
 Comme dans la plupart des langages, le mot clé `if` sert à tester
 une condition et il s'emploie de la façon suivante :
@@ -26,7 +26,7 @@ if condition then
 end
 ```
 
-### Le if "mono-ligne"
+## Le if "mono-ligne"
 
 La version avec le `then` est obligatoire pour écrire des tests
 sur une seule ligne de code :
@@ -82,7 +82,7 @@ if 10 > 1 puts "10 gagne"
 irb(main):005:0>
 ```
 
-### Le if en tant que "modificateur"
+## Le if en tant que "modificateur"
 
 C'est pourquoi on utilise le `if` différement quand on veut
 écrire un test sur une seule ligne :
@@ -108,7 +108,7 @@ est plus lisible et naturel que :
 
 > &gt; si 10 est supérieur à 1 alors 10 gagne
 
-### Le mot clé "else"
+## Le mot clé "else"
 
 Comme dans les autres langages, on peut aussi définir le traitement à
 réaliser lorsque la condition n'est pas respectée à l'aide du mot clé
@@ -141,7 +141,7 @@ irb(main):017:0> if 10 > 1 then puts "10 gagne" else puts "10 perd" end
 => nil
 ```
 
-### Le mot clé "elsif"
+## Le mot clé "elsif"
 
 Quand on a besoin d'enchainer les tests, on peut utiliser le mot clé
 `elsif` qui correspond au `else if` des autres
@@ -230,7 +230,7 @@ else
  <-- ici il manque un "end"
 ```
 
-### Le mot clé "unless"
+## Le mot clé "unless"
 
 Quand on veut tester l'opposé d'une condition, on peut utiliser l'opérateur
 `not` :
@@ -308,7 +308,7 @@ irb(main):021:0> puts "10 gagne" unless 10 < 1
 => nil
 ```
 
-### L'opérateur ternaire "? ... :"
+## L'opérateur ternaire "? ... :"
 
 Il existe une autre façon d'écrire des tests "condensés", c'est l'opérateur
 ternaire " `?` " qui existe également dans d'autres langages comme
@@ -357,7 +357,7 @@ Donc, le résultat de l'opérateur ternaire est toujours une expression (celle
 définie pour le cas où la condition est vraie ou bien celle définie pour le cas
 contraire).
 
-### Le if en tant que "expression"
+## Le if en tant que "expression"
 
 Tout comme l'opérateur ternaire, le mot clé `if` peut lui aussi
 servir à renvoyer une expression.
@@ -445,7 +445,7 @@ puts if condition_1
 De façon plus générale, il est bon de savoir qu'en Ruby toutes les
 instructions sont en fait des expressions.
 
-### Le mot clé "case"
+## Le mot clé "case"
 
 Dans certains cas, on a besoin de tester plusieurs fois une même variable en
 la comparant à différentes valeurs. On peut faire ça en enchainant toute une
@@ -585,7 +585,7 @@ Et aussi, si on est un peu habitué à C# (et peut-être d'autres langages), il
 faut faire attention de ne pas se tromper en tapant des "case une_valeur" pour
 chaque condition au lieu des "when une_valeur" typiques de Ruby.
 
-### Les opérateurs || et ||=
+## Les opérateurs || et ||=
 
 Ce n'est pas une condition comme `if`, `unless` ou
 `case`, mais c'est quelque chose qu'on rencontre assez souvent dans

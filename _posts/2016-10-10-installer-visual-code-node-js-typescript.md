@@ -6,31 +6,31 @@ tags: javascript
 title: "Installer Visual Code, Node.js et TypeScript"
 ---
 
-### Installer Visual Studio Code
+## Installer Visual Studio Code
 
 ```
 C:\Code> choco install -y visualstudiocode
 ```
 
-### Installer Node.js et NPM (Node Package Manager)
+## Installer Node.js et NPM (Node Package Manager)
 
 ```
 C:\Code> choco install -y nodejs.install
 ```
 
-### Installer la dernière version de TypeScript
+## Installer la dernière version de TypeScript
 
 ```
 C:\Code> npm install -g typescript
 ```
 
-### Installer Typings
+## Installer Typings
 
 ```
 C:\Code> npm install -g typings
 ```
 
-### Vérifier que tout est correctement installé
+## Vérifier que tout est correctement installé
 
 ```
 C:\Code> code -v
@@ -49,7 +49,7 @@ C:\Code> typings -v
 1.4.0
 ```
 
-### Utiliser TypeScript dans Visual Studio Code
+## Utiliser TypeScript dans Visual Studio Code
 
 Pour utiliser la version de TypeScript installée via NPM dans Visual Studio
 Code, il faut localiser où est elle a été installée :

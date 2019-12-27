@@ -15,7 +15,7 @@ la version gratuite de SQL Server Express. Tout le code que nous allons écrire
 fonctionnera aussi bien avec un SQL Server complet ou un simple SQL Server
 Express.
 
-### Création d'une nouvelle base de données SQL Server Express
+## Création d'une nouvelle base de données SQL Server Express
 
 Nous allons commencer par faire un clic droit sur notre projet Web, pour
 sélectionner les commandes **Add -&gt; New Item** :
@@ -39,7 +39,7 @@ au bon endroit dans l'explorateur de solution :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image027.png)
 
-### Création des tables de la base de données
+## Création des tables de la base de données
 
 Nous disposons maintenant d'une nouvelle base de données vide à laquelle
 nous allons ajouter quelques tables.
@@ -106,7 +106,7 @@ clé primaire et colonne "Identity" :
 
 Enregistrons la table en l'appelant "RSVP".
 
-### Définir une relation de clé étrangère entre nos tables
+## Définir une relation de clé étrangère entre nos tables
 
 Notre base de données contient désormais deux tables. La dernière étape dans
 la conception de notre base de données sera de définir une relation de "un à
@@ -154,7 +154,7 @@ elle ne fait pas référence à une ligne existante de la table Dinners. Il se
 chargera également d'interdire la suppression d'une ligne de la table Dinners
 s'il existe des lignes de la table RSVP qui correspondent à celle-ci.
 
-### Ajout de données à nos tables
+## Ajout de données à nos tables
 
 Pour finir, nous allons remplir notre table Dinners avec un jeu d'essai.
 Nous pouvons ajouter des données à une table en faisant un clic-droit sur

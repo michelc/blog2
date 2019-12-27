@@ -17,7 +17,7 @@ J'ai pensé, réfléchi, exploré plus ou moins 3 pistes différentes :
 * Mocker le DbContext d'Entity Framework
 * Utiliser une base de données SQLite en mémoire
 
-### Méthode 1 : Ajouter une couche
+## Méthode 1 : Ajouter une couche
 
 Comme j'essaie de faire au plus simple, j'ai conservé le mode "standard" des
 contrôleurs générés par VS 2010 et j'instancie un objet DbContext :
@@ -100,7 +100,7 @@ appel au DbContext.
 Conclusion : C'est beaucoup de boulot pas très
 zintéressant pour un projet censé m'amuzer...
 
-### Méthode 2 : Mocker le DbContext
+## Méthode 2 : Mocker le DbContext
 
 Certains ont pris le parti de mocker directement le DbContext, ce qui évite
 d'avoir à ajouter une couche et ce qui me plait beaucoup plus.
@@ -129,7 +129,7 @@ Conclusion : c'est pas mal du tout et ça pourrait le
 faire mais ça demande un peu plus de temps que ce que je peux veux y
 consacrer.
 
-### Méthode 3 : SQLite en mémoire
+## Méthode 3 : SQLite en mémoire
 
 Le problème (entre autres) des tests unitaires qui attaquent la base de
 données, c'est que c'est lent. Il faudrait donc avoir une base de données
@@ -162,7 +162,7 @@ faire un truc qui devrait être naturel.
 Conclusion : c'est vraiment dommage, mais ça ne vas
 pas être possible.
 
-### La méthode retenue
+## La méthode retenue
 
 J'avais donc le choix entre laisser tomber les tests unitaires de mes
 contrôleurs ou tester coûte que coûte.

@@ -13,7 +13,7 @@ Il sert de récapitulatif sur les tests unitaires présentés dans les billets
 précédents et présente succintement les tests unitaires réalisés pour les
 actions Edit() et Delete().
 
-### Tests unitaires action Detail()
+## Tests unitaires action Detail()
 
 Le code testé :
 
@@ -36,7 +36,7 @@ Les 3 tests unitaires :
 
 Référence : [Tester l'action Detail()]({% post_url 2012-10-04-tester-action-details %})
 
-### Tests unitaires action Create()
+## Tests unitaires action Create()
 
 #### Le code GET testé :
 
@@ -109,7 +109,7 @@ Références :
 * [Tester la partie POST d'une action Create() - 1/2]({% post_url 2012-10-01-tester-partie-post-action-create %})
 * [Tester la partie POST d'une action Create() - 2/2]({% post_url 2012-10-02-tester-partie-post-action-create-2 %})
 
-### Tests unitaires de l'action Edit()
+## Tests unitaires de l'action Edit()
 
 Le code source à tester :
 
@@ -186,7 +186,7 @@ public void PeopleEdit_post_doit_enregistrer_modification_quand_saisie_correcte(
 }
 ```
 
-### Tests unitaires de l'action Delete()
+## Tests unitaires de l'action Delete()
 
 Le code source à tester :
 

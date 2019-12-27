@@ -27,7 +27,7 @@ abandons) une des façons de faire à laquelle je suis arrivé et qui est assez
 "simple" à expliquer. Ca marche correctement, mais je ne peux absolument pas
 affirmer que c'est la méthode à suivre.
 
-### Etape 1 : Installer NHibernate
+## Etape 1 : Installer NHibernate
 
 Pour faire simple, le plus pratique est d'aller sur le site de [Castle
 ActiveRecord](http://www.castleproject.org/ActiveRecord/) et d'y télécharger la toute dernière version d'Active Record.
@@ -67,7 +67,7 @@ dé-référencer les éléments qui correspondent à Entity Framework et par
 conséquent de supprimer les fichiers liés à EF dans le sous-répertoire
 Models.
 
-### Etape 2 : Configurer NHibernate
+## Etape 2 : Configurer NHibernate
 
 NHibernate est installé et référencé au niveau du projet. Il faut maintenant
 le configurer pour lui expliquer qu'on aimerait bien qu'il utilise notre base
@@ -98,7 +98,7 @@ configurer NHibernate :
     <property name="proxyfactory.factory_class">NHibernate.ByteCode.LinFu.ProxyFactoryFactory, NHibernate.ByteCode.LinFu</property>
     <mapping assembly="ContactManager" />
   </session-factory>
-  
+
 </hibernate-configuration>
 ```
 
@@ -109,7 +109,7 @@ Sinon, il aurait aussi été possible d'utiliser directement le fichier
 "hibernate.cfg.xml" standard mais je trouve qu'un fichier ".config" c'est plus
 propre (et plus sûr ?) qu'un fichier ".xml".
 
-### Etape 3 : Gérer une session NHibernate
+## Etape 3 : Gérer une session NHibernate
 
 Dans la version Entity Framework de l'application Contact Manager, on
 utilise un objet ContactManagerDBEntities généré automatiquement par ADO.NET EF
@@ -160,7 +160,7 @@ par l'instruction suivante :
 private ISession _session = MvcApplication.SessionFactory.GetCurrentSession();
 ```
 
-### Etape 4 : Faire le mapping entre les tables et les objets
+## Etape 4 : Faire le mapping entre les tables et les objets
 
 Avec NHibernate, les classes Contact et Group ne sont pas générées
 automatiquement comme avec Entity Framework ou LINQ to SQL. Il faut donc créer
@@ -291,7 +291,7 @@ mapping NHibernate ne fonctionne pas. C'est un problème très facile à
 identifier parce qu'on obtient une erreur "Association references unmapped
 class: ContactManager.Models.Contact" dès le lancement de l'application.
 
-### Redévelopper le repository avec NHibernate
+## Redévelopper le repository avec NHibernate
 
 Après ces 4 premières étapes, tout est enfin prêt pour pouvoir modifier la
 couche repository de l'application afin de remplacer Entity Framework par
@@ -416,7 +416,7 @@ Entity Framework ou LINQ to SQL :
 Et juste pour le plaisir, je peux lancer les quelques tests unitaires de
 ContactManager.Test et tout va bien !
 
-### Conclusion
+## Conclusion
 
 Par rapport au passage sous LINQ to SQL, ça a été beaucoup plus laborieux.
 Le problème, c'est qu'il y a à la fois beaucoup (trop) de façon de faire et

@@ -24,7 +24,7 @@ de la boite
 * saisir le contenu de la boite
 * valider la saisie du contenu
 
-### Première amélioration
+## Première amélioration
 
 La 1° évolution a consisté à faire disparaitre l'étape n° 2. J'avais fait ça
 à une époque où il y avait beaucoup plus de types de boites et où je pensais
@@ -37,7 +37,7 @@ pour rien.
 Le type de boite est maintenant défini avec les autres propriétés de la
 boite à l'aide d'une simple liste déroulante.
 
-### Deuxième amélioration
+## Deuxième amélioration
 
 La 2° évolution a été de simplifier la saisie des propriétés de la boite
 :
@@ -49,13 +49,13 @@ Il suffit désormais de valider directement le formulaire de l'étape n° 3
 sans rien saisir pour créer une nouvelle boite Htmltext qui s'avère être celle
 qui est le plus largement utilisée.
 
-### Troisième amélioration
+## Troisième amélioration
 
 La 3° évolution a été de passer automatiquement en saisie du contenu une
 fois la création de la boite validée et ainsi d'éliminer l'étape n° 5. C'est
 tout bête, mais encore fallait-il y penser et le faire...
 
-### Bilan
+## Bilan
 
 Le nombre d'étapes pour créer une nouvelle boite est passé de 7 à 5 et ça
 fait la seconde fenêtre popup qui disparait.

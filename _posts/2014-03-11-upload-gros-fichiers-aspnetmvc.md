@@ -19,7 +19,7 @@ maxRequestLength="10240" />` dans la partie `<system.web>` de mon Web.config.
 Puis j'ai cherché s'il était possible de limiter cette liberté à certaine
 parties du site.
 
-### Utiliser un tag &lt;location&gt;
+## Utiliser un tag &lt;location&gt;
 
 > [ASP.NET MVC and httpRuntime executionTimeout](http://stackoverflow.com/questions/492346/asp-net-mvc-and-httpruntime-executiontimeout/636609#636609)
 >
@@ -34,7 +34,7 @@ parties du site.
 </location>
 ```
 
-### Il y a aussi un maxAllowedContentLength ?
+## Il y a aussi un maxAllowedContentLength ?
 
 > [ASP.NET MVC are maxRequestLength and maxAllowedContentLength
 > ignored in a subfolder web.config?](http://stackoverflow.com/questions/8605925/asp-net-mvc-are-maxrequestlength-and-maxallowedcontentlength-ignored-in-a-subfol#11886738)
@@ -59,7 +59,7 @@ parties du site.
 </location>
 ```
 
-### Alors quoi ?
+## Alors quoi ?
 
 > [Which gets priority? maxRequestLength or
 > maxAllowedContentLength?](http://stackoverflow.com/questions/6327452/which-gets-priority-maxrequestlength-or-maxallowedcontentlength#6472631)
@@ -69,7 +69,7 @@ parties du site.
 > request supported by IIS. So you need to set both in order to upload large
 > files: the smaller one "takes priority".
 
-### En fait, ça dépend su serveur
+## En fait, ça dépend su serveur
 
 J'ai tout compris grâce au billet [From IIS6 maxRequestLength to IIS7 -
 specifying maximum file upload size](http://weblogs.asp.net/jeffwids/archive/2009/09/24/from-iis6-maxrequestlength-to-iis7-maxallowedcontentlengthfile-specifying-maximum-file-upload-size.aspx) :

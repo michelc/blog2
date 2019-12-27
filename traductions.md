@@ -6,7 +6,7 @@ redirect_from: "pages/traductions"
 title: "Traductions"
 ---
 
-### I Did It My Way
+## I Did It My Way
 
 En janvier 2010, Darren Jones a pris la bonne résolution de publier
 régulièrement des tutoriels présentant pas à pas son apprentissage de Sinatra.
@@ -27,7 +27,7 @@ Grâce à lui, j'ai moi aussi eu envie d'essayer et d'adopter Sinatra :
 * [Création d'un premier projet avec Sinatra]({% post_url 2010-07-27-creation-premier-projet-sinatra %}) (28/07/2010)
 * [Installer Sinatra sous Windows 7]({% post_url 2010-07-22-installer-sinatra-windows-7 %}) (22/07/2010)
 
-### ASP.NET MVC 2
+## ASP.NET MVC 2
 
 Lors de la sortie de ASP.NET MVC 2, Scott Guthrie avait prévu de rédiger une
 dizaine d'articles pour présenter les fonctionnalités et les nouveautés
@@ -40,7 +40,7 @@ de sa série d'articles consacrés à Visual Studio 2010 et .NET 4 :
 * [Validation basée sur le modèle]({% post_url 2010-08-06-aspnetmvc-2-model-validation %}) (06/08/2010)
 * [Des helpers HTML fortement typés]({% post_url 2010-01-12-aspnetmvc-2-helpers-html-fortement-types %}) (31/07/2010)
 
-### MVC Music Store sous RavenDB
+## MVC Music Store sous RavenDB
 
 Au lancement de RavenDB, Ayende a publié une série de billets reprenant le
 tutoriel MVC Music Store et expliquant comment réaliser la même application
@@ -62,7 +62,7 @@ comme exercice de traduction en quasi temps-réel :
 * [StoreManagerController]({% post_url 2010-05-31-mvc-music-store-raven-db-storemanagercontroller %}) (31/05/2010)
 * [StoreManagerController (2° partie)]({% post_url 2010-06-01-mvc-music-store-raven-db-storemanagercontroller-2 %}) (01/06/2010)
 
-### Convertir SQL en LINQ
+## Convertir SQL en LINQ
 
 J'avais essayé d'adapter au C# une série de sept articles expliquant comment
 transformer du code SQL en syntaxe LINQ pour VB.NET. Je ne suis pas allé très
@@ -73,7 +73,7 @@ VB.NET et C# de LINQ.
 * [FROM et SELECT]({% post_url 2010-02-23-convertir-sql-linq-from-select %}) (23/02/2010)
 * [DISTINCT, WHERE et ORDER BY]({% post_url 2010-02-24-convertir-sql-linq-distinct-where-order-by %}) (24/02/2010)
 
-### NerdDinner en français
+## NerdDinner en français
 
 Après avoir suivi le tutoriel en français sur la gestion de contacts, j'ai
 voulu continuer mon apprentissage de ASP.NET MVC 1.0 dans les meilleures
@@ -103,7 +103,7 @@ autorisations](/nerddinner/authentification-autorisation/) (20/01/2010)
 * [Conclusion](/nerddinner/conclusion/)
 (15/02/2010)
 
-### Mes autres traductions
+## Mes autres traductions
 
 * [C'est Quoi cette Expression Lambda ?]({% post_url 2010-04-28-c-est-quoi-cette-expression-lambda %}) (28/04/2010) - Ayant
 entrepris de me mettre à jour sur les nouveautés de C#, j'avais trouvé cet

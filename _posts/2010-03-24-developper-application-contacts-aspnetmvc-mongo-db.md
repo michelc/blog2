@@ -17,7 +17,7 @@ qui me donnera l'occasion de tester l'utilisation d'une base de données MongoDB
 pour stocker les données et d'essayer la librairie NoRM repérée sur le blog de
 Rob Conery (<http://blog.wekeroad.com/2010/03/04/using-mongo-with-linq>).
 
-### Créer le projet ASP.NET MVC
+## Créer le projet ASP.NET MVC
 
 Lancez Visual Studio et choisissez "Fichier, Nouveau, Projet...". Lorsque la
 fenêtre "Nouveau projet" apparait (Figure 1), choisissez le type de projet
@@ -58,7 +58,7 @@ s'appelle MongoContact et le projet de tests s'appelle MongoContact.Tests.
 
 Figure 3: L'explorateur de solution
 
-### Supprimer les fichiers d'exemple
+## Supprimer les fichiers d'exemple
 
 Le modèle de projet ASP.NET MVC contient des exemples d'implémentation pour
 des contrôleurs et des vues. Avant de continuer à créer notre application, vous
@@ -81,7 +81,7 @@ Une fois ces modifications terminées, vous pouvez compiler l'application en
 lançant les commandes "Générer, Régénérer la solution" avant d'enregistrer la
 solution MongoContact à l'aide de la commande "Fichier, Enregistrer tout".
 
-### Installer MongoDB
+## Installer MongoDB
 
 Notre application MongoContact est une application web orientée base de
 données. Nous utiliserons donc une base de données pour stocker les
@@ -109,7 +109,7 @@ fonctionnait pas, c'est très certainement que vous n'avez pas récupéré la bo
 version de MongoDB (il existe une version 32 bits et une 64 bits) ou alors que
 vous n'avez pas créé le répertoire C:\Data.
 
-### Installer le provider LINQ pour MongoDB
+## Installer le provider LINQ pour MongoDB
 
 Il est nécessaire d'installer un pilote pour pouvoir utiliser une base de
 données MongoDB avec C#. Jusqu'à présent, il existait le projet mongodb-csharp
@@ -224,7 +224,7 @@ données "test",
 Si on tente de recompiler l'application en l'état, la compilation échoue
 parce que nous n'avons pas encore défini la classe Product.
 
-### Créer le modèle de données
+## Créer le modèle de données
 
 Dans le tutoriel ContactManager d'origine, il faut d'abord créer la base de
 données SQL Server puis lui ajouter une table Contacts et enfin générer
@@ -270,7 +270,7 @@ Arrivés à ce stade, nous avons créé notre modèle de données. Nous pouvons
 alors utiliser la classe Contact pour représenter un enregistrement particulier
 de notre base de données dans notre application.
 
-### Création du contrôleur par défaut
+## Création du contrôleur par défaut
 
 La prochaine étape consiste à créer le contrôleur Home qui sera appelé par
 défaut par notre application ASP.NET MVC.
@@ -375,7 +375,7 @@ namespace MongoContact.Controllers
 }
 ```
 
-### Lister les contacts
+## Lister les contacts
 
 Afin de lister les enregistrements depuis la table Contacts de notre base de
 données, nous devons créer une action Index() et une vue Index. Le contrôleur
@@ -543,7 +543,7 @@ Figure 10: La vue Index sans données
 Mais comme vous pouvez le constater, cette vue Index n'affiche rien d'autre
 que le titre des colonnes de notre liste.
 
-### Créer un jeu d'exemple
+## Créer un jeu d'exemple
 
 Dans la version SQL Server de ce tutoriel, la vue Index affiche bien des
 données parce qu'on avait inséré quelques enregistrements dans la table
@@ -616,7 +616,7 @@ Note: Si vous le souhaitez, vous pouvez supprimer le code
 qui a servi à créer quelques contacts d'exemple avant de continuer ce
 tutoriel.
 
-### Créer de nouveaux contacts
+## Créer de nouveaux contacts
 
 Pour permettre aux utilisateurs de créer de nouveaux contacts, nous devons
 ajouter deux actions Create() au contrôleur par défaut (Home). Nous devons en
@@ -775,7 +775,7 @@ contact que vous venez juste de créer (Figure 15).
 
 Figure 15: La vue Index avec le nouveau contact
 
-### Editer les contacts
+## Editer les contacts
 
 Avant de pouvoir gérer la modification d'une fiche contact, il faut
 commencer par ajouter un lien sur la liste des contacts qui permette d'appeler
@@ -1037,7 +1037,7 @@ l'adresse email du contact a bel et bien été modifiée (Figure 19).
 
 Figure 19: La vue Index avec le contact mis à jour
 
-### Suppression d'un contact
+## Suppression d'un contact
 
 Si vous souhaitez supprimer des contacts alors vous devez ajouter deux
 méthodes d'actions Delete() au contrôleur Home (Listing 16). La première action
@@ -1192,7 +1192,7 @@ données comme vous pouvez le constater lorsque la liste des contacts réapparai
 
 Figure 23: La vue Index sans le contact supprimé
 
-### Conclusion
+## Conclusion
 
 Dans ce tutoriel, nous avons créé une application basique de gestion de
 contacts de manière très rapide. Nous avons utilisé NoRM pour lister, créer,

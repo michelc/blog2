@@ -20,7 +20,7 @@ de solitaires.
 
 </div>
 
-### 1° série de tests (à la main)
+## 1° série de tests (à la main)
 
 J'ai donc réussi à gérer assez correctement la délégation d'évènements dans ma
 librairie dQuery. Après pas mal de tests et un grand nombre de parties de
@@ -39,7 +39,7 @@ C'est comme si le "clic" n'avait pas lieu :
 * Ça ne réagit pas du tout quand j'appuie sur une carte du tableau.
 
 
-### 2° série de tests (plus automatisés)
+## 2° série de tests (plus automatisés)
 
 Dans [NanoJS](https://github.com/vladocar/nanoJS/), Vladimir Carrer a écrit des
 tests unitaires pour vérifier que le code de sa librairie fonctionne comme
@@ -77,7 +77,7 @@ tests passent ! Ah ben zut alors :
 * Soit je ne sais plus quoi faire...
 
 
-### 3° série de tests (sur émulateur)
+## 3° série de tests (sur émulateur)
 
 Manifestement, il y a un vrai problème avec les iPhones. Si je veux trouver la
 solution, il faut impérativement que je puisse faire des essais dessus autrement

@@ -28,7 +28,7 @@ Pour réaliser le contrôle des urls référencées, j'ai développé un petit
 utilitaire qui prend la liste des liens existants, contrôle que leur url répond
 correctement puis génère un état récapitulatif.
 
-### Utilisation
+## Utilisation
 
 Pour commencer, il faut créer la requête suivante dans la base de
 données :
@@ -47,7 +47,7 @@ Et pour finir, on lance le programme CheckUrls => après 5 à 10 minutes
 cela aura généré un fichier pi_test.html avec les liens posant problèmes,
 regroupés par type de problèmes.
 
-### Contenu de http://localhost/pi/pi_test.html
+## Contenu de http://localhost/pi/pi_test.html
 
 * 1° colonne : champ status actuel (0 : OK, &gt;0 : KO)
 * 2° colonne : titre du lien dans PI (clic pour formulaire mise à
@@ -61,7 +61,7 @@ Il est possible de copier ce fichier sur le site de production. De cette
 façon, si on est connecté en tant qu'administrateur, on peut aller directement
 mettre à jour le lien en cliquand sur la 2° colonne de ce rapport.
 
-### Types de problèmes
+## Types de problèmes
 
 * resurrected : liens avec status &gt; 0 qui "re-marchent" => à
 vérifier et réactiver
@@ -73,7 +73,7 @@ par cas
 * others : autres résultats bizarres
 * ok : tout ce qui va bien
 
-### Que faire de ça
+## Que faire de ça
 
 * toujours vérifier le nouveau lien avant mise à jour
 * ne pas oublier de mettre à jour le champ status dans le formulaire du

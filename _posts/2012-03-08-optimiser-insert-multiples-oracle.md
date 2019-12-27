@@ -11,7 +11,7 @@ une partie du contenu d'une grosse table clients d'une base de donnée DB2 dans
 une base Oracle. Je sais qu'il existe SQL*Loader mais c'est pas encore cette
 fois que je vais m'y remettre.
 
-### Une commande INSERT par ligne à traiter
+## Une commande INSERT par ligne à traiter
 
 Pour commencer, j'ai testé sur un sous-ensemble de données et j'ai tenté de
 faire ça au plus simple. Tellement simple que je me suis contenté de générer et
@@ -29,7 +29,7 @@ etc...
 => 12,07 secondes pour insérer 4579 lignes (soit 379 requêtes à la
 secondes).
 
-### Des commandes INSERT groupées dans un BEGIN / END
+## Des commandes INSERT groupées dans un BEGIN / END
 
 Plutôt que de faire un connexion.Execute() pour chaque ligne, j'ai regroupé
 les commandes INSERT à l'intérieur d'une expression BEGIN ... INSERT (un peu
@@ -60,7 +60,7 @@ génère la grosse requête :
 BEGIN INSERT INTO MaTable (...) VALUES (...); INTO MaTable (...) VALUES (...); ...; END;
 ```
 
-### Une commande INSERT à partir de plusieurs SELECT
+## Une commande INSERT à partir de plusieurs SELECT
 
 Cette fois, au lieu de faire 1 accès au serveur pour malgré tout lui faire
 faire plusieurs INSERT, j'ai encore plus optimisé en lui envoyant une seule
@@ -78,7 +78,7 @@ etc...
 => 2,84 secondes pour insérer 4579 lignes (soit 1612 requêtes à la
 seconde) => 4 fois plus rapide
 
-### Résultat des courses
+## Résultat des courses
 
 ![](/public/2012/tests-vitesse-insert.png)
 
@@ -87,7 +87,7 @@ suis passé de 379 insertions à la seconde à plus de 1600 ! Et comme j'ai
 près de 300.000 lignes à traiter, ça prendra dans les 3 minutes et pas 1/4
 d'heure.
 
-### Mise en oeuvre
+## Mise en oeuvre
 
 Dans la pratique, je copie l'intégralité des données par bloc de 500 clients
 pour éviter de saturer la mémoire :

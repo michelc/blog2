@@ -6,10 +6,10 @@ tags: code-killer
 title: "C'est un métier"
 ---
 
-### Un problème ?
+## Un problème ?
 
 [![Good Code](http://imgs.xkcd.com/comics/good_code.png)](http://xkcd.com/844/)
 
-### La solution ?
+## La solution ?
 
 [Horizontal vs. vertical complexity](http://usingimho.wordpress.com/2009/11/24/horizontal-vs-vertical-complexity/)

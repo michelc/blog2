@@ -6,7 +6,7 @@ tags: ef, unit-test
 title: "Tester Entity Framework avec SQL CE"
 ---
 
-### Un petit rappel
+## Un petit rappel
 
 Au cours de mes recherches pour faire des [tests
 unitaires avec Entity Framework]({% post_url 2012-11-05-tests-unitaires-entity-framework %}), j'étais tombé sur un article de Code
@@ -25,7 +25,7 @@ genre d'approche dans son billet [Code First Entity Framework Unit Test Examples
 Alea jacta est. Vu que tout le reste n'était pas ultra convainquant, autant
 essayer au plus simple !
 
-### Un peu de code
+## Un peu de code
 
 Ce qu'il me faut donc, c'est avoir une base de données SQL CE dédiée pour
 les tests unitaires. Pour cela, je commence par ajouter une chaîne de connexion
@@ -90,7 +90,7 @@ DbContext correspondant à la "vraie" base de données.
 En pratique, j'aurai pu me passer de cette ligne de code et mettre en place
 un système d'injection de dépendance. Mais pour 1 seule ligne de code...
 
-### Un premier test
+## Un premier test
 
 Je peux maintenant tenter un premier vrai test sur ContactsController pour
 vérifier que son action `Index()` renvoie bien la vue par
@@ -136,7 +136,7 @@ tests ?
 * je vais voir ce que ça donne sur AppHarbor
 * Ca a marché !!!
 
-### Une conclusion
+## Une conclusion
 
 C'est bon, je vais pouvoir faire tout un tas de tests unitaires (71 pour
 l'instant) pour vérifier que les contrôleurs font correctement ce que j'attends

@@ -59,7 +59,7 @@ CRUD avec Express et PostgreSQL en 10
 
 <a id="crud1"></a>
 
-### 1. Créer un nouveau projet Node
+## 1. Créer un nouveau projet Node
 
 
 #### Créer un dossier pour le projet
@@ -133,7 +133,7 @@ NPM dans le dossier racine du projet ("E:\Code\AppTest" dans le cas présent).
 
 <a id="crud2"></a>
 
-### 2. Ajouter des modules au projet Node
+## 2. Ajouter des modules au projet Node
 
 
 #### Choix techniques
@@ -227,7 +227,7 @@ PS E:\Code\AppTest> npm install
 
 <a id="crud3"></a>
 
-### 3. Créer l'application Express
+## 3. Créer l'application Express
 
 
 #### Vérifier que ça peut marcher...
@@ -405,7 +405,7 @@ préfère éviter d'aborder trop de choses à la fois dans ce tutoriel.
 
 <a id="crud4"></a>
 
-### 4. Ajouter des vues EJS
+## 4. Ajouter des vues EJS
 
 Comme le but de l'application est d'avoir plusieurs fonctionnalités, on a besoin
 de créer plusieurs vues. Malheureusement, EJS ne gère pas les "layouts". Il faut
@@ -497,7 +497,7 @@ correspondant à la version 4.3.1 de Bootstrap dans mon cas.
 
 <a id="crud5"></a>
 
-### 5. Utiliser les vues dans Express
+## 5. Utiliser les vues dans Express
 
 Note : Si cela n'avait pas été fait en début de projet, il aurait été nécessaire
 d'installer le module "EJS" par un `npm install ejs` pour pouvoir l'utiliser.
@@ -697,7 +697,7 @@ app.get("/data", (req, res) => {
 
 <a id="crud6"></a>
 
-### 6. Premiers pas avec le module SQlite3
+## 6. Premiers pas avec le module SQlite3
 
 Note : Si cela n'avait pas été fait en début de projet, il aurait été nécessaire
 d'installer le module SQlite3 par un `npm install sqlite3` pour pouvoir accéder
@@ -969,7 +969,7 @@ indispensable pour la suite du tutoriel.
 
 <a id="crud7"></a>
 
-### 7. Modifier une fiche
+## 7. Modifier une fiche
 
 Cette partie du tutoriel va montrer comment modifier une fiche existante. On
 commencera par créer les vues nécéssaires pour saisir les informations du livre
@@ -1144,7 +1144,7 @@ place, mais ce n'est plus utile depuis la version 4.1.6 de Express.
 
 <a id="crud8"></a>
 
-### 8. Créer une nouvelle fiche
+## 8. Créer une nouvelle fiche
 
 
 #### La vue "views/create.ejs"
@@ -1238,7 +1238,7 @@ app.post("/create", (req, res) => {
 
 <a id="crud9"></a>
 
-### 9. Supprimer une fiche
+## 9. Supprimer une fiche
 
 
 #### Les vues "views/delete.ejs" et "views/_display.ejs"
@@ -1355,7 +1355,7 @@ app.post("/delete/:id", (req, res) => {
 
 <a id="crud10"></a>
 
-### 10. Conclusion
+## 10. Conclusion
 
 Personnellement, ce tutoriel m'a permis de bien avancer. J'ai enfin écrit une
 application web permettant de mettre à jour une base de données SQL avec Node JS
@@ -1416,7 +1416,7 @@ toujours dans le programme développé)
 
 <a id="annexe"></a>
 
-### Annexe - Le code complet de "index.js"
+## Annexe - Le code complet de "index.js"
 
 Ce n'est pas pour rallonger le billet, mais pour ceux qui comme moi aiment avoir
 une vue d'ensemble d'un programme. Et autant en profiter pour mettre en avant

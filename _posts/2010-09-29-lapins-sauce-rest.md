@@ -12,7 +12,7 @@ Ceci est la traduction du tutoriel Sinatra "[Restful Rabbits](http://ididitmyway
 Dans ce billet, je vais explorer la façon de créer une ressource en
 construisant une [architecture REST](http://fr.wikipedia.org/wiki/Representational_State_Transfer) et en utilisant Sinatra et DataMapper.
 
-### Mais pour commencer, c'est quoi ce REST ?
+## Mais pour commencer, c'est quoi ce REST ?
 
 REST signifie Representational State Transfer et a été présenté par [Roy Fielding](http://fr.wikipedia.org/wiki/Roy_Fielding) pour
 sa thèse de doctorat en 2000. De façon sommaire, c'est un style d'architecture
@@ -59,7 +59,7 @@ l'URL /lapins/1 affichera le lapin dont l'identifiant est 1 quand une requête
 GET est effectuée, mais elle supprimera le lapin si c'est une requête DELETE
 qui a été faite.
 
-### Le code
+## Le code
 
 Pour commencer, nous devons charger les librairies nécessaires. J'utilise en
 particulier Haml pour les vues, mais ce ne devrait pas être compliqué
@@ -97,7 +97,7 @@ ressource ne sera pas créée ou mise à jour et les erreurs seront signalées
 
 ```
 class Lapin
-  include DataMapper::Resource 
+  include DataMapper::Resource
   property :id,           Serial
   property :nom,          String, :required => true
   property :description,  Text
@@ -200,7 +200,7 @@ put '/lapins/:id' do
     redirect '/lapins/' + params[:id]
   else
     status 400
-    haml :edit  
+    haml :edit
   end
 end
 ```
@@ -234,7 +234,7 @@ de confirmation, cela appelle le gestionnaire Delete :
 # Delete : suppression d'un lapin
 delete '/lapins/:id' do
   Lapin.get(params[:id]).destroy
-  redirect '/lapins'  
+  redirect '/lapins'
 end
 ```
 
@@ -404,7 +404,7 @@ serait alors visibles dans ces deux vues :
 %select#quantity(name="lapin[couleur]")
   - %w[noir blanc gris marron].each do |couleur|
     %option{:value => couleur, :selected => (true if couleur == @lapin.couleur)}= couleur
-    
+
 %p
 %label(for="description") Description :
 %textarea#description(name="lapin[description]")
@@ -445,7 +445,7 @@ sait gérer de façon native.
   ou <a href='/lapins'>Annuler</a>
 ```
 
-### Conclusion
+## Conclusion
 
 Ca y est, c'est fait. Vous avez maintenant un parfait exemple de la façon de
 gérer des ressources à la sauce REST et vous pouvez voir ce que donne la
@@ -460,7 +460,7 @@ personnalisés :
 
 ```
 class Lapin
-  include DataMapper::Resource 
+  include DataMapper::Resource
   property :id,           Serial
   property :nom,          String, :required => true, :messages => { :presence => "Le nom est obligatoire" }
   property :description,  Text

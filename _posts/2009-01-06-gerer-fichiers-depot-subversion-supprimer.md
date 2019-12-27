@@ -10,7 +10,7 @@ Ce qui est important pour supprimer un fichier, c'est de ne pas faire ça
 directement dans Visual Studio mais de passer par TortoiseSVN pour que la
 suppression du fichier soit correctement prise en compte par Subversion.
 
-### 1° étape : supprimer le fichier du projet
+## 1° étape : supprimer le fichier du projet
 
 Dans l'explorateur de solution de Visual Studio, faire un clic-droit sur le
 fichier Extract.cs puis choisir la commande Exclure du projet (et surtout pas
@@ -20,7 +20,7 @@ Suite à cela, recompiler le projet puis le sauvegarder => Visual Studio
 aura bien compris que le fichier Extract.cs ne fait plus partie du projet, même
 s'il existe encore physiquement sur le disque dur.
 
-### 2° étape : supprimer le fichier du répertoire de travail
+## 2° étape : supprimer le fichier du répertoire de travail
 
 Il faut maintenant expliquer à TortoiseSVN que le fichier Extract.cs n'a
 plus de raison d'exister et qu'il doit donc disparaitre des fichiers
@@ -36,7 +36,7 @@ Le fichier Extract.cs est alors immédiatement supprimé du répertoire de
 travail D:\Portals\Tests et il n'est plus géré par TortoiseSVN côté client. Par
 contre il existe toujours dans le dépôt Subversion côté serveur.
 
-### 3° étape : supprimer le fichier du dépôt Subversion
+## 3° étape : supprimer le fichier du dépôt Subversion
 
 Si on veut que le fichier Extract.cs disparaisse du dépôt Subversion
 (notamment pour que les autres utilisateurs du dépôt sachent qu'il a été

@@ -16,7 +16,7 @@ dîner puisse le modifier par la suite.
 Pour réaliser cela, nous allons utiliser les mécanismes d'authentification
 et d'autorisation qui vont nous permettre de sécuriser notre application.
 
-### Comprendre l'authentification et l'autorisation
+## Comprendre l'authentification et l'autorisation
 
 L'authentification correspond au processus d'identification et de validation
 de l'identité de la personne qui accède à une application. Pour être plus
@@ -44,7 +44,7 @@ dîners. Nous voulons aussi ajouter un test pour autoriser uniquement
 l'utilisateur qui a organisé un dîner à mettre à jour son contenu et en
 interdire la modification par qui que ce soit d'autre.
 
-### AccountController et l'authentification par formulaire
+## AccountController et l'authentification par formulaire
 
 Lors de la création d'une nouvelle application ASP.NET MVC, Visual Studio
 part d'un modèle de projet par défaut qui sélectionne automatiquement
@@ -124,7 +124,7 @@ Membership. Il est possible de lancer l'utilitaire "aspnet_regsql.exe" présent
 dans le répertoire \Windows\Microsoft.NET\Framework\v2.0.50727\ pour ajouter
 ces éléments et ceux d'autres services pour ASP.NET à une base de données.
 
-### Utiliser le filtre [Authorize] pour l'URL /Dinners/Create
+## Utiliser le filtre [Authorize] pour l'URL /Dinners/Create
 
 Nous n'avons pas eu à écrire la moindre ligne de code pour que l'application
 NerdDinner dispose d'un système d'authentification sécurisé et d'une gestion
@@ -208,7 +208,7 @@ public ActionResult Create() {
 }
 ```
 
-### Utiliser User.Identity.Name pour créer un dîner
+## Utiliser User.Identity.Name pour créer un dîner
 
 Lors d'une requête, nous pouvons récupérer l'identifiant de l'utilisateur
 actuellement connecté grâce à la propriété User.Identity.Name disponible via la
@@ -255,7 +255,7 @@ s'exécute que si le visiteur arrivant sur l'URL /Dinner/Create est connecté au
 site. Et si c'est le cas, la propriété User.Identity.Name contiendra
 obligatoirement un nom d'utilisateur valide.
 
-### Utiliser User.Identity.Name pour modifier un dîner
+## Utiliser User.Identity.Name pour modifier un dîner
 
 Nous allons maintenant ajouter un test pour gérer les autorisations des
 utilisateurs et faire en sorte que seul le responsable d'un dîner ait le droit
@@ -356,7 +356,7 @@ même chose en ce qui concerne les méthodes d'action Delete() de façon à
 contrôler la suppression d'un dîner et être sûr que seule la personne
 responsable du dîner aura la permission de le supprimer.
 
-### Afficher ou masquer les liens Edit et Delete
+## Afficher ou masquer les liens Edit et Delete
 
 Notre page Details propose un lien vers les méthodes d'action Edit et Delete
 de la classe DinnersController :

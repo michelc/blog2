@@ -28,7 +28,7 @@ Par contre, je ne vais pas revenir pas sur l'intérêt du TDD, la façon de le
 mettre en œuvre ou tous les avantages que cela apporte, mais plutôt sur la
 façon dont se déroule le tutoriel.
 
-### 1° scénario : lister les groupes de contacts
+## 1° scénario : lister les groupes de contacts
 
 Le premier contact avec le TDD a pour but de répondre au user story (=
 scénario utilisateur) suivant : "*L'utilisateur peut voir une liste de
@@ -120,7 +120,7 @@ Pour relativiser un peu, on a "juste" mis au point la façon de vérifier que
 notre futur contrôleur GroupController aura bien une méthode Index() qui
 renverra une liste d'objets de type Group.
 
-### 2° scénario : créer un groupe de contacts
+## 2° scénario : créer un groupe de contacts
 
 Avant de passer à la programmation du "vrai" code, on remet ça avec la prise
 en compte d'un second scénario utilisateur, à savoir : "*L'utilisateur
@@ -214,7 +214,7 @@ seconde 2° étape TDD OK de la journée. La suite sera pour plus tard...
 > System.Linq;` au début de GroupControlletTest.cs pour pouvoir utiliser
 > `.ToList()`.
 
-### 3° scénario : valider la création d'un groupe de contacts
+## 3° scénario : valider la création d'un groupe de contacts
 
 (Plus tard) Pour bien faire les choses, notre création d'un nouveau groupe
 de contacts est un peu limite. On ne peut pas en créer un comme ça à la bonne
@@ -301,7 +301,7 @@ public ActionResult Create(Group groupToCreate)
 Mission accomplie : ça continue de compiler et tous les tests unitaires
 sont réussis.
 
-### Petit bilan avant de continuer
+## Petit bilan avant de continuer
 
 On progresse peu à peu sur la voie du développement piloté par les
 tests : création des scénarios utilisateur, écriture des tests unitaires

@@ -38,7 +38,7 @@ Ce qui tombe bien, puisque Lee Dumond a justement créé un package [LowercaseRo
 puisqu'il suffit de référencer sa DLL puis de légèrement modifier la façon de
 déclarer les routes dans le Globas.asax.
 
-### Installer
+## Installer
 
 * Faire un clic droit sur la branche "Référence" du projet et sélectionner le
 sous-menu "Manage NuGet Packages…".
@@ -46,7 +46,7 @@ sous-menu "Manage NuGet Packages…".
 * Demander à installer le package "LowercaseRouteMVC"
 * Lire et accepter la licence
 
-### Modifier
+## Modifier
 
 * Ouvrir le fichier "Global.asax"
 * Ajouter un `using LowercaseRouteMVC;` au bon endroit
@@ -59,7 +59,7 @@ using LowercaseRoutesMVC;
 public static void RegisterRoutes(RouteCollection routes)
 {
   routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-  
+
   routes.MapRouteLowercase(
     "Default", // Route name
     "{controller}/{action}/{id}", // URL with parameters
@@ -67,7 +67,7 @@ public static void RegisterRoutes(RouteCollection routes)
   );
 ```
 
-### Terminé
+## Terminé
 
 * Lancer l'exécution par F5
 * Les URLs générées par l'application ne contiennent plus que des noms de

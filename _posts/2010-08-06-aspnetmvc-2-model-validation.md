@@ -13,7 +13,7 @@ Ceci est le deuxième billet d'une série consacrée à la prochaine sortie de
 ASP.NET MVC 2. Ce billet aborde les améliorations apportées à la validation
 dans la future version de ASP.NET MVC 2.
 
-### La validation dans ASP.NET MVC 2
+## La validation dans ASP.NET MVC 2
 
 Valider les saisies utilisateurs et appliquer des règles métiers est un
 besoin élémentaire dans la plupart des applications web. ASP.NET MVC 2 propose
@@ -41,7 +41,7 @@ Grâce à tout cela, la validation est vraiment très simple dans la majorité
 des cas, tout en restant suffisamment flexible pour les scénarios d'utilisation
 les plus évolués.
 
-### Utiliser les DataAnnotations pour la validation en ASP.NET MVC 2
+## Utiliser les DataAnnotations pour la validation en ASP.NET MVC 2
 
 Pour apprendre à tirer parti du support des DataAnnotations pour valider les
 données, nous allons étudier un exemple de scénario CRUD tout simple. Et nous
@@ -66,7 +66,7 @@ Je vais utiliser VS 2010 et ASP.NET MVC 2 pour mettre en oeuvre le scénario
 décrit ci-dessus. Mais vous pouvez tout aussi bien employer VS 2008 et ASP.NET
 MVC 2 pour arriver au même résultat.
 
-### Etape 1: Implémenter FriendsController (sans validation pour
+## Etape 1: Implémenter FriendsController (sans validation pour
 commencer)
 
 Nous commencerons par ajouter une classe "Person" toute simple à notre
@@ -118,7 +118,7 @@ Cependant, étant donné que nous n'avons pas encore implémenté l'aspect
 validation, rien ne nous empêche de saisir des informations erronées dans ce
 formulaire et de les publier vers le serveur.
 
-### Etape 2: Activer la Validation avec les DataAnnotations
+## Etape 2: Activer la Validation avec les DataAnnotations
 
 Nous allons maintenant mettre à jour notre application pour qu'elle respecte
 quelques règles de validation de base. Nous implémenterons ces règles sur notre
@@ -201,7 +201,7 @@ respectées partout ailleurs nous permet de faire évoluer notre application et
 ses règles extrêmement rapidement avec un minimum de travail et en suivant au
 mieux la philosophie DRY.
 
-### Etape 3: Activer la validation côté client
+## Etape 3: Activer la validation côté client
 
 Actuellement, la validation pour notre application ne s'exécute que côté
 serveur, ce qui signifie que nos utilisateurs devront valider le formulaire
@@ -267,7 +267,7 @@ employer cette librairie à la place. Le téléchargement de ASP.NET MVC Futures
 intègrera la possibilité d'utiliser une validation jQuery en complément de la
 validation ASP.NET MVC 2 côté serveur.
 
-### Etape 4: Créer un attribut de validation personnalisé
+## Etape 4: Créer un attribut de validation personnalisé
 
 L'espace de nom System.ComponentModel.DataAnnotations du framework .NET
 contient un certain nombre d'attributs de validation tous prêts que vous pouvez
@@ -300,7 +300,7 @@ Lors de la création d'attributs de validation personnalisés, vous pouvez
 spécifier une logique de validation qui s'exécute à la fois sur le serveur et
 sur le client via JavaScript.
 
-### Etape 5: Sauvegarder dans la base de données
+## Etape 5: Sauvegarder dans la base de données
 
 Nous allons maintenant développer les traitements nécessaires pour
 enregistrer nos amis dans la base de données :
@@ -398,7 +398,7 @@ modifier ou supprimer des règles de validation à un seul endroit et avoir la
 certitude qu'elles seront prises en compte par tous les contrôleurs et toutes
 les vues de notre application.
 
-### Conclusion
+## Conclusion
 
 ASP.NET MVC 2 simplifie énormément la gestion de la validation dans les
 applications web. Il favorise une approche DRY avec une validation qui s'appuie

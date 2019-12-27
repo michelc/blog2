@@ -82,7 +82,7 @@ Dans ce cas, je peux définir la propriété "Id" dans tout le code source à
 l'intérieur de ma classe, et par contre elle n'est pas modifiable par tout le
 code en dehors de cette classe.
 
-### Mise à jour après coup
+## Mise à jour après coup
 
 Le fait d'avoir un "set" privé n'est pas limité aux propriétés automatiques.
 Cela existe depuis C# 2.0 pour toutes les propriétés. L'avantage c'est que ça

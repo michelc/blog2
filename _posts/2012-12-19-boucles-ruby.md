@@ -6,7 +6,7 @@ tags: ruby
 title: "Les boucles en Ruby"
 ---
 
-### La boucle "for"
+## La boucle "for"
 
 Avec mon passé de développeur Basic, je commence par la boucle "for".
 
@@ -75,7 +75,7 @@ end
 Par conséquent, il est beaucoup plus naturel d'employer les
 `each` en Ruby que le `for`.
 
-### Les itérations
+## Les itérations
 
 ```
 each
@@ -128,7 +128,7 @@ end
 end
 ```
 
-### Les boucles "while" et "until"
+## Les boucles "while" et "until"
 
 Là il s'agit d'instructions qui font vraiment parti du langage Ruby (pas
 comme le `for` qui est plus une "surcouche" pour le
@@ -163,7 +163,7 @@ i = 0
 puts "- nombre = #{i += 1}" while i <= 5    # => 1, 2, 3, 4, 5, 6
 ```
 
-### La boucle "loop"
+## La boucle "loop"
 
 Et finalement, Ruby dispose aussi d'une autre instruction native pour
 effectuer des boucles.
@@ -228,7 +228,7 @@ loop do
 end
 ```
 
-### Portée des variables
+## Portée des variables
 
 En C#, une variable déclarée dans la boucle est locale et ne peut pas être
 utilisé en dehors de la boucle :

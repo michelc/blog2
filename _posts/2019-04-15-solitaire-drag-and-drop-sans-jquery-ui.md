@@ -46,7 +46,7 @@ repéré les 5 librairies JavaScript suivantes qui gèrent les navigateurs réce
 mais aussi Internet Explorer et les écrans tactiles...
 
 
-### [Dragula](https://bevacqua.github.io/dragula/)
+## [Dragula](https://bevacqua.github.io/dragula/)
 
 Dragula est une librairie JavaScript simple et sans aucune dépendance. Elle
 permet d'ajouter du drag & drop  aux éléments du DOM. Elle gère les
@@ -57,7 +57,7 @@ périphériques tactiles et fonctionne aussi avec IE7+.
 * Dernière release : 12/09/2016
 
 
-### [Draggabilly](https://draggabilly.desandro.com/)
+## [Draggabilly](https://draggabilly.desandro.com/)
 
 Draggabilly est une librairie JavaScript avec pour seul objectif de faire que
 le drag and drop marche. Elle fonctionne avec IE10+ et les appareils tactiles.
@@ -67,7 +67,7 @@ le drag and drop marche. Elle fonctionne avec IE10+ et les appareils tactiles.
 * Dernière release : 27/03/2018
 
 
-### [Draggable JS](https://shopify.github.io/draggable/)
+## [Draggable JS](https://shopify.github.io/draggable/)
 
 Draggable JS est une bibliothèque JavaScript complètement paramétrable pour
 gérer tout ce qui est drag & drop, tri ou permutation. C'est une librairie
@@ -81,7 +81,7 @@ A l'origine, c'était un projet issu de la plateforme de eCommerce Shopify, mais
 il est désormais géré par d'autres personnes.
 
 
-### [Interact.js](http://interactjs.io/)
+## [Interact.js](http://interactjs.io/)
 
 Interact.js est une librairie JavaScript légère et autonome pour gérer le
 glisser / déposer et le redimensionnement sur les navigateurs modernes. Elle
@@ -92,7 +92,7 @@ fonctionne avec IE9+.
 * Dernière release : 05/04/2019
 
 
-### [SortableJS](https://sortablejs.github.io/Sortable/)
+## [SortableJS](https://sortablejs.github.io/Sortable/)
 
 SortableJS est une librairie JavaScript simple et légère qui permet de trier une
 liste d'éléments du DOM. Elle fonctionne avec tous les navigateurs et appareils
@@ -112,7 +112,7 @@ quand même 2 points intéressants :
   rapport à jQuery UI et Dragula.
 
 
-### Conclusion
+## Conclusion
 
 Ca va me demander pas mal de travail pour étudier et tester tout ça avant de
 pouvoir sélectionner la "bonne" librairie dans un premier temps. Et après, il

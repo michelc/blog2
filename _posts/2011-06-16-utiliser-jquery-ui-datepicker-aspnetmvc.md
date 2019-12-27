@@ -13,7 +13,7 @@ de lui laisser une chance. Et surtout, je vois ça comme un bon moyen d'aborder
 les templates Editor et Display de ASP.NET MVC et d'étudier un peu plus
 correctement comment les utiliser.
 
-### Un projet MVC juste pour tester
+## Un projet MVC juste pour tester
 
 Pour commencer, j'ai échafaudé vite fait une application de gestion de
 livres à partir de la classe suivante :
@@ -34,7 +34,7 @@ accéder à mon écran de création d'un nouveau livre :
 
 ![](/public/2011/jquery-datepicker-mvc-01.jpg)
 
-### Deux templates DateTime.cshtml
+## Deux templates DateTime.cshtml
 
 J'ai alors pu passer à l'exemple [Create user friendly date fields with ASP.NET MVC EditorTemplates
 &amp; jQueryUI](http://rachelappel.com/create-user-friendly-date-fields-with-asp.net-mvc-editortemplates-amp-jqueryui) donné par Rachel Appel pour créer les deux templates
@@ -44,7 +44,7 @@ J'ai alors pu passer à l'exemple [Create user friendly date fields with ASP.NET
 **\Views\Shared\DisplayTemplates\DateTime.cshtml**
 
 ```
-@model DateTime   
+@model DateTime
 @String.Format("{0:d}", Model.Date)
 ```
 
@@ -64,7 +64,7 @@ L'avantage, c'est que maintenant je n'ai rien d'autre à faire pour que
 toutes les zones de dates existantes ou à venir dans mon application Livres
 bénéficient de la même présentation.
 
-### Ajout de jQuery UI Datepicker
+## Ajout de jQuery UI Datepicker
 
 Je continue pas à pas le tutoriel de Rachel Appel en référençant la
 librairie jQuery UI (et sa CSS) dans mon fichier "_Layout.cshtml" :
@@ -104,7 +104,7 @@ jQuery UI qui apparait :
 
 ![](/public/2011/jquery-datepicker-mvc-03.jpg)
 
-### Un calendrier en français
+## Un calendrier en français
 
 C'est pas mal, mais c'est tout en anglais :) Heureusement, il y a moyen
 d'avoir une version traduite en français très facilement. Il suffit de
@@ -125,7 +125,7 @@ reconnaitre la date en cours et de s'y positionner correctement :
 
 ![](/public/2011/jquery-datepicker-mvc-04.jpg)
 
-### Le cas des dates nullables
+## Le cas des dates nullables
 
 En creusant un peu sur différents exemples d'utilisation du Datepicker de
 jQuery UI avec ASP.NET MVC, je suis tombé sur des démos qui allaient un peu
@@ -174,7 +174,7 @@ ce n'est pas quelque chose qui doit être décidé et accompli au niveau d'un
 template. Il est préférable de prévoir ce genre d'initialisation dans une
 classe ViewModel.
 
-### Moderniser le code HTML
+## Moderniser le code HTML
 
 Le déclenchement du calendrier est basé sur la présence de la classe CSS
 "datefield" (ce que fait `$(".datefield").datepicker();`). Mais
@@ -216,7 +216,7 @@ $(function () {
 </script>
 ```
 
-### Conclusion
+## Conclusion
 
 Finalement, c'est pas hyper compliqué de faire des templates. Et en y
 réfléchissant un peu mieux, je pense que c'est une solution qui devrait me

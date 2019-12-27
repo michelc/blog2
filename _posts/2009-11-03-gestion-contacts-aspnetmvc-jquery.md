@@ -15,7 +15,7 @@ De mon côté, j'ai préféré faire entièrement confiance à la librairie
 [jQuery](http://jquery.com/ "The Write Less, Do More, JavaScript Library") : à la fois pour
 les animations et pour les fonctionnalités Ajax.
 
-### Utilisation d'une vue partielle via jQuery
+## Utilisation d'une vue partielle via jQuery
 
 Il suffit de remplacer les 3 fonctions Javascript beginContactList(),
 successContactList() et failureContactList() par le tout petit script
@@ -126,7 +126,7 @@ peur :
     </ul>
 ```
 
-### Faire les suppressions via jQuery
+## Faire les suppressions via jQuery
 
 Là aussi, c'est un jeu d'enfant que de se débarrasser de Ajax.NET :
 
@@ -181,7 +181,7 @@ des contacts mis à jour. Sans ce paramètre, le navigateur lancerait la requêt
 Ajax puis mettrait immédiatement à jour le contenu de la divContactList, ce qui
 ne marcherait pas puisque la requête Ajax n'aurait encore rien renvoyé.
 
-### Mise à jour (12/11/2009)
+## Mise à jour (12/11/2009)
 
 Cette méthode présente un tout petit défaut. La fonction jQuery chargée
 d'ajaxifier les liens pour la suppression s'exécute une fois que la page a été
@@ -246,7 +246,7 @@ Au final, cela donne donc le source javascript suivant :
             }
             return false;
         });
-    }    
+    }
 
 </script>
 ```

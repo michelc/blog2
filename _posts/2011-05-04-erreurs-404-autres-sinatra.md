@@ -17,7 +17,7 @@ d'erreur :
 Les applications web ont toutes besoin d'afficher des pages d'erreurs et
 c'est quelque chose de très simple à faire avec Sinatra.
 
-### Les erreurs 404
+## Les erreurs 404
 
 Elles se produisent lorsque l'URL appelée ne peut pas être trouvée. On peut
 gérer cette erreur à l'aide du code Ruby suivant :
@@ -55,7 +55,7 @@ not_found do
 end
 ```
 
-### Les erreurs 500
+## Les erreurs 500
 
 Ces erreurs surviennent en cas d'erreur interne du serveur, généralement
 lorsque quelque chose a planté dans l'application. Le code suivant sert pour

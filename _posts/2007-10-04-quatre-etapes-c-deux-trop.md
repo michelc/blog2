@@ -6,7 +6,7 @@ tags: ap
 title: "Quatre étapes, c'est deux de trop"
 ---
 
-### Y'a comme un problème
+## Y'a comme un problème
 
 Jusqu'à présent, la barre d'outils d'Altrr-Press contient une
 icone ![](/public/2007/mapsite.gif) qui fait apparaitre
@@ -38,7 +38,7 @@ fenêtre se ferme et qu'on atteigne l'écran voulu.
 Tout ça c'est vraiment trop confusionnant voire même carrément mal
 foutu!
 
-### A chaque problème sa solution
+## A chaque problème sa solution
 
 Récapitulons. Je suis sur un écran A et je veux aller sur un écran B. La
 meilleure solution serait d'y aller en ligne droite ou tout du moins avec le

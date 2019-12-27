@@ -11,7 +11,7 @@ de sa progression au jour le jour, mais aussi d'aider d'autres personnes qui
 souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 
-### Janvier
+## Janvier
 
 * [How to see the language percentage breakdown of a repository – 001](https://saraford.net/2017/01/01/how-to-see-the-language-percentage-breakdown-of-a-repo-001/)
 
@@ -75,7 +75,7 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 * [How to view the diff of a markdown (.md) file as its rendered content – 031](https://saraford.net/2017/01/31/how-to-view-the-diff-of-a-markdown-md-file-as-its-rendered-content-031/)
 
-### Février
+## Février
 
 * [How to paste an image directly into an Issue on GitHub – 032](https://saraford.net/2017/02/01/how-to-paste-an-image-directly-into-an-issue-on-github-032/)
 
@@ -133,7 +133,7 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 * [How to use Blame on GitHub to find the commit that changed that line or block of code – 059](https://saraford.net/2017/02/28/how-to-use-blame-on-github-to-find-the-commit-that-changed-that-line-or-block-of-code-059/)
 
-### Mars
+## Mars
 
 * [How to clone a public GitHub repository without signing into GitHub from Visual Studio – 060](https://saraford.net/2017/03/01/how-to-clone-a-public-github-repository-without-signing-into-github-from-visual-studio-060/)
 
@@ -197,7 +197,7 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 * [How to fix the "I’ve started making changes on master. How do I get those to another branch?" using Visual Studio – 090](https://saraford.net/2017/03/31/how-to-fix-the-ive-started-making-changes-on-master-how-do-i-get-those-to-another-branch-using-visual-studio-090/)
 
-### Avril
+## Avril
 
 * [Should I read anything on the Internet on April 1? – 091](https://saraford.net/2017/04/01/should-i-read-anything-on-the-internet-on-april-1-091/)
 
@@ -259,7 +259,7 @@ souhaiteraient se familiariser et se perfectionner avec Git et GitHub.
 
 * [How to view your branches from the command line – 120](https://saraford.net/2017/04/30/how-to-view-your-branches-from-the-command-line-120/)
 
-### Mai
+## Mai
 
 * [How to use a double verbose to print the name of the upstream branch on command line – 121](https://saraford.net/2017/05/01/how-to-use-a-double-verbose-to-print-the-name-of-the-upstream-branch-on-command-line-121/)
 

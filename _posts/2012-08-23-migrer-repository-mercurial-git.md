@@ -18,7 +18,7 @@ Grosso-modo, il existe 3 méthodes :
 Comme j'ai pu trouver assez vite comment installer simplement Hg-Git, j'ai
 donc pris cette option.
 
-### Installation du plugin Hg-Git sous Windows 7 64 bits
+## Installation du plugin Hg-Git sous Windows 7 64 bits
 
 Au début, ça fait un peu [peur](http://stackoverflow.com/questions/4585776/installing-hg-git-on-windows-7-64bit), mais en fait y'a quasiment [rien à faire](http://tortoisehg.bitbucket.org/manual/1.0/nonhg.html#hg-git-git).
 
@@ -41,7 +41,7 @@ bookmarks =
 hggit = C:\Tools\hg-git\hggit
 ```
 
-### Faire un push de Mercurial vers Git
+## Faire un push de Mercurial vers Git
 
 Là aussi, j'ai un peu galéré. Y'avait pas moyen de faire un push de
 Mercurial vers Git. J'ai cherché et essayé tout plein de trucs mais rien n'y
@@ -93,7 +93,7 @@ C:\Gits> git clone -l .\MongoContactsBare .\MongoContacts
 
 => `done.`
 
-### Finitions
+## Finitions
 
 Quelques dernières dernières retouches pour avoir un "vrai" repository
 Git :

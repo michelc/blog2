@@ -17,7 +17,7 @@ NHibernate pour une application .Net.
 
 ![Utiliser ASP.NET MVC et NHibernate](/public/2010/asp-net-mvc-nhibernate.jpg)
 
-### NHibernate c'est quoi ?
+## NHibernate c'est quoi ?
 
 NHibernate est un outil de mapping Objet-Relationnel (object-relational
 mapping ou ORM en anglais) pour .Net qui permet de faire correspondre des
@@ -31,12 +31,12 @@ SourceForge](http://sourceforge.net/projects/nhibernate/files/). Les exemples de
 NHibernate 2.1.1 (la version la plus récente disponible au moment de la
 rédaction de cet article).
 
-### Installer NHibernate
+## Installer NHibernate
 
 Téléchargez et dézippez NHibernate sur votre ordinateur. Ca y est,
 NHibernate est installé.
 
-### Créer le projet ASP.NET MVC
+## Créer le projet ASP.NET MVC
 
 Créez un nouveau projet ASP.NET MVC et **n'oubliez pas de créer un
 projet de test**.
@@ -48,7 +48,7 @@ que tout soit structuré du mieux possible).
 Dans le projet Core, ajoutez une référence à l'assemblie
 **NHibernate**.
 
-### La base de données
+## La base de données
 
 Pour notre exemple, nous allons créer un modèle contenant des
 **Posts** (des billets en français) et des
@@ -64,7 +64,7 @@ de données, une autre solution étant de créer notre modèle dans Visual Studi
 et de demander à NHibernate de créer la base de données pour nous. Mais dans
 notre cas, nous allons créer manuellement la base de données.
 
-### Créer le Modèle
+## Créer le Modèle
 
 L'étape suivante va consister à créer notre modèle qui est une
 représentation orientée objet de notre base de données. Pour cela nous allons
@@ -72,7 +72,7 @@ utiliser le concepteur de classes de Visual Studio :
 
 ![](http://forerunnerg34.files.wordpress.com/2009/11/postscategoriesmodel1.png)
 
-### Les Repository
+## Les Repository
 
 Un Repository nous permet de créer, sélectionner, modifier et supprimer nos
 objets et il est indépendant de la base de données. Pour ce tutoriel, nous
@@ -87,7 +87,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
- 
+
 namespace Core
 {
     public interface IRepository<T>
@@ -156,13 +156,13 @@ using System.Text;
 using Core.Domain.Model;
 using NHibernate;
 using NHibernate.Criterion;
- 
+
 namespace Core.Domain.Repositories
 {
     public class PostRepository: IRepository<Post>
     {
         #region IRepository<Post> Members
- 
+
         void IRepository<Post>.Save(Post entity)
         {
             using (ISession session = NHibernateHelper.OpenSession())
@@ -243,7 +243,7 @@ namespace Core.Domain.Repositories
                 }
             }
         }
- 
+
         void IRepository<Category>.Update(Category entity)
         {
             using (ISession session = NHibernateHelper.OpenSession())
@@ -288,7 +288,7 @@ Comme vous pouvez le constater, c'est dans les repositorys que nous plaçons
 le code pour appeler les méthodes NHibernate, ce que nous faisons en créant un
 objet **Session** en premier.
 
-### Où est-ce que nous en sommes...
+## Où est-ce que nous en sommes...
 
 Avant de continuer, revoyons un peu ce que nous avons déjà fait :
 
@@ -300,7 +300,7 @@ ayant une collection de catégories.
 * Nous avons cré deux repositorys pour enregistrer, modifier, supprimer et
 retrouver les objets de notre modèle.
 
-### Les Mappings
+## Les Mappings
 
 Il est temps de faire quelque chose dans notre projet
 **Infrastructure** où nous mapperont notre modèle à notre base de
@@ -335,7 +335,7 @@ Important : Vous devez définir l'action de génération
 de ces deux fichiers à "**Ressource incorporée**" afin que
 NHibernate puisse trouver le bon fichier dans l'assembly.
 
-### Configurer NHibernate
+## Configurer NHibernate
 
 Nous sommes presque prêts. La prochaine étape va consister définir la chaine
 de connexion à la base de données et quelques paramètres pour NHibernate. Cette
@@ -373,7 +373,7 @@ La ligne `<property name="proxyfactory.factory_class">...`
 utilise la fonctionalité de "lazy loading" au sujet de laquelle vous trouverez
 plus d'informations sur le site d'[Hibernate](https://www.hibernate.org/162.html).
 
-### Test unitaire de NHibernate
+## Test unitaire de NHibernate
 
 Il est enfin temps de tester notre configuration de NHibernate ! Nous
 allons ajouter quelques données à notre table "Categories". Pour cela nous

@@ -10,7 +10,7 @@ excerpt: "I only use 'bootstrap.min.js' to handle the Bootstrap hamburger menu. 
 {:.encart}
 Version en français : [Gérer le menu hamburger de Bootstrap 4 en Vanilla JS]({% post_url 2019-12-09-menu-hamburger-bootstrap-vanilla-js %}).
 
-### Introduction
+## Introduction
 
 Some weeks ago, I wrote a small ASP.NET MVC application where I already have to [Search and filter a table with JavaScript]({% post_url 2019-10-01-search-filter-table-javascript %}).
 
@@ -66,7 +66,7 @@ Clicking on the hamburger icon again, the submenu disappears because the `div#na
 ```
 
 
-### There is a problem...
+## There is a problem...
 
 Currently, this is the only Bootstrap feature I use in this application and it requires the "bootstrap.min.js" script. So, only for one rather ridiculous feature, I have to embed 2 scripts on all my pages:
 
@@ -77,7 +77,7 @@ It's a bit of a waste...
 
 Practically, I need jQuery, but only with input forms, because it's ASP.NET MVC and it uses the [jQuery Validation](https://jqueryvalidation.org/) plugin. But I don't think it's very ecological to load jQuery in all pages because it's easier and that anyway it's cached after a while. Not to mention the 57 kb of "bootstrap.min.js" which serves me absolutely nothing but on the hamburger menu...
 
-### The solution (based on jQuery)
+## The solution (based on jQuery)
 
 That's why I decided to write my own "navbar-toggler.js" script.
 
@@ -103,7 +103,7 @@ The important and good thing is that I didn't "create" a new hamburger menu syst
 
 Bonus: the animation part is lost when displaying / hiding the hamburger menu, but it's way better for my blood pressure.
 
-### The same solution (based on Vanilla JS)
+## The same solution (based on Vanilla JS)
 
 To be perfect, this tiny script should not even rely on jQuery. So that's what I'm going to do now.
 
@@ -125,7 +125,7 @@ It's literally the same!
 * `(subbar.className + " show").replace(/ show show/, "")` adds or removes the "show" class from this div, which allows you to show or hide it
 
 
-### The final "js-navbar-toggler.js" source code
+## The final "js-navbar-toggler.js" source code
 
 This gives the following source file, ready to be integrated with a `<script src="/js/js-navbar-toggler.js"></script>` :
 

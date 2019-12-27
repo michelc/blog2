@@ -6,7 +6,7 @@ tags: mvc
 title: "Héritage en génération des routes ASP.NET MVC"
 ---
 
-### Quand ça marche
+## Quand ça marche
 
 J'ai développé une petite application ASP.NET MVC pour gérer des "brochures"
 de voyages. Chaque brochure est constitué d'un ensemble de voyages et chaque
@@ -66,7 +66,7 @@ pour générer la nouvelle route.
 Et en fait, je viens de m'apercevoir tout récemment que c'est encore plus
 sophistiqué que ça !
 
-### Quand ça ne marche pas
+## Quand ça ne marche pas
 
 Dans un autre projet, j'ai encore eu besoin de faire suivre une valeur tout
 au long des différentes actions liées à une série de traitements. Dans ce cas,

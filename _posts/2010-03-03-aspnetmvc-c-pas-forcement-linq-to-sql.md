@@ -72,7 +72,7 @@ l'application. Pour être sûr que la nouvelle DAL respecte bien les mêmes
 signatures de méthode que la DAL actuelle, le plus simple est de définir des
 Interfaces (ce qui pourrait faire un très bon sujet d'article).
 
-### Architecture MVC
+## Architecture MVC
 
 Il existe tout un tas de très bons articles qui expliquent ce qu'est
 l'architecture MVC, c'est pourquoi ce billet ne va pas entrer trop dans le
@@ -113,7 +113,7 @@ projet compilait. Par la suite, je n'aurait pas à revenir sur ces fichiers, à
 part pour quelques méthodes de la DAL et les méthodes correspondantes dans la
 BLL, comme nous le verrons par la suite.
 
-### Les Contrôleurs
+## Les Contrôleurs
 
 Ayant supprimé les contrôleurs créés par défaut par Visual Studio, j'ai
 ajouté quatre contrôleurs, un pour chaque entité. ce qui me donne donc au final
@@ -133,9 +133,9 @@ public static void RegisterRoutes(RouteCollection routes)
   routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
   routes.MapRoute(
-      "Default",                                              
-      "{controller}/{action}/{id}",                           
-      new { controller = "Contact", action = "List", id = "" }  
+      "Default",
+      "{controller}/{action}/{id}",
+      new { controller = "Contact", action = "List", id = "" }
   );
 }
 ```
@@ -153,7 +153,7 @@ public ActionResult List()
 }
 ```
 
-### Les vues fortement typées
+## Les vues fortement typées
 
 Je vais utiliser des vues fortement typées tout au long de l'application.
 D'une part parce que cela permet de profiter de l'intellisense dans le code
@@ -189,7 +189,7 @@ simplement d'une collection d'objets ContactPerson. La déclaration de page en
 première ligne de la vues List est la suivante :
 
 ```
-<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" 
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master"
     Inherits="System.Web.Mvc.ViewPage<ContactPersonList>" %>
 ```
 
@@ -208,7 +208,7 @@ l'affichage des objets ContactPerson de la collection est le suivant :
       <th scope="col">&nbsp;</th>
       <th scope="col">&nbsp;</th>
       <th scope="col">&nbsp;</th>
-      <th scope="col">&nbsp;</th>  
+      <th scope="col">&nbsp;</th>
     </tr>
     <%
       if (Model != null)
@@ -231,7 +231,7 @@ l'affichage des objets ContactPerson de la collection est le suivant :
       }else{ %>
     <tr>
       <td colspan="9">No Contacts Yet</td>
-    </tr>  
+    </tr>
      <% }%>
   </table>
 ```
@@ -267,7 +267,7 @@ Ajax dans mon application. Et pour finir, la classe css "link" me sert pour que
 le texte agisse comme un lien avec du souligné et un pointeur de type main
 lorsque la souris passe dessus.
 
-### Utiliser jQuery pour la partie Ajax
+## Utiliser jQuery pour la partie Ajax
 
 Avant de jeter un coup d'œil au gros morceau de script qui gère les
 fonctionnalités Ajax de l'application, voici trois lignes supplémentaires de
@@ -316,7 +316,7 @@ vue List :
         $(this).removeClass('SelectedRowStyle');
       });
       $(this).addClass('SelectedRowStyle');
-    }); 
+    });
     // hide the dialog div
     $('#dialog').hide();
     // set up ajax to prevent caching of results in IE
@@ -330,7 +330,7 @@ vue List :
         $.get(loc + '/' + id, function(data) {
           $('#details').html(data);
         });
-      // if it is, show the modal dialog   
+      // if it is, show the modal dialog
       } else {
         $('#dialog').dialog({
           buttons: {
@@ -341,16 +341,16 @@ vue List :
               $(this).dialog('close');
             }
           }
-        }); 
+        });
         $('#dialog').dialog('open');
         }
-      }); 
+      });
       // add an onclick event handler to the add contact button
       $('#addContact').click(function() {
         $.get('Contact/Add', function(data) {
           $('#details').html(data);
         });
-      }); 
+      });
     });
 </script>
 ```
@@ -410,7 +410,7 @@ Et pour finir, j'attache un gestionnaire d'évènement au clic sur le bouton
 
 Vous voyez ? Je vous avais bien dit que c'était simple !
 
-### Ajouter un contact
+## Ajouter un contact
 
 Quand on ajoute des enregistrements dans une application ASP.NET, la
 pratique habituelle est de proposer à l'utilisateur un formulaire contenant une
@@ -561,7 +561,7 @@ correspondre les valeurs du formulaire aux propriété d'un objet ContactPerson
 avant d'appeler la méthode Save() de la BLL en trois fois rien de code avant de
 renvoyer l'utilisateur vers l'action List.
 
-### Modifier un contact
+## Modifier un contact
 
 Cette fois encore, il existe deux actions dans le contrôleur pour gérer les
 modifications : une pour la requête GET initiale et une autre pour la
@@ -577,7 +577,7 @@ requête POST lorsque le formulaire est validé :
 
       var contactPerson = ContactPersonManager.GetItem(id);
       var model = new ContactPersonViewModel
-                    { 
+                    {
                       Id = id,
                       FirstName = contactPerson.FirstName,
                       MiddleName = contactPerson.MiddleName,
@@ -619,7 +619,7 @@ de la vue Add :
   });
 </script>
 
-<% using (Html.BeginForm("Edit", "Contact", FormMethod.Post)) { %> 
+<% using (Html.BeginForm("Edit", "Contact", FormMethod.Post)) { %>
      <table>
         <tr>
           <td class="LabelCell">Name</td>
@@ -662,7 +662,7 @@ traitement au niveau de l'action. Cela permettrait d'éviter pas mal de
 répétitions. Mais j'ai préféré les garder séparés pour que l'application de
 démonstration reste le plus claire possible.
 
-### Supprimer un contact
+## Supprimer un contact
 
 L'action de suppression est assez simple et elle n'a pas besoin d'avoir une
 vue correspondante. Une fois la suppression réalisée, elle se contente de
@@ -696,7 +696,7 @@ fermeture de la boite de dialogue). Par contre, s'il clique sur le bouton
 "Confirm", l'url qui a été construite par le jQuery est appelée afin de pointer
 sur l'action Delete du contrôleur.
 
-### Gérer les collections
+## Gérer les collections
 
 Toutes les collections (PhoneNumberList, EmailAddressList et AddressList)
 sont gérées exactement de la même manière. Par conséquence, je n'ai qu'à en
@@ -873,7 +873,7 @@ sérialiser le contenu des champs du formulaire puis faire une requête pour
 atteindre l'action Add() décoré avec l'attribut
 [AcceptVerbs(HttpVerbs.Post)].
 
-### Modifier et supprimer des adresses email
+## Modifier et supprimer des adresses email
 
 Pour la modification des objets EmailAddress nous avons besoin du même genre
 d'actions et de vues que celles auxquelles nous avons eu à faire jusqu'à
@@ -965,7 +965,7 @@ public ActionResult Delete(int id)
 }
 ```
 
-### Conclusion
+## Conclusion
 
 Le but de ce petit exercice était de démontrer qu'il est parfaitement
 possible de réaliser des applications MVC sans recourir à LINQ to SQL ou Entity

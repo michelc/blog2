@@ -18,7 +18,7 @@ Les deux premières pages passent comme une lettre à la poste : pourquoi
 utiliser Ajax, ce qu'on va faire avec, Ajax c'est gentil... Il faut juste faire
 attention à la version du jQuery disponible dans le dossier Scripts.
 
-### Utilisation d'une vue partielle avec Ajax
+## Utilisation d'une vue partielle avec Ajax
 
 Puis on s'attaque au vif du sujet pour modifier la vue Index des contacts,
 afin déviter de recharger toute la page juste quand on change de groupe de
@@ -101,7 +101,7 @@ code ci-dessous :
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 <div class="container">
-    
+
     <ul id="leftColumn">
     <% foreach (var item in Model.Groups) { %>
         <li<%= Html.Selected(item.Id, Model.SelectedGroup.Id) %>>
@@ -113,7 +113,7 @@ code ci-dessous :
     <div id="divContactList">
         <% Html.RenderPartial("ContactList", Model.SelectedGroup); %>
     </div>
-    
+
     <div class="clear"></div>
 
 </div>
@@ -166,7 +166,7 @@ public ActionResult Index(int? id)
     // Ajax Request
     if (Request.IsAjaxRequest())
         return PartialView("ContactList", selectedGroup);
-    
+
     // Normal Request
     var model = new IndexModel
     {
@@ -181,7 +181,7 @@ Je compile, j'exécute et tout marche comme prévu dans le tutoriel. Y compris
 le fait que le groupe sélectionné n'est pas mis en évidence (puisqu'il n'y a
 pas de classe "selected").
 
-### Ajout d'une animation jQuery
+## Ajout d'une animation jQuery
 
 Pour résoudre le petit problème de CSS et aussi pour que l'utilisateur se
 rende compte qu'il se passe quelque chose, on va utiliser la librairie jQuery
@@ -228,14 +228,14 @@ quand :
 </script>
 ```
 
-### Ajout du support de l'historique du navigateur
+## Ajout du support de l'historique du navigateur
 
 J'ai lu cette partie, mais c'est tout. Utiliser Ajax pour faire croire à un
 utilisateur qu'il est dans une application Windows puis faire des bidouilles
 interminables pour qu'il retrouve des automatismes du monde web, très peu pour
 moi.
 
-### Faire des suppressions en Ajax
+## Faire des suppressions en Ajax
 
 Ca c'est quelque chose de beaucoup plus intéressant. Pas vraiment d'un point
 de vue interface utilisateur (je préfère afficher un écran de détail où on voit
@@ -291,7 +291,7 @@ en mode GET qui renvoie la vue Delete.aspx pour faire confirmer
 contactToDelete) en mode POST qui supprime le contact et renvoie la vue
 Index.
 
-### Conclusion
+## Conclusion
 
 Ouf ! Ca a été long ([plus d'un mois]({% post_url 2009-09-23-troisieme-etape-aspnetmvc %})) et [pas]({% post_url 2009-10-20-test-driven-development-aspnetmvc-suite %}) [toujours]({% post_url 2009-10-29-test-driven-development-aspnetmvc-suite %}) [facile]({% post_url 2009-10-30-test-driven-development-aspnetmvc-fin %}), mais j'ai finalement réussi à suivre ce tutoriel d'un
 bout à l'autre. Avec du recul, je me rend compte qu'il aurait été préférable de

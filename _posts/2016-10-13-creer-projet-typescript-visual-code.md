@@ -8,7 +8,7 @@ title: "Créer un projet TypeScript sous Visual Code"
 
 Source : <https://code.visualstudio.com/Docs/languages/typescript>
 
-### Créer un projet
+## Créer un projet
 
 ```
 C:\Code> md Test1
@@ -16,13 +16,13 @@ C:\Code> cd Test1
 C:\Code\Test1> _
 ```
 
-### Ouvrir ce projet
+## Ouvrir ce projet
 
 ```
 C:\Code\Test1> code .
 ```
 
-### Créer le fichier tsconfig.json
+## Créer le fichier tsconfig.json
 
 Le fichier "tsconfig.json" sert à indiquer que le répertoire dans lequel il se
 situe est un projet TypeScript.
@@ -40,7 +40,7 @@ sache comment générer les fichiers JS à partir des fichiers TS.
 }
 ```
 
-### Créer un fichier test.ts
+## Créer un fichier test.ts
 
 ```
 class Startup {
@@ -55,7 +55,7 @@ Startup.main();
 
 Note : Shilt+Alt+P permet de reformater le code.
 
-### Créer le fichier tasks.json
+## Créer le fichier tasks.json
 
 Ce fichier sert à paramétrer les tâches dans Visual Code.
 
@@ -81,7 +81,7 @@ Ce fichier sert à paramétrer les tâches dans Visual Code.
 Note : cette tâche compile un projet TypeScript, il faut donc avoir un fichier
 "tsconfig.json" pour que le répertoire soit considéré comme un projet.
 
-### Générer le fichier test.js via Visual Code
+## Générer le fichier test.js via Visual Code
 
 * Ctrl+Shift+B (Run Build Task) =>
   - génère le fichier test.js
@@ -101,7 +101,7 @@ Startup.main();
 //# sourceMappingURL=test.js.map
 ```
 
-### Générer le fichier test.js via la ligne de commande
+## Générer le fichier test.js via la ligne de commande
 
 * Ctrl+ù => ouvre le terminal intégré de Visual Code
 
@@ -116,7 +116,7 @@ c:\Code\Test1> _
 Note : ça marche aussi avec un terminal externe tel que l'invite de commande de
 Windows.
 
-### Générer le fichier à chaque enregistrement
+## Générer le fichier à chaque enregistrement
 
 Il faut modifier le fichier "tasks.json" de la façon suivante :
 
@@ -141,7 +141,7 @@ Note : pour créer directement une tâche qui compile à chaque enregistrement, 
 est possible de configurer l'exécuteur de tâche en sélectionnant "TypeScript -
 Watch Mode : Compiles a TypeScript project in watch mode".
 
-### Exécuter le fichier test.js
+## Exécuter le fichier test.js
 
 A faire depuis le terminal :
 
@@ -152,7 +152,7 @@ Hello World
 c:\Code\Test1> _
 ```
 
-### Débuguer le code
+## Débuguer le code
 
 * Ctrl+Shift+D => ouvre la vue débugueur
 * Cliquer sur l'engrenage pour sélectionner un environnement :

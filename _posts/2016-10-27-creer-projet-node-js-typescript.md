@@ -6,7 +6,7 @@ tags: javascript
 title: "Créer un projet Node.js en TypeScript"
 ---
 
-### Créer (et ouvrir) un nouveau projet
+## Créer (et ouvrir) un nouveau projet
 
 ```
 C:\Code> md Test3 && cd Test3 && code .
@@ -14,7 +14,7 @@ C:\Code> md Test3 && cd Test3 && code .
 
 Ca dépote !
 
-### Créer le fichier tsconfig.json
+## Créer le fichier tsconfig.json
 
 ```
 {
@@ -33,14 +33,14 @@ Ca dépote !
 }
 ```
 
-### Créer le fichier tasks.json
+## Créer le fichier tasks.json
 
 * Ctrl+Shift+P et "Configure Task Runner"
 * Sélectionner "TypeScript - Watch Mode : Compiles a TypeScript project in watch
   mode"
 * Ctrl+Shift+B pour démarrer la tâche
 
-### Installer le fichier de définition pour Node.js
+## Installer le fichier de définition pour Node.js
 
 * Ctrl+ù pour ouvrir le terminal de Visual Code
 
@@ -48,7 +48,7 @@ Ca dépote !
 c:\Code\Test3> typings install dt~node --global --save
 ```
 
-### Créer un fichier test.ts
+## Créer un fichier test.ts
 
 ```
 const path = require('path');
@@ -57,7 +57,7 @@ var current_dir = path.resolve('./');
 console.log(current_dir);
 ```
 
-### Exécuter le fichier test.js
+## Exécuter le fichier test.js
 
 * Ctrl+ù pour ouvrir le terminal de Visual Code
 
@@ -68,7 +68,7 @@ c:\Code\Test3
 c:\Code\Test3> _
 ```
 
-### Améliorer l'intellisense pour Node.js
+## Améliorer l'intellisense pour Node.js
 
 Dans certains tutoriels, on trouve une syntaxe utilisant le mot clé `var` :
 
@@ -104,7 +104,7 @@ Et par contre, on dispose maintenant d'une intellisense complète :
 
 ![](/public/2016/node-04-intellisense.png)
 
-### Débuguer le code TypeScript
+## Débuguer le code TypeScript
 
 * Ctrl+Shift+D et sélectionner l'environnement "Node.js"
 * Génère le fichier ".vscode/launch.json"

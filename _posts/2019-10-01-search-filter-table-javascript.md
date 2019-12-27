@@ -18,7 +18,7 @@ and found a very simple and easily understandable example with a demonstration
 on [codepen.io](https://codepen.io/priyankamalviya/pen/zzWZEa).
 
 
-### The original script
+## The original script
 
 First of all, the script as developed by
 [Priyanka Malviya](https://twitter.com/priyankamalvi18) before explaining what
@@ -63,7 +63,7 @@ it does and how.
 })();
 ```
 
-### How does it work?
+## How does it work?
 
 To be able to use this code, you must add an input tag to the page and decorate
 it with the "table-filter" class:
@@ -151,7 +151,7 @@ Hiding/displaying a row is done via the CSS `display` property which is defined
 as "none" or "table-row".
 
 
-### Modification #1: a first contact
+## Modification #1: a first contact
 
 After studying how these few lines operate, I made a very small change that
 enabled me to understand how the code worked.
@@ -206,7 +206,7 @@ Advantages:
 tested.
 
 
-### Modification #2: a small improvement
+## Modification #2: a small improvement
 
 My table displays a list of books. The filter system works perfectly: I can type
 a few things and the table only shows the books that match the search.
@@ -237,7 +237,7 @@ the input field is not empty, and if so, triggers the event by passing it the
 current input tag.
 
 
-### Modification #3: a little modernity
+## Modification #3: a little modernity
 
 Once I procrastinated, I decided to replace the
 `document.getElementsByClassName()` with a much more trendy
@@ -291,7 +291,7 @@ that was expected by `.getElementsByClassName()`) must now be changed to
 ".books" (a CSS selector that is intended for `.querySelectorAll()`).
 
 
-### Modification #4: a slight optimization
+## Modification #4: a slight optimization
 
 Every time we start a search, all the rows of the table are converted to
 lowercase in order to make the comparison... Suppose I have a small table with
@@ -317,7 +317,7 @@ Note: Given the size of the tables on which I use "js-table-filter.js", it's
 more for the sake of detail than for real optimization.
 
 
-### Modification #5: a new feature
+## Modification #5: a new feature
 
 This time, I made a little more useful modification. The title of the table is
 "List of books", followed by the number of books in parentheses.
@@ -366,7 +366,7 @@ Note: If the attribute "data-count" does not exist, then the condition `if
 (writer) { ... }` avoids trying to count lines.
 
 
-### Modification #6: simplifications
+## Modification #6: simplifications
 
 On this occasion, we can also notice that the "table-filter" class is not really
 essential. The presence of the "data-table" attribute can also be used to
@@ -393,7 +393,7 @@ var inputs = dquery("input[data-table]");
 ```
 
 
-### The "js-table-filter.js" file up to date
+## The "js-table-filter.js" file up to date
 
 Here's where I am (until I want to handle accented characters). And with a few
 comments, the code is still as short and simple as ever:

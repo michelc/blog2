@@ -46,7 +46,7 @@ J'ai apporté quelques modification au code par rapport à la deuxième partie
 car j'ai détecté quelques bugs grâce aux test unitaires. Par conséquent, il est
 nécessaire de [télécharger la version complète du projet](http://go2.wordpress.com/?id=725X1342&amp;site=forerunnerg34.wordpress.com&amp;url=http://cid-926d6677262767bd.skydrive.live.com/self.aspx/ForerunnerG34/NHibernate101%20Final.zip).
 
-### ViewModel
+## ViewModel
 
 Les vues pour les Posts ont besoin des objets Post et Category pour
 fonctionner correctement. Pour cela, un *pattern* très répandu est de
@@ -62,7 +62,7 @@ seule entité.
 
 ![](http://forerunnerg34.files.wordpress.com/2009/11/image1.png)
 
-### Conclusion
+## Conclusion
 
 Configurer NHibernate pour la première fois peut demander un petit effort
 (ou un effort certain), mais il vous fera gagner énormément de temps pour

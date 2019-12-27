@@ -21,7 +21,7 @@ différentes façons qui existent pour définir des fonctions en JavaScript.
   </figcaption>
 </figure>
 
-### Via une déclaration
+## Via une déclaration
 
 La méthode classique date des origines de JavaScript et consiste simplement à
 déclarer la fonction avec le mot-clé `function`.
@@ -35,7 +35,7 @@ function bonjour (prenom) {
 Cette fonction a comme nom "bonjour", ce qui en fait une fonction nommée.
 
 
-### Via une expression
+## Via une expression
 
 Une méthode un peu plus moderne qui met en évidence le fait que les fonctions
 sont des objets comme les autres et qu'elles peuvent elles aussi être affectées
@@ -57,7 +57,7 @@ affecte une fonction), la commande se termine par un point-virgule, exactement
 comme c'est le cas pour touts les autres affectations : `const pi = 3.14;`.
 
 
-### Via la syntaxe arrow
+## Via la syntaxe arrow
 
 Avec ES6 est apparu une nouvelle syntaxe "arrow" pour déclarer les fonctions via
 une expression :

@@ -13,7 +13,7 @@ mettre en œuvre des formulaires encore plus sophistiqués. Cela nous permettra
 d'étudier les deux approches envisageables pour faire passer des informations
 des contrôleurs vers les vues : ViewData et ViewModel.
 
-### Transmettre des données des contrôleurs vers les vues
+## Transmettre des données des contrôleurs vers les vues
 
 Une des caractéristiques du modèle MVC est qu'il incite à pratiquer une
 stricte "séparation des préoccupations" entre les différents composants de
@@ -47,7 +47,7 @@ Dinner aux vues Edit et Create.
 Nous allons maintenant examiner deux méthodes différentes pour faire
 cela.
 
-### Utiliser le dictionnaire ViewData
+## Utiliser le dictionnaire ViewData
 
 La classe de base du contrôleur expose une propriété ViewData de type
 dictionnaire. Celle-ci peut s'employer pour faire passer des données
@@ -130,7 +130,7 @@ public ActionResult Edit(int id, FormCollection collection) {
 Une fois cela terminé, l'action Edit() du contrôleur DinnersController prend
 désormais en charge une liste déroulante.
 
-### Utiliser une classe ViewModel
+## Utiliser une classe ViewModel
 
 L'avantage du dictionnaire ViewData est d'être simple et rapide à mettre en
 œuvre. Cependant, certains développeurs n'aiment pas trop cette approche basée
@@ -299,7 +299,7 @@ Après quoi nos formulaires de création et de modification offrent tous les
 deux une liste déroulante pour sélectionner le pays où va se dérouler le
 dîner.
 
-### Utiliser une classe ViewModel personnalisée
+## Utiliser une classe ViewModel personnalisée
 
 Dans notre exemple, la classe DinnerFormViewModel expose directement une
 propriété de type Dinner et une autre de type SelectList. Cette formule est

@@ -10,7 +10,7 @@ title: "Je peux le dire : Vous devriez apprendre MVC"
 Ceci est la traduction du billet [I Spose I'll Just Say It: You Should Learn MVC](http://blog.wekeroad.com/2009/04/22/i-spose-ill-just-say-it-you-should-learn-mvc) de Rob
 Conery.
 
-### Le Gros Mensonge
+## Le Gros Mensonge
 
 Les WebForms sont des menteurs. C'est une abstraction roulée dans la farine
 et nappée de boniments le tout présenté à grand coups de passe-passe sur un
@@ -41,7 +41,7 @@ du genre têtu ! Merci de retourner 2 phrases en arrière.
 Vous le croyez encore ? Votre chat a besoin d'une nouvelle
 perruque.
 
-### MVC est snob ?
+## MVC est snob ?
 
 Je devine que les gens qui font des  WebForms se disent que je commence
 à les emm... J'aimerai m'adresser à eux. Le titre de ce billet est "Vous
@@ -50,7 +50,7 @@ que vous le fassiez : c'est que du bonheur). C'est tout ce que je vous
 demande : que vous appreniez MVC. Je n'ai jamais dit que vous étiez idiot
 de ne pas l'utiliser (juste que votre chat portait une perruque).
 
-### MVC est un gros plein de soupe ?
+## MVC est un gros plein de soupe ?
 
 [Je vais me répéter](http://blog.wekeroad.com/blog/asp-net-mvc-avoiding-tag-soup/), mais que je vous dise : si vous
 cuisinez des spaghettis, vous mangerez  des spaghettis. Comme tout bon
@@ -66,7 +66,7 @@ Je n'ai pas peur du HTML - et vous ne devriez pas non plus. Pensez à lui
 quand vous codez vos pages. Et restez sobre. On peut y arriver si on s'y met
 tous ensemble. Et vous pouvez amener votre chat si vous voulez.
 
-### 7 raisons d'arrêter de me prendre pour un crétin
+## 7 raisons d'arrêter de me prendre pour un crétin
 
 Espérons que vous êtes encore là et croisons les doigts pour que vous vous
 disiez "Assez de tout ce blabla. Donnes-moi quelque chose à me mettre sous la
@@ -149,7 +149,7 @@ veux, comme je veux. J'ai la possibilité de créer quelque chose qui correspond
 à ce que j'ai envie de faire, et je ne suis pas empêtré par un Gros Mensonge et
 un chat tout bizarre avec sa perruque sur la tête.
 
-### Conclusion
+## Conclusion
 
 Je suis à nouveaux heureux de programmer et c'est quelque chose de très
 motivant, du moins pour moi et mes chats. Allez ! Encore un parallèle,

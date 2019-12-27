@@ -21,7 +21,7 @@ In this tutorial, I will modify the existing code so that I no longer have to us
 </figure>
 
 
-### Asynchronous operation / callback
+## Asynchronous operation / callback
 
 Last time, I found out how to get the same JavaScript code to access both databases:
 
@@ -60,7 +60,7 @@ In a nutshell, you have to:
 Note: It's difficult to read, difficult to write, and also difficult to explain.
 
 
-### Async / await operation
+## Async / await operation
 
 This is why JavaScript has regularly evolved and today allow to use an async / await operation which, although doing the "same" thing, seems much more "natural".
 
@@ -132,7 +132,7 @@ TypeError: callback is not a function
 ```
 
 
-### Async / Await with the SQlite3 module
+## Async / Await with the SQlite3 module
 
 I guess it was its way of saying that the SQlite3 module doesn't handle async / await operation.
 
@@ -184,7 +184,7 @@ I'm testing a...gain: http://localhost:3000/books
 It works :)
 
 
-### Conclusion
+## Conclusion
 
 Personally, I like the async / await syntax much better. It's more beautiful, it looks more natural and avoids indentations of death:
 
@@ -237,7 +237,7 @@ db.query(sql_create, [], (err, result) => {
 => Yummy?
 
 
-### The complete code for "index.js"
+## The complete code for "index.js"
 
 And finally, the full "index.js" source to get an overview of all changes.
 

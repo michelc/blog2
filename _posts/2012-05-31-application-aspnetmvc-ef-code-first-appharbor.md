@@ -26,7 +26,7 @@ migration automatique de Entity Framework
 que j'ai tendance à faire) et Sql Server en production en expliquant comment
 configurer la transformation dans le fichier Web.Release.config.
 
-### Etape 1 : Créer un nouveau projet sous Visual Studio 2010
+## Etape 1 : Créer un nouveau projet sous Visual Studio 2010
 
 #### Nouveau projet...
 
@@ -101,7 +101,7 @@ Mise à jour de /Views/Shared/_Layout.cshtml pour refléter tout ça :
 Générer / Regénérer la solution, ça compile. Déboguer / Démarrer le
 débogage, ça marche.
 
-### Etape 2 : Ecriture du code
+## Etape 2 : Ecriture du code
 
 Par rapport au tutoriel je ne fais pas un projet "Core" et un projet "Web",
 mais je met tout dans un seul projet (ce qui a l'avantage de passer avec Visual
@@ -257,7 +257,7 @@ namespace HarborFirstTest.Tests.Controllers
 }
 ```
 
-### Etape 3 : Modifier le modèle de données
+## Etape 3 : Modifier le modèle de données
 
 #### /Models/User.cs
 
@@ -358,7 +358,7 @@ débogage, ça marche. Créer d'autres utilisateurs, ça repasse !
 
 ![](/public/2012/ah1-07-apres-migration.jpg)
 
-### Etape 4 : Déployer vers AppHarbor
+## Etape 4 : Déployer vers AppHarbor
 
 Enfin ! Pour cette dernière étape, je me suis aussi inspiré des billets
 [Deploy to AppHarbor using GitHub for Windows](http://blog.appharbor.com/2012/05/25/deploy-to-appharbor-using-github-for-windows), [Announcing GitHub support](http://blog.appharbor.com/2011/10/13/announcing-github-support) et [Use NuGet Package Restore to avoid pushing packages to

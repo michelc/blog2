@@ -6,7 +6,7 @@ tags: mvc, unit-test
 title: "Tester la partie POST d'une action Create() - 1/2"
 ---
 
-### L'action à tester
+## L'action à tester
 
 Il s'agit de l'action Create() en mode POST de mon application de gestion de
 contacts, pour le cas où l'utilisateur valide son formulaire pour créer un
@@ -73,7 +73,7 @@ public ActionResult Create(ViewPerson person)
 }
 ```
 
-### 1° test : Si erreur Alors je reste en saisie
+## 1° test : Si erreur Alors je reste en saisie
 
 Je vais commencer par vérifier que Create() me renvoie la vue par défaut
 quand j'ai une erreur de saisie :
@@ -157,7 +157,7 @@ maintenant certain qu'en cas d'erreur de saisie l'action People.Create() me
 renverra en saisie. C'est donc quelque chose que je n'ai plus à vérifier dans
 les tests suivants.
 
-### 2° test : Si erreur Alors on me dit quoi
+## 2° test : Si erreur Alors on me dit quoi
 
 Là, je vais vérifier que quand j'ai une erreur de saisie, Create() me
 renvoie bien la liste de ces erreurs dans ModelState, ce qui me permettra de
@@ -199,7 +199,7 @@ ont développé ça d'avoir unitairement testé tout ce qui va bien.
 
 Conclusion : un test pour rien à supprimer.
 
-### 2° test : Si erreur Alors la liste des sociétés est initialisée
+## 2° test : Si erreur Alors la liste des sociétés est initialisée
 
 Dans ce "vrai" 2° test, je vais vérifier que l'action Create() a bien
 initialisé la liste des sociétés existantes dont la vue Create.cshtml a besoin
@@ -254,7 +254,7 @@ Conclusion : je reviendrai une autre fois sur la
 méthode que j'ai choisi d'utiliser pour effectuer mes tests liés à Entity
 Framework Code First.
 
-### 3° test : Si erreur Alors je peux corriger ma saisie
+## 3° test : Si erreur Alors je peux corriger ma saisie
 
 Dans ce test, je vais vérifier que lorsqu'il y a une erreur, l'action
 Create() retransmet bien à la vue l'objet ViewPerson qu'elle a traité, de façon
@@ -351,7 +351,7 @@ Après ça, il faudra que je teste le POST quand ça marche et que l'action
 Create() enregistre la nouvelle personne (màj : c'est fait avec la
 [2° partie de ce billet]({% post_url 2012-10-02-tester-partie-post-action-create-2 %})).
 
-### Ce que je ne teste pas
+## Ce que je ne teste pas
 
 Je n'ai pas fait de test unitaire pour contrôler que `public
 ActionResult Create(ViewPerson person)` avec un objet ViewPerson

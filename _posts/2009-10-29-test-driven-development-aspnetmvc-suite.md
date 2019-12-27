@@ -14,7 +14,7 @@ réalisées et que je ne voulais pas me contenter de les récupérer toutes fait
 j'ai pris ça comme un exercice pour compléter mon apprentissage d'ASP.NET
 MVC.
 
-### Première tentative
+## Première tentative
 
 Dans ce billet, je vais donc continuer la modification de la base de
 données, c'est à dire ajouter une colonne groupId à la table des contacts et
@@ -30,7 +30,7 @@ seul :( Je dois passer par la toolbox pour ajouter l'association entre les deux
 tables. Et même après ça, j'ai des erreurs de compilation ! je recommence,
 je bidouille, mais rien à faire, ça ne veut pas compiler...
 
-### Seconde tentative
+## Seconde tentative
 
 Pour aller plus vite, je récupère la base de données
 (App_Data\ContactManagerDB\*.\*) et le modèle (Models\ContactManagerModel.\*) qui
@@ -47,7 +47,7 @@ dans le tutorial (ou à peu près).
 Et cette fois-ci, tout marche comme sur des roulettes ! Je vérifie que
 ça compile (Ok), je quitte VWD et je sauvegarde. On ne sait jamais...
 
-### Prise en compte de groupId dans la table Contacts
+## Prise en compte de groupId dans la table Contacts
 
 Pour la suite, je vais déjà tenter de faire apparaitre la liste des groupes
 dans les formulaires de création et de mise à jour des contacts, mais juste
@@ -103,7 +103,7 @@ faire. Tant mieux.
 
 Bon. Aux vues maintenant.
 
-### Mise à jour des vues contacts pour lister les groupes
+## Mise à jour des vues contacts pour lister les groupes
 
 Je démarre avec la vue Create.aspx en regardant comment c'est fait dans les
 sources finis de la 6° partie et en refaisant la même chose pas à pas.
@@ -181,7 +181,7 @@ public IEnumerable<Contact> ListContacts()
 }
 ```
 
-### Utilisation du groupe sélectionné pour créer un contact
+## Utilisation du groupe sélectionné pour créer un contact
 
 Maintenant, je vais essayer de tenir compte du groupe sélectionné lors de la
 création d'un contact.
@@ -285,7 +285,7 @@ Je lance l'application et crée un nouveau contact après avoir sélectionné
 et ça marche ! Faut vérifier dans la table Contacts pour le croire mais
 c'est bien le cas.
 
-### Utilisation du groupe pour modifier un contact
+## Utilisation du groupe pour modifier un contact
 
 Ca consiste très simplement à refaire à peu près pareil avec la vue
 Edit.aspx et les méthode Edit() qu'on trouve un peu partout dans le contrôleur,
@@ -356,10 +356,10 @@ public Contact EditContact(int groupId, Contact contactToEdit)
 {
     // Get original contact
     var originalContact = GetContact(contactToEdit.Id);
-    
+
     // Update with new group
     originalContact.Group = GetGroup(groupId);
-    
+
     // Save changes
     _entities.ApplyPropertyChanges(originalContact.EntityKey.EntitySetName, contactToEdit);
     _entities.SaveChanges();
@@ -371,7 +371,7 @@ Quel progrès ! Je peux enfin rattacher un contact à un groupe au moment
 de sa création et même en changer lors de sa modification, et tout ça pour de
 vrai. Et sans compter que les tests unitaires sont toujours au vert.
 
-### Je touche au but
+## Je touche au but
 
 Pour enfin arriver au bout de cette 6° étape, il me reste juste à faire
 apparaitre les groupes au niveau de la vue Contact\Index.aspx qui affiche la
@@ -443,7 +443,7 @@ contacts (le `<div id="divContactList">`).
             <% } %>
         </tbody>
     </table>
-</div>    
+</div>
 ```
 
 Puis on ajoute un peu de CSS pour <s>faire flotter tout ça</s> que les

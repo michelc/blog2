@@ -17,7 +17,7 @@ pages. Cela contribue à protéger vos applications et vos sites contre le
 Cross-site scripting (XSS) et les attaques par injection HTML, et cela grâce à
 une nouvelle syntaxe à la fois élégante et concise.
 
-### Encoder le HTML
+## Encoder le HTML
 
 Le Cross-site scripting (XSS) et les attaques par injection HTML
 représentent deux des principales failles de sécurité qui gangrènent les sites
@@ -54,7 +54,7 @@ inconvénients :
 – et il n'existe pas de moyen facile pour vérifier qu'elle est bien utilisée
 tout au long de l'application.
 
-### Encoder avec la nouvelle syntaxe &lt;%: %&gt;
+## Encoder avec la nouvelle syntaxe &lt;%: %&gt;
 
 Avec ASP.NET 4, nous avons introduit une nouvelle syntaxe &lt;%: %&gt; pour
 générer des éléments comme le fait un bloc &lt;%= %&gt;, mais qui en plus
@@ -71,7 +71,7 @@ permet également de rechercher facilement les éléments &lt;%= %&gt; dans votr
 code et de contrôler les cas où vous n'utilisez pas l'encodage HTML dans votre
 application pour vous assurer que c'est bien ce que vous souhaitiez faire.
 
-### Eviter le double encodage
+## Eviter le double encodage
 
 Bien que l'encodage HTML soit souvent une bonne pratique, il existe quelques
 cas où le contenu que vous renvoyez doit être du HTML ou qu'il est déjà encodé,
@@ -120,7 +120,7 @@ intraitable, vous pouvez même créer une règle de build dont le but sera de
 traquer l'utilisation de blocs &lt;%= %&gt; dans votre application pour que
 vous soyez certain que rien n'échappe à l'encodage HTML
 
-### Génération des vues ASP.NET MVC 2
+## Génération des vues ASP.NET MVC 2
 
 Lorsque vous utilisez VS 2010 (ou sa version gratuite Visual Web Developer
 2010 Express) pour construire des applications ASP.NET MVC 2, vous pouvez voir
@@ -133,7 +133,7 @@ validation (tous trois obtenus grâce à des méthodes helper) :
 
 ![](http://weblogs.asp.net/blogs/scottgu/image_thumb_6812E188.png)
 
-### Résumé
+## Résumé
 
 La nouvelle syntaxe &lt;%: %&gt; offre une méthode concise pour encoder
 automatiquement le contenu puis le renvoyer vers la sortie. Cela vous permet de

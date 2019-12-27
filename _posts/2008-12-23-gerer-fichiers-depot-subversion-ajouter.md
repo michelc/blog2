@@ -10,7 +10,7 @@ Dans ce billet, je reviens sur l'ajout d'un fichier dans un dépôt Subversion
 pour bien mettre en évidence les 3 étapes qui sont nécessaires pour y
 parvenir.
 
-### 1° étape : ajouter le fichier dans le projet
+## 1° étape : ajouter le fichier dans le projet
 
 Dans l'explorateur de solution de Visual Studio, faire un clic-droit sur le
 projet puis Ajouter / Ajouter une classe et créer la classe NouvelleClasse.cs
@@ -19,7 +19,7 @@ puis sauvegarder la solution.
 Pour l'instant, seul Visual Studio est "au courant" de l'ajout de ce
 fichier.
 
-### 2° étape : ajouter le fichier dans le répertoire de travail
+## 2° étape : ajouter le fichier dans le répertoire de travail
 
 Il faut donc ajouter spécifiquement le nouveau fichier sous TortoiseSVN pour
 qu'il fasse partie des fichiers versionnés.
@@ -49,7 +49,7 @@ Désormais, le fichier NouvelleClasse.cs a été ajouté au répertoire de
 travail et il est donc pris en compte par TortoiseSVN côté client, mais pas
 encore intégré au dépôt Subversion côté serveur.
 
-### 3° étape : ajouter le fichier au dépôt Subversion
+## 3° étape : ajouter le fichier au dépôt Subversion
 
 Si on veut que le fichier NouvelleClasse.cs apparaisse dans le dépôt
 Subversion et que les autres utilisateurs du dépôt puisse enfin voir ce nouveau

@@ -35,7 +35,7 @@ commandes DDL (Data Definition Language) qui couvrent la majorité des cas
 rencontrés dans les scripts de création et de mise à jour des tables d'une base
 de données relationnelle.
 
-### Créer une table, sa clé primaire et un index
+## Créer une table, sa clé primaire et un index
 
 ```
 /* Create table
@@ -58,7 +58,7 @@ CREATE UNIQUE INDEX UK_test_Parametres_libelle ON test_Parametres (libelle);
 GO;
 ```
 
-### Créer une table, une clé étrangère et un index
+## Créer une table, une clé étrangère et un index
 
 ```
 /* Create table and primary key
@@ -100,7 +100,7 @@ Notes :
 commande CREATE TABLE.
 * ON UPDATE CASCADE n'est pas directement supporté avec Oracle
 
-### Modifier une table
+## Modifier une table
 
 ```
 /* Add a column
@@ -126,7 +126,7 @@ GO;
 
 Note : RENAME COLUMN ne fonctionne pas avec Access et MySQL.
 
-### Faire du ménage
+## Faire du ménage
 
 ```
 DROP TABLE test_Donnees;

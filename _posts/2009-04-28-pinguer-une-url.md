@@ -65,7 +65,7 @@ namespace Altrr.Tools.UrlPing
 }
 ```
 
-### Mises à jour
+## Mises à jour
 
 Si jamais le site visé renvoie une erreur `401 - Non autorisé` et que
 l'authentification est basé sur Active Directory, il faut initialiser l'objet
@@ -94,7 +94,7 @@ juste un petit peu plus compliqué :
 
 Et pour mémoire, ça ne marche pas du tout avec `request.Method = "HEAD";` !
 
-### Version PowerShell
+## Version PowerShell
 
 ```
 # Crée un objet PSCredential

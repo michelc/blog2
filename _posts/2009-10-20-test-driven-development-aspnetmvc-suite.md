@@ -11,7 +11,7 @@ la base de données, écrire du code qui permet à l'utilisateur de réellement
 gérer des groupes de contacts... et venir à bout de la [6°
 partie du tutoriel pour gérer des contacts]({% post_url 2009-10-09-test-driven-development-aspnetmvc-suite %} "Test-Driven Development avec ASP.NET MVC (suite)").
 
-### Mises à jour comme dans le tutoriel
+## Mises à jour comme dans le tutoriel
 
 #### La base de données : facile
 
@@ -54,7 +54,7 @@ Stop ! J'efface tout et je recommence pas à pas. En un, gérer la table
 des groupes. En deux, modifier la gestion des contacts pour tenir compte des
 groupes.
 
-### Mises à jour à ma façon
+## Mises à jour à ma façon
 
 Une fois revenu en arrière :
 
@@ -69,7 +69,7 @@ table "Groups"
 * mise à jour du FaleRepository pour que ça compile
 * un coup de tests unitaires et tout continue à être bon.
 
-### Ajout de la vue Index
+## Ajout de la vue Index
 
 Ca avance bien, donc je continue :
 
@@ -119,7 +119,7 @@ pas infaisable.
         </tr>
 
     <% foreach (var item in Model) { %>
-    
+
         <tr>
             <td class="actions delete">
                 <a href='<%= Url.Action("Delete", new {id=item.Id}) %>'><img src="../../Content/Delete.png" alt="Delete" /></a>
@@ -128,7 +128,7 @@ pas infaisable.
                 <%= Html.Encode(item.Name) %>
             </td>
         </tr>
-    
+
     <% } %>
 
         <tr>
@@ -175,8 +175,8 @@ The view 'Create' or its master could not be found. The following locations were
 ~/Views/Group/Create.aspx
 ~/Views/Group/Create.ascx
 ~/Views/Shared/Create.aspx
-~/Views/Shared/Create.ascx 
-Description : Une exception non gérée s'est produite au moment de l'exécution de la demande Web actuelle. Contrôlez la trace de la pile pour plus d'informations sur l'erreur et son origine dans le code. 
+~/Views/Shared/Create.ascx
+Description : Une exception non gérée s'est produite au moment de l'exécution de la demande Web actuelle. Contrôlez la trace de la pile pour plus d'informations sur l'erreur et son origine dans le code.
 ```
 
 Quoi encore ? Pourquoi diable est-ce que ça veut afficher une vue
@@ -243,7 +243,7 @@ Je re-lance, clique sur l'image "Delete" devant le groupe "Friends" et ça me
 sort une erreur "*La ressource est introuvable.*". Ah ouais, j'ai pas
 encore géré la suppression.
 
-### Ajout de la suppression d'un groupe
+## Ajout de la suppression d'un groupe
 
 Avant d'attaquer ça, je refais vite un coup de tests unitaires pour vérifier
 que tout continue de fonctionner comme prévu et ouf! rien de cassé.
@@ -315,7 +315,7 @@ compléter :
 
     <% using (Html.BeginForm(new { Id = Model.Id }))
        { %>
-       <p> 
+       <p>
             <input type="submit" value="Delete" /> &nbsp; <%=Html.ActionLink("Cancel", "Index") %>
         </p>
     <% } %>

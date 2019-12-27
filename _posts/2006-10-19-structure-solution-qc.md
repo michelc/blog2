@@ -6,7 +6,7 @@ tags: qc
 title: "Structure d'une solution sous QC"
 ---
 
-### Private Assemblies
+## Private Assemblies
 
 Une solution basée sur QC est constituée d'au minimum 4 projets, chacun
 correspondant à une DLL :
@@ -20,7 +20,7 @@ QC utilise le principe des Private Assemblies (PA) selon la méthode "
 Development Framework" pour DotNetNuke 2 qui a été décrite par Bo Norgaard sur
 son site (<http://www.dotnetnuke.dk/Default.aspx?tabid=59>).
 
-### Répertoire principal
+## Répertoire principal
 
 * default.aspx : charte graphique vide (nécessaire mais inutilisé),
 * default.aspx.cs : code pour la classe inPortal.Default,
@@ -38,7 +38,7 @@ de données
 * Framework/ : code de la PA servant à lier le tout,
 * res/ : sous-répertoires (scripts, images, chartes graphiques...)
 
-### Créer une nouvelle solution
+## Créer une nouvelle solution
 
 Ce paragraphe explique point par point comment créer une nouvelle solution
 nommée "demo" à partir de la solution QC.
@@ -66,7 +66,7 @@ les fichiers suivants :
 * Tout sauvegarder, quitter et tester que http://localhost/demo fonctionne
 toujours
 
-### Ajouter un nouveau projet
+## Ajouter un nouveau projet
 
 Ce paragraphe explique comment ajouter un nouveau projet sous forme de
 Private Assembly à la solution "demo". Concrètement, ce projet regroupe
@@ -109,7 +109,7 @@ référence
   - le résultat doit être de la forme "Génération : 5 a réussi, 0 a échoué, 0 a
 été ignoré"
 
-### Ajouter une nouvelle boite
+## Ajouter une nouvelle boite
 
 Dans ce paragraphe, on va voir comment ajouter une nouvelle "boite" dans le
 projet demo.Exemple créé auparavant. Dans la terminologie QC, une boite

@@ -35,7 +35,7 @@ Par conséquent, la "bonne" solution, c'est de ne pas importer le dépôt mais
 de l'extraire immédiatement après sa création sur le répertoire du projet
 d'origine puis d'ajouter les fichiers du projet au dépôt.
 
-### Etape 1 : Créer un dépôt Subversion
+## Etape 1 : Créer un dépôt Subversion
 
 Pour passer un projet sous Subversion, il faut commencer par créer un
 "repository" (un dépôt ou référentiel en bon français) pour y enregistrer les
@@ -70,7 +70,7 @@ certain nombre de fichiers et de dossiers.
 Le dépôt Subversion que je viens de créer est encore totalement vide. Il est
 stocké dans le répertoire D:\SVN\Tests et son url est file:///D:/SVN/Tests.
 
-### Etape 2 : Organiser le dépôt Subversion
+## Etape 2 : Organiser le dépôt Subversion
 
 Avant de remplir mon dépôt Subversion, il faut d'abord organiser la façon
 dont seront enregistrées les données dans le dépôt. Comme je ne cherche pas
@@ -104,7 +104,7 @@ Répéter l'opération en créant les dossiers tags et trunk.
 Mon dépôt Subversion est toujours quasiment vide, mais il est désormais prêt
 à l'emploi.
 
-### Etape 3 : Obtenir une copie de travail du dépôt Subversion
+## Etape 3 : Obtenir une copie de travail du dépôt Subversion
 
 Dans cette étape, je vais faire en sorte de "relier" le répertoire de mon
 projet au dépôt Subversion, de façon à ce que Subversion le considère comme un
@@ -142,7 +142,7 @@ fichiers sources qui y sont enregistrés ne sont toujours pas intégrés au dép
 et par conséquent, le dépôt Subversion est toujours aussi vide qu'à la fin de
 l'étape précédente.
 
-### Etape 4 : Ajouter mes fichiers sources au dépôt Subversion
+## Etape 4 : Ajouter mes fichiers sources au dépôt Subversion
 
 Cette dernière étape va consister à ajouter les fichiers de mon projet dans
 le dépôt Subversion.
@@ -204,7 +204,7 @@ fichier source,
 
 En gros, je fais enfin du contrôle des sources pour mon projet Tests.
 
-### Donc, pour résumer :
+## Donc, pour résumer :
 
 * Créer un répertoire et le transformer en dépôt Subversion
 * Organiser le contenu du dépôt Subversion

@@ -11,7 +11,7 @@ main tous les contrôles de [StyleCop](http://code.msdn.microsoft.com/sourceanal
 mon projet BDHelper. Il s'agit du projet qui regroupe tout ce qui concerne
 l'accès aux bases de données dans Altrr-Press.
 
-### Un tiers de boulot
+## Un tiers de boulot
 
 Pour en arriver là, j'ai dû commencer par faire beaucoup de modifications à
 la main et surtout ajouter des commentaires en pagaille. Personnellement, j'en
@@ -51,7 +51,7 @@ public string CnxString {
 private string cnxString = string.Empty;
 ```
 
-### Un tiers d'artistique
+## Un tiers d'artistique
 
 Une fois cette première étape réalisée, il ne me restait quasiment plus que
 des problèmes de présentation. Grosso modo, il fallait que je trouve un moyen
@@ -125,7 +125,7 @@ int Foo()
 }
 ```
 
-### Un tiers d'expression régulière
+## Un tiers d'expression régulière
 
 Après un passage éclair par Artistic Style, le nombre d'anomalies pour le
 projet BDHelper est tombé à seulement 30 avertissements. Déjà, rien que le fait
@@ -184,7 +184,7 @@ Supprimer la ligne vide avant une accolade fermante (SA1508) :
 * Rechercher : `\}`
 * Remplacer par : `}`
 
-### Et voilà le résultat !
+## Et voilà le résultat !
 
 ```
 ------ StyleCop started ------

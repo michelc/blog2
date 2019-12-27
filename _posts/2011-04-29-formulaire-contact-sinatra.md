@@ -53,7 +53,7 @@ Pour cela, nous allons créer un gestionnaire de type POST pour la même URL
 web) :
 
 ```
-post '/contact' do 
+post '/contact' do
     require 'pony'
     Pony.mail(
       :from => params[:name] + "<" + params[:email] + ">",
@@ -62,16 +62,16 @@ post '/contact' do
       :body => params[:message],
       :port => '587',
       :via => :smtp,
-      :via_options => { 
-        :address              => 'smtp.gmail.com', 
-        :port                 => '587', 
-        :enable_starttls_auto => true, 
-        :user_name            => 'adresseperso', 
-        :password             => 'p@55w0rd', 
-        :authentication       => :plain, 
+      :via_options => {
+        :address              => 'smtp.gmail.com',
+        :port                 => '587',
+        :enable_starttls_auto => true,
+        :user_name            => 'adresseperso',
+        :password             => 'p@55w0rd',
+        :authentication       => :plain,
         :domain               => 'localhost.localdomain'
       })
-    redirect '/success' 
+    redirect '/success'
 end
 ```
 
@@ -92,7 +92,7 @@ get('/success') {"Merci pour votre message. Nous vous contacterons bientôt."}
 C'est clair qu'il faudrait développez un peu plus pour une vrai application,
 mais vous voyez l'idée.
 
-### Heroku
+## Heroku
 
 Heroku vous permet d'utiliser l'option Sendgrid pour envoyer vos emails.
 Vous pouvez vous inscrire pour bénéficier d'un compte gratuit (limité à 200
@@ -107,7 +107,7 @@ Pour utiliser Sendgrid, vous devez modifier le paramétrage de Pony de la
 façon suivante :
 
 ```
-post '/contact' do 
+post '/contact' do
     require 'pony'
      Pony.mail(
       :from => params[:name] + "<" + params[:email] + ">",
@@ -116,16 +116,16 @@ post '/contact' do
       :body => params[:message],
       :port => '587',
       :via => :smtp,
-      :via_options => { 
-        :address              => 'smtp.sendgrid.net', 
-        :port                 => '587', 
-        :enable_starttls_auto => true, 
-        :user_name            => ENV['SENDGRID_USERNAME'], 
-        :password             => ENV['SENDGRID_PASSWORD'], 
-        :authentication       => :plain, 
+      :via_options => {
+        :address              => 'smtp.sendgrid.net',
+        :port                 => '587',
+        :enable_starttls_auto => true,
+        :user_name            => ENV['SENDGRID_USERNAME'],
+        :password             => ENV['SENDGRID_PASSWORD'],
+        :authentication       => :plain,
         :domain               => ENV['SENDGRID_DOMAIN']
       })
-    redirect '/success' 
+    redirect '/success'
 end
 ```
 
@@ -160,7 +160,7 @@ Et après cela, vous pouvez mettre à jour votre code pour envoyer un email en
 utilisant Pony :
 
 ```
-post '/contact' do 
+post '/contact' do
     require 'pony'
      Pony.mail(
       :from => params[:name] + "<" + params[:email] + ">",
@@ -169,16 +169,16 @@ post '/contact' do
       :body => params[:message],
       :port => '587',
       :via => :smtp,
-      :via_options => { 
-        :address              => 'smtp.' + settings.email_service, 
-        :port                 => '587', 
-        :enable_starttls_auto => true, 
-        :user_name            => settings.email_username, 
-        :password             => settings.email_password, 
-        :authentication       => :plain, 
+      :via_options => {
+        :address              => 'smtp.' + settings.email_service,
+        :port                 => '587',
+        :enable_starttls_auto => true,
+        :user_name            => settings.email_username,
+        :password             => settings.email_password,
+        :authentication       => :plain,
         :domain               => settings.email_domain
       })
-    redirect '/success' 
+    redirect '/success'
 end
 ```
 

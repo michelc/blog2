@@ -12,7 +12,7 @@ fait ce que cela pourrait donner en français et ça n'a pas été franchement
 concluant en ce qui concerne les nombres. On pourrait presque croire que le
 français est plus compliqué que l'anglais...
 
-### Un peu d'archéologie
+## Un peu d'archéologie
 
 Heureusement, il y a très longtemps j'avais déjà fait un petit programme
 pour écrire les nombres en lettres parce qu'en ces temps reculés c'était encore
@@ -138,16 +138,16 @@ C'est donc pas si compliqué. Il suffit juste de se replonger dans ce code
 pour trouver comment ça marche pour écrire des nombres en bon français puis
 d'essayer de l'adapter en C#.
 
-### Un peu de spécifications
+## Un peu de spécifications
 
 Mais pour mettre toutes les chances de mon côté, je vais quand même m'aider
 d'Internet et plus particulièrement de l'extraordinaire documentation
 suivante :
 
 > **Écriture des nombres en français** par Olivier Miakinen.
-> 
+>
 > GOTO "[http://www.miakinen.net/vrac/nombres](http://www.miakinen.net/vrac/nombres "Écriture des nombres en français")"
-> 
+>
 > C'est un peu long, mais c'est vraiment super intéressant à lire. Toutes les
 > explications données ici sont reprises de ce site (et donc à consulter quand
 > j'ai un peu trop simplifié).
@@ -194,7 +194,7 @@ soixante et onze".
 "trente-deux-mille-cinq-cent-soixante-et-onze". Seuls les noms tels que
 "million" ou "milliard" en sont exemptés.
 
-### 1° étape : Le zéro
+## 1° étape : Le zéro
 
 Le trucs le plus simple à faire pour commencer, c'est de gérer le cas du 0
 qui s'écrit "zéro" tout simplement :
@@ -235,7 +235,7 @@ namespace Amstramgram.Tests
 
 Et ça marche. Je sais donc écrire 0 sous forme de lettres :)
 
-### 2° étape : Les nombres de 1 à 19
+## 2° étape : Les nombres de 1 à 19
 
 Les nombres de 1 à 16 correspondent à des mots spécifiques. Leur écriture
 est donc à coder "en dur". Pour simplifier la suite (quand il faudra écrire les
@@ -279,7 +279,7 @@ public static string ToWords(this int number)
 
 Résultat : les 2 tests unitaires sont OK.
 
-### 3° étape : Les nombres de 20 à 99
+## 3° étape : Les nombres de 20 à 99
 
 Là ça commence à se compliquer un peu. Par conséquent, je vais faire le plus
 facile d'abord puis je corrigerai les cas tordus après.
@@ -399,7 +399,7 @@ public static string ToWords(this int number)
 }
 ```
 
-### 4° étape : Cas des 21, 31, 41, 51, 61 et 71
+## 4° étape : Cas des 21, 31, 41, 51, 61 et 71
 
 Normalement, dans le cas des dizaines avec des unités différentes de zéro,
 le mot pour l'unité est simplement accolé au mot pour la dizaine via un trait
@@ -488,7 +488,7 @@ public static string ToWords(this int number)
 }
 ```
 
-### 5° étape : Le pluriel de vingt
+## 5° étape : Le pluriel de vingt
 
 C'est compliqué. Déjà, "vingt" peut se mettre au pluriel parce que c'est un
 mot un peu particulier. Avant, on comptait aussi en vingtaines, c'est à dire en
@@ -581,7 +581,7 @@ sert à exprimer un numéro d'ordre : "la quatre-vingtième page", mais aussi
 "la page quatre-vingt" (sans "s" !).
 * Heureusement pour moi, je ne m'intéresse qu'aux nombres cardinaux :)
 
-### 6° étape : Les nombres de 100 à 999
+## 6° étape : Les nombres de 100 à 999
 
 Là aussi on procède par découpage un peu comme pour les dizaines. Il faut
 commencer par écrire le chiffre qui correspond à la centaine que l'on fait
@@ -723,7 +723,7 @@ public static string ToWords(this int number)
 
 Ca a été un peu compliqué, mais c'est passé !
 
-### 7° étape : Le pluriel de cent
+## 7° étape : Le pluriel de cent
 
 C'est facile. C'est la même règle que pour le pluriel de vingt et on met
 donc un "s" à cent :
@@ -790,7 +790,7 @@ test unitaire KO.
   }
 ```
 
-### 8° étape : Les nombres de 1000 à 999999
+## 8° étape : Les nombres de 1000 à 999999
 
 Maintenant qu'on sait gérer les blocs de 3 chiffres, c'est super facile. Il
 suffit simplement de gérer 2 paquets au lieu d'un seul comme on l'a fait
@@ -889,7 +889,7 @@ private static string Textify(int number)
 }
 ```
 
-### 9° étape : Le pluriel de mille
+## 9° étape : Le pluriel de mille
 
 C'est super facile. Mille est invariable, parce que dans le temps "mille"
 était la forme plurielle de "mil".
@@ -943,7 +943,7 @@ public static string ToWords(this int number)
 Et avec cette petite modification j'ai maintenant 15 tests unitaires sur 15
 qui passent.
 
-### 10° étape : Les millions
+## 10° étape : Les millions
 
 Une fois que les bases sont posées, c'est assez simple de faire évoluer le
 truc. Dans le cas des millions, il suffit de reproduire ce qui a été fait pour
@@ -1035,7 +1035,7 @@ public static string ToWords(this int number)
 }
 ```
 
-### 11° étape : Les milliards
+## 11° étape : Les milliards
 
 C'est quasiment la même chose que pour gérer les millions. On découpe le
 nombre en 4 blocs de 3 chiffres et le 1° bloc correspond au(x) milliard(s).
@@ -1063,7 +1063,7 @@ cas où le nombre à écrire en lettre est supérieur ou égal à 1 milliard.
   if (number >= 1000000000) return number.ToString();
 ```
 
-### 12° étape : Les nombres négatifs
+## 12° étape : Les nombres négatifs
 
 Pour mettre la touche finale à la fonction ToWords(), j'ajoute une dernière
 fonctionnalité pour qu'elle gère le cas des nombres négatifs.
@@ -1113,7 +1113,7 @@ public static string ToWords(this int number)
   ...
 ```
 
-### Conclusion
+## Conclusion
 
 Je ne suis pas vraiment certain que cette fonction me servira un jour, mais
 c'était un chouette exercice. Et je pense m'en être pas trop mal tiré pour tout

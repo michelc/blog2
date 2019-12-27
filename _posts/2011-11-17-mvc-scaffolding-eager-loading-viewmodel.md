@@ -13,7 +13,7 @@ de données avec une table "Voyages", une table "Tarifs" pour enregistrer les
 chaque tarif du voyage et une table "Parties" qui sert à décrire les
 différentes étapes du voyage.
 
-### Eager loading pour les actions Index
+## Eager loading pour les actions Index
 
 Pour l'instant, j'ai plus ou moins laissé [MVC Scaffolding](http://mvcscaffolding.codeplex.com/) écrire
 mon code pour la classe Voyage associée à la table Voyages. Par défaut, il a
@@ -44,85 +44,85 @@ requête SQL qui charge à la fois le contenu de la table Voyages et par des
 jointures celui des tables Parties et Tarifs :
 
 ```
-SELECT 
-[UnionAll1].[VoyageID] AS [C1], 
-[UnionAll1].[VoyageID1] AS [C2], 
-[UnionAll1].[Position1] AS [C3], 
-[UnionAll1].[Title1] AS [C4], 
-[UnionAll1].[VoyageType] AS [C5], 
-[UnionAll1].[Notes] AS [C6], 
-[UnionAll1].[C1] AS [C7], 
-[UnionAll1].[PartieID] AS [C8], 
-[UnionAll1].[VoyageID2] AS [C9], 
-[UnionAll1].[Position2] AS [C10], 
-[UnionAll1].[PartieType] AS [C11], 
-[UnionAll1].[Content] AS [C12], 
-[UnionAll1].[C2] AS [C13], 
-[UnionAll1].[C3] AS [C14], 
-[UnionAll1].[C4] AS [C15], 
-[UnionAll1].[C5] AS [C16], 
-[UnionAll1].[C6] AS [C17], 
-[UnionAll1].[C7] AS [C18], 
-[UnionAll1].[C8] AS [C19], 
-[UnionAll1].[C9] AS [C20], 
-[UnionAll1].[C10] AS [C21], 
+SELECT
+[UnionAll1].[VoyageID] AS [C1],
+[UnionAll1].[VoyageID1] AS [C2],
+[UnionAll1].[Position1] AS [C3],
+[UnionAll1].[Title1] AS [C4],
+[UnionAll1].[VoyageType] AS [C5],
+[UnionAll1].[Notes] AS [C6],
+[UnionAll1].[C1] AS [C7],
+[UnionAll1].[PartieID] AS [C8],
+[UnionAll1].[VoyageID2] AS [C9],
+[UnionAll1].[Position2] AS [C10],
+[UnionAll1].[PartieType] AS [C11],
+[UnionAll1].[Content] AS [C12],
+[UnionAll1].[C2] AS [C13],
+[UnionAll1].[C3] AS [C14],
+[UnionAll1].[C4] AS [C15],
+[UnionAll1].[C5] AS [C16],
+[UnionAll1].[C6] AS [C17],
+[UnionAll1].[C7] AS [C18],
+[UnionAll1].[C8] AS [C19],
+[UnionAll1].[C9] AS [C20],
+[UnionAll1].[C10] AS [C21],
 [UnionAll1].[C11] AS [C22]
 FROM  (SELECT
         CASE WHEN ([Extent2].[PartieID] IS NULL) THEN CAST(NULL AS int) ELSE 1 END AS [C1],
-        [Extent1].[Position] AS [Position], 
-        [Extent1].[Title] AS [Title], 
-        [Extent1].[VoyageID] AS [VoyageID], 
-        [Extent1].[VoyageID] AS [VoyageID1], 
-        [Extent1].[Position] AS [Position1], 
-        [Extent1].[Title] AS [Title1], 
-        [Extent1].[VoyageType] AS [VoyageType], 
-        [Extent1].[Notes] AS [Notes], 
-        [Extent2].[PartieID] AS [PartieID], 
-        [Extent2].[VoyageID] AS [VoyageID2], 
-        [Extent2].[Position] AS [Position2], 
-        [Extent2].[PartieType] AS [PartieType], 
-        [Extent2].[Content] AS [Content], 
-        CAST(NULL AS int) AS [C2], 
-        CAST(NULL AS int) AS [C3], 
-        CAST(NULL AS nvarchar(1)) AS [C4], 
-        CAST(NULL AS nvarchar(1)) AS [C5], 
-        CAST(NULL AS real) AS [C6], 
-        CAST(NULL AS real) AS [C7], 
-        CAST(NULL AS real) AS [C8], 
-        CAST(NULL AS real) AS [C9], 
-        CAST(NULL AS real) AS [C10], 
-        CAST(NULL AS nvarchar(1)) AS [C11] 
-        FROM  [Voyages] AS [Extent1] 
+        [Extent1].[Position] AS [Position],
+        [Extent1].[Title] AS [Title],
+        [Extent1].[VoyageID] AS [VoyageID],
+        [Extent1].[VoyageID] AS [VoyageID1],
+        [Extent1].[Position] AS [Position1],
+        [Extent1].[Title] AS [Title1],
+        [Extent1].[VoyageType] AS [VoyageType],
+        [Extent1].[Notes] AS [Notes],
+        [Extent2].[PartieID] AS [PartieID],
+        [Extent2].[VoyageID] AS [VoyageID2],
+        [Extent2].[Position] AS [Position2],
+        [Extent2].[PartieType] AS [PartieType],
+        [Extent2].[Content] AS [Content],
+        CAST(NULL AS int) AS [C2],
+        CAST(NULL AS int) AS [C3],
+        CAST(NULL AS nvarchar(1)) AS [C4],
+        CAST(NULL AS nvarchar(1)) AS [C5],
+        CAST(NULL AS real) AS [C6],
+        CAST(NULL AS real) AS [C7],
+        CAST(NULL AS real) AS [C8],
+        CAST(NULL AS real) AS [C9],
+        CAST(NULL AS real) AS [C10],
+        CAST(NULL AS nvarchar(1)) AS [C11]
+        FROM  [Voyages] AS [Extent1]
         LEFT OUTER JOIN [Parties] AS [Extent2] ON [Extent1].[VoyageID] = [Extent2].[VoyageID]
 UNION ALL
         SELECT
-        2 AS [C1], 
-        [Extent3].[Position] AS [Position], 
-        [Extent3].[Title] AS [Title], 
-        [Extent3].[VoyageID] AS [VoyageID], 
-        [Extent3].[VoyageID] AS [VoyageID1], 
-        [Extent3].[Position] AS [Position1], 
-        [Extent3].[Title] AS [Title1], 
-        [Extent3].[VoyageType] AS [VoyageType], 
-        [Extent3].[Notes] AS [Notes], 
-        CAST(NULL AS int) AS [C2], 
-        CAST(NULL AS int) AS [C3], 
-        CAST(NULL AS int) AS [C4], 
-        CAST(NULL AS int) AS [C5], 
-        CAST(NULL AS nvarchar(1)) AS [C6], 
-        [Extent4].[TarifID] AS [TarifID], 
-        [Extent4].[VoyageID] AS [VoyageID2], 
-        [Extent4].[Title] AS [Title2], 
-        [Extent4].[Year] AS [Year], 
-        [Extent4].[Prix1] AS [Prix1], 
-        [Extent4].[Prix2] AS [Prix2], 
-        [Extent4].[Prix3] AS [Prix3], 
-        [Extent4].[Prix4] AS [Prix4], 
-        [Extent4].[Prix5] AS [Prix5], 
+        2 AS [C1],
+        [Extent3].[Position] AS [Position],
+        [Extent3].[Title] AS [Title],
+        [Extent3].[VoyageID] AS [VoyageID],
+        [Extent3].[VoyageID] AS [VoyageID1],
+        [Extent3].[Position] AS [Position1],
+        [Extent3].[Title] AS [Title1],
+        [Extent3].[VoyageType] AS [VoyageType],
+        [Extent3].[Notes] AS [Notes],
+        CAST(NULL AS int) AS [C2],
+        CAST(NULL AS int) AS [C3],
+        CAST(NULL AS int) AS [C4],
+        CAST(NULL AS int) AS [C5],
+        CAST(NULL AS nvarchar(1)) AS [C6],
+        [Extent4].[TarifID] AS [TarifID],
+        [Extent4].[VoyageID] AS [VoyageID2],
+        [Extent4].[Title] AS [Title2],
+        [Extent4].[Year] AS [Year],
+        [Extent4].[Prix1] AS [Prix1],
+        [Extent4].[Prix2] AS [Prix2],
+        [Extent4].[Prix3] AS [Prix3],
+        [Extent4].[Prix4] AS [Prix4],
+        [Extent4].[Prix5] AS [Prix5],
         [Extent4].[Notes] AS [Notes1]
         FROM  [Voyages] AS [Extent3]
         INNER JOIN [Tarifs] AS [Extent4] ON [Extent3].[VoyageID] = [Extent4].[VoyageID]) AS [UnionAll1]
-ORDER BY [UnionAll1].[Position] ASC, [UnionAll1].[Title] ASC, [UnionAll1].[VoyageID1] ASC, [UnionAll1].[C1] ASC  
+ORDER BY [UnionAll1].[Position] ASC, [UnionAll1].[Title] ASC, [UnionAll1].[VoyageID1] ASC, [UnionAll1].[C1] ASC
 ```
 
 Puis dans la vue Index.cshtml, on utilise le
@@ -164,7 +164,7 @@ Ce qui est intéressant, c'est que MVC Scaffolding fait automatiquement du
 `item.Tarifs.Count.ToString()` en boucle ne provoquent pas autant
 d'accès à la base de données qu'il y a de voyage à afficher.
 
-### Lazy loading et SELECT N+1
+## Lazy loading et SELECT N+1
 
 En effet, si par défaut, MVC Scaffolding n'avait pas fait le lien avec les
 parties et les tarifs et qu'il se soit contenté de générer le code C#
@@ -193,47 +193,47 @@ Soit 1 première requête toute simple pour charger la liste des 35
 voyages :
 
 ```
-SELECT 
-[Extent1].[VoyageID] AS [VoyageID], 
-[Extent1].[Position] AS [Position], 
-[Extent1].[Title] AS [Title], 
-[Extent1].[VoyageType] AS [VoyageType], 
+SELECT
+[Extent1].[VoyageID] AS [VoyageID],
+[Extent1].[Position] AS [Position],
+[Extent1].[Title] AS [Title],
+[Extent1].[VoyageType] AS [VoyageType],
 [Extent1].[Notes] AS [Notes]
 FROM [Voyages] AS [Extent1]
-ORDER BY [Extent1].[Position] ASC, [Extent1].[Title] ASC 
+ORDER BY [Extent1].[Position] ASC, [Extent1].[Title] ASC
 ```
 
 Puis 35 requêtes pour charger successivement les parties de chacun des 35
 voyages :
 
 ```
-SELECT 
-[Extent1].[PartieID] AS [PartieID], 
-[Extent1].[VoyageID] AS [VoyageID], 
-[Extent1].[Position] AS [Position], 
-[Extent1].[PartieType] AS [PartieType], 
+SELECT
+[Extent1].[PartieID] AS [PartieID],
+[Extent1].[VoyageID] AS [VoyageID],
+[Extent1].[Position] AS [Position],
+[Extent1].[PartieType] AS [PartieType],
 [Extent1].[Content] AS [Content]
 FROM [Parties] AS [Extent1]
-WHERE [Extent1].[VoyageID] = @EntityKeyValue1  
+WHERE [Extent1].[VoyageID] = @EntityKeyValue1
 ```
 
 Et encore 35 requêtes pour charger successivement les tarifs de chacun des
 35 voyages :
 
 ```
-SELECT 
-[Extent1].[TarifID] AS [TarifID], 
-[Extent1].[VoyageID] AS [VoyageID], 
-[Extent1].[Title] AS [Title], 
-[Extent1].[Year] AS [Year], 
-[Extent1].[Prix1] AS [Prix1], 
-[Extent1].[Prix2] AS [Prix2], 
-[Extent1].[Prix3] AS [Prix3], 
-[Extent1].[Prix4] AS [Prix4], 
-[Extent1].[Prix5] AS [Prix5], 
+SELECT
+[Extent1].[TarifID] AS [TarifID],
+[Extent1].[VoyageID] AS [VoyageID],
+[Extent1].[Title] AS [Title],
+[Extent1].[Year] AS [Year],
+[Extent1].[Prix1] AS [Prix1],
+[Extent1].[Prix2] AS [Prix2],
+[Extent1].[Prix3] AS [Prix3],
+[Extent1].[Prix4] AS [Prix4],
+[Extent1].[Prix5] AS [Prix5],
 [Extent1].[Notes] AS [Notes]
 FROM [Tarifs] AS [Extent1]
-WHERE [Extent1].[VoyageID] = @EntityKeyValue1   
+WHERE [Extent1].[VoyageID] = @EntityKeyValue1
 ```
 
 Par rapport à l'eager loading, ici on a fait du "lazy loading" : les
@@ -241,7 +241,7 @@ entités enfants ne sont chargées que lorsque on y accède. Des fois c'est bien
 Des fois c'est mal. Mais heureusement, MVC Scaffolding qui a pensé à tout est
 est assez malin pour nous éviter l'écueil du [SELECT N+1](http://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem) quand on génère l'action Index ([merci Scott](http://blog.stevensanderson.com/2011/01/28/mvcscaffolding-one-to-many-relationships/)).
 
-### Lazy loading et virtual
+## Lazy loading et virtual
 
 Pour être complet, c'est parce que les propriétés Parties et Tarifs de la
 classe Voyage sont déclarées en tant que propriétés virtuelles, que Entity
@@ -267,14 +267,14 @@ requête pour charger uniquement les données de la table des voyages (pas de
 eager loading puisque on n'a pas d'`Include`) :
 
 ```
-SELECT 
-[Extent1].[VoyageID] AS [VoyageID], 
-[Extent1].[Position] AS [Position], 
-[Extent1].[Title] AS [Title], 
-[Extent1].[VoyageType] AS [VoyageType], 
+SELECT
+[Extent1].[VoyageID] AS [VoyageID],
+[Extent1].[Position] AS [Position],
+[Extent1].[Title] AS [Title],
+[Extent1].[VoyageType] AS [VoyageType],
 [Extent1].[Notes] AS [Notes]
 FROM [Voyages] AS [Extent1]
-ORDER BY [Extent1].[Position] ASC, [Extent1].[Title] ASC 
+ORDER BY [Extent1].[Position] ASC, [Extent1].[Title] ASC
 ```
 
 Et puis c'est tout ! Comme on n'a pas de `virtual`, Entity
@@ -291,7 +291,7 @@ l'eager loading à grand coups de `Include`, on retombe bien sur la
 grosse requête qui accède par jointure aux tables Voyages, Parties et
 Tarifs.
 
-### Action Index et ViewModel
+## Action Index et ViewModel
 
 A titre personnel, je trouve malgré tout que la requête SQL générée par
 Entity Framework est un peu lourde pour ce qu'on en fait. Alors que le but est
@@ -422,31 +422,31 @@ peu plus simple à lire, et normalement plus efficace puisqu'elle ne cherche pas
 à charger les tables Parties et Tarifs.
 
 ```
-SELECT 
-[Project2].[VoyageID] AS [VoyageID], 
-[Project2].[Position] AS [Position], 
-[Project2].[Title] AS [Title], 
-[Project2].[VoyageType] AS [VoyageType], 
-[Project2].[C1] AS [C1], 
+SELECT
+[Project2].[VoyageID] AS [VoyageID],
+[Project2].[Position] AS [Position],
+[Project2].[Title] AS [Title],
+[Project2].[VoyageType] AS [VoyageType],
+[Project2].[C1] AS [C1],
 [Project2].[C2] AS [C2]
-FROM ( SELECT 
-        [Project1].[VoyageID] AS [VoyageID], 
-        [Project1].[Position] AS [Position], 
-        [Project1].[Title] AS [Title], 
-        [Project1].[VoyageType] AS [VoyageType], 
-        [Project1].[C1] AS [C1], 
-        [SSQTAB1].[A1] AS [C2] 
-        FROM ( SELECT 
-                [Extent1].[VoyageID] AS [VoyageID], 
-                [Extent1].[Position] AS [Position], 
-                [Extent1].[Title] AS [Title], 
-                [Extent1].[VoyageType] AS [VoyageType], 
-                [SSQTAB1].[A1] AS [C1] 
-                FROM [Voyages] AS [Extent1] 
-                 OUTER APPLY 
-                (SELECT 
-                        COUNT(1) AS [A1] 
-                        FROM [Tarifs] AS [Extent2] 
+FROM ( SELECT
+        [Project1].[VoyageID] AS [VoyageID],
+        [Project1].[Position] AS [Position],
+        [Project1].[Title] AS [Title],
+        [Project1].[VoyageType] AS [VoyageType],
+        [Project1].[C1] AS [C1],
+        [SSQTAB1].[A1] AS [C2]
+        FROM ( SELECT
+                [Extent1].[VoyageID] AS [VoyageID],
+                [Extent1].[Position] AS [Position],
+                [Extent1].[Title] AS [Title],
+                [Extent1].[VoyageType] AS [VoyageType],
+                [SSQTAB1].[A1] AS [C1]
+                FROM [Voyages] AS [Extent1]
+                 OUTER APPLY
+                (SELECT
+                        COUNT(1) AS [A1]
+                        FROM [Tarifs] AS [Extent2]
                         WHERE [Extent1].[VoyageID] = [Extent2].[VoyageID]) AS [SSQTAB1]
         )  AS [Project1]
          OUTER APPLY
@@ -455,5 +455,5 @@ FROM ( SELECT
                 FROM [Parties] AS [Extent3]
                 WHERE [Project1].[VoyageID] = [Extent3].[VoyageID]) AS [SSQTAB1]
 )  AS [Project2]
-ORDER BY [Project2].[Position] ASC, [Project2].[Title] ASC   
+ORDER BY [Project2].[Position] ASC, [Project2].[Title] ASC
 ```

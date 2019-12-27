@@ -24,7 +24,7 @@ NerdDinner, la prochaine étape va consister à lui ajouter un contrôleur.
 Celui-ci offrira aux utilisateurs une navigation de type liste / détails pour
 consulter les dîners enregistrés sur notre site.
 
-### Ajout d'un contrôleur DinnersController
+## Ajout d'un contrôleur DinnersController
 
 Pour commencer, on fait un clic-droit sur le dossier "Controllers" de notre
 projet web et on sélectionne la commande __Add -&gt; Controller__ (astuce : on
@@ -45,7 +45,7 @@ dans le répertoire \Controllers :
 Et il ouvre automatiquement ce nouveau fichier DinnersController.cs dans
 l'éditeur de code.
 
-### Ajout des méthodes d'action Index() et Details() à notre classe contrôleur
+## Ajout des méthodes d'action Index() et Details() à notre classe contrôleur
 
 Nous voulons que les visiteurs qui viennent sur notre site aient la
 possibilité de parcourir la liste des dîners prévus et qu'ils puissent cliquer
@@ -116,7 +116,7 @@ Peut-être que vous vous demandez comment ASP.NET MVC sait qu'il faut créer
 notre classe DinnersController et appeler ces méthodes ? Pour comprendre cela,
 nous allons jeter un coup d'œil à la façon dont fonctionne le routage.
 
-### Comprendre le routage dans ASP.NET MVC
+## Comprendre le routage dans ASP.NET MVC
 
 ASP.NET MVC possède un puissant moteur de routage des URLs qui offre une
 grande souplesse pour contrôler la façon dont les URLs sont associées aux
@@ -232,7 +232,7 @@ les modifier dans la méthode RegisterRoutes vue plus haut. Mais pour notre
 application NerdDinner, nous n'en ferons rien et nous les utiliserons telles
 quelles.
 
-### Utiliser DinnerRepository dans DinnersController
+## Utiliser DinnerRepository dans DinnersController
 
 Nous allons maintenant réellement écrire le code pour gérer nos deux actions
 Index() et Détails() en utilisant notre modèle (c'est à dire la partie Modèle
@@ -282,7 +282,7 @@ namespace NerdDinner.Controllers {
 Nous sommes maintenant prêts pour générer une réponse HTML en utilisant nos
 objets modèle de données.
 
-### Utilisation de vues avec notre contrôleur
+## Utilisation de vues avec notre contrôleur
 
 Bien qu'il soit possible d'écrire du code dans nos méthodes actions pour
 générer du HTML puis d'utiliser la méthode Response.Write() pour envoyer
@@ -391,7 +391,7 @@ public ActionResult Details(int id) {
 Et maintenant il ne nous reste plus qu'à coder les vues "NotFound",
 "Details" et "Index".
 
-### Réalisation de la vue "NotFound"
+## Réalisation de la vue "NotFound"
 
 Nous allons commencer avec la vue "NotFound" qui se contente d'afficher un
 message d'erreur pour indiquer que le dîner demandé n'a pas été trouvé.
@@ -457,7 +457,7 @@ dû au fait qu'elle utilise une "master page", ce qui nous permet d'appliquer
 une présentation homogène à toutes les vues de notre site. Nous approfondirons
 cette notion de "page maître" dans une autre section de ce tutoriel.
 
-### Réalisation de la vue "Details"
+## Réalisation de la vue "Details"
 
 Nous allons maintenant programmer la vue "Détails" destinée à générer le
 code HTML qui sert à afficher un dîner.
@@ -627,7 +627,7 @@ la présentation suivante :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image069.png)
 
-### Réalisation de la vue "Index"
+## Réalisation de la vue "Index"
 
 A présent, nous allons réaliser la vue "Index" qui servira à générer la
 liste des dîners à venir. Pour cela, nous plaçons le curseur dans la méthode
@@ -771,7 +771,7 @@ qu'il contient nous conduit vers la fiche complète du dîner :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image076.png)
 
-### Gestion de vues basées sur les conventions
+## Gestion de vues basées sur les conventions
 
 Par défaut, les applications ASP.NET MVC utilisent une convention de nommage
 basée sur la structure des répertoires pour déterminer l'emplacement des vues.

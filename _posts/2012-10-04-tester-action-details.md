@@ -11,7 +11,7 @@ PeopleController, je remet au propre les 3 tests unitaires que j'ai déjà codé
 pour valider le fonctionnement de l'action Details() et surtout j'en profite
 pour décrire ce que j'ai voulu faire.
 
-### L'action à tester
+## L'action à tester
 
 ```
 //
@@ -52,7 +52,7 @@ ViewPerson à la vue, puisque c'est ce qu'elle attend.
 * un dernier test pour s'assurer que l'action renvoie bien le contact que
 l'on souhaite afficher.
 
-### 1° test : l'action renvoie la vue par défaut
+## 1° test : l'action renvoie la vue par défaut
 
 C'est un test un peu répétitif comme test puisqu'on le retrouve à chaque
 action. Mais l'avantage, c'est que ça permet d'avoir un point de départ et de
@@ -120,7 +120,7 @@ Assert.IsTrue(string.IsNullOrEmpty(result.ViewName),
 utiliser et qu'elle laisse faire le moteur de vue pour qu'il utilise la vue par
 défaut.
 
-### 2° test : l'action transmet à la vue l'objet qu'elle attend
+## 2° test : l'action transmet à la vue l'objet qu'elle attend
 
 Là aussi, on retrouve ce genre de test dans les autres actions. Au moins, on
 ne peut pas dire que ça soit compliqué d'écrire des tests unitaires.
@@ -162,7 +162,7 @@ ViewPerson");
 => vérifie que l'action a bien transmis un objet de type
 `ViewPerson`.
 
-### 3° test : l'action renvoie le contact demandé à la vue
+## 3° test : l'action renvoie le contact demandé à la vue
 
 Ce test unitaire est un peu nouveau par rapport au 2 premiers tests, mais
 rien de bien compliqué quand même.
@@ -218,7 +218,7 @@ Assert.AreEqual(contact1.Phone1, model.Phone1, "...");
 => teste que le contact transmis à la vue correspond bien à celui qui a
 été demandé et pas à un autre de la table des contacts.
 
-### Remarque en passant
+## Remarque en passant
 
 Je ne teste pas ce que ferait l'action Details() dans le cas où le contact
 demandé n'existerait pas. C'est parce que j'ai décidé que (pour l'instant) je
@@ -230,7 +230,7 @@ Et donc, comme cela ne fait pas partie de mes "spécifications", cela n'a pas
 Même si bien sûr c'est une fonctionnalité qu'il est tout à fait raisonnable
 de gérer.
 
-### Conclusion
+## Conclusion
 
 Ca, c'est fait. Il faut maintenant que je teste les autres actions du
 contrôleur : Edit() en versions GET et POST, Delete() en mode GET,

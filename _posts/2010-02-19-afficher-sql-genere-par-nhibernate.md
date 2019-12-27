@@ -6,7 +6,7 @@ tags: nhibernate
 title: "Afficher le SQL généré par NHibernate"
 ---
 
-### Problème
+## Problème
 
 Quand on débute avec un ORM (et avec NHibernate en l'occurrence), il n'est
 pas très très simple de comprendre ce qui va se passer au niveau de la base de
@@ -48,7 +48,7 @@ cela fonctionne de façon satisfaisante :
 * il faut bien utiliser [log4net](http://logging.apache.org/log4net/)
 * il n'y a pas énormément de trucs à faire
 
-### Solution
+## Solution
 
 La première phase pour utiliser log4net nécessite de le configurer au niveau
 du fichier Web.config. Il faut commencer par ajouter la ligne suivante à
@@ -114,7 +114,7 @@ propriété "show_sql" à "true" pour que ça marche :
 
 ![](/public/2010/nhibernate-log4net.png)
 
-### Pour aller plus loin
+## Pour aller plus loin
 
 Trois liens intéressants parmi tant d'autres qui m'ont permis d'arriver à
 cette solution :

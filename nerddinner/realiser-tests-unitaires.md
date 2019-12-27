@@ -11,7 +11,7 @@ vérifier les fonctionnalités de NerdDinner. A l'avenir, cela nous permettra
 d'apporter des modifications et des améliorations à notre application en toute
 confiance.
 
-### Pourquoi faire des tests unitaires ?
+## Pourquoi faire des tests unitaires ?
 
 Un matin, alors que vous allez tranquillement au boulot, vous avez un éclair
 de génie : "Bon sang, mais c'est bien sûr ! Si je faisais ce petit truc dans
@@ -42,7 +42,7 @@ avez la possibilité de suivre un cycle de développement basé sur les tests
 (Test-Driven Development ou TDD en anglais) qui consiste à écrire des tests
 puis à programmer en s'appuyant sur ceux-ci.
 
-### Le projet NerdDinner.Tests
+## Le projet NerdDinner.Tests
 
 Quand nous avons créé la solution NerdDinner au tout début de ce tutoriel,
 nous sommes passés par une boite de dialogue qui nous demandait si nous
@@ -59,7 +59,7 @@ Le projet NerdDinner.Test fait référence à l'assembly du projet NerdDinner,
 ce qui permet d'ajouter facilement des tests automatisés pour contrôler notre
 application.
 
-### Créer des tests unitaires pour le modèle Dinner
+## Créer des tests unitaires pour le modèle Dinner
 
 Nous allons ajouter quelques tests au projet NerdDinner.Test pour vérifier
 le fonctionnement de la classe Dinner que nous avons créée lors de la
@@ -185,7 +185,7 @@ unitaire. Si vous avez plus d'une commande "Assert" dans une méthode de test,
 vérifiez-bien qu'elles servent toutes à tester la même chose. Et en cas de
 doute, ajoutez un autre test unitaire.
 
-### Lancer les tests
+## Lancer les tests
 
 Avec Visual Studio 2008 Professional (ou une version supérieurs), il est
 possible d'exécuter les projets de tests unitaires directement au sein de
@@ -230,7 +230,7 @@ point of failure in the test". Cela vous permettra de double-cliquer sur un
 test en erreur dans la fenêtre des résultats de test et d'accéder directement
 au point qui pose problème.
 
-### Créer des tests unitaires pour DinnersController
+## Créer des tests unitaires pour DinnersController
 
 Nous allons à présent créer quelques tests unitaires pour vérifier les
 fonctionnalités du contrôleur DinnersController. Pour commencer, nous faisons
@@ -316,7 +316,7 @@ dépendance" (ou DI = Dependancy Injection) qui va nous aider à gérer ce genre
 de problèmes et nous éviter d'avoir à travailler sur une vraie base de données
 pour réaliser les tests.
 
-### L'injection de dépendance
+## L'injection de dépendance
 
 Pour l'instant, la classe DinnersController est étroitement "liée" à la
 classe DinnerRepository. Cette notion de "lien" fait référence au fait qu'une
@@ -362,7 +362,7 @@ données pour fonctionner.
 Pour mettre cela en pratique, nous allons d'ores et déjà ajouter cette
 notion d'injection de dépendance au niveau du contrôleur DinnersController.
 
-### Extraire l'interface IDinnerRepository
+## Extraire l'interface IDinnerRepository
 
 La première étape consiste à créer une interface IDinnerRepository qui
 contractualise les éléments que doit fournir le repository pour que le
@@ -416,7 +416,7 @@ public class DinnerRepository : IDinnerRepository {
 }
 ```
 
-### Ajouter l'injection de dépendance à DinnersController
+## Ajouter l'injection de dépendance à DinnersController
 
 Nous pouvons maintenant passer à la phase de mise à jour de la classe
 DinnersController pour qu'elle utilise désormais cette nouvelle interface.
@@ -469,7 +469,7 @@ faire passer une "fausse" implémentation du repository. Cette "fausse"
 implémentation n'aura pas besoin d'accéder à une vraie base de données et se
 contentera de travailler avec des données en mémoire.
 
-### Créer la classe FakeDinnerRepository
+## Créer la classe FakeDinnerRepository
 
 Nous allons donc voir comment créer une classe FakeDinnerRepository.
 
@@ -578,7 +578,7 @@ Nous disposons désormais d'une implémentation de l'interface
 IDinnerRepository qui n'a pas besoin d'une base de données et qui est capable
 de fonctionner avec une liste d'objets Dinners en mémoire.
 
-### Utiliser FakeDinnerRepository pour faire les tests unitaires
+## Utiliser FakeDinnerRepository pour faire les tests unitaires
 
 Nous pouvons maintenant revenir aux tests unitaires de la classe
 DinnersController qui avaient échoués tout à l'heure étant donné que la base de
@@ -659,7 +659,7 @@ classe DinnersController (depuis la liste jusqu'à la pagination, la fiche
 détail, la création, la modification et la suppression) sans avoir le moindre
 besoin de nous connecter à une vraie base de données.
 
-### Remarque : Les frameworks pour l'injection de dépendance
+## Remarque : Les frameworks pour l'injection de dépendance
 
 Gérer à la main l'injection de dépendance (comme nous l'avons fait
 ci-dessus) marche très bien, mais ça risque de devenir de plus en plus
@@ -688,7 +688,7 @@ dans le cadre du tutoriel NerdDinner. Mais c'est quelque chose qui mériterait
 vraiment d'être envisagé à l'avenir si nous venions à faire évoluer le code et
 les fonctionnalités de l'application.
 
-### Créer des tests unitaires pour l'action Edit
+## Créer des tests unitaires pour l'action Edit
 
 Nous allons maintenant créer quelques tests unitaires pour vérifier la
 fonctionnalité Edit du contrôleur DinnersController. Pour commencer, nous
@@ -741,7 +741,7 @@ ne s'exécute pas à partir d'un serveur web, l'objet User n'est donc pas
 initialisé par ASP.NET MVC, ce qui fait que nous nous retrouvons avec une
 référence nulle.
 
-### Simuler la propriété User.Identity.Name
+## Simuler la propriété User.Identity.Name
 
 Les frameworks de mocking facilitent les tests car ils permettant de créer
 dynamiquement de faux objets nécessaires pour réussir les tests. On peut par
@@ -835,7 +835,7 @@ Et ce coup-ci, nos tests passent avec succès quand nous les lançons :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image153.png)
 
-### Tester le scénario UpdateModel()
+## Tester le scénario UpdateModel()
 
 Pour l'instant, nous avons donc testé le côté HTTP GET de l'action Edit.
 Nous allons maintenant créer quelques tests pour contrôler le côté HTTP POST de
@@ -925,7 +925,7 @@ public void EditAction_Should_Redisplay_With_Errors_When_Update_Fails() {
 }
 ```
 
-### Conclusion sur les tests unitaires
+## Conclusion sur les tests unitaires
 
 Nous avons abordé les concepts de base en ce qui concerne les tests
 unitaires qui s'appliquent aux classes contrôleurs. Nous pouvons maintenant

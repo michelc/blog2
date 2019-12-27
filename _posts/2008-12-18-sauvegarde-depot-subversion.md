@@ -6,7 +6,7 @@ tags: svn
 title: "Sauvegarder un dépôt Subversion"
 ---
 
-### SvnAdmin dump
+## SvnAdmin dump
 
 Jusqu'à présent, je sauvegarde mon dépôt Subversion en faisant un dump de
 celui-ci, à l'aide de la commande :
@@ -43,7 +43,7 @@ svnadmin: 'svn://srv02-svn/replu/' is an URL when it should be a path
 Ca a été l'occasion de faire un petit tour des différentes méthodes
 possibles pour sauvegarder un dépôt.
 
-### SvnAdmin hotcopy
+## SvnAdmin hotcopy
 
 Par rapport à un dump, cette commande est censée être beaucoup plus rapide
 et surtout, elle intègre tout le dépôt (y compris la configuration du serveur
@@ -80,7 +80,7 @@ Le problème avec cette méthode, c'est qu'il faut avoir un accès "fichier" au
 dépôt (comme c'est le cas pour toutes les commandes de SvnAdmin
 apparament).
 
-### SvnSync
+## SvnSync
 
 Depuis Subversion 1.4, il existe un nouvel utilitaire SvnSync destiné à
 faire des réplications d'un dépôt vers un autre. Un de ses avantages est de
@@ -125,7 +125,7 @@ Et pour finir, on synchronise le dépôt local pour que son contenu
 corresponde à celui du dépôt distant :
 
 ```
-SvnSync sync file:///D:/SVN/replusync 
+SvnSync sync file:///D:/SVN/replusync
 Committed revision 1.
 Copied properties for revision 1.
 Committed revision 2.
@@ -149,7 +149,7 @@ sauvegarde, je n'aurai qu'à lancer une ligne de commande pour re-synchroniser
 mon dépôt local :
 
 ```
-SvnSync sync file:///D:/SVN/replusync 
+SvnSync sync file:///D:/SVN/replusync
 ```
 
 Et si j'y tenais vraiment, je n'aurais qu'à automatiser cette commande dans

@@ -49,7 +49,7 @@ pour notre projet de tests :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image010.png)
 
-### Contenu du répertoire NerdDinner
+## Contenu du répertoire NerdDinner
 
 Quand on crée une application ASP.NET MVC avec Visual Studio, un certain
 nombre de fichiers et de répertoires sont automatiquement ajoutés au
@@ -132,7 +132,7 @@ page à propos, des pages de connexion, de déconnexion et d'inscription, et une
 page pour les erreurs non gérées, le tout prêt à être utilisé sans autre
 manipulation.
 
-### Lancer l'application NerdDinner
+## Lancer l'application NerdDinner
 
 Nous pouvons lancer notre projet en choisissant __Debug -&gt; Start
 Debugging **ou** Debug -&gt; Start Without Debugging__ dans les
@@ -170,7 +170,7 @@ Tout le code pour réaliser les quatre écrans précédents a été généré pa
 défaut lorsque nous avons créé notre nouveau projet. Nous allons l'utiliser
 comme point de départ de notre application.
 
-### Test de l'application NerdDinner
+## Test de l'application NerdDinner
 
 Si nous utilisons Visual Studio Professional Edition ou une version
 supérieure, nous pouvons utiliser l'environnement de test unitaire intégré au

@@ -21,7 +21,7 @@ juste :
 * faire évoluer les coordonnées de la carte d'une position à l'autre.
 
 
-### 1) Savoir quelle est la carte à déplacer
+## 1) Savoir quelle est la carte à déplacer
 
 Facile : elle est passée en paramètre à la fonction via la propriété `.card_id`
 de l'objet `move`.
@@ -31,7 +31,7 @@ var $card = $('#" + move.card_id);
 ```
 
 
-### 2) Récupérer sa position de départ
+## 2) Récupérer sa position de départ
 
 Facile : c'est exactement ce que donne la méthode `.offset()`de jQuery :
 
@@ -58,7 +58,7 @@ offset: function () {
 ```
 
 
-### 3) Savoir vers où déplacer la carte
+## 3) Savoir vers où déplacer la carte
 
 Facile : c'est également donné par la propriété `.stack` de l'objet `move` passé
 en paramètre à la fonction.
@@ -68,7 +68,7 @@ var $target = $("#" + move.stack.id);
 ```
 
 
-### 4) Calculer cette position de destination
+## 4) Calculer cette position de destination
 
 Facile : là encore, on utilise la méthode `.offset()` de jQuery / dQuery...
 
@@ -106,7 +106,7 @@ $target.remove();
 ```
 
 
-### 5) Faire évoluer les coordonnées de la carte d'une position à l'autre
+## 5) Faire évoluer les coordonnées de la carte d'une position à l'autre
 
 Facile !
 
@@ -138,7 +138,7 @@ enchainer correctement les différents déplacements et ne pas envoyer toutes le
 cartes vers les fondations en même temps.
 
 
-### 6) Quelques finitions
+## 6) Quelques finitions
 
 J'ai quand même eu besoin de 2 petits bricolages après avoir testé un peu mieux.
 

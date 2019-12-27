@@ -21,7 +21,7 @@ permalink: archives/
   {% capture month %}{{ post.date | date: '%m' }}{% endcapture %}
   {% if current_month != month %}
     {% assign current_month = month %}
-### {{ post.date | date: '%B %Y' }}
+#### {{ post.date | date: '%B %Y' }}
   {% endif %}
 
 * [{{ post.title }}]({{ post.url | relative_url }})

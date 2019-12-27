@@ -23,7 +23,7 @@ et de modification.
 Nous allons maintenant voir comment appliquer cette "philosophie DRY" au
 niveau des vues, pour là aussi faire disparaitre toute duplication de code.
 
-### Amélioration des vues Edit et Create
+## Amélioration des vues Edit et Create
 
 Nous employons actuellement deux vues différentes - "Edit.aspx" et
 "Create.aspx" - pour afficher un formulaire de mise à jour des dîners. Un
@@ -47,7 +47,7 @@ contrôles de saisie. Avec une telle répétition, nous devrons donc refaire
 chaque modification en double toutes les fois où nous ferons évoluer l'objet
 Dinner, ce qui n'est vraiment pas une bonne chose.
 
-### Utiliser une vue partielle
+## Utiliser une vue partielle
 
 ASP.NET MVC offre la possibilité de créer des "vues partielles" qui peuvent
 ensuite être utilisées pour incorporer les traitements de présentation des vues
@@ -178,7 +178,7 @@ de faire passer d'autres objets Model ou un autre dictionnaire ViewData à la
 vue partielle. Cela peut servir dans le cas où vous souhaitez seulement
 transmettre un sous-ensemble de l'objet Model ou ViewModel à la vue.
 
-### Remarque : Pourquoi &lt;% %&gt; et pas &lt;%= %&gt; ?
+## Remarque : Pourquoi &lt;% %&gt; et pas &lt;%= %&gt; ?
 
 Une des petites subtilités que vous avez peut-être remarqué dans le code
 ci-dessus est que nous avons utilisé un bloc &lt;% %&gt; au lieu d'un bloc
@@ -215,7 +215,7 @@ Il faut bien faire attention à écrire le code suivant :
 Ceci est dû au fait que les blocs &lt;% %&gt; sont des instructions et qu'en
 C# les instructions doivent se terminer par un point-virgule.
 
-### Rendre le code plus lisible avec une vue partielle
+## Rendre le code plus lisible avec une vue partielle
 
 Nous avons créé la vue partielle "DinnerForm" pour éviter d'avoir à répéter
 le même code dans plusieurs vues. C'est la principale raison qui motive la
@@ -258,7 +258,7 @@ comprendre comment fonctionne le code ou le html d'une vue, prenez le temps de
 vous demander si cela ne deviendrait pas plus clair en la découpant en
 plusieurs vues partielles avec des noms évocateurs.
 
-### Pages Maîtres
+## Pages Maîtres
 
 En complément des vues partielles, ASP.NET MVC offre aussi la possibilité de
 créer une "page maître" qui permet de définir la présentation globale et le

@@ -14,7 +14,7 @@ d'éviter d'afficher 1000 dîners en une seule fois. Nous afficherons seulement
 10 dîners à la fois et donnerons à l'utilisateur la possibilité de changer de
 page en utilisant une méthode qui optimise le référencement.
 
-### Rappel sur l'action Index()
+## Rappel sur l'action Index()
 
 La méthode d'action Index() de notre classe DinnersController ressemble
 actuellement à ceci :
@@ -35,7 +35,7 @@ dîners à venir et les présente sous forme de liste :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image107.png)
 
-### Comprendre IQuerable&lt;T&gt;
+## Comprendre IQuerable&lt;T&gt;
 
 IQueryable &lt;T&gt; est une interface qui est apparue dans .NET 3.5 avec
 LINQ. Elle permet une exécution différée qui va nous permettre de mettre en
@@ -94,7 +94,7 @@ la base de données contenait des millions de dîners, seuls les 10 demandés
 seraient renvoyé par cette requête SQL (ce qui la rend à la fois performante et
 évolutive).
 
-### Gérer un numéro de page dans l'URL
+## Gérer un numéro de page dans l'URL
 
 Au lieu de coder en dur la page souhaitée, nous allons ajouter un paramètre
 "page" dans l'URL pour indiquer quelle fourchette de dîners afficher.
@@ -211,7 +211,7 @@ suivants :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image110.png)
 
-### Gérer la navigation entre les pages
+## Gérer la navigation entre les pages
 
 La dernière étape pour finaliser notre système de pagination est d'ajouter
 des boutons de navigation "suivant" et "précédent" dans notre vue pour que les
@@ -346,7 +346,7 @@ pour le référencement par les moteurs de recherches :
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image112.png)
 
-### Remarque : Comprendre les conséquences de IQueryable&lt;T&gt;
+## Remarque : Comprendre les conséquences de IQueryable&lt;T&gt;
 
 IQueryable&lt;T&gt; est une fonctionnalité très puissante qui rend possible
 un grand nombre de traitements d'exécution différée comme dans le cas de la

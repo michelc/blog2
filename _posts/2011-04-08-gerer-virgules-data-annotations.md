@@ -43,7 +43,7 @@ pour que ASP.NET prenne lui aussi le "." comme séparateur décimal :
 Mais cette fois-ci, je me suis dit que j'allai creuser un peu plus sinon ça
 enlève pas mal d'intérêt aux Data Annotations.
 
-### Localiser les messages du plugin jQuery Validation
+## Localiser les messages du plugin jQuery Validation
 
 Déjà, quand on fait des recherches sur la localisation de jQuery Validation,
 on se rend compte que c'est un problème général qui semble avoir été un peu
@@ -56,12 +56,12 @@ Super ! Mais ça ne sert pas à grand chose parce que les messages
 d'erreurs sont déjà initialisés directement par ASP.NET MVC :(
 
 ```
-<input data-val="true" 
+<input data-val="true"
        data-val-number="The field Prix must be a number."
        data-val-range="Le champ Prix doit &amp;#234;tre compris entre 0,01 et 100."
-       data-val-range-max="100" 
-       data-val-range-min="0.01" 
-       data-val-required="Le champ Prix est requis." 
+       data-val-range-max="100"
+       data-val-range-min="0.01"
+       data-val-required="Le champ Prix est requis."
        id="Price" name="Price" type="text" value="8,99" />
 ```
 
@@ -69,7 +69,7 @@ C'est malin ça de définir les messages d'erreur alors que le plugin jQuery
 Validation les initialise déjà de son côté. Et c'est encore plus rigolo d'en
 mettre certains en français et d'autres en anglais :)
 
-### Localiser "The field Xxxxx must be a number."
+## Localiser "The field Xxxxx must be a number."
 
 Première méthode pour traduire ce message : supprimer l'attribut
 "data-val-number" de toutes les zones de saisie et inclure le fichier
@@ -143,7 +143,7 @@ important) :
 Dans ce cas, la saisie d'une valeur incorrecte dans le prix affiche le
 message "Le champ Prix doit être un nombre.".
 
-### Faire accepter les nombres à virgule à jQuery Validation
+## Faire accepter les nombres à virgule à jQuery Validation
 
 C'est bien beau de parler à l'utilisateur en français, mais c'est quand même
 plus important de lui permettre de pouvoir saisir le prix qu'il veut sans avoir
@@ -182,7 +182,7 @@ doit être compris entre 0,01 et 100.".
 
 C'est des coriaces !
 
-### Gérer les virgules dans jQuery Validation
+## Gérer les virgules dans jQuery Validation
 
 Si c'est ça, je regarde dans le source de [jquery.validate.js](https://github.com/jzaefferer/jquery-validation/blob/master/jquery.validate.js). Ah ben bien sûr, y'a un problème avec le
 "range" :

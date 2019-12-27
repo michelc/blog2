@@ -13,7 +13,7 @@ Intriago.
 Et voici la deuxième partie d'une série d'article consacré à l'utilisation
 de NHibernate dans une application ASP.NET MVC. Vous pouvez lire la [première partie de ce tutoriel ici]({% post_url 2010-01-29-utiliser-aspnetmvc-nhibernate-1 %}).
 
-### Représenter une relation many-to-many
+## Représenter une relation many-to-many
 
 Nous allons continuer en créant un fichier de mapping pour la classe Post.
 Celui-ci est légèrement différent de celui pour la classe Category étant donné
@@ -78,7 +78,7 @@ puis le schéma de la base de données correspondante :
 Comme vous pouvez le constater dans le diagramme de classe, nous n'avons pas
 besoin de créer une classe pour la table PostCategory.
 
-### Test unitaire
+## Test unitaire
 
 Nous allons maintenant tester nos repositorys et vérifier que nous pouvons
 créer des billets à l'aide des tests unitaires suivants :

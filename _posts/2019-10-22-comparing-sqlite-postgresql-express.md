@@ -27,7 +27,7 @@ For the moment, I have seen 5 differences, more or less important:
 * Names of the columns in lowercase
 
 
-### Markers for SQL parameters
+## Markers for SQL parameters
 
 Generally, examples for SQlite use "?, ?, ? ..." to identify parameters in parameterized queries. So I followed this method. When you go to PostgreSQL, you see more like "$1, $2, $3 ...".
 
@@ -45,7 +45,7 @@ db.run("UPDATE Books SET Title = $1 WHERE Book_ID = $2", [title, id], callback);
 One!
 
 
-### SQL parameters in tabular form
+## SQL parameters in tabular form
 
 When there is only one SQL parameter, the SQlite3 module accepts that this unique data is transmitted as a value, and not within an array:
 
@@ -78,7 +78,7 @@ It's even better, because that way you're sure you haven't forgotten a parameter
 Two.
 
 
-### .query() vs .run(), .all() and .get()
+## .query() vs .run(), .all() and .get()
 
 The SQlite3 module defines 3 methods:
 
@@ -114,7 +114,7 @@ pool.query("SELECT * FROM Books", [], callback);
 Three...
 
 
-### Callback function parameters
+## Callback function parameters
 
 The `.query()` method of the node-postgres module always returns 2 objects to the callback function that it chains:
 
@@ -157,7 +157,7 @@ xxx.query("SELECT * FROM Books", [], (err, result) => {});
 It's four!
 
 
-### The lowercase problem
+## The lowercase problem
 
 I usually write SQL keywords in capital letters and the names of tables, columns, views, sequences ... in PascalCase.
 
@@ -233,7 +233,7 @@ CREATE TABLE IF NOT EXISTS books (
 And five => no more difference.
 
 
-### Use a "common" object
+## Use a "common" object
 
 Currently, I do not use the same way to connect to databases:
 
@@ -273,7 +273,7 @@ console.log("Successful connection to the database");
 Note: I should search how to isolate this confusing things in 2 separate files. But later...
 
 
-### Conclusion
+## Conclusion
 
 I solved all problems related to the fact that SQlite3 and node-postgres modules work a little differently. It only took a few modifications to successfully develop a simple enough solution to have exactly the same code for both databases:
 
@@ -304,7 +304,7 @@ db.query = function (sql, params, callback) {
 Note: It must slow down a tad, but we're in development, it gives us time to think.
 
 
-### The complete code for "index.js"
+## The complete code for "index.js"
 
 As always, the entire "index.js" file to get an overview of the new system.
 

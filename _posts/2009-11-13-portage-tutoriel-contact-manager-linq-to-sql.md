@@ -10,7 +10,7 @@ Encouragé par un premier succès pour faire [passer le tutoriel ContactManager 
 de continuer ma formation ASP.NET MVC en modifiant l'application ContactManager
 pour remplacer Entity Framework par LINQ to SQL.
 
-### Création du modèle LINQ to SQL
+## Création du modèle LINQ to SQL
 
 Après un ou deux essais, j'ai vu que le plus pratique était de commencer par
 exclure ou supprimer du projet tout ce qui touchait à Entity Framework, à
@@ -44,7 +44,7 @@ et "Group" issus de la base de données.
 Concrètement, cette première étape a eu pour résultat de substituer
 ContactManagerModel.dbml à ContactManagerModel.edmx.
 
-### Création d'un Repository basé sur LINQ to SQL
+## Création d'un Repository basé sur LINQ to SQL
 
 Cette seconde étape va consister à remplacer
 EntityContactManagerRepository.cs par une classe L2SContactManagerRepository.cs
@@ -122,10 +122,10 @@ public Contact EditContact(int groupId, Contact contactToEdit)
 {
     // Get original contact
     var originalContact = GetContact(contactToEdit.Id);
-    
+
     // Update with new group
     originalContact.Group = GetGroup(groupId);
-    
+
     // Save changes
     _entities.ApplyPropertyChanges(originalContact.EntityKey.EntitySetName, contactToEdit);
     _entities.SaveChanges();
@@ -168,12 +168,12 @@ return (from c in _entities.ContactSet
         where c.Id == id
         select c).FirstOrDefault();
 
-=>  SELECT 1 AS [C1], 
-                [Extent1].[Id] AS [Id], 
-                [Extent1].[FirstName] AS [FirstName], 
-                [Extent1].[LastName] AS [LastName], 
-                [Extent1].[Phone] AS [Phone], 
-                [Extent1].[Email] AS [Email], 
+=>  SELECT 1 AS [C1],
+                [Extent1].[Id] AS [Id],
+                [Extent1].[FirstName] AS [FirstName],
+                [Extent1].[LastName] AS [LastName],
+                [Extent1].[Phone] AS [Phone],
+                [Extent1].[Email] AS [Email],
                 [Extent1].[groupId] AS [groupId]
         FROM [dbo].[Contacts] AS [Extent1]
         WHERE [Extent1].[Id] = @p__linq__1
@@ -186,13 +186,13 @@ return (from c in _entities.ContactSet.Include("Group")
         where c.Id == id
         select c).FirstOrDefault();
 
-=> SELECT 1 AS [C1], 
-                [Extent1].[Id] AS [Id], 
-                [Extent1].[FirstName] AS [FirstName], 
-                [Extent1].[LastName] AS [LastName], 
-                [Extent1].[Phone] AS [Phone], 
-                [Extent1].[Email] AS [Email], 
-                [Extent2].[Id] AS [Id1], 
+=> SELECT 1 AS [C1],
+                [Extent1].[Id] AS [Id],
+                [Extent1].[FirstName] AS [FirstName],
+                [Extent1].[LastName] AS [LastName],
+                [Extent1].[Phone] AS [Phone],
+                [Extent1].[Email] AS [Email],
+                [Extent2].[Id] AS [Id1],
                 [Extent2].[Name] AS [Name]
         FROM  [dbo].[Contacts] AS [Extent1]
         LEFT OUTER JOIN [dbo].[Groups] AS [Extent2] ON [Extent1].[groupId] = [Extent2].[Id]
@@ -221,7 +221,7 @@ public Contact GetContact(int id)
 }
 ```
 
-### Isoler les tests unitaires de l'ORM
+## Isoler les tests unitaires de l'ORM
 
 Une fois la classe Repository complètement ré-écrite pour s'appuyer sur LINQ
 to SQL et plus Entity Framework, le projet Contact manager compile sans
@@ -305,7 +305,7 @@ sans problème. Je peux :
 * ajouter, modifier ou supprimer un contact,
 * ajouter ou supprimer un groupe de contacts.
 
-### Conclusion
+## Conclusion
 
 Suite à mes différents essais avec les tutoriels ContactManager et
 NerdDinner, j'avais eu le pressentiment que cette notion de repository et de

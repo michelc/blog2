@@ -10,7 +10,7 @@ excerpt: "Comment générer un nombre aléatoire en JavaScript, mais aussi comme
 {:.encart}
 English version: [Generate a random number with JavaScript]({% post_url 2019-12-04-generate-random-number-javascript %}).
 
-### La méthode "Math.random()"
+## La méthode "Math.random()"
 
 <figure>
   <img src="{{ page.image }}" alt="random-number" />
@@ -43,7 +43,7 @@ Note: On parle de "pseudo" nombre aléatoire, parce que pour un ordinateur, ça
 n'est pas facile de reproduire le hasard et qu'il est plus simple de simuler.
 
 
-### Le module "Math.seedrandom()"
+## Le module "Math.seedrandom()"
 
 Pour changer du travail (C# / Oracle), j'ai créé il y a quelque temps un site de
 jeux de solitaires, [Solitaire-Play](https://www.solitaire-play.com/), avec des

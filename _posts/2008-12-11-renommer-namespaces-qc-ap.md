@@ -14,13 +14,13 @@ ap.Xxxxxx dans tous les fichiers du projet, ce qui aura pour effet de modifier
 tous les namespaces et les assemblys de qc.Xxxxxx en ap.Xxxxxx. Les noms des
 projets en eux-même seront renommés à l'étape 3 via TortoiseSVN.
 
-### 1° étape
+## 1° étape
 
 * S'assurer que la solution est totalement versionnée
 * Faire une sauvegarde complète du en lançant un Export All sous
 Subversion
 
-### 2° étape
+## 2° étape
 
 Sous Visual Studio, sans ouvrir la solution, faire Edition / Rechercher et
 remplacer / Remplacer dans les fichiers
@@ -38,7 +38,7 @@ remplacer / Remplacer dans les fichiers
 Répéter la même chose pour qc.Classic, qc.Department, qc.Devel et
 qc.Framework puis une dernière fois pour renommer BAS.Data en Altrr.Data.
 
-### 3° étape
+## 3° étape
 
 * Supprimer le contenu du répertoire bin
 * Supprimer le fichier pi.suo
@@ -51,7 +51,7 @@ qc.Xxxxxxx.csproj.webinfo en ap.Xxxxxxx.csproj.webinfo
 * Contrôler que le site fonctionne encore :)
 * Commiter le projet en indiquant "Renommé qc.Xxxxxx en ap.Xxxxxx"
 
-### 4° étape
+## 4° étape
 
 Une fois le gros oeuvre fait, je fignole pour qu'il ne reste presque plus de
 trace de [QC](/tags/qc/).
@@ -75,7 +75,7 @@ tagprefix, user controls ...)"
 Après ça, il ne reste plus que les tables de la base de données qui sont
 encore préfixées par "qc_" et pas "ap_".
 
-### 5° étape
+## 5° étape
 
 Le souci, c'est qu'il faut tout re-déployer puisque les namespaces ont
 changés et que désormais les fichiers .ascx héritent de ap.Xxxxxx.Yyyyyy et

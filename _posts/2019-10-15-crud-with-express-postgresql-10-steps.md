@@ -46,7 +46,7 @@ Note: This tutorial is pretty much a copy/paste of the tutorial [CRUD applicatio
 
 <a name="crud1"></a>
 
-### 1. Create a new Node project
+## 1. Create a new Node project
 
 
 #### Create a folder for the project
@@ -112,7 +112,7 @@ In Visual Code, the "package.json" file created by NPM now appears in the root f
 
 <a name="crud2"></a>
 
-### 2. Add modules to the Node project
+## 2. Add modules to the Node project
 
 
 #### Technical choices
@@ -193,7 +193,7 @@ PS E:\Code\AppTestPG> npm install
 
 <a name="crud3"></a>
 
-### 3. Create the Express application
+## 3. Create the Express application
 
 
 #### Check that it can work...
@@ -355,7 +355,7 @@ Note: It is possible to use the "nodemon" module to avoid having to stop / resta
 
 <a name="crud4"></a>
 
-### 4. Add EJS views
+## 4. Add EJS views
 
 Since the purpose of the application is to have several functionalities, you need to create several views. Unfortunately, EJS does not manage layouts. It is therefore necessary to hack by inserting a partial view at the beginning of the view for all HTML that must come before the view-specific content and a second partial view with the HTML code to "finish" the page.
 
@@ -435,7 +435,7 @@ To do this, you have to create a "public" folder in which you create a sub-folde
 
 <a name="crud5"></a>
 
-### 5. Use views in Express
+## 5. Use views in Express
 
 Note: If this had not been done at the beginning of the project, it would have been necessary to install the "EJS" module by an `npm install ejs` to be able to use it.
 
@@ -610,7 +610,7 @@ app.get("/data", (req, res) => {
 
 <a name="crud6"></a>
 
-### 6. First steps with the node-postgres module
+## 6. First steps with the node-postgres module
 
 Note: If this had not been done at the beginning of the project, it would have been necessary to install the node-postgres module by an `npm install pg` to be able to access a PostgreSQL database under Node.
 
@@ -874,7 +874,7 @@ The advantage of this new view is to provide [Add], [Edit] and [Delete] buttons 
 
 <a name="crud7"></a>
 
-### 7. Modify an existing row
+## 7. Modify an existing row
 
 This part of the tutorial will show you how to modify an existing record. We will start by creating the necessary views to enter the information of the book to be updated. Then we will code a method to display the input form when the GET /edit/xxx route is called (by clicking on the [Edit] button in the book list). And finally, a method corresponding to the POST /edit/xxx route will be used to update the database when the user validates the changes(by clicking the [Update] button at the bottom of the input form).
 
@@ -1004,7 +1004,7 @@ Note: There are examples that still use the "body-parser" module instead, but th
 
 <a name="crud8"></a>
 
-### 8. Create a new row
+## 8. Create a new row
 
 
 #### The "views/create.ejs" view
@@ -1086,7 +1086,7 @@ app.post("/create", (req, res) => {
 
 <a name="crud9"></a>
 
-### 9. Delete a row
+## 9. Delete a row
 
 
 #### The "views/delete.ejs" and "views/_display.ejs" views
@@ -1187,7 +1187,7 @@ app.post("/delete/:id", (req, res) => {
 
 <a name="crud10"></a>
 
-### 10. Conclusion
+## 10. Conclusion
 
 Personally, this tutorial allowed me to progress pretty well. I wrote a second web application to update a SQL database with Node JS that looks like what I can do with Sinatra for little things. It gave me a good overview of everything that is necessary and to see that in the end it is not very far from what I'm used to do with ASP.NET MVC or Sinatra.
 
@@ -1228,7 +1228,7 @@ As for JavaScript itself, this application has had the advantage of practicing s
 
 <a id="annexe"></a>
 
-### Appendix - The complete code for "index.js"
+## Appendix - The complete code for "index.js"
 
 This is not to extend the post, but for those like me who like to have an overview of a program. And as much to highlight a few numbers:
 

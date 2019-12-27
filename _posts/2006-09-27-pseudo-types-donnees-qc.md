@@ -47,7 +47,7 @@ comprise entre 1 et 255 ou strictement égale à 2000.
 uniquement destinés à gérer des tables déjà existantes pour lesquelles il
 serait impossible de modifier le type de données.
 
-### Transposition pour une base de données Access
+## Transposition pour une base de données Access
 
 * AUTOINCREMENT : INT NOT NULL IDENTITY (1, 1)
 * BOOLEAN : BIT
@@ -65,7 +65,7 @@ serait impossible de modifier le type de données.
 * TIME : TIME
 * BINDATA : IMAGE
 
-### Transposition pour une base de données Sql Server
+## Transposition pour une base de données Sql Server
 
 * AUTOINCREMENT : INT NOT NULL IDENTITY (1, 1)
 * BOOLEAN : BIT
@@ -83,7 +83,7 @@ serait impossible de modifier le type de données.
 * TIME : DATETIME
 * BINDATA : IMAGE
 
-### Transposition pour une base de données Oracle
+## Transposition pour une base de données Oracle
 
 * AUTOINCREMENT : INT NOT NULL
 * BOOLEAN : NUMBER(1,0)
@@ -107,7 +107,7 @@ simulée à l'aide :
 * d'une séquence SEQ_NomTable,
 * d'un trigger before insert TRG_BI_NomTable
 
-### Transposition pour une base de données PostgreSQL
+## Transposition pour une base de données PostgreSQL
 
 * AUTOINCREMENT : BIGSERIAL
 * BOOLEAN : NUMERIC(1)
@@ -125,7 +125,7 @@ simulée à l'aide :
 * TIME : TIME
 * BINDATA : BYTEA
 
-### Transposition pour une base de données MySQL
+## Transposition pour une base de données MySQL
 
 * AUTOINCREMENT : INT AUTO_INCREMENT
 * BOOLEAN : TINYINT(1)

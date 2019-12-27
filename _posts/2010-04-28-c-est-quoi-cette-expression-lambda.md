@@ -22,7 +22,7 @@ quoi que ce soit dans ce genre. Il existe déjà de bien meilleurs billets sur l
 sujet. Non, je vais juste vous dire "bon sang, mais ça veut dire quoi une
 syntaxe pareille ?".
 
-### Prenons un exemple concret
+## Prenons un exemple concret
 
 Je vais utiliser une situation classique auquel tout développeur est
 confronté de nos jours : filtrer une liste de Lamas en tenant compte de
@@ -58,7 +58,7 @@ foreach (var lama in Lamas)
 }
 ```
 
-### Refactoriser en Lambda
+## Refactoriser en Lambda
 
 Le problème c'est que ça fait un paquet de code pour appliquer un filtre
 tout bête… Alors que nous savons bien qu'il existe de supers méthodes
@@ -92,7 +92,7 @@ C'est pas complètement idiot ? La méthode Where appelle la méthode
 Filter en lui passant chaque Lama un par un pour vérifier s'il doit faire parti
 des résultats ou non.
 
-### Méthode anonyme en ligne
+## Méthode anonyme en ligne
 
 Ouais mais quand même : notre méthode Filter ne sert qu'à un seul
 endroit pour filtrer nos Lamas. On pourrait donc se simplifier la vie et éviter
@@ -124,7 +124,7 @@ Ca c'est déjà plus concis. Suivez-bien et je vous traduis ce que ça veut
 dire : "cette méthode renvoie un Booléen, et attend un Lama en
 entrée", suivi du code pour le corps de la méthode.
 
-### Types implicites
+## Types implicites
 
 Attendez-voir. Le compilateur C# est quand même vachement intelligent, pas
 vrai ? Alors pourquoi est-ce que je me décarcasse à lui dire que la
@@ -153,7 +153,7 @@ var results = Lamas.Where(
     });
 ```
 
-### Constructeurs inutiles
+## Constructeurs inutiles
 
 Le truc c'est que notre méthode n'est rien de plus qu'une seule et
 ridiculement simple ligne d'expression Booléenne. Alors pourquoi avoir encore
@@ -198,7 +198,7 @@ d'un simple `l` ?
 var results = Lamas.Where( l => l.EstRonchon && l.Taille > 9 );
 ```
 
-### Résumé
+## Résumé
 
 Il s'avère que **les trois dernières commandes ci-dessus sont des
 Expressions Lambdas valides** qui filtrent une liste de Lamas pour nous.

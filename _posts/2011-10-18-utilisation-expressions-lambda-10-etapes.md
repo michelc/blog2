@@ -6,7 +6,7 @@ tags: c-sharp
 title: "Utilisation d’expressions lambda en 10 étapes"
 ---
 
-### Point de départ : 3 fonctions avec du code répétitif ( !DRY)
+## Point de départ : 3 fonctions avec du code répétitif ( !DRY)
 
 #### PrevisionFacturationSrv.cs
 
@@ -70,14 +70,14 @@ public void UpdatePlacement(IList<PrevisionFacturation> list, int ponderation)
 }
 ```
 
-### Source d'inspiration (à lire !)
+## Source d'inspiration (à lire !)
 
 [Introduction au délégués en C#](http://fguillot.developpez.com/cours/dotnet/introduction-delegates-csharp/), un article en français rédigé
 par Fabien Guillot pour expliquer aux débutants comment fonctionnent les
 délégués en C#, quelle est leur utilité, et quelle a été leur évolution avec
 les différentes versions du Framework .NET.
 
-### Les 10 étapes
+## Les 10 étapes
 
 * 1° étape : Mise en commun du code (ancien style)
 * 2° étape : Isolation des traitements spécifiques dans des fonctions
@@ -97,7 +97,7 @@ type
 Consulter éventuellement la version PDF pour voir en détail comment se sont
 déroulées ces étapes : [Utilisation_Expressions_Lambda_en_10_etapes.pdf](/public/2011/Utilisation_Expressions_Lambda_en_10_etapes.pdf).
 
-### Le résultat
+## Le résultat
 
 #### PrevisionFacturationSrv.cs
 

@@ -24,7 +24,7 @@ SQL en LINQ. Dans cette introduction, je souhaite présenter ce qui différencie
 LINQ de SQL puis j'aborderai les particularités de chaque syntaxe dans la suite
 de la série.
 
-### Pré-requis
+## Pré-requis
 
 Les exemples de code SQL que je vais utiliser seront basés sur une table
 ClientTable et une table CommandeTable. Pour les exemples C#, je m'appuierai
@@ -56,7 +56,7 @@ class Commande
 }
 ```
 
-### Syntaxe de base
+## Syntaxe de base
 
 LINQ gère l'équivalent des commandes SQL SELECT, mais pas les autres types
 de commandes SQL telles que CREATE, INSERT, UPDATE ou DELETE. On peut
@@ -117,7 +117,7 @@ requête SQL en LINQ en faisant du "clause à clause". Dans les exemples
 ci-dessus, même si les clauses apparaissent dans un ordre légèrement différent,
 vous pouvez malgré tout voir qu'elles sont assez semblables.
 
-### Conclusion
+## Conclusion
 
 Après cette introduction assez généraliste, j'aborderai des aspects plus
 spécifiques au cours des billets suivants. Mon objectif tout au long de ces

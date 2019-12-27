@@ -6,26 +6,26 @@ tags: ef
 title: "Comic strip"
 ---
 
-### Go !
+## Go !
 
 ![Add Controller](/public/2011/goscaffold1.png)
 
-### Splatch !
+## Splatch !
 
 ![Error](/public/2011/goscaffold2.png)
 
-### Wizzzz !
+## Wizzzz !
 
 ![ContactsModel.cs](/public/2011/goscaffold3.png)
 
-### Humpf...
+## Humpf...
 
 ```
-Unable to retrieve metadata for 'Go.Models.ContactsModel+Group'. The 
-type 'Go.Models.ContactsModel+Contact' was not mapped. Check that 
-the type has not been explicitly excluded by using the Ignore method 
-or NotMappedAttribute data annotation. Verify that the type was 
-defined as a class, is not primitive, nested or generic, and does 
+Unable to retrieve metadata for 'Go.Models.ContactsModel+Group'. The
+type 'Go.Models.ContactsModel+Contact' was not mapped. Check that
+the type has not been explicitly excluded by using the Ignore method
+or NotMappedAttribute data annotation. Verify that the type was
+defined as a class, is not primitive, nested or generic, and does
 not inherit from EntityObject.
 ```
 

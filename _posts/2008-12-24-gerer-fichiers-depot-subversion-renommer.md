@@ -13,7 +13,7 @@ pris en compte par Subversion.
 Par contre, quand on a besoin de renommer un fichier, il ne faut surtout pas
 faire comme d'habitude, mais perdre ses automatismes et faire différemment.
 
-### 1° méthode : la mauvaise
+## 1° méthode : la mauvaise
 
 Dans l'explorateur de solution de Visual Studio, faire clic-droit sur
 NouvelleClasse.cs pour le renommer en Extract.cs. On recompile la solution puis
@@ -49,7 +49,7 @@ le lien avec fichier NouvelleClasse.cs qui vient d'être supprimé. Par
 conséquent, il sera incapable de me donner l'historique des modifications
 apportés depuis la création du fichier NouvelleClasse.cs
 
-### 2° méthode : la bonne
+## 2° méthode : la bonne
 
 C'est pourquoi il existe une autre méthode, un peu moins naturelle, mais
 beaucoup plus avantageuse.

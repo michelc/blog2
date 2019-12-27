@@ -13,7 +13,7 @@ puis aborde la réalisation d'un premier jeu de tests unitaires pour contrôler
 le bon fonctionnement de la couche de service et un autre pour vérifier le
 fonctionnement du contrôleur.
 
-### Rendre NUnit compatible avec Visual Studio Unit Test
+## Rendre NUnit compatible avec Visual Studio Unit Test
 
 Pour commencer, comme je fais mes essais avec Visual Web Developer et pas
 Visual Studio 2008, je ne peux pas utiliser Visual Studio Unit Test, le
@@ -71,7 +71,7 @@ Encore deux petites remarques :
 "Add / New Item / Class"
 * La méthode .Expect() de Moq a été remplacée par .Setup()
 
-### Sur quoi faire porter les tests unitaires
+## Sur quoi faire porter les tests unitaires
 
 Sinon, l'étude de cette cinquième partie m'en a un peu plus appris sur
 l'intérêt des tests unitaires, notamment sur quoi les faire porter (la couche
@@ -101,7 +101,7 @@ données. Par conséquent, la réalisation de cette interface IRepository ne doi
 pas être ressentie comme un niveau de complexité supplémentaire et inutile mais
 comme une étape clé pour faciliter la mise en place de tests unitaires.
 
-### Sous le coude
+## Sous le coude
 
 La sixième étape du tutoriel va consister à ajouter une fonctionnalité à la
 gestion des contacts. Cela promet d'être très intéressant car on va pour cela

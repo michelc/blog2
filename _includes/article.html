@@ -10,9 +10,9 @@
 
 <nav class="paginate">
   {% if post.previous.url %}
-    <a href="{{ post.previous.url | relative_url }}" hreflang="{{ post.previous.lang | default: site.lang }}">{{ post.previous.title }}</a>
+    <a rel="prev" href="{{ post.previous.url }}" hreflang="{{ post.previous.lang | default: site.lang }}">{{ post.previous.title }}</a>
   {% endif %}
   {% if post.next.url %}
-    <a href="{{ post.next.url | relative_url }}" hreflang="{{ post.next.lang | default: site.lang }}">{{ post.next.title }}</a>
+    <a rel="next" href="{{ post.next.url }}" hreflang="{{ post.next.lang | default: site.lang }}">{{ post.next.title }}</a>
   {% endif %}
 </nav>

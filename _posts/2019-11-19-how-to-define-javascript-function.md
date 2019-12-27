@@ -4,6 +4,7 @@ layout: post
 tags: javascript
 title: "How to define a JavaScript function"
 image: "/public/2019/butterfly-collection.jpg"
+excerpt: "A personal reminder post to list some of the JavaScript methods to define a function: declaration, expression and arrow syntax."
 ---
 
 {:.encart}

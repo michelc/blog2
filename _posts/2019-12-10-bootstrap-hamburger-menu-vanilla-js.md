@@ -4,6 +4,7 @@ layout: post
 tags: javascript, bootstrap
 title: "Switch Bootstrap 4 hamburger menu with Vanilla JS"
 image: "/public/2019/hamburger-menu.jpg"
+excerpt: "I only use 'bootstrap.min.js' to handle the Bootstrap hamburger menu. So I 'replaced' the 57 ko of this file with 3 lines of JS."
 ---
 
 {:.encart}

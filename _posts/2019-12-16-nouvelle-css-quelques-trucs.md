@@ -4,6 +4,9 @@ layout: post
 tags: css
 title: "Nouvelle CSS et 5 trucs bons à savoir"
 image: "/public/2019/sapin-de-noel.jpg"
+excerpt: "Pour la nouvelle année à venir, j'ai un peu rafraichi la charte graphique de mon
+blogue. Outre le côté 'tout nouveau, tout beau', cela m'a permis de voir 2 ou 3
+trucs de CSS et de Jekyll que je ne connaissais pas."
 ---
 
 {:.encart}

@@ -4,6 +4,7 @@ layout: post
 tags: javascript
 title: "De l'inconvénient d'utiliser aveuglément la dernière version de Node"
 image: "/public/2019/le-corniaud.jpg"
+excerpt: "Jusqu'à présent, j'utilise toujours la dernière version de Node. D'habitude ça marche mais ce coup-ci j'ai dû revenir en arrière."
 ---
 
 {:.encart}

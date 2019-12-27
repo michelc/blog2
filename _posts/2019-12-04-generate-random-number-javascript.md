@@ -4,6 +4,7 @@ layout: post
 tags: javascript
 title: "Generate a random number with JavaScript"
 image: "/public/2019/xkcd-221.jpg"
+excerpt: "How to generate random numbers with Math.random() + How to force chance and be sure to always generate the same set of random numbers (useful for testing)."
 ---
 
 {:.encart}

@@ -4,6 +4,7 @@ layout: post
 tags: javascript
 title: "Comment définir une fonction JavaScript"
 image: "/public/2019/butterfly-collection.jpg"
+excerpt: "Pour moi essentiellement, un petit mémo sur les différentes façons de déclarer une fonction en JavaScript."
 ---
 
 {:.encart}

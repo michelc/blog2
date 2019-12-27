@@ -16,6 +16,7 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 feed:
   path: atom.xml

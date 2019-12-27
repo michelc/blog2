@@ -10,7 +10,7 @@ image: "/public/2019/sql-database.jpg"
 {:.encart}
 It's the end of the year, so I'm just going to translate an old post from 2007
 that I still refer to once in a while : [Mise à jour d'une table à partir d'une
-autre]({% post_url 2007-05-30-mise-a-jour-table-partir-autre %}).
+autre]({% post_url 2007-05-30-mise-a-jour-table-partir-autre %}){:hreflang="fr"}.
 
 <figure>
   <img src="{{ page.image }}" alt="sql-database" />

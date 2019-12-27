@@ -8,7 +8,7 @@ excerpt: "Jusqu'à présent, j'utilise toujours la dernière version de Node. D'
 ---
 
 {:.encart}
-English version: [The problem with blindly using the latest Node]({% post_url 2019-11-26-problem-using-latest-nodejs %}).
+English version: [The problem with blindly using the latest Node]({% post_url 2019-11-26-problem-using-latest-nodejs %}){:hreflang="en"}.
 
 Depuis que j'ai commencé à faire quelques trucs avec Node, j'ai toujours
 travaillé avec la toute dernière version de Node. Pour cela, j'ai l'habitude de

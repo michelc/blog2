@@ -9,7 +9,7 @@ excerpt: "I only use 'bootstrap.min.js' to handle the Bootstrap hamburger menu. 
 ---
 
 {:.encart}
-Version en français : [Gérer le menu hamburger de Bootstrap 4 en Vanilla JS]({% post_url 2019-12-09-menu-hamburger-bootstrap-vanilla-js %}).
+Version en français : [Gérer le menu hamburger de Bootstrap 4 en Vanilla JS]({% post_url 2019-12-09-menu-hamburger-bootstrap-vanilla-js %}){:hreflang="fr"}.
 
 ## Introduction
 

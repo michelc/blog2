@@ -10,7 +10,7 @@ trucs de CSS et de Jekyll que je ne connaissais pas."
 ---
 
 {:.encart}
-English version: [A new CSS and 5 tips to know]({% post_url 2019-12-17-new-css-tips-to-know %}).
+English version: [A new CSS and 5 tips to know]({% post_url 2019-12-17-new-css-tips-to-know %}){:hreflang="en"}.
 
 Pour la nouvelle année à venir, j'ai un peu rafraichi la charte graphique de mon
 blogue. Outre le côté "tout nouveau, tout beau", cela m'a permis de voir 2 ou 3

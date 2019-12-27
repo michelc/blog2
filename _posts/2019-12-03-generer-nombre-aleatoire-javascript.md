@@ -8,7 +8,7 @@ excerpt: "Comment générer un nombre aléatoire en JavaScript, mais aussi comme
 ---
 
 {:.encart}
-English version: [Generate a random number with JavaScript]({% post_url 2019-12-04-generate-random-number-javascript %}).
+English version: [Generate a random number with JavaScript]({% post_url 2019-12-04-generate-random-number-javascript %}){:hreflang="en"}.
 
 ## La méthode "Math.random()"
 

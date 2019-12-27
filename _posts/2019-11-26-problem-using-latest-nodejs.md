@@ -9,7 +9,7 @@ excerpt: "Until a few days ago, I've always used the latest version of Node. Usu
 ---
 
 {:.encart}
-Version en français : [De l'inconvénient d'utiliser aveuglément la dernière version de Node]({% post_url 2019-11-25-inconvenient-derniere-version-node-js %}).
+Version en français : [De l'inconvénient d'utiliser aveuglément la dernière version de Node]({% post_url 2019-11-25-inconvenient-derniere-version-node-js %}){:hreflang="fr"}.
 
 Since I started doing some testing with Node, I've always worked with the latest version of Node. And that's why I am used to do `choco upgrade -y nodejs` quite regularly.
 

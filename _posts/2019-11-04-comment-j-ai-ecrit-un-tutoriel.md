@@ -7,7 +7,7 @@ image: "/public/2019/ididitmyself.jpg"
 ---
 
 {:.encart}
-English version: [How I wrote a Node JS tutorial]({% post_url 2019-11-05-how-i-wrote-a-tutorial %}).
+English version: [How I wrote a Node JS tutorial]({% post_url 2019-11-05-how-i-wrote-a-tutorial %}){:hreflang="en"}.
 
 Il y a quelques semaines, je me suis lancé dans la rédaction d'un tutoriel sur
 le développement d'une application Node JS avec Express pour gérer une base de

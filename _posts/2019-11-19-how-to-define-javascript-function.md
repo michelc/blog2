@@ -9,7 +9,7 @@ excerpt: "A personal reminder post to list some of the JavaScript methods to def
 ---
 
 {:.encart}
-Version en français : [Comment définir une fonction JavaScript]({% post_url 2019-11-18-comment-definir-fonction-javascript %}).
+Version en français : [Comment définir une fonction JavaScript]({% post_url 2019-11-18-comment-definir-fonction-javascript %}){:hreflang="fr"}.
 
 As I always have a little trouble remembering everything and also because there is a little collection side that I like, here is a summary of the different ways that exist to define functions in JavaScript.
 

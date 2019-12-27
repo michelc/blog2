@@ -9,7 +9,7 @@ excerpt: "For the coming new year, I have refreshed the visual style of my blog.
 ---
 
 {:.encart}
-Version en français : [Nouvelle CSS et 5 trucs bons à savoir]({% post_url 2019-12-16-nouvelle-css-quelques-trucs %}).
+Version en français : [Nouvelle CSS et 5 trucs bons à savoir]({% post_url 2019-12-16-nouvelle-css-quelques-trucs %}){:hreflang="fr"}.
 
 For the coming new year, I have refreshed the visual style of my blog. Besides the "tout nouveau, tout beau" point, it allowed me to find 2 or 3 things from CSS and [Jekyll](https://jekyllrb.com/) that I didn't know.
 
@@ -185,7 +185,7 @@ And lately, I have sometimes used an "encart" div to display a table of contents
 </div>
 ```
 
-Well, that doesn't work... The Markdown code inside the `div` tag is not transformed into html :( For the simplest cases with only one link, I used to replace the `div.insert` tag by its Markdown equivalent, using the `{:.insert}` syntax:
+Well, that doesn't work... The Markdown code inside the `div` tag is not transformed into html :( For the simplest cases with only one link, I used to replace the `div.encart` tag by its Markdown equivalent, using the `{:.encart}` syntax:
 
 ```
 {:.encart}

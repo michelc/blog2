@@ -7,7 +7,7 @@ image: "/public/2019/grand-bain.jpg"
 ---
 
 {:.encart}
-English version: [Use SQlite3 in async / await mode]({% post_url 2019-10-29-use-sqlite-node-async-await %}).
+English version: [Use SQlite3 in async / await mode]({% post_url 2019-10-29-use-sqlite-node-async-await %}){:hreflang="en"}.
 
 Je continue ma série de tutoriels pour apprendre Node JS et plus
 particulièrement voir comment développer de petites applications web avec

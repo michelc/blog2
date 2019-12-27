@@ -8,7 +8,7 @@ image: "/public/2019/grand-bain.jpg"
 ---
 
 {:.encart}
-Version en français : [Utiliser SQlite3 en mode async / await]({% post_url 2019-10-21-utiliser-sqlite-node-async-await %}).
+Version en français : [Utiliser SQlite3 en mode async / await]({% post_url 2019-10-21-utiliser-sqlite-node-async-await %}){:hreflang="fr"}.
 
 I go on my series of tutorials to learn Node JS and more specifically how to develop small web applications with ExpressJS. I have already seen how to access a [SQlite]({% post_url 2019-10-08-crud-with-express-sqlite-10-steps %}) database, then [PostgreSQL]({% post_url 2019-10-15-crud-with-express-postgresql-10-steps %}). In the previous tutorial, I compared how to access [SQlite and PostgreSQL with Express]({% post_url 2019-10-22-comparing-sqlite-postgresql-express %}) to be able to write the same code to access both databases.
 

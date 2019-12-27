@@ -9,7 +9,7 @@ excerpt: "How to generate random numbers with Math.random() + How to force chanc
 ---
 
 {:.encart}
-Version en français : [Générer un nombre aléatoire en JavaScript]({% post_url 2019-12-03-generer-nombre-aleatoire-javascript %}).
+Version en français : [Générer un nombre aléatoire en JavaScript]({% post_url 2019-12-03-generer-nombre-aleatoire-javascript %}){:hreflang="fr"}.
 
 ## The "Math.random()" method
 

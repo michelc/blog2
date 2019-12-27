@@ -7,7 +7,7 @@ image: "/public/2019/elephant-bookshelf.jpg"
 ---
 
 {:.encart}
-English version: [CRUD application with Express and PostgresSQL in 10 steps]({% post_url 2019-10-15-crud-with-express-postgresql-10-steps %}).
+English version: [CRUD application with Express and PostgresSQL in 10 steps]({% post_url 2019-10-15-crud-with-express-postgresql-10-steps %}){:hreflang="en"}.
 
 Le but de ce projet ultra simple est de développer une application Node JS pour
 apprendre comment :

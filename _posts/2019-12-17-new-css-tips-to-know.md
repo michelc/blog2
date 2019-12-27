@@ -3,6 +3,7 @@ date: 2019-12-17 12:09:42+200
 layout: post
 tags: css
 title: "A new CSS and 5 tips to know"
+image: "/public/2019/sapin-de-noel.jpg"
 ---
 
 {:.encart}
@@ -11,7 +12,7 @@ Version en français : [Nouvelle CSS et 5 trucs bons à savoir]({% post_url 2019
 For the coming new year, I have refreshed the visual style of my blog. Besides the "tout nouveau, tout beau" point, it allowed me to find 2 or 3 things from CSS and [Jekyll](https://jekyllrb.com/) that I didn't know.
 
 <figure>
-  <img src="/public/2019/sapin-de-noel.jpg" alt="sapin-de-noel" />
+  <img src="{{ page.image }}" alt="sapin-de-noel" />
   <figcaption>
     <a href="https://unsplash.com/photos/ySNkCkdKyTY">Christmas tree - Rodion Kutsaev</a>
   </figcaption>

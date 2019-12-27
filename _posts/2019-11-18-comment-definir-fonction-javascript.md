@@ -3,6 +3,7 @@ date: 2019-11-18 12:31:14+200
 layout: post
 tags: javascript
 title: "Comment définir une fonction JavaScript"
+image: "/public/2019/butterfly-collection.jpg"
 ---
 
 {:.encart}
@@ -13,7 +14,7 @@ un petit côté collection que j'aime bien, voici un récapitulatif sommaire des
 différentes façons qui existent pour définir des fonctions en JavaScript.
 
 <figure>
-  <img src="/public/2019/butterfly-collection.jpg" alt="butterfly-collection" />
+  <img src="{{ page.image }}" alt="butterfly-collection" />
   <figcaption>
     <a href="https://unsplash.com/photos/X8pnAEjqmqI">Wall decorations with colorful butterflies - __ drz __</a>
   </figcaption>

@@ -3,6 +3,7 @@ date: 2019-11-04 12:26:04+200
 layout: post
 tags: javascript, tutoriel
 title: "Comment j'ai écrit un tutoriel Node JS"
+image: "/public/2019/ididitmyself.jpg"
 ---
 
 {:.encart}
@@ -16,7 +17,7 @@ et j'ai fait un peu de publicité dessus en espérant que ça puisse servir à
 d'autres que moi.
 
 <figure>
-  <img src="/public/2019/ididitmyself.jpg" alt="#ididitmyself" />
+  <img src="{{ page.image }}" alt="#ididitmyself" />
   <figcaption>
     <a href="https://commons.wikimedia.org/wiki/File:Dirty_dishes.jpg">C'est moi qui l'ait fait !</a>
   </figcaption>

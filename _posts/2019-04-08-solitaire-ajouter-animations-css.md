@@ -3,6 +3,7 @@ date: 2019-04-08 12:29:24
 layout: post
 tags: javascript
 title: "Solitaire - Ajouter des animations CSS"
+image: "/public/2019/animation.jpg"
 ---
 
 <div class="encart" markdown="1">
@@ -20,7 +21,7 @@ solitaires et aux évolutions que je souhaite y apporter :
 </div>
 
 <figure>
-  <img src="/public/2019/animation.jpg" alt="victoire-solitaire" />
+  <img src="{{ page.image }}" alt="victoire-solitaire" />
   <figcaption>
     <a href="http://www.skrekkogle.com/projects/solitaire/">Skrekkogle - Solitaire Win Sculpture</a>
   </figcaption>

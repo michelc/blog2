@@ -3,6 +3,7 @@ date: 2019-11-19 12:22:52+200
 layout: post
 tags: javascript
 title: "How to define a JavaScript function"
+image: "/public/2019/butterfly-collection.jpg"
 ---
 
 {:.encart}
@@ -11,7 +12,7 @@ Version en français : [Comment définir une fonction JavaScript]({% post_url 20
 As I always have a little trouble remembering everything and also because there is a little collection side that I like, here is a summary of the different ways that exist to define functions in JavaScript.
 
 <figure>
-  <img src="/public/2019/butterfly-collection.jpg" alt="butterfly-collection" />
+  <img src="{{ page.image }}" alt="butterfly-collection" />
   <figcaption>
     <a href="https://unsplash.com/photos/X8pnAEjqmqI">Wall decorations with colorful butterflies - __ drz __</a>
   </figcaption>

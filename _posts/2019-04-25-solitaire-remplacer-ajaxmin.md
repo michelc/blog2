@@ -3,6 +3,7 @@ date: 2019-04-25 12:19:02
 layout: post
 tags: javascript
 title: "Solitaire - Remplacer AjaxMin, etc..."
+image: "/public/2019/printemps.jpg"
 ---
 
 <div class="encart" markdown="1">
@@ -20,7 +21,7 @@ solitaires et aux évolutions que je souhaite y apporter :
 </div>
 
 <figure>
-  <img src="/public/2019/printemps.jpg" alt="printemps" />
+  <img src="{{ page.image }}" alt="printemps" />
 </figure>
 
 Lorsque j'aurai réussi à réaliser tout ce que j'ai en vue dans les billets

@@ -3,6 +3,7 @@ date: 2019-10-22 12:20:34+200
 layout: post
 tags: javascript, node, sql
 title: "Comparing SQlite or PostgreSQL with Express"
+image: "/public/2019/microscope.jpg"
 ---
 
 {:.encart}
@@ -11,7 +12,7 @@ Version en français : [Comparaison de l'utilisation de SQlite ou PostgreSQL ave
 After writing two tutorials on Express to access [SQlite]({% post_url 2019-10-08-crud-with-express-sqlite-10-steps %}) and [PostgreSQL]({% post_url 2019-10-15-crud-with-express-postgresql-10-steps %}) databases, I realized that there were not such big gaps between the two systems.
 
 <figure>
-  <img src="/public/2019/microscope.jpg" alt="microscope" />
+  <img src="{{ page.image }}" alt="microscope" />
   <figcaption>
     <a href="https://unsplash.com/photos/6q5QG8iIgRo">Observing samples under the microscope - Trust "Tru" Katsande</a>
   </figcaption>

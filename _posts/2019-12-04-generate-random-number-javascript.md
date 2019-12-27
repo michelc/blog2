@@ -3,6 +3,7 @@ date: 2019-12-04 12:23:15+200
 layout: post
 tags: javascript
 title: "Generate a random number with JavaScript"
+image: "/public/2019/xkcd-221.jpg"
 ---
 
 {:.encart}
@@ -11,7 +12,7 @@ Version en français : [Générer un nombre aléatoire en JavaScript]({% post_ur
 ### The "Math.random()" method
 
 <figure>
-  <img src="/public/2019/xkcd-221.jpg" alt="random-number" />
+  <img src="{{ page.image }}" alt="random-number" />
   <figcaption>
     <a href="https://xkcd.com/221/">XKCD #221 - Random Number</a>
   </figcaption>

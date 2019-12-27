@@ -3,6 +3,7 @@ date: 2019-11-26 12:28:44+200
 layout: post
 tags: javascript
 title: "The problem with blindly using the latest Node"
+image: "/public/2019/le-corniaud.jpg"
 ---
 
 {:.encart}
@@ -11,7 +12,7 @@ Version en français : [De l'inconvénient d'utiliser aveuglément la dernière 
 Since I started doing some testing with Node, I've always worked with the latest version of Node. And that's why I am used to do `choco upgrade -y nodejs` quite regularly.
 
 <figure>
-  <img src="/public/2019/le-corniaud.jpg" alt="le-corniaud" />
+  <img src="{{ page.image }}" alt="le-corniaud" />
   <figcaption>
     <a href="https://en.wikipedia.org/wiki/The_Sucker">It will not work as well... - Le Corniaud</a>
   </figcaption>

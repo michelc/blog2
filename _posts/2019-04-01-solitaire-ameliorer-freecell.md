@@ -3,6 +3,7 @@ date: 2019-04-01 13:34:26
 layout: post
 tags: javascript
 title: "Solitaire - Améliorer FreeCell"
+image: "/public/2019/freecell.jpg"
 ---
 
 <div class="encart" markdown="1">
@@ -20,7 +21,7 @@ solitaires et aux évolutions que je souhaite y apporter :
 </div>
 
 <figure>
-  <img src="/public/2019/freecell.jpg" alt="microsoft-freecell" />
+  <img src="{{ page.image }}" alt="microsoft-freecell" />
   <figcaption>Microsoft FreeCell - Windows 3.1</figcaption>
 </figure>
 

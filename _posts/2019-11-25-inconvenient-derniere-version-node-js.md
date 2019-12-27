@@ -3,6 +3,7 @@ date: 2019-11-25 12:16:55+200
 layout: post
 tags: javascript
 title: "De l'inconvénient d'utiliser aveuglément la dernière version de Node"
+image: "/public/2019/le-corniaud.jpg"
 ---
 
 {:.encart}
@@ -13,7 +14,7 @@ travaillé avec la toute dernière version de Node. Pour cela, j'ai l'habitude d
 faire des `choco upgrade -y nodejs` assez régulièrement.
 
 <figure>
-  <img src="/public/2019/le-corniaud.jpg" alt="le-corniaud" />
+  <img src="{{ page.image }}" alt="le-corniaud" />
   <figcaption>
     <a href="https://fr.wikipedia.org/wiki/Le_Corniaud">Elle va marcher beaucoup moins bien... - Le Corniaud</a>
   </figcaption>

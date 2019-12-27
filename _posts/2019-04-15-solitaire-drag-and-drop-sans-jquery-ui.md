@@ -3,6 +3,7 @@ date: 2019-04-15 12:32:26
 layout: post
 tags: javascript
 title: "Solitaire - Drag and drop sans jQuery UI"
+image: "/public/2019/drag-and-drop.jpg"
 ---
 
 <div class="encart" markdown="1">
@@ -20,7 +21,7 @@ solitaires et aux évolutions que je souhaite y apporter :
 </div>
 
 <figure>
-  <img src="/public/2019/drag-and-drop.jpg" alt="drag-and-drop" />
+  <img src="{{ page.image }}" alt="drag-and-drop" />
 </figure>
 
 A assez long terme par rapport à tout le reste (remplacer jQuery, terminr

@@ -3,6 +3,7 @@ date: 2019-09-11 12:14:22
 layout: post
 tags: javascript, node, sql
 title: "Application CRUD avec Express et SQlite en 10 étapes"
+image: "/public/2019/library-bookshelf.jpg"
 ---
 
 {:.encart}
@@ -15,7 +16,7 @@ apprendre comment :
 * Gérer la mise à jour d'une base de données SQL (SQlite en l'occurence).
 
 <figure>
-  <img src="/public/2019/library-bookshelf.jpg" alt="library-bookshelf" />
+  <img src="{{ page.image }}" alt="library-bookshelf" />
   <figcaption>
     <a href="https://www.flickr.com/photos/opengridscheduler/22468805072">Library Bookshelf - Open Grid Scheduler</a>
   </figcaption>

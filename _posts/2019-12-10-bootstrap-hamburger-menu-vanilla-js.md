@@ -3,6 +3,7 @@ date: 2019-12-10 12:24:10+200
 layout: post
 tags: javascript, bootstrap
 title: "Switch Bootstrap 4 hamburger menu with Vanilla JS"
+image: "/public/2019/hamburger-menu.jpg"
 ---
 
 {:.encart}
@@ -13,7 +14,7 @@ Version en français : [Gérer le menu hamburger de Bootstrap 4 en Vanilla JS]({
 Some weeks ago, I wrote a small ASP.NET MVC application where I already have to [Search and filter a table with JavaScript]({% post_url 2019-10-01-search-filter-table-javascript %}).
 
 <figure>
-  <img src="/public/2019/hamburger-menu.jpg" alt="hamburger-menu" />
+  <img src="{{ page.image }}" alt="hamburger-menu" />
   <figcaption>
     <a href="https://unsplash.com/photos/Nb_Q-M3Cdzg">Hamburger with a beer - Edward Franklin</a>
   </figcaption>

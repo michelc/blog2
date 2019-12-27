@@ -4,10 +4,18 @@ layout: post
 redirect_from: "post/2007/05/30/Mise-a-jour-dune-table-a-partir-dune-autre"
 tags: code-snippets, sql
 title: "Mise à jour d'une table à partir d'une autre"
+image: "/public/2019/sql-database.jpg"
 ---
 
 {:.encart}
 English version: [Updating a table from another table]({% post_url 2019-12-23-update-table-from-another-table %}).
+
+<figure>
+  <img src="{{ page.image }}" alt="sql-database" />
+  <figcaption>
+    <a href="https://dbdiagram.io/">dbdiagram.io</a>
+  </figcaption>
+</figure>
 
 Pour mettre à jour un champ d'une table à partir du champ équivalent d'une
 autre table, Access accepte deux noms de tables pour la commande UPDATE, mais

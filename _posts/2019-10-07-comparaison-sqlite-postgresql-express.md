@@ -3,6 +3,7 @@ date: 2019-10-07 12:36:44
 layout: post
 tags: javascript, node, sql
 title: "Comparaison de l'utilisation de SQlite ou PostgreSQL avec Express"
+image: "/public/2019/microscope.jpg"
 ---
 
 {:.encart}
@@ -15,7 +16,7 @@ j'ai pu me rendre compte qu'il n'y avait pas de si gros écarts que çà entre l
 deux systèmes.
 
 <figure>
-  <img src="/public/2019/microscope.jpg" alt="microscope" />
+  <img src="{{ page.image }}" alt="microscope" />
   <figcaption>
     <a href="https://unsplash.com/photos/6q5QG8iIgRo">Observing samples under the microscope - Trust "Tru" Katsande</a>
   </figcaption>

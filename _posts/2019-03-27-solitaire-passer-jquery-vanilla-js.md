@@ -3,6 +3,7 @@ date: 2019-03-27 12:22:32
 layout: post
 tags: javascript
 title: "Solitaire - Passer de jQuery à Vanilla JS"
+image: "/public/2019/vanille.jpg"
 ---
 
 <div class="encart" markdown="1">
@@ -20,7 +21,7 @@ solitaires et aux évolutions que je souhaite y apporter :
 </div>
 
 <figure>
-  <img src="/public/2019/vanille.jpg" alt="vanille-bourbon" />
+  <img src="{{ page.image }}" alt="vanille-bourbon" />
   <figcaption>Vanille Bourbon - La Réunion</figcaption>
 </figure>
 

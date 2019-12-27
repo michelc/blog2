@@ -3,6 +3,7 @@ date: 2019-11-05 12:11:04+200
 layout: post
 tags: javascript, tutoriel
 title: "How I wrote a Node JS tutorial"
+image: "/public/2019/ididitmyself.jpg"
 ---
 
 {:.encart}
@@ -11,7 +12,7 @@ Version en français : [Comment j'ai écrit un tutoriel Node JS]({% post_url 201
 A few weeks ago, I started writing a tutorial on developing a Node JS application with Express to manage an SQlite database. I published it on my blog under the title [CRUD Application with Express and SQlite in 10 steps]({% post_url 2019-10-08-crud-with-express-sqlite-10-steps %}) and I did some publicity about it in the hope that it could be used by others.
 
 <figure>
-  <img src="/public/2019/ididitmyself.jpg" alt="#ididitmyself" />
+  <img src="{{ page.image }}" alt="#ididitmyself" />
   <figcaption>
     <a href="https://commons.wikimedia.org/wiki/File:Dirty_dishes.jpg">C'est moi qui l'ait fait !</a>
   </figcaption>

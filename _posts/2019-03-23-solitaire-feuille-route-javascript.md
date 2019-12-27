@@ -3,6 +3,7 @@ date: 2019-03-23 15:52:52
 layout: post
 tags: javascript
 title: "Solitaire - Feuille de route JavaScript"
+image: "/public/2019/solitaire.jpg"
 ---
 
 J'ai un peu beaucoup délaissé ce blog parce que j'ai lancé un site de jeux de solitaire,
@@ -10,7 +11,7 @@ J'ai un peu beaucoup délaissé ce blog parce que j'ai lancé un site de jeux de
 la rédaction ou la traduction de billets...
 
 <figure>
-  <img src="/public/2019/solitaire.jpg" alt="joueuse-solitaire" />
+  <img src="{{ page.image }}" alt="joueuse-solitaire" />
   <figcaption>Paul Emile Félix - Le Solitaire</figcaption>
 </figure>
 

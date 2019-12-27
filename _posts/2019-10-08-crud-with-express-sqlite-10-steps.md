@@ -3,6 +3,7 @@ date: 2019-10-08 12:20:34
 layout: post
 tags: javascript, node, sql
 title: "CRUD application with Express and SQlite in 10 steps"
+image: "/public/2019/library-bookshelf.jpg"
 ---
 
 {:.encart}
@@ -14,7 +15,7 @@ The goal of this very simple project is to develop a Node JS application to lear
 * Manage an SQL database (SQlite in this case).
 
 <figure>
-  <img src="/public/2019/library-bookshelf.jpg" alt="library-bookshelf" />
+  <img src="{{ page.image }}" alt="library-bookshelf" />
   <figcaption>
     <a href="https://www.flickr.com/photos/opengridscheduler/22468805072">Library Bookshelf - Open Grid Scheduler</a>
   </figcaption>

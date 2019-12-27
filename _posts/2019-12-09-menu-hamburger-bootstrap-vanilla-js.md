@@ -3,6 +3,7 @@ date: 2019-12-09 12:24:10+200
 layout: post
 tags: javascript, bootstrap
 title: "Gérer le menu hamburger de Bootstrap 4 en Vanilla JS"
+image: "/public/2019/hamburger-menu.jpg"
 ---
 
 ### Présentation
@@ -12,7 +13,7 @@ laquelle j'ai déjà eu besoin de [filtrer les tables en JavaScript]({% post_url
 2019-09-30-rechercher-filtrer-table-javascript %}).
 
 <figure>
-  <img src="/public/2019/hamburger-menu.jpg" alt="hamburger-menu" />
+  <img src="{{ page.image }}" alt="hamburger-menu" />
   <figcaption>
     <a href="https://unsplash.com/photos/Nb_Q-M3Cdzg">Hamburger with a beer - Edward Franklin</a>
   </figcaption>

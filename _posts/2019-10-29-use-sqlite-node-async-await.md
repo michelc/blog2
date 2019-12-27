@@ -3,6 +3,7 @@ date: 2019-10-29 12:33:18+200
 layout: post
 tags: javascript, node, sql
 title: "Use SQlite3 in async / await mode"
+image: "/public/2019/grand-bain.jpg"
 ---
 
 {:.encart}
@@ -13,7 +14,7 @@ I go on my series of tutorials to learn Node JS and more specifically how to dev
 In this tutorial, I will modify the existing code so that I no longer have to use a callback function when I make a query on the database.
 
 <figure>
-  <img src="/public/2019/grand-bain.jpg" alt="grand-bain" />
+  <img src="{{ page.image }}" alt="grand-bain" />
   <figcaption>
     <a href="https://www.rottentomatoes.com/m/sink_or_swim_2018">Sink or Swim - Gilles Lellouche</a>
   </figcaption>

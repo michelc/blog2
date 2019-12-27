@@ -3,6 +3,7 @@ date: 2019-10-21 12:12:36+200
 layout: post
 tags: javascript, node, sql
 title: "Utiliser SQlite3 en mode async / await"
+image: "/public/2019/grand-bain.jpg"
 ---
 
 {:.encart}
@@ -21,7 +22,7 @@ Dans ce tutoriel, je vais modifier le code existant pour ne plus avoir à
 utiliser de fonction callback quand je fais une requête sur la base de données.
 
 <figure>
-  <img src="/public/2019/grand-bain.jpg" alt="grand-bain" />
+  <img src="{{ page.image }}" alt="grand-bain" />
   <figcaption>
     <a href="https://fr.wikipedia.org/wiki/Le_Grand_Bain_(film)">Le Grand Bain - Gilles Lellouche</a>
   </figcaption>

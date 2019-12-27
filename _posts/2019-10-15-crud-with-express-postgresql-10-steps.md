@@ -3,6 +3,7 @@ date: 2019-10-15 10:59:46
 layout: post
 tags: javascript, node, sql
 title: "CRUD application with Express and PostgresSQL in 10 steps"
+image: "/public/2019/elephant-bookshelf.jpg"
 ---
 
 {:.encart}
@@ -14,7 +15,7 @@ The goal of this very simple project is to develop a Node JS application to lear
 * Manage an SQL database (PostgresSQL in this case).
 
 <figure>
-  <img src="/public/2019/elephant-bookshelf.jpg" alt="elephant-bookshelf" />
+  <img src="{{ page.image }}" alt="elephant-bookshelf" />
   <figcaption>
     <a href="https://www.instagram.com/victorzastolskiy/">An elephant in the room with book shelves - Victor Zastolskiy</a>
   </figcaption>

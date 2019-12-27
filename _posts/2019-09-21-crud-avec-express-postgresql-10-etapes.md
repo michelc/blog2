@@ -3,6 +3,7 @@ date: 2019-09-21 15:11:46
 layout: post
 tags: javascript, node, sql
 title: "Application CRUD avec Express et PostgreSQL en 10 étapes"
+image: "/public/2019/elephant-bookshelf.jpg"
 ---
 
 {:.encart}
@@ -15,7 +16,7 @@ apprendre comment :
 * Gérer la mise à jour d'une base de données SQL (PostgreSQL en l'occurence).
 
 <figure>
-  <img src="/public/2019/elephant-bookshelf.jpg" alt="elephant-bookshelf" />
+  <img src="{{ page.image }}" alt="elephant-bookshelf" />
   <figcaption>
     <a href="https://www.instagram.com/victorzastolskiy/">An elephant in the room with book shelves - Victor Zastolskiy</a>
   </figcaption>

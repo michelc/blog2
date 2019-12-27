@@ -8,7 +8,7 @@ title: "Migration de Altrr-Press de .NET 1 vers .NET 2"
 
 ## Carnet de route
 
-#### Les pré-requis
+### Les pré-requis
 
 * Renommer les projets, les assemblys et les namespaces de qc.  - en ap.*
 * Supprimer les trucs inutiles :
@@ -26,7 +26,7 @@ Premier bon point : à part le renommage, je suis maintenant quasiment
 bon sur tout et je peux donc considérer que j'ai une version 1.0 "finie" sous
 ASP.NET 1.
 
-#### Comment faire
+### Comment faire
 
 Dans un premier temps, juste pour tester :
 
@@ -78,7 +78,7 @@ Altrr-Press sous Visual Studio 2005 ne génère plus que 47 avertissements. Et i
 me suffit de quelques modifications très simples pour ramener ce nombre à
 13.
 
-#### Page_Load() ne s'éxécute plus (pas signalé !!!)
+### Page_Load() ne s'éxécute plus (pas signalé !!!)
 
 C'est un problème critique parce que sans ça Altrr-Press ne fonctionne pas
 du tout puisque c'est dans le Page_Load() de default.aspx.cs que sont chargées
@@ -100,7 +100,7 @@ default.aspx au niveau des chartes graphiques et que ceux-ci héritent de
 qui n'est pas doué, c'est moi qui suis [trop tordu](http://www.dailymotion.com/video/x1a9w5_cest-etudie-pour_fun)
 pour eux).
 
-#### ConfigurationSettings n'existe plus (29 avertissements)
+### ConfigurationSettings n'existe plus (29 avertissements)
 
 * il suffit de faire un remplacer dans tous les fichiers de
 ConfigurationSettings.AppSettings par ConfigurationManager.AppSettings
@@ -111,7 +111,7 @@ défaut) et DIR_levelTwo (75 par défaut) qui en fait sont rarement paramétrés
 autrement => modifié ap.Department pour renvoyer des constantes et ne plus
 avoir besoin de ConfigurationSettings
 
-#### Instancier une Hashtable (1 avertissement)
+### Instancier une Hashtable (1 avertissement)
 
 C# 2 n'aime pas que j'utilise :
 
@@ -134,7 +134,7 @@ tester.
 De toute façon, dans un second temps l'utilisation des Hashtables devrait
 être avantageusement remplacée par des classes génériques.
 
-#### Blocs de scripts clients (4 avertissements)
+### Blocs de scripts clients (4 avertissements)
 
 En gros, il n'existe plus Page.RegisterClientScriptBlock(...) et autres et
 il faut maintenant utiliser
@@ -144,7 +144,7 @@ Donc là aussi, ajout des deux méthodes Common.RegisterClientScript() et
 Common.RegisterStartupScript() pour éviter l'éparpillement et faciliter la
 migration vers .NET 2 de façon à ne faire le remplacement qu'à un endroit.
 
-#### Envois de méls (10 avertissements)
+### Envois de méls (10 avertissements)
 
 Comme System.Web.Mail n'est plus en odeur de sainteté, il faut maintenant
 utiliser System.Net.Mail à la place puis faire toutes les modifications qui en
@@ -155,7 +155,7 @@ encore dans tous les cas (ouille!).
 Pour l'instant, pour faciliter les essais entre .NET 1 et .NET 2, je reste
 avec System.Web.Mail => il y toujours 10 avertissements.
 
-#### Problèmes XML (3 avertissements)
+### Problèmes XML (3 avertissements)
 
 'System.Web.UI.WebControls.Xml.Document' est obsolète : 'The
 recommended alternative is the XPathNavigator property. Create a

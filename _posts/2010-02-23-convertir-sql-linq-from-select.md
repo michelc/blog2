@@ -37,14 +37,14 @@ les colonnes de la table. En ce qui concerne LINQ, il suffit d'utiliser la
 clause `select alias` pour renvoyer tous les membres de l'objet
 requêté :
 
-#### SQL
+### SQL
 
 ```
 SELECT *
 FROM   ClientTable
 ```
 
-#### LINQ
+### LINQ
 
 ```
 from Contact in ClientListe
@@ -59,14 +59,14 @@ de la table source par l'intermédiaire de cet alias. Comme nous l'avons vu dans
 le paragraphe précédent, l'identifiant qui est défini au niveau de la clause
 from en LINQ sert lui aussi essentiellement à cela :
 
-#### SQL
+### SQL
 
 ```
 SELECT Contact.ClientID, Contact.Telephone
 FROM   ClientTable Contact
 ```
 
-#### LINQ
+### LINQ
 
 ```
 from Contact in ClientListe
@@ -88,14 +88,14 @@ exemple `3 + 4`). S'il n'est pas possible de déduire le nom d'un membre
 que vous avez sélectionné, vous devrez utiliser un alias (voir le paragraphe
 suivant).
 
-#### SQL
+### SQL
 
 ```
 SELECT Nom, ClientID
 FROM   ClientTable Contact
 ```
 
-#### LINQ
+### LINQ
 
 ```
 from Contact in ClientListe
@@ -111,14 +111,14 @@ façon, LINQ vous permet de donner un nom aux éléments que vous sélectionnez,
 qui vous permettra par la suite d'utiliser ce nom faire référence à ces
 éléments lorsque vous exploiterez le résultat de la requête LINQ.
 
-#### SQL
+### SQL
 
 ```
 SELECT Nom NomContact, ClientID ContactID
 FROM   ClientTable Contact
 ```
 
-#### LINQ
+### LINQ
 
 ```
 from Contact in ClientListe

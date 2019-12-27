@@ -49,7 +49,7 @@ Note: I have since written a second tutorial like this one, but by connecting to
 ## 1. Create a new Node project
 
 
-#### Create a folder for the project
+### Create a folder for the project
 
 You can start at the command line (or "Command prompt" in Windows):
 
@@ -61,7 +61,7 @@ E:\Code> mkdir AppTest
 This creates a sub-folder "AppTest" in my "E:\Code" directory that is used to test different things.
 
 
-#### Open the folder with Visual Code
+### Open the folder with Visual Code
 
 Always on the command line, launch Visual Code to open the "AppTest" folder:
 
@@ -73,7 +73,7 @@ E:\Code\AppTest> code .
 From there, the Windows command prompt is no longer useful and can be closed. The rest will take place in Visual Code or in its terminal.
 
 
-#### Initiate the Node project
+### Initiate the Node project
 
 To do this, open the Visual Code terminal and run the `npm init` command:
 
@@ -115,7 +115,7 @@ In Visual Code, the "package.json" file created by NPM now appears in the root f
 ## 2. Add modules to the Node project
 
 
-#### Technical choices
+### Technical choices
 
 The objective of this tutorial is to test the development of a web-based Node application. To do this, you must install [Express](https://expressjs.com/) because it is the most commonly used Node framework for this type of application.
 
@@ -124,7 +124,7 @@ Express needs a template system to generate views. To avoid complicating things,
 To manage the database as simply as possible, [SQlite](https://sqlite.org/) will be sufficient. Above all, it's the easiest thing to do: no server to install and no problems under Windows. With Node JS, it is the SQlite3 module that serves as the interface for SQlite.
 
 
-#### Install dependencies
+### Install dependencies
 
 This is done in the command line, in the Visual Code terminal:
 
@@ -165,7 +165,7 @@ When the installation of these three dependencies (and their own dependencies) i
 Note: In older tutorials, we still see the syntax `npm install --save xxxxx` to save the list of dependencies in the "package.json" file, but this is no longer necessary since NPM version 5.
 
 
-#### The "node_modules" folder
+### The "node_modules" folder
 
 The "node_modules" subdirectory is used by NPM to store all the dependency files of a Node project.
 
@@ -194,7 +194,7 @@ PS E:\Code\AppTest> npm install
 ## 3. Create the Express application
 
 
-#### Check that it can work...
+### Check that it can work...
 
 To be sure that everything is installed correctly, the safest way is to start with a "index.js" file with a minimum content:
 
@@ -236,7 +236,7 @@ The message "Hello world..." should appear as below:
 It's OK => stop the server by typing Ctrl+C in the Visual Code terminal.
 
 
-#### How does it work?
+### How does it work?
 
 The first line references / imports the Express module.
 
@@ -269,7 +269,7 @@ app.get("/", (req, res) => { {
 Roughly speaking...
 
 
-#### And more precisely?
+### And more precisely?
 
 It doesn't seem so, but the `app.get()` method does a lot of things in only 3 lines of code.
 
@@ -300,7 +300,7 @@ In our program, the answer will be the text "Hello world..." that is sent using 
 Note: It's quite technical for this tutorial.
 
 
-#### Improve the launch of the Node application
+### Improve the launch of the Node application
 
 Let's get back to simpler things. In the "scripts" section of the "package.json" file, it is recommended to add a line to "automate" the launch of the Node application:
 
@@ -362,7 +362,7 @@ In the case of the view corresponding to the request to the site root (i.e. a "G
 Note: These three files must be saved in a "views" folder, which must therefore be created first.
 
 
-#### Partial view "views/_header.ejs"
+### Partial view "views/_header.ejs"
 
 ```erb
 <!doctype html>
@@ -396,7 +396,7 @@ Note: These three files must be saved in a "views" folder, which must therefore 
 ```
 
 
-#### View "views/index.ejs"
+### View "views/index.ejs"
 
 ```erb
 <%- include("_header") -%>
@@ -407,7 +407,7 @@ Note: These three files must be saved in a "views" folder, which must therefore 
 ```
 
 
-#### Partial view "views/_footer_.ejs"
+### Partial view "views/_footer_.ejs"
 
 ```erb
     <footer>
@@ -424,7 +424,7 @@ Note: These three files must be saved in a "views" folder, which must therefore 
 Note: Apart from the two `<%- include(partial_view) -%>`, it is only HTML. This is one of the advantages of EJS over other template engines to avoid having to get distracted when you start.
 
 
-#### Add a style sheet
+### Add a style sheet
 
 As you can see in the three views above, they refer to Bootstrap 4.
 
@@ -437,7 +437,7 @@ To do this, you have to create a "public" folder in which you create a sub-folde
 
 Note: If this had not been done at the beginning of the project, it would have been necessary to install the "EJS" module by an `npm install ejs` to be able to use it.
 
-#### Changes to "index.js"
+### Changes to "index.js"
 
 To use the views created in the Express application, you need to modify the "index.js" file a little.
 
@@ -481,7 +481,7 @@ app.get("/", (req, res) => { {
 ```
 
 
-#### Check that it works
+### Check that it works
 
 * Make an `npm start` in the Visual Code terminal
 * Navigate to "http://localhost:3000/" with Chrome
@@ -490,7 +490,7 @@ app.get("/", (req, res) => { {
 ![Home page with the "index.ejs" view](/public/2019/crud-02-vues.png)
 
 
-#### Add the "/about" path
+### Add the "/about" path
 
 The application's navigation bar contains an "About" choice that sends to the URL "http://localhost:3000/about". This menu is defined in the "nav" part of the partial view "_header.ejs", but for the moment, nothing exists to manage this route.
 
@@ -524,7 +524,7 @@ app.get("/about", (req, res) => {
 ![About page with the "about.ejs" view](/public/2019/crud-03-about.png)
 
 
-#### Send data from the server to the view
+### Send data from the server to the view
 
 The application's navigation bar also contains the "Data" choice that sends to the URL "http://localhost:3000/data". This URL will be used to see how to "inject" data into the view from the program.
 
@@ -565,7 +565,7 @@ And now, when you navigate to "http://localhost:3000/data" after restarting the 
 ![Data sent to the view](/public/2019/crud-04-data.png)
 
 
-#### The updated "index.js" file
+### The updated "index.js" file
 
 ```javascript
 const express = require("express");
@@ -613,7 +613,7 @@ app.get("/data", (req, res) => {
 Note: If this had not been done at the beginning of the project, it would have been necessary to install the SQlite3 module by an `npm install sqlite3` to be able to access a SQlite database under Node.
 
 
-#### Declare the SQlite3 module
+### Declare the SQlite3 module
 
 First, refer to "sqlite3" at the top of the "index.js" program, with the other two declarations for "express" and "path".
 
@@ -624,7 +624,7 @@ const sqlite3 = require("sqlite3").verbose();
 The ".verbose()" method allows you to have more information in case of a problem.
 
 
-#### Connection to the SQlite database
+### Connection to the SQlite database
 
 Then add the code to connect to the database just before starting the Express server.
 
@@ -643,7 +643,7 @@ The database will be saved in the "data" folder, under the name "apptest.db". It
 After this code has been executed, the variable "db" is a `Database` object from the SQlite3 module which represents the connection to the database. This object will later be used to access the contents of the database and to make queries on this database.
 
 
-#### Creating a "Books" table
+### Creating a "Books" table
 
 For this tutorial, we will create a table of books with 4 columns:
 
@@ -690,7 +690,7 @@ This code uses the `.run()` method of the `Database` object fom the SQlite3 modu
 Note: The table will only be created if it does not exist yet, thanks to the SQL clause "IF NOT EXISTS". It wouldn't be great for a real application, right now it's just a tutorial.
 
 
-#### Seeding the "Books" table
+### Seeding the "Books" table
 
 To facilitate the next parts of this tutorial, it is more convenient to insert a few books in the database. Under SQlite, we could make the following query:
 
@@ -728,7 +728,7 @@ Now, the "Books" table contains the following 3 lines:
 ![Contents of the Books table](/public/2019/crud-00-livres.png)
 
 
-#### Display the list of books
+### Display the list of books
 
 Now that our "Books" table contains some data, it is possible to create a method for the URL "http://localhost:3000/books" of the site in order to read the list of books stored in the database and display this list in the view.
 
@@ -781,7 +781,7 @@ After restarting the application with `npm start`, the following result is obtai
 Note: Be careful and write "book.Title" and not "book.title" because the "Books" table was created using capital letters as initials for column names.
 
 
-#### Display books in tabular form
+### Display books in tabular form
 
 Now that the method for displaying the list of books works, we will improve the presentation of these data. The view from the previous step used a simple "ul / li" list to display the books. The code in this view "books.ejs" will be completely modified to use an HTML table.
 
@@ -835,7 +835,7 @@ The advantage of this new view is to provide [Add], [Edit] and [Delete] buttons 
 This part of the tutorial will show you how to modify an existing record. We will start by creating the necessary views to enter the information of the book to be updated. Then we will code a method to display the input form when the GET /edit/xxx route is called (by clicking on the [Edit] button in the book list). And finally, a method corresponding to the POST /edit/xxx route will be used to update the database when the user validates the changes(by clicking the [Update] button at the bottom of the input form).
 
 
-#### The "views/edit.ejs" and "views/_editor.ejs" views
+### The "views/edit.ejs" and "views/_editor.ejs" views
 
 The main view for editing a book is a fairly classic Bootstrap form.
 
@@ -888,7 +888,7 @@ The previous view uses the partial view "_editor.ejs" which contains the HTML co
 ```
 
 
-#### The GET /edit/xxx route
+### The GET /edit/xxx route
 
 You must then code a first route to display the book to be modified when responding to the GET /edit/xxx request (when the user has clicked on an [Edit] button in the book list).
 
@@ -913,7 +913,7 @@ After restarting the server, here is the input form that now appears when the us
 ![Book updating form](/public/2019/crud-07-edit.png)
 
 
-#### The POST /edit/xxx route
+### The POST /edit/xxx route
 
 And finally, all that remains is to code the route to save the changes made to the record, during the POST /edit/xxx request. The "post" occurs when the user validates his entry by clicking on the [Update] button on the input form.
 
@@ -941,7 +941,7 @@ app.post("/edit/:id", (req, res) => {
 Note: With a real application, it is essential to have a client-side and server-side input control, but this is not the subject of this tutorial.
 
 
-#### The middleware "express.urlencoded()"
+### The middleware "express.urlencoded()"
 
 As mentioned in the previous section, it is necessary to use the middleware "express.urlencoded()" so that `Request.body` retrieves the posted values. This is simply done by an `app.use()` when configuring the server.
 
@@ -963,7 +963,7 @@ Note: There are examples that still use the "body-parser" module instead, but th
 ## 8. Create a new row
 
 
-#### The "views/create.ejs" view
+### The "views/create.ejs" view
 
 The main view for creating a new book is very similar to the coded view for updating a record. Like it, it uses the partial view "_editor.ejs" for the different input fields.
 
@@ -991,7 +991,7 @@ The main view for creating a new book is very similar to the coded view for upda
 ```
 
 
-#### The GET /create route
+### The GET /create route
 
 Compared to edit, this function is much simpler. It just returns the "create.ejs" view by sending it an empty "book" object (because the partial view "_editor.ejs" expects such an object).
 
@@ -1019,7 +1019,7 @@ As can be seen below, the entry form for adding a new book is quite similar to t
 ![Book creation form](/public/2019/crud-08-create.png)
 
 
-#### The POST /create route
+### The POST /create route
 
 When the user clicks on the [Save] button to validate their input, the browser sends a "post" request to this route. The method associated with it is very similar to the one used to modify a book:
 
@@ -1045,7 +1045,7 @@ app.post("/create", (req, res) => {
 ## 9. Delete a row
 
 
-#### The "views/delete.ejs" and "views/_display.ejs" views
+### The "views/delete.ejs" and "views/_display.ejs" views
 
 The main view to be able to delete a record must first display the information of the selected book to allow the user to confirm its deletion in full knowledge. It therefore looks a lot like the "edit.ejs" and "create.ejs" views.
 
@@ -1099,7 +1099,7 @@ This view uses the partial view "_display.ejs" which contains the HTML code to d
 
 If the "Books" table contained more columns than can be displayed in the book list, this "_display.ejs" view could also be used as part of a route and a "details" view that would be used to display the entire record.
 
-#### The GET /delete/xxx route
+### The GET /delete/xxx route
 
 It is the same code as the GET /edit/xxx method, except that it returns the "delete.ejs" view rather than the "edit.ejs" view.
 
@@ -1120,7 +1120,7 @@ The user interface is quite similar to the usual input form. Ironically enough, 
 ![Book delete form](/public/2019/crud-09-delete.png)
 
 
-#### The POST /delete/xxx route
+### The POST /delete/xxx route
 
 This simple function responds to the "post" request sent by the browser after clicking on the [Delete] button to confirm the deletion of the book. Its code looks a lot like what has already been seen so far:
 

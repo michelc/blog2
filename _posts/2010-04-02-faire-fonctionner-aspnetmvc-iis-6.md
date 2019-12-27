@@ -22,7 +22,7 @@ avec des extensions ".aspx", il faut commencer par mettre à jour les routes
 définies dans le fichier Global.asax.cs pour qu'elles prennent en compte cette
 extension.
 
-#### Comment faire
+### Comment faire
 
 Pour cela, il faut modifier la méthode RegisterRoutes comme
 ci-dessous :
@@ -55,14 +55,14 @@ La seconde route (nommée "Root") est nécessaire pour gérer l'URL
 "http://www.example.com/" que la route "Default" ne sait plus prendre en compte
 puisqu'elle attend une extension ".aspx".
 
-#### Remarque
+### Remarque
 
 Pour que l'URL "http://www.example.com/" fonctionne, il faut également
 penser à configurer IIS pour que le fichier Default.aspx soit un des documents
 par défaut du site (à la place ou en plus des fichiers Index.aspx,
 Index.htm...).
 
-#### Attention
+### Attention
 
 Etant donné que nos URLs prennent des ".aspx", il faut aussi modifier le
 fichier Web.Config pour mettre à jour l'URL qui y est paramétrée pour effectuer

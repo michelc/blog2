@@ -20,7 +20,7 @@ Conventions :
 ## Générer un script renvoyant la valeur maximum des identifiants de chaque
 table
 
-#### Requête pour générer les SELECT MAX() de chaque table
+### Requête pour générer les SELECT MAX() de chaque table
 
 ```
 SELECT 'UNION SELECT ''' || TABLE_NAME || ''' AS TB_NAME, '
@@ -33,7 +33,7 @@ AND    COLUMN_NAME IN (SELECT COLUMN_NAME FROM COLS WHERE DATA_TYPE = 'NUMBER')
 ORDER BY TABLE_NAME
 ```
 
-#### Compléter le script généré
+### Compléter le script généré
 
 Sous TOAD, faire clic droit dans le résultat de la requête et choisir SaveAs
 et enregistrer dans le presse-papiers, ce qui donne :

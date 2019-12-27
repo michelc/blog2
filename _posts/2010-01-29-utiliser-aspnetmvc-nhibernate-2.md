@@ -25,7 +25,7 @@ Important : Vous devez définir l'action de génération
 de tous les fichiers de mapping à "**Ressource incorporée**" afin
 que NHibernate puisse trouver le bon fichier dans l'assembly.
 
-#### Post.hbm.xml
+### Post.hbm.xml
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>

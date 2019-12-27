@@ -70,11 +70,11 @@ requêtes dans Access, j'y trouve bien ma "vue"
 
 ## La documentation Access
 
-#### CREATE PROCEDURE, instruction
+### CREATE PROCEDURE, instruction
 
 Crée une procédure stockée.
 
-#### Syntaxe
+### Syntaxe
 
 ```
 CREATE PROCEDURE procédure (typedonnées param1[, typedonnées param2][, ...]) AS instructionsql
@@ -97,7 +97,7 @@ Access primaires ou un de leurs synonymes.
 * `instructionsql` : Instruction SQL telle que SELECT,
 UPDATE, DELETE, INSERT, CREATE TABLE, DROP TABLE, etc.
 
-#### Exemple
+### Exemple
 
 ```
 CREATE PROCEDURE Sales_By_CountryRegion ([Beginning Date] DateTime, [Ending Date] DateTime)
@@ -106,7 +106,7 @@ SELECT Customer, [Ship Address]
 WHERE [Shipped Date] Between [Beginning Date] And [Ending Date]
 ```
 
-#### Notes
+### Notes
 
 Une procédure SQL se compose d'une clause PROCEDURE (qui spécifie le nom de
 la procédure), d'une liste facultative de définitions de paramètres et d'une

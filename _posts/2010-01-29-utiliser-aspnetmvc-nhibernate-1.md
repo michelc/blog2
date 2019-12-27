@@ -80,7 +80,7 @@ avons besoin de créer deux repositorys : **PostRepository**
 et **CategoryRepository**. Tout deux vont implémenter la même
 interface présentée ci-dessous :
 
-#### IRepository.cs
+### IRepository.cs
 
 ```
 using System;
@@ -105,7 +105,7 @@ Pour créer nous deux repositorys, nous avons d'abord besoin d'une une classe
 helper pour créer une **session NHibernate** sur notre base de
 données :
 
-#### NHibernateHelper.cs
+### NHibernateHelper.cs
 
 ```
 using System;
@@ -146,7 +146,7 @@ namespace Core.Domain.Repositories
 
 Ensuite, nous pouvons créer les repositorys :
 
-#### PostRepository.cs
+### PostRepository.cs
 
 ```
 using System;
@@ -215,7 +215,7 @@ namespace Core.Domain.Repositories
 }
 ```
 
-#### CategoryRepository.cs
+### CategoryRepository.cs
 
 ```
 using System;
@@ -352,7 +352,7 @@ l'utiliser :
 
 Nous pouvons alors créer le fichier de configuration XML suivant :
 
-#### hibernate.cfg.xml
+### hibernate.cfg.xml
 
 ```
 <hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">

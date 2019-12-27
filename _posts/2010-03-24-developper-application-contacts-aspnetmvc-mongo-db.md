@@ -138,7 +138,7 @@ Et pour finir, nous allons ajouter un fichier MongoSession.cs (Listing 1)
 dans le répertoire Models du projet pour y adapter le pattern UnitOfWork
 proposé par Rob Conery.
 
-#### Listing 1: Models\MongoSession.cs
+### Listing 1: Models\MongoSession.cs
 
 ```
 using System;
@@ -237,7 +237,7 @@ l'application.
 Pour créer cette classe Contact, nous ajoutons simplement un fichier
 Contact.cs (Listing 2) dans le sous-répertoire Models de l'application.
 
-#### Listing 2: Models\Contact.cs
+### Listing 2: Models\Contact.cs
 
 ```
 using NoRM;
@@ -290,7 +290,7 @@ Figure 6: Ajout du contrôleur par défaut
 Après avoir créé le contrôleur Home, vous obtenez le code source présenté
 dans Listing 3.
 
-#### Listing 3: Controllers\HomeController.cs
+### Listing 3: Controllers\HomeController.cs
 
 ```
 using System;
@@ -382,7 +382,7 @@ données, nous devons créer une action Index() et une vue Index. Le contrôleur
 Home contient déjà une action Index(). Nous devons donc modifier cette méthode
 pour qu'elle ressemble à celle du Listing 4.
 
-#### Listing 4: Controllers\HomeController.cs (action Index)
+### Listing 4: Controllers\HomeController.cs (action Index)
 
 ```
 using MongoContact.Models;
@@ -446,7 +446,7 @@ Le corps de notre vue Index contient une boucle foreach qui parcourt chacun
 des contacts représenté par notre modèle de classes. La valeur de chacune des
 propriétés de la classe Contact est affichée au sein d'une table HTML.
 
-#### Listing 5: Views\Home\Index.aspx (généré automatiquement)
+### Listing 5: Views\Home\Index.aspx (généré automatiquement)
 
 ```
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<MongoContact.Models.Contact>>" %>
@@ -557,7 +557,7 @@ directement dans l'application.
 Pour cela, vous pouvez modifier l'action Index à l'aide du code du Listing
 6.
 
-#### Listing 6: Controllers\HomeController.cs
+### Listing 6: Controllers\HomeController.cs
 
 ```
 public ActionResult Index()
@@ -628,7 +628,7 @@ informations saisies dans la base de données.
 La méthode Create() que nous devons ajouter au contrôleur Home se trouve
 dans le Listing 7.
 
-#### Listing 7: Controllers\HomeController.cs (avec les méthodes Create)
+### Listing 7: Controllers\HomeController.cs (avec les méthodes Create)
 
 ```
 //
@@ -704,7 +704,7 @@ La vue de création contient des champs pour chacune des propriétés de la
 classe Contact. Vous pouvez constater que la propriété "Id" n'a pas été générée
 dans le code présenté au Listing 8 parce qu'elle est de type ObjectId.
 
-#### Listing 8: Views\Home\Create.aspx
+### Listing 8: Views\Home\Create.aspx
 
 ```
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MongoContact.Models.Contact>" %>
@@ -783,7 +783,7 @@ cette fonctionnalité. Pour cela, il faut modifier la première colonne du
 tableau dans la vue Index (Listing 9) et y utiliser le helper Html.ActionLink()
 pour appeler l'action Edit.
 
-#### Listing 9: Views\Home\Index.aspx (1° essai)
+### Listing 9: Views\Home\Index.aspx (1° essai)
 
 ```
 <td>
@@ -804,7 +804,7 @@ nous allons simplement créer une nouvelle classe ContactExtensions dans le
 répertoire Models (Listing 10) et y ajouter une méthode d'extension IdString()
 qui permet de transformer la propriété "Id" en chaine de caractères:
 
-#### Listing 10: Models\ContactExtension.cs
+### Listing 10: Models\ContactExtension.cs
 
 ```
 using System;
@@ -827,7 +827,7 @@ De cette façon, il est possible de remettre à jour la vue Index (Listing 11)
 et cette fois-ci utiliser item.IdString() comme paramètre du helper
 Html.ActionLink().
 
-#### Listing 11: Views\Home\Index.aspx (corrigé)
+### Listing 11: Views\Home\Index.aspx (corrigé)
 
 ```
 <%@ Import namespace="MongoContact.Models" %>
@@ -842,7 +842,7 @@ contact est très similaire à ce qui a été fait pour la création d'un nouvea
 contact. Tout d'abord, il faut ajouter une méthode Edit() comme dans le Listing
 12 pour afficher le formulaire de modification du contact sélectionné.
 
-#### Listing 12: Controllers\HomeController.cs (avec la méthode GET Edit)
+### Listing 12: Controllers\HomeController.cs (avec la méthode GET Edit)
 
 ```
 using NoRM;
@@ -892,7 +892,7 @@ automatiquement pour vous. Le formulaire HTML (Listing 13) qui est généré
 contient des champs correspondant à nouveau à chacune des propriétés de la
 classe Contact.
 
-#### Listing 13: Views\Home\Edit.aspx
+### Listing 13: Views\Home\Edit.aspx
 
 ```
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MongoContact.Models.Contact>" %>
@@ -958,7 +958,7 @@ Mais pour l'instant, nous ne pouvons que cliquer sur le lien "Back to list"
 puisque nous n'avons pas encore programmé l'action Edit en mode POST. Pour
 cela, vous devez recopier le code du Listing 14.
 
-#### Listing 14: Controllers\HomeController.cs (avec la méthode POST Edit)
+### Listing 14: Controllers\HomeController.cs (avec la méthode POST Edit)
 
 ```
 //
@@ -1004,7 +1004,7 @@ Toutefois, pour que cela fonctionne réellement, il faut compléter la classe
 MongoSession empruntée à Rob et ajouter une surcharge à la méthode Update
 qu'elle contient d'origine (Listing 15).
 
-#### Listing 15: Models\MongoSession.cs (extrait)
+### Listing 15: Models\MongoSession.cs (extrait)
 
 ```
 public void Update<T>(T item) where T : class, new()
@@ -1044,7 +1044,7 @@ méthodes d'actions Delete() au contrôleur Home (Listing 16). La première acti
 Delete() affiche un formulaire de confirmation de suppression. La seconde
 action Delete() s'occupe de réellement supprimer l'enregistrement.
 
-#### Listing 16: Controllers\HomeController.cs
+### Listing 16: Controllers\HomeController.cs
 
 ```
 //
@@ -1090,7 +1090,7 @@ suppression.
 Cette fois encore, il est nécessaire de compléter la classe MongoSession.cs
 (Listing 17) pour faciliter l'appel de la méthode Delete.
 
-#### Listing 17: Models\MongoSession.cs (méthode Delete)
+### Listing 17: Models\MongoSession.cs (méthode Delete)
 
 ```
 public void Delete<T>(T item) where T : class, new()
@@ -1104,7 +1104,7 @@ modifier la vue Index pour qu'elle contienne un lien permettant la suppression
 d'un enregistrement (Listing 18). Pour cela, il faut ajouter le code suivant
 dans la cellule qui contient déjà le lien pour la modification.
 
-#### Listing 18: Views\Home\Index.aspx (lien Delete)
+### Listing 18: Views\Home\Index.aspx (lien Delete)
 
 ```
 <td>
@@ -1138,7 +1138,7 @@ Le contenu de la vue Delete est présent dans le Listing 19. Cette vue
 contient un formulaire demandant si oui ou non ce contact doit être
 supprimé.
 
-#### Listing 19: Views\Home\Delete.aspx
+### Listing 19: Views\Home\Delete.aspx
 
 ```
 <%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MongoContact.Models.Contact>" %>

@@ -25,7 +25,7 @@ grand nombre d'avantages, c'est pourquoi je souhaite vous présenter les trois
 Mais pour commencer, je vais corriger quelques idées fausses trop largement
 répandues en ce qui concerne les PWAs.
 
-#### 1) PWA ≠ "Application"
+### 1) PWA ≠ "Application"
 
 Une Application Web Progressive peut aussi bien être un blog, un site de
 présentation, une boutique ou une galerie de petits chats trop mignons. Une PWA
@@ -38,7 +38,7 @@ car certains trouvent qu'il ne véhicule pas le bon concept. Pour moi, ça n'est
 qu'un nom. Et de toute façon, il est de plus en plus difficile de définir ce qui
 différencie un site internet d'une "application web".*
 
-#### 2) PWA ≠ Javascript + Application web monopage
+### 2) PWA ≠ Javascript + Application web monopage
 
 Encore une fois, ce n'est pas parce que votre site n'est pas une
 <abbr title="Single Page Application">SPA</abbr> sous React-Redux que cela n'est
@@ -47,7 +47,7 @@ pas pour vous. Mon site personnel est seulement composé
 mais c'est une PWA tout à fait valide. Quoique vous ayez publié sur internet,
 vous pouvez donc en profiter.
 
-#### 3) PWA ≠ Google ou Android
+### 3) PWA ≠ Google ou Android
 
 Ce qui est génial, c'est que les PWAs offrent le meilleur des deux mondes :
 * les liens directs et les URLs du monde web,
@@ -58,7 +58,7 @@ Et tout ça en restant complètement indépendant de la plate-forme où cela
 s'exécute. Pas besoin d'AppStore ou d'un environnement iOS ou Android, mais
 juste ce bon vieux web.
 
-#### 4) PWA = prêt et sûr dès aujourd'hui
+### 4) PWA = prêt et sûr dès aujourd'hui
 
 Dans PWA, il y a un "P" pour progressif ! Ce "P" signifie que toutes ces
 techniques ne sont que des améliorations accessoires. Si un ancien navigateur ne
@@ -193,7 +193,7 @@ SW. Il s'agit d'un chemin relatif par rapport à la racine de votre domaine. Par
 exemple, si vous le définissez à `/articles`, vous contrôlez les requêtes vers
 `votredomaine.com/articles/my-post` mais pas vers `/votredomaine.com/contact`.
 
-#### La mode est au déconnecté
+### La mode est au déconnecté
 
 Il y a plusieurs trucs intéressants qui peuvent être réalisés grâce aux Service
 Workers. Vous pouvez en particulier mettre votre contenu en cache et le stocker

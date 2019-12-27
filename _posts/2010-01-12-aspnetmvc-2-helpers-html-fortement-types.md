@@ -72,7 +72,7 @@ dans le premier exemple :
 ASP.NET MVC 2 intègre d'ores et déjà les helpers HTML fortement typés
 suivants :
 
-#### Eléments HTML
+### Eléments HTML
 
 * Html.TextBoxFor()
 * Html.TextAreaFor()
@@ -84,7 +84,7 @@ suivants :
 * Html.HiddenFor()
 * Html.LabelFor()
 
-#### Autres helpers
+### Autres helpers
 
 * Html.EditorFor()
 * Html.DisplayFor()

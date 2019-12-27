@@ -128,7 +128,7 @@ pour y appeler la vue partielle "DinnerForm.ascx" et ainsi élimer le code en
 double. Pour cela, nous devons utiliser le helper
 Html.RenderPartial("DinnerForm") :
 
-#### Create.aspx
+### Create.aspx
 
 ```
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">
@@ -144,7 +144,7 @@ Html.RenderPartial("DinnerForm") :
 </asp:Content>
 ```
 
-#### Edit.aspx
+### Edit.aspx
 
 ```
 <asp:Content ID="Title" ContentPlaceHolderID="TitleContent" runat="server">

@@ -28,7 +28,7 @@ configurer la transformation dans le fichier Web.Release.config.
 
 ## Etape 1 : Créer un nouveau projet sous Visual Studio 2010
 
-#### Nouveau projet...
+### Nouveau projet...
 
 ![](/public/2012/ah1-01-nouveau-projet.jpg)
 
@@ -40,14 +40,14 @@ Et voila :
 
 ![](/public/2012/ah1-03-explorateur-solution.jpg)
 
-#### Mise à jour des références
+### Mise à jour des références
 
 Clic-droit sur le projet, Gérer les packages NuGet... pour faire une mise à
 jour
 
 ![](/public/2012/ah1-04-maj-nuget.jpg)
 
-#### Nettoyage du projet
+### Nettoyage du projet
 
 Supprimer :
 
@@ -96,7 +96,7 @@ Mise à jour de /Views/Shared/_Layout.cshtml pour refléter tout ça :
 </html>
 ```
 
-#### Tests
+### Tests
 
 Générer / Regénérer la solution, ça compile. Déboguer / Démarrer le
 débogage, ça marche.
@@ -107,7 +107,7 @@ Par rapport au tutoriel je ne fais pas un projet "Core" et un projet "Web",
 mais je met tout dans un seul projet (ce qui a l'avantage de passer avec Visual
 Studio Express).
 
-#### /Models/Entity.cs
+### /Models/Entity.cs
 
 ```
 namespace HarborFirstTest.Models
@@ -119,7 +119,7 @@ namespace HarborFirstTest.Models
 }
 ```
 
-#### /Models/User.cs
+### /Models/User.cs
 
 ```
 namespace HarborFirstTest.Models
@@ -131,7 +131,7 @@ namespace HarborFirstTest.Models
 }
 ```
 
-#### /Persistence/HftContext.cs
+### /Persistence/HftContext.cs
 
 ```
 using System.Data.Entity;
@@ -148,7 +148,7 @@ namespace HarborFirstTest.Persistence
 
 Le "Hft" de HftContext est pour Harbor First Test
 
-#### /Controllers/HomeController.cs
+### /Controllers/HomeController.cs
 
 ```
 using System.Web.Mvc;
@@ -182,7 +182,7 @@ namespace HarborFirstTest.Controllers
 }
 ```
 
-#### /Views/Home/Index.cshtml
+### /Views/Home/Index.cshtml
 
 ```
 @model IEnumerable<HarborFirstTest.Models.User>
@@ -203,7 +203,7 @@ namespace HarborFirstTest.Controllers
 }
 ```
 
-#### /Web.config
+### /Web.config
 
 Mise à jour de la section &lt;connectionStrings&gt; pour :
 
@@ -221,7 +221,7 @@ de données SQL Server CE de mon application
   </connectionStrings>
 ```
 
-#### Tests
+### Tests
 
 Générer / Regénérer la solution, ça compile. Déboguer / Démarrer le
 débogage, ça marche. Créer quelques utilisateurs, ça passe !
@@ -259,7 +259,7 @@ namespace HarborFirstTest.Tests.Controllers
 
 ## Etape 3 : Modifier le modèle de données
 
-#### /Models/User.cs
+### /Models/User.cs
 
 ```
 namespace HarborFirstTest.Models
@@ -272,7 +272,7 @@ namespace HarborFirstTest.Models
 }
 ```
 
-#### /Views/Home/Index.cshtml
+### /Views/Home/Index.cshtml
 
 ```
 @model IEnumerable<HarborFirstTest.Models.User>
@@ -294,7 +294,7 @@ namespace HarborFirstTest.Models
 }
 ```
 
-#### Tests
+### Tests
 
 Générer / Regénérer la solution, ça compile. Déboguer / Démarrer le
 débogage, ça plante.
@@ -307,7 +307,7 @@ débogage, ça plante.
 
 C'était prévu !
 
-#### /Persistence/Configuration.cs
+### /Persistence/Configuration.cs
 
 Puisqu'on a modifié le modèle de données, on va devoir configurer le système
 de migration de Entity Framework (de la façon la plus basique qui soit pour
@@ -329,7 +329,7 @@ namespace HarborFirstTest.Persistence
 }
 ```
 
-#### /Persistence/HftContext.cs
+### /Persistence/HftContext.cs
 
 Et on présente cette configuration à notre `DbContext`.
 
@@ -351,7 +351,7 @@ namespace HarborFirstTest.Persistence
 }
 ```
 
-#### Tests
+### Tests
 
 Générer / Regénérer la solution, ça compile. Déboguer / Démarrer le
 débogage, ça marche. Créer d'autres utilisateurs, ça repasse !
@@ -364,11 +364,11 @@ Enfin ! Pour cette dernière étape, je me suis aussi inspiré des billets
 [Deploy to AppHarbor using GitHub for Windows](http://blog.appharbor.com/2012/05/25/deploy-to-appharbor-using-github-for-windows), [Announcing GitHub support](http://blog.appharbor.com/2011/10/13/announcing-github-support) et [Use NuGet Package Restore to avoid pushing packages to
 AppHarbor](http://blog.appharbor.com/2012/02/06/use-nuget-package-restore-to-avoid-pushing-packages-to-appharbor) qu'il est donc impératif de lire dans leur intégralité.
 
-#### Créer l'application dans AppHarbor
+### Créer l'application dans AppHarbor
 
 ![](/public/2012/ah1-08-creer-apphabor.jpg)
 
-#### Installer et configurer l'add-on SQL Server "Yocto"
+### Installer et configurer l'add-on SQL Server "Yocto"
 
 ![](/public/2012/ah1-09-addon-yocto.jpg)
 
@@ -382,7 +382,7 @@ AppHarbor](http://blog.appharbor.com/2012/02/06/use-nuget-package-restore-to-avo
 
 Tout le monde a suivi ?
 
-#### Passer l'application sous Git
+### Passer l'application sous Git
 
 Lancer GitHib for Windows, chercher "+ add" et cliquer dessus pour "create a
 new repository".
@@ -409,7 +409,7 @@ deploy/*
 packages/
 ```
 
-#### Relier AppHarbor et GitHub
+### Relier AppHarbor et GitHub
 
 Aller sur AppHarbor, chercher "Build Url" et cliquer dessus
 
@@ -433,7 +433,7 @@ possible
 
 C'est presque fini !
 
-#### NuGet Package Restore
+### NuGet Package Restore
 
 Depuis NuGet 1.6, il n'est plus obligatoire d'inclure les packages dans le
 repository (cf [Using NuGet without committing packages to source
@@ -446,7 +446,7 @@ posée.
 Penser à vérifier que .gitignore exclue le répertoire "packages" du
 repository (ma version le fait).
 
-#### J'ai failli oublier
+### J'ai failli oublier
 
 Pour que l'application déployée sur AppHarbor utilise l'add-on SQL SErver
 Yocto qu'on avait sélectionné plus haut, il faut modifier notre chaîne de
@@ -500,14 +500,14 @@ Puis après c'est la magie de AppHarbor qui remplace la
 `connectionString` de "Data Source=|DataDirectory|hft_data.sdf" en
 ce qui va bien.
 
-#### Initial Commit
+### Initial Commit
 
 Allez, on revient dans GitHub for Windows pour faire le premier commit du
 projet
 
 ![](/public/2012/ah1-18-premier-commit.jpg)
 
-#### Publish, Build &amp; Deploy
+### Publish, Build &amp; Deploy
 
 On reste dans GitHub for Windows pour cliquer sur "publish" en haut de
 l'écran et envoyer notre application vers GitHub et de là vers AppHarbor :)

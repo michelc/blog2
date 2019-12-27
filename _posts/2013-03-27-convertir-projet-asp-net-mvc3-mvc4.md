@@ -17,7 +17,7 @@ J'ai migré mon application [Répertoir](http://repertoir.apphb.com/) vers ASP.N
 Note : le projet vide est déjà pas mal vide, mais il
 intègre Web API par défaut et je n'en ai pas l'utilité.
 
-#### Créer un projet "Empty"
+### Créer un projet "Empty"
 
 * Renommer le dossier C:\MVC\Repertoir en C:\MVC\Repertoir3
 * Sous Visual Studio 2010, créer un nouveau projet "Repertoir" de type
@@ -26,7 +26,7 @@ intègre Web API par défaut et je n'en ai pas l'utilité.
   - Razor comme View Engine
   - Ok pour créer le projet de test unitaire
 
-#### Supprimer Web API du projet
+### Supprimer Web API du projet
 
 * Pour le projet Repertoir : Références, clic-droit et "Gérer les
 packages NuGet..."
@@ -43,7 +43,7 @@ désinstaller :
   - Microsoft.AspNet.WebPages
   - Microsoft.Web.Infrastructure
 
-#### Supprimer Web API du projet de test unitaire
+### Supprimer Web API du projet de test unitaire
 
 * Pour le projet Repertoir.Tests : Références, clic-droit et "Gérer les
 packages NuGet..."
@@ -59,7 +59,7 @@ désinstaller :
   - Microsoft.AspNet.WebPages
   - Microsoft.Web.Infrastructure
 
-#### Finaliser le projet vide
+### Finaliser le projet vide
 
 * Dans le projet Repertoir / App_Start, supprimer le fichier
 WebApiConfig.cs
@@ -127,7 +127,7 @@ Pour le projet Repertoir.Tests, il faut copier :
 
 Là aussi, penser à inclure ces nouveaux fichiers dans le projet.
 
-#### Mettre à jour les fichiers de configuration
+### Mettre à jour les fichiers de configuration
 
 * Repertoir/Web.Config :
   - recopier la section &lt;connectionStrings&gt;
@@ -142,7 +142,7 @@ namespace="Repertoir.Helpers" /&gt; à &lt;system.web.webPages.razor&gt;
 * Repertoir.Tests/App.Config : recopier la section
 &lt;connectionStrings&gt;
 
-#### Adapter le Global.asax
+### Adapter le Global.asax
 
 ```
 using System;
@@ -186,7 +186,7 @@ namespace Repertoir
 }
 ```
 
-#### Mise au point des routes
+### Mise au point des routes
 
 Il faut également adapter /App_Start/RouteConfig.cs pour tenir compte de la
 route "Id_Slug" et du fait que j'utilise LowercaseRoutesMVC.
@@ -220,7 +220,7 @@ namespace Repertoir
 }
 ```
 
-#### Vérifier que tout est OK
+### Vérifier que tout est OK
 
 * Fichier / Enregistrer tout
 * Générer / Regénérer la solution

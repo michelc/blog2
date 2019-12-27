@@ -12,7 +12,7 @@ passé sur PI et AP ces derniers temps.
 
 ## Les modifications de PI (Pages d'Infos)
 
-#### Les cinémas
+### Les cinémas
 
 J'ai fait pas mal de mises à jour sur les programmes de cinéma et il y a
 maintenant 3 présentations pour les séances :
@@ -40,7 +40,7 @@ par un "!", il ne s'affiche que dans le cas où il n'y a pas de séances
 connues : je m'en suis servi pour afficher les périodes de fermeture des
 cinémas pendant l'été.
 
-#### Les communes
+### Les communes
 
 Le template _PlaceTemplate.txt employé pour les communes gère maintenant une
 macro {@place.urlOffice} pour afficher un lien vers l'office de tourisme. Pour
@@ -92,7 +92,7 @@ Par ailleurs, la description brute est utilisée pour la balise meta
 description de la page. C'est ce qui est conseillé par les outils Google pour
 les webmasters pour avoir moins de pages avec la même description.
 
-#### Les liens
+### Les liens
 
 Je ne fais plus apparaitre de publicité à l'intérieur des liens lorsqu'ils
 sont affichés sous forme minimisée. Parce que ça faisait trop de publicité dans
@@ -112,7 +112,7 @@ pages concernées sont beaucoup plus légères qu'avant et je trouve que c'est
 plus pratique à lire et pour y trouver d'un coup d'oeil les sites d'une
 commune.
 
-#### En vrac
+### En vrac
 
 Il est maintenant possible de modifier un marché (avant il fallait aller
 taper dans la base de données).
@@ -134,7 +134,7 @@ fait un bon bout de temps que je n'ai rien fait dessus.
 
 ## Les modifications de AP (Altrr-Press)
 
-#### Moins de code
+### Moins de code
 
 Pour résumer, l'objectif général de toutes les modifications apportées à
 Altrr-Press c'est de diminuer la quantité de code (si besoin en réduisant les
@@ -152,7 +152,7 @@ code, c'est que j'ai utilisé du XML pour la remplacer).
 
 Pour plus d'explications, vous pouvez vous reporter au billet [Régime XML]({% post_url 2008-09-02-regime-d-ete %}).
 
-#### Un nouveau Wysiwyg
+### Un nouveau Wysiwyg
 
 J'ai aussi définitivement remplacé l'éditeur wysiwyg [widgEditor](http://code.google.com/p/widgeditor/) par Altrr-Editt, un super
 nouveau éditeur wysiwyg que j'ai fait moi-même en reprenant des morceaux de
@@ -162,7 +162,7 @@ Il est plus mieux bien, vous pouvez me faire confiance, même s'il faudra
 attendre encore un petit peu pour que je trouve le temps de vous expliquer
 pourquoi.
 
-#### Mise à jour des macros
+### Mise à jour des macros
 
 Désormais, toutes les macros de AP sont sous la forme [%AP.Xxxxxx.Yyyyyy%].
 Pour rappel, les macros c'est les trucs qu'on peut utiliser dans les chartes
@@ -194,7 +194,7 @@ même niveau d'arborescence. Vous pouvez aller voir les 2 galeries de photos sur
 le site de Saint-Privat pour voir ce que ça donne. Au passage, ces 2 galeries
 contiennent du XML, saurez-vous le retrouver ?
 
-#### Poliçage du code
+### Poliçage du code
 
 J'ai aussi essayé de passer les sources d'Altrr-Press à la moulinette
 [StyleCop](http://code.msdn.microsoft.com/sourceanalysis) (c'est un
@@ -218,7 +218,7 @@ Sur BDHlper.cs où j'ai fait le plus de travail il y a encore 392
 avertissements (heureusement y'en a beaucoup qui sont liés les uns aux
 autres).
 
-#### Pour la suite
+### Pour la suite
 
 J'ai le début d'un autre billet en préparation sur tout ce qu'il est
 nécessaire de prévoir pour faire passer Altrr-Press en ASP.NET 2. Et j'ai peur

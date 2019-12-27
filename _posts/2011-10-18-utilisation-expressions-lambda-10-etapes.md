@@ -8,7 +8,7 @@ title: "Utilisation d’expressions lambda en 10 étapes"
 
 ## Point de départ : 3 fonctions avec du code répétitif ( !DRY)
 
-#### PrevisionFacturationSrv.cs
+### PrevisionFacturationSrv.cs
 
 ```
 PrevSrv.UpdateEndOfContract(PrevFinContrat);
@@ -16,7 +16,7 @@ PrevSrv.UpdateEndOfMonth(PrevFinMois);
 PrevSrv.UpdatePlacement(PrevPlacement, PonderationPlacement);
 ```
 
-#### PrevisionSrv.cs
+### PrevisionSrv.cs
 
 ```
 /// <summary>
@@ -99,7 +99,7 @@ déroulées ces étapes : [Utilisation_Expressions_Lambda_en_10_etapes.pdf](/pub
 
 ## Le résultat
 
-#### PrevisionFacturationSrv.cs
+### PrevisionFacturationSrv.cs
 
 ```
 PrevSrv.UpdatePrevision(PrevFinContrat, (p, m, n) => { p.FinContrat = m; });
@@ -107,7 +107,7 @@ PrevSrv.UpdatePrevision(PrevFinMois, (p, m, n) => { p.FinMois = m; p.NbContrats 
 PrevSrv.UpdatePrevision(PrevPlacement, (p, m, n) => { p.Placement = m; }, PonderationPlacement);
 ```
 
-#### PrevisionSrv.cs
+### PrevisionSrv.cs
 
 ```
 /// <summary>

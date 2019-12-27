@@ -225,7 +225,7 @@ Html.ValidationMessage(). En plus de générer le balisage HTML pour nous, ces
 méthodes helper assurent automatiquement la gestion des erreurs et la
 validation des données.
 
-#### Le helper Html.BeginForm()
+### Le helper Html.BeginForm()
 
 La méthode Html.BeginForm() sert à générer la balise HTML &lt;form&gt;. Vous
 remarquerez que dans notre vue Edit.aspx, nous utilisons la commande C# "using"
@@ -266,7 +266,7 @@ method="post"&gt;. Si nous voulons poster vers une autre URL, il est cependant
 possible de passer explicitement les paramètres nécessaires à
 Html.BeginForm().
 
-#### Le helper Html.TextBox()
+### Le helper Html.TextBox()
 
 La vue Edit.aspx utilise la méthode helper Html.TextBox() pour générer les
 balises &lt;input type="text"/&gt; :
@@ -348,7 +348,7 @@ que tous les autres types de requêtes vers l'URL /Dinners/Edit/[id] seront
 dirigées vers la première méthode Edit mise en place (celle qui n'a pas
 d'attribut [AcceptVerbs]).
 
-#### Remarque : Pourquoi se baser sur le type HTTP ?
+### Remarque : Pourquoi se baser sur le type HTTP ?
 
 Pourquoi utiliser la même URL dans les deux cas et dépendre du type HTTP
 pour savoir quelle action effectuer ? Est-ce qu'il ne serait pas plus pratique
@@ -370,7 +370,7 @@ déterminant  son traitement en fonction du type HTTP, cela ne pose pas de
 problème si cette URL est ajoutée aux favoris ou communiquée à d'autres
 utilisateurs.
 
-#### Récupérer les valeurs du formulaire
+### Récupérer les valeurs du formulaire
 
 Il existe de nombreuses façons de faire pour que l'action "Edit" en mode
 POST accède aux données envoyées via le formulaire. La méthode la plus simple
@@ -565,7 +565,7 @@ public ActionResult Edit(int id, FormCollection formValues) {
 }
 ```
 
-#### Prise en compte du ModelState par les helpers HTML
+### Prise en compte du ModelState par les helpers HTML
 
 Les helpers HTML - tels que Html.TextBox() - inspectent la collection
 ModelState quand ils génèrent leur rendu html. S'il existe une erreur pour
@@ -609,7 +609,7 @@ C'est grâce à cette règle CSS que les saisies incorrectes sont mises en
 
 ![](http://nerddinnerbook.s3.amazonaws.com/Images/image086.png)
 
-#### Le helper Html.ValidationMessage()
+### Le helper Html.ValidationMessage()
 
 Le helper Html.ValidationMessage() peut s'utiliser pour afficher le message
 d'erreur du ModelState correspondant à une propriété donnée :
@@ -635,7 +635,7 @@ L'exemple ci-dessus génère &lt;span
 class="field-validation-error"&gt;*&lt;/span&gt; au lieu du message d'erreur
 par défaut lorsque une erreur existe au niveau de la propriété EventDate.
 
-#### Le helper Html.ValidationSummary()
+### Le helper Html.ValidationSummary()
 
 Le helper Html.ValidationSummary() s'utilise pour afficher un message
 d'erreur récapitulatif, accompagné par une liste &lt;ul&gt; &lt;li/&gt;
@@ -1167,7 +1167,7 @@ propriétés de l'objet qui correspondent à des valeurs provenant du formulaire
 De même, toutes les propriétés des objets utilisés comme paramètres des
 méthodes d'action sont définissables à partir des données du formulaire.
 
-#### Verrouiller le binding au cas par cas
+### Verrouiller le binding au cas par cas
 
 Vous pouvez contrôler les règles de binding au cas par cas en spécifiant
 explicitement la liste des propriétés qui peuvent être modifiées. Pour cela, il
@@ -1196,7 +1196,7 @@ public ActionResult Create( [Bind(Include="Title,Address")] Dinner dinner ) {
 }
 ```
 
-#### Verrouiller le binding au niveau du modèle
+### Verrouiller le binding au niveau du modèle
 
 Les règles pour lier les propriétés d'un objet aux éléments d'un formulaire
 peuvent aussi être spécifiées par rapport à l'objet lui-même. Ainsi, on ne les

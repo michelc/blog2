@@ -289,7 +289,7 @@ Maintenant que nous avons créé notre classe DinnerRepository, jetons un coup
 d'œil à quelques exemples de code pour comprendre à quoi elle va pouvoir nous
 servir :
 
-#### Exemple de recherche
+### Exemple de recherche
 
 Le code ci-dessous retrouve un dîner particulier à partir de la valeur de
 DinnerID :
@@ -316,7 +316,7 @@ foreach (Dinner dinner in upcomingDinners) {
 }
 ```
 
-#### Exemples d'insertion et de modification
+### Exemples d'insertion et de modification
 
 Le code ci-dessous illustre la façon d'ajouter deux nouveaux dîners. Les
 ajouts et les modifications dans le repository ne sont pas répercutés dans la
@@ -390,7 +390,7 @@ dinner.RSVPs.Add(myRSVP);
 dinnerRepository.Save();
 ```
 
-#### Exemple de suppression
+### Exemple de suppression
 
 Le code ci-dessous retrouve un objet Dinner particulier puis le supprime du
 repository. Par la suite, lorsque la méthode "Save()" est appelée, la
@@ -415,7 +415,7 @@ Le fait de valider les données et d'appliquer des règles métiers est un
 aspect essentiel dès lors que l'on développe des applications qui traitent des
 données.
 
-#### Validation du schéma
+### Validation du schéma
 
 Lorsque le concepteur LINQ to SQL a généré les classes modèles, il a calqué
 le type de données des propriétés de ces classes sur celui des colonnes de la
@@ -432,7 +432,7 @@ lorsque vous manipulez des chaînes, ce qui fait que vous n'avez pas à vous
 préoccuper des risques d'attaque par injection SQL lorsque vous passez par
 lui.
 
-#### Validation des données et règles métiers
+### Validation des données et règles métiers
 
 La validation par rapport au type de données est déjà un bon début, mais
 c'est rarement suffisant. Dans la vrai vie, il est nécessaire d'en passer par

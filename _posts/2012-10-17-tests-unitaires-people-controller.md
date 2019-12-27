@@ -38,7 +38,7 @@ Référence : [Tester l'action Detail()]({% post_url 2012-10-04-tester-action-de
 
 ## Tests unitaires action Create()
 
-#### Le code GET testé :
+### Le code GET testé :
 
 ```
 // GET: /People/Create
@@ -69,7 +69,7 @@ renseignee
 
 Référence : [Tester la partie GET d'une action Create()]({% post_url 2012-10-03-tester-partie-get-action-create %})
 
-#### Le code POST testé :
+### Le code POST testé :
 
 ```
 // POST: /People/Create

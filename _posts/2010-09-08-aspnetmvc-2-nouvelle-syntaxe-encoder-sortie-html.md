@@ -35,7 +35,7 @@ permet de s'assurer que toute information qui aurait pû être créée ou modifi
 par un utilisateur final ne pourra jamais être renvoyée vers une page côté
 client en contenant des balises telles que &lt;script&gt; ou &lt;img&gt;.
 
-#### Comment encodait-on le HTML jusqu'à présent ?
+### Comment encodait-on le HTML jusqu'à présent ?
 
 Les applications ASP.NET (et en particulier celles qui utilisent ASP.NET
 MVC) s'appuient très souvent sur la syntaxe &lt;%= %&gt; pour générer certains
@@ -90,7 +90,7 @@ poser la question au cas par cas pour savoir s'il faut utiliser la syntaxe
 &lt;%: %&gt; et faire en sorte que toutes les propriétés ou types qui sont déja
 encodées implémentent bien l'interface IHtmlString.
 
-#### Utiliser les helpers ASP.NET MVC avec &lt;%: %&gt;
+### Utiliser les helpers ASP.NET MVC avec &lt;%: %&gt;
 
 Prenons le cas où vous utilisez des méthodes helpers en ASP.NET MVC pour
 avoir un exemple concret qui montre dans quel cas ce mécanisme d'encodage HTML

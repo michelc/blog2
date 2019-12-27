@@ -27,14 +27,14 @@ méthode `Distinct()`. Cette méthode renvoie des éléments distincts à
 partir de la source sur laquelle on l'applique. Les deux exemples ci-dessous
 ont le même effet :
 
-#### SQL
+### SQL
 
 ```
 SELECT DISTINCT Region
 FROM   ClientTable
 ```
 
-#### LINQ
+### LINQ
 
 ```
 var ListeRegions = (from Contact in ClientListe
@@ -47,7 +47,7 @@ Comme pour une requête SQL, une expression LINQ permet elle aussi de filtrer
 les résultats renvoyés en ajoutant une clause "`where`". Cette
 clause peut contenir n'importe quelle expression C# booléenne.
 
-#### SQL
+### SQL
 
 ```
 SELECT *
@@ -55,7 +55,7 @@ FROM   ClientTable
 WHERE  Region = 'PACA'
 ```
 
-#### LINQ
+### LINQ
 
 ```
 from Contact in ClientListe
@@ -71,7 +71,7 @@ opérateur équivalent en C# qui peut être employé au niveau de la clause
 `where` de la requête LINQ pour obtenir le même genre de
 résultat.
 
-#### SQL
+### SQL
 
 ```
 SELECT *
@@ -80,7 +80,7 @@ WHERE  Region = 'PACA'
 AND    CodePostal = '06570'
 ```
 
-#### LINQ
+### LINQ
 
 ```
 from Contact in ClientListe
@@ -95,7 +95,7 @@ C#. Par exemple, il n'existe pas de mot-clé en C# qui corresponde au mot-clé
 "`BETWEEN`" du SQL. Mais on peut facilement obtenir un résultat
 similaire en C#.
 
-#### SQL
+### SQL
 
 ```
 SELECT *
@@ -103,7 +103,7 @@ FROM   CommandeTable
 WHERE  DateCommande BETWEEN '2010-01-01' AND '2010-12-31'
 ```
 
-#### LINQ
+### LINQ
 
 ```
 from Colis in CommandeListe
@@ -116,7 +116,7 @@ Dans le cas de l'opérateur "`IN`" du SQL, il est possible
 d'utiliser la méthode `Contains()` pour arriver au même
 résultat :
 
-#### SQL
+### SQL
 
 ```
 SELECT *
@@ -124,7 +124,7 @@ FROM   ClientTable
 WHERE  Region IN ('IDF', 'PACA')
 ```
 
-#### LINQ
+### LINQ
 
 ```
 string[] regions = { "RA", "PACA" };
@@ -142,7 +142,7 @@ d'expressions séparées par des virgules. Il est possible d'employer n'importe
 quelle expression C#, sans qu'il soit nécessaire que cette expression fasse
 parti des éléments sélectionnés dans la requête LINQ.
 
-#### SQL
+### SQL
 
 ```
 SELECT *
@@ -150,7 +150,7 @@ FROM   ClientTable
 ORDER BY Telephone
 ```
 
-#### LINQ
+### LINQ
 
 ```
 from Contact in ClientListe
@@ -167,14 +167,14 @@ façon croissante ou décroissante. Avec LINQ, il faut utiliser les mots-clés
 résultat. Quand aucun de ces mots-clés n'est indiqué, le tri est réalisé de
 façon croissante par défaut.
 
-#### SQL
+### SQL
 
 ```
 SELECT * FROM ClientTable
 ORDER BY Telephone ASC, Nom DESC
 ```
 
-#### LINQ
+### LINQ
 
 ```
 from Contact in ClientListe

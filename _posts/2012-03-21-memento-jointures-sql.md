@@ -27,7 +27,7 @@ faire ça de son plein gré
 
 ## Création de 2 tables pour les essais (sous Oracle)
 
-#### 1° table
+### 1° table
 
 ```
 CREATE TABLE Table1 AS
@@ -46,7 +46,7 @@ ID  Libelle
 3   Trois
 ```
 
-#### 2° table
+### 2° table
 
 ```
 CREATE TABLE Table2 AS
@@ -69,7 +69,7 @@ id  caption
 
 On ne prend que ce qui existe des 2 côtés
 
-#### Syntaxe explicite
+### Syntaxe explicite
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -77,7 +77,7 @@ FROM   Table1 T1
 INNER JOIN Table2 T2 ON T1.ID = T2.ID
 ```
 
-#### Syntaxe implicite
+### Syntaxe implicite
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -86,7 +86,7 @@ FROM   Table1 T1,
 WHERE  T2.ID = T1.ID
 ```
 
-#### Syntaxe "naturelle"
+### Syntaxe "naturelle"
 
 ```
 SELECT ID, T1.Libelle, T2.Caption
@@ -94,7 +94,7 @@ FROM   Table1 T1
 NATURAL JOIN Table2 T2
 ```
 
-#### Résultat
+### Résultat
 
 ```
 ID  Libelle  Caption
@@ -108,7 +108,7 @@ ID  Libelle  Caption
 On prend tout des 2 côtés sans faire de correspondance <=> produit
 cartésien
 
-#### Syntaxe explicite
+### Syntaxe explicite
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -116,7 +116,7 @@ FROM   Table1 T1
 CROSS JOIN Table2 T2
 ```
 
-#### Syntaxe implicite
+### Syntaxe implicite
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -124,7 +124,7 @@ FROM   Table1 T1,
        Table2 T2
 ```
 
-#### Résultat
+### Résultat
 
 ```
 ID  Libelle  Caption
@@ -144,7 +144,7 @@ ID  Libelle  Caption
 
 On prend tout ce qui est à gauche (ie la 1° table) et l'autre suit
 
-#### Syntaxe explicite
+### Syntaxe explicite
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -152,7 +152,7 @@ FROM   Table1 T1
 LEFT OUTER JOIN Table2 T2 ON T1.ID = T2.ID
 ```
 
-#### Syntaxe implicite
+### Syntaxe implicite
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -161,7 +161,7 @@ FROM   Table1 T1,
 WHERE  T2.ID(+) = T1.ID
 ```
 
-#### Résultat
+### Résultat
 
 ```
 ID  Libelle  Caption
@@ -175,7 +175,7 @@ ID  Libelle  Caption
 
 On prend tout ce qui est à droite (ie la 2° table) et l'autre suit
 
-#### Syntaxe explicite
+### Syntaxe explicite
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -183,7 +183,7 @@ FROM   Table1 T1
 RIGHT OUTER JOIN Table2 T2 ON T1.ID = T2.ID
 ```
 
-#### Syntaxe implicite
+### Syntaxe implicite
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -192,7 +192,7 @@ FROM   Table1 T1,
 WHERE  T2.ID = T1.ID(+)
 ```
 
-#### Résultat
+### Résultat
 
 ```
 ID  Libelle  Caption
@@ -206,7 +206,7 @@ ID  Libelle  Caption
 
 On prend ce qui existe des 2 côtés
 
-#### Syntaxe explicite
+### Syntaxe explicite
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -214,7 +214,7 @@ FROM   Table1 T1
 FULL OUTER JOIN Table2 T2 ON T1.ID = T2.ID
 ```
 
-#### Syntaxe implicite (ou comment faire sans)
+### Syntaxe implicite (ou comment faire sans)
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -228,7 +228,7 @@ FROM   Table1 T1,
 WHERE  T2.ID = T1.ID(+)
 ```
 
-#### Résultat
+### Résultat
 
 ```
 ID  Libelle  Caption
@@ -239,7 +239,7 @@ ID  Libelle  Caption
 3   Trois
 ```
 
-#### Version améliorée pour avoir l'ID
+### Version améliorée pour avoir l'ID
 
 ```
 SELECT NVL(T1.ID, T2.ID) AS ID, T1.Libelle, T2.Caption

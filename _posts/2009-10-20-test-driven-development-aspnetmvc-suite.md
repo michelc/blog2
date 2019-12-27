@@ -13,7 +13,7 @@ partie du tutoriel pour gérer des contacts]({% post_url 2009-10-09-test-driven-
 
 ## Mises à jour comme dans le tutoriel
 
-#### La base de données : facile
+### La base de données : facile
 
 Pour commencer, direction le "Database Explorer" pour modifier la base de
 données :
@@ -23,11 +23,11 @@ données :
 l'identifiant du groupe auquel est rattaché le contact
 * définition de la relation entre les tables "Contacts" et "Groups"
 
-#### Le modèle : encore plus facile
+### Le modèle : encore plus facile
 
 Rien à ajouter au tutoriel.
 
-#### Le Repositiry : ça se complique
+### Le Repositiry : ça se complique
 
 Zut ! Le tutoriel donne bien les modifications à apporter repository
 (l'interface et la classe), mais pas un seul mot sur les autres modifications

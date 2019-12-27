@@ -172,7 +172,7 @@ Je ne vais pas expliquer comment faire ni entrer dans les détails de comment
 ça marche (en plus je n'ai pas encore suffisament bien compris moi-même), mais
 voici ce à quoi je suis arrivé après quelques essais.
 
-#### Models\Contact.cs
+### Models\Contact.cs
 
 ```
 namespace ContactManager.Models
@@ -213,7 +213,7 @@ namespace ContactManager.Models
 }
 ```
 
-#### Mappings\Contact.hbm.xml
+### Mappings\Contact.hbm.xml
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -237,7 +237,7 @@ namespace ContactManager.Models
 </hibernate-mapping>
 ```
 
-#### Models\Group.cs
+### Models\Group.cs
 
 ```
 using System.Collections.Generic;
@@ -257,7 +257,7 @@ namespace ContactManager.Models
 }
 ```
 
-#### Mappings\Group.hbm.xml
+### Mappings\Group.hbm.xml
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -308,7 +308,7 @@ IContactManagerRepository en utilisant NHibernate et LINQ to NHibernate pour
 remplacer le fichier EntityContactManagerRepository.cs qui l'implémentait pour
 Entity Framework.
 
-#### Models\NHContactManagerRepository.cs
+### Models\NHContactManagerRepository.cs
 
 ```
 using System.Collections.Generic;

@@ -105,14 +105,14 @@ h2 {
 }
 h2 a, h2 a:visited { color: #43a047; }
 
-h4 {
+h3 {
   color: #aaa;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1;
   margin: 1.25rem 0;
 }
-h4 a, h4 a:visited { color: #aaa; }
+h3 a, h3 a:visited { color: #aaa; }
 
 
 /* Blocks

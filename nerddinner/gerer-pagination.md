@@ -99,7 +99,7 @@ seraient renvoyé par cette requête SQL (ce qui la rend à la fois performante 
 Au lieu de coder en dur la page souhaitée, nous allons ajouter un paramètre
 "page" dans l'URL pour indiquer quelle fourchette de dîners afficher.
 
-#### Utiliser la QueryString
+### Utiliser la QueryString
 
 Le code suivant montre comment modifier notre action Index() pour gérer le
 paramètre "page" sous forme de Querystring et prendre en compte des URLs sous
@@ -133,7 +133,7 @@ l'opérateur ?? du C# qui est très pratique pour gérer les types nullables. Da
 l'exemple ci-dessus, il nous permet d'employer la valeur 0 lorsque le paramètre
 "page" est null.
 
-#### Modifier l'URL
+### Modifier l'URL
 
 Plutôt que d'utiliser un paramètre en Querystring, il est aussi possible de
 faire apparaitre le numéro de page directement dans l'URL, ce qui pourrait

@@ -324,7 +324,7 @@ façons, nous n'aurions rien eu d'autre à faire, ni au niveau de la classe
 Person, ni au niveau des règles de validation : tout aurait continué à
 fonctionner parfaitement.
 
-#### Mais qu'est-ce qui se passe dans le cas où nous utilisons un outil
+### Mais qu'est-ce qui se passe dans le cas où nous utilisons un outil
 graphique pour effectuer notre mapping objet-relationnel ?
 
 De nos jours, la plupart des développeurs qui utilisent Visual Studio
@@ -373,7 +373,7 @@ L'approche ci-dessus n'est sans doute pas aussi élégante qu'une approche
 purement POCO mais présente l'avantage de fonctionner plutôt bien avec
 n'importe quel code généré par un outil ou un concepteur de Visual Studio.
 
-#### Dernière étape - Enregistrer en base de données
+### Dernière étape - Enregistrer en base de données
 
 Notre dernière étape - que nous utilisions une classe "Person" de type POCO
 ou générée automatiquement - sera de sauvegarder nos amis convenables dans la

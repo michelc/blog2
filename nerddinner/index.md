@@ -25,26 +25,21 @@ l'occasion d'illustrer différents concepts à la base de ASP.NET MVC
 * [Création du projet ASP.NET MVC 1.0](/nerddinner/file-new-project/)
 * [Comment créer la base de données](/nerddinner/creation-base-donnees/)
 * [Construire le modèle et définir des règles métiers](/nerddinner/construire-modele/)
-* [Utiliser les contrôleurs et les vues pour réaliser une interface
-liste / détail](/nerddinner/controleurs-vues/)
-* [Effectuer la mise à jour des données via des formulaires
-CRUD](/nerddinner/formulaires-crud/)
+* [Utiliser les contrôleurs et les vues pour réaliser une interface liste / détail](/nerddinner/controleurs-vues/)
+* [Effectuer la mise à jour des données via des formulaires CRUD](/nerddinner/formulaires-crud/)
 * [Faire passer des informations du contrôleur vers la vue](/nerddinner/viewdata-viewmodel/)
 * [Utiliser des master pages et des vues partielles](/nerddinner/master-page-vues-partielles/)
 * [Permettre la pagination des listes](/nerddinner/gerer-pagination/)
-* [Gérer l'authentification des utilisateurs et leurs
-autorisations](/nerddinner/authentification-autorisation/)
+* [Gérer l'authentification des utilisateurs et leurs autorisations](/nerddinner/authentification-autorisation/)
 * [Utiliser Ajax pour saisir les inscriptions](/nerddinner/utiliser-ajax/)
 * [Ajouter une carte interactive grâce à Ajax](/nerddinner/ajouter-carte-ajax/)
 * [Réaliser des tests unitaires](/nerddinner/realiser-tests-unitaires/)
 * [Conclusion](/nerddinner/conclusion/)
 
-![R](http://www.nerddinner.com/Content/Img/logo.png)
+![](/public/2009/nerddinner.jpg)
 
-* [Site de démonstration de
-l'application NerdDinner](http://www.nerddinner.com/) terminée.
-* [Code source complet
-de l'application NerdDinner](http://nerddinner.codeplex.com/) sur Codeplex.
+* [Site de démonstration de l'application NerdDinner](http://www.nerddinner.com/) terminée.
+* [Code source complet de l'application NerdDinner](http://nerddinner.codeplex.com/) sur Codeplex.
 
 ---
 La version originale en anglais du tutoriel NerdDinner pour ASP.NET MVC 1.0

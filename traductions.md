@@ -1,5 +1,4 @@
 ---
-date: 2011-06-10 13:33:00
 layout: page
 permalink: traductions/
 redirect_from: "pages/traductions"
@@ -21,8 +20,7 @@ Grâce à lui, j'ai moi aussi eu envie d'essayer et d'adopter Sinatra :
 * [Des lapins à la sauce REST]({% post_url 2010-09-29-lapins-sauce-rest %}) (29/09/2010)
 * [Déployer des applications Sinatra sur Heroku]({% post_url 2010-09-13-deployer-applications-sinatra-heroku %})
 (13/09/2010)
-* [SuperDo : Une todo liste avec Sinatra et DataMapper]({% post_url 2010-09-02-superdo-todo-liste-sinatra-datamapper %})
-(02/09/2010)
+* [SuperDo : Une todo liste avec Sinatra et DataMapper]({% post_url 2010-09-02-superdo-todo-liste-sinatra-datamapper %}) (02/09/2010)
 * [Guide pour démarrer avec Git]({% post_url 2010-07-29-guide-demarrer-git %}) (03/08/2010)
 * [Création d'un premier projet avec Sinatra]({% post_url 2010-07-27-creation-premier-projet-sinatra %}) (28/07/2010)
 * [Installer Sinatra sous Windows 7]({% post_url 2010-07-22-installer-sinatra-windows-7 %}) (22/07/2010)
@@ -35,8 +33,7 @@ apportées par cette nouvelle version. Au final, il n'y a eu que 2 articles que
 j'ai donc traduits et complétés par un autre sur la syntaxe &lt;%: %&gt; tiré
 de sa série d'articles consacrés à Visual Studio 2010 et .NET 4 :
 
-* [Nouvelle syntaxe &lt;%: %&gt; pour encoder la sortie HTML]({% post_url 2010-09-08-aspnetmvc-2-nouvelle-syntaxe-encoder-sortie-html %})
-(08/09/2010)
+* [Nouvelle syntaxe &lt;%: %&gt; pour encoder la sortie HTML]({% post_url 2010-09-08-aspnetmvc-2-nouvelle-syntaxe-encoder-sortie-html %}) (08/09/2010)
 * [Validation basée sur le modèle]({% post_url 2010-08-06-aspnetmvc-2-model-validation %}) (06/08/2010)
 * [Des helpers HTML fortement typés]({% post_url 2010-01-12-aspnetmvc-2-helpers-html-fortement-types %}) (31/07/2010)
 
@@ -81,43 +78,26 @@ conditions. J'ai donc préféré ne pas me contenter de suivre vite fait le
 tutoriel NerdDinner en quelques heures mais de maitriser du mieux possible
 toutes les fonctionnalités qu'il aborde :
 
+* [Introduction](/nerddinner/) (19/11/2009)
 * [Présentation du projet NerdDinner](/nerddinner/presentation-tutoriel/) (20/11/2009)
 * [Création du projet ASP.NET MVC](/nerddinner/file-new-project/) (20/11/2009)
 * [Comment créer la base de données](/nerddinner/creation-base-donnees/) (23/11/2009)
-* [Construire le modèle et définir des règles métiers](/nerddinner/construire-modele/)
-(25/11/2009)
-* [Utiliser les contrôleurs et les vues pour réaliser une interface
-liste / détail](/nerddinner/controleurs-vues/) (25/11/2009)
-* [Effectuer la mise à jour des données via des formulaires CRUD](/nerddinner/formulaires-crud/)
-(16/12/2009)
-* [Faire passer des informations du contrôleur vers la vue](/nerddinner/viewdata-viewmodel/)
-(07/01/2010)
-* [Utiliser des master pages et des vues partielles](/nerddinner/master-page-vues-partielles/)
-(13/01/2010)
+* [Construire le modèle et définir des règles métiers](/nerddinner/construire-modele/) (25/11/2009)
+* [Utiliser les contrôleurs et les vues pour réaliser une interface liste / détail](/nerddinner/controleurs-vues/) (25/11/2009)
+* [Effectuer la mise à jour des données via des formulaires CRUD](/nerddinner/formulaires-crud/) (16/12/2009)
+* [Faire passer des informations du contrôleur vers la vue](/nerddinner/viewdata-viewmodel/) (07/01/2010)
+* [Utiliser des master pages et des vues partielles](/nerddinner/master-page-vues-partielles/) (13/01/2010)
 * [Permettre la pagination des listes](/nerddinner/gerer-pagination/) (19/01/2010)
-* [Gérer l'authentification des utilisateurs et leurs
-autorisations](/nerddinner/authentification-autorisation/) (20/01/2010)
+* [Gérer l'authentification des utilisateurs et leurs autorisations](/nerddinner/authentification-autorisation/) (20/01/2010)
 * [Utiliser Ajax pour saisir les inscriptions](/nerddinner/utiliser-ajax/) (27/01/2010)
 * [Ajouter une carte interactive grâce à Ajax](/nerddinner/ajouter-carte-ajax/) (02/02/2010)
 * [Réaliser des tests unitaires](/nerddinner/realiser-tests-unitaires/) (15/02/2010)
-* [Conclusion](/nerddinner/conclusion/)
-(15/02/2010)
+* [Conclusion](/nerddinner/conclusion/) (15/02/2010)
 
 ## Mes autres traductions
 
-* [C'est Quoi cette Expression Lambda ?]({% post_url 2010-04-28-c-est-quoi-cette-expression-lambda %}) (28/04/2010) - Ayant
-entrepris de me mettre à jour sur les nouveautés de C#, j'avais trouvé cet
-article qui explique les expressions lambda de façon amusante.
-* [ASP.NET MVC c'est pas forcément LINQ to SQL]({% post_url 2010-03-03-aspnetmvc-c-pas-forcement-linq-to-sql %}) (03/03/2010) - Un
-tutoriel intéressant à suivre parce qu'il présente un exemple d'application
-très complet et très concret et qu'il sort des sentiers (re)battus de LINQ to
-SQL, Entity Framework et autres ORMs.
-* [Utiliser ASP.NET MVC et NHibernate]({% post_url 2010-01-29-utiliser-aspnetmvc-nhibernate-1 %}) (29/01/2010) - Pour
-accompagner mes premiers essais avec NHibernate, j'avais repris le tutoriel que
-César Intriago avait publié sous forme d'une série de 3 articles.
-* [Je peux le dire : Vous devriez apprendre MVC]({% post_url 2010-01-12-vous-devriez-apprendre-mvc %}) (12/01/2010) - Un
-plaidoyer pour ASP.NET MVC de Rob Conery qui se résume en 3 mots :
-"WebForms is a lie"
-* [Comment transformer votre site web en PWA]({% post_url 2017-08-18-transformer-site-web-pwa %}) (18/08/2017) - Un billet très didactique de Max Böck qui donne une vision
-claire sur la façon de procéder pour créer une première Application Web
-progressive à partir d'un simple site internet.
+* [C'est Quoi cette Expression Lambda ?]({% post_url 2010-04-28-c-est-quoi-cette-expression-lambda %}) (28/04/2010) - Ayant entrepris de me mettre à jour sur les nouveautés de C#, j'avais trouvé cet article qui explique les expressions lambda de façon amusante.
+* [ASP.NET MVC c'est pas forcément LINQ to SQL]({% post_url 2010-03-03-aspnetmvc-c-pas-forcement-linq-to-sql %}) (03/03/2010) - Un tutoriel intéressant à suivre parce qu'il présente un exemple d'application très complet et très concret et qu'il sort des sentiers (re)battus de LINQ to SQL, Entity Framework et autres ORMs.
+* [Utiliser ASP.NET MVC et NHibernate]({% post_url 2010-01-29-utiliser-aspnetmvc-nhibernate-1 %}) (29/01/2010) - Pour accompagner mes premiers essais avec NHibernate, j'avais repris le tutoriel que César Intriago avait publié sous forme d'une série de 3 articles.
+* [Je peux le dire : Vous devriez apprendre MVC]({% post_url 2010-01-12-vous-devriez-apprendre-mvc %}) (12/01/2010) - Un plaidoyer pour ASP.NET MVC de Rob Conery qui se résume en 3 mots : "WebForms is a lie"
+* [Comment transformer votre site web en PWA]({% post_url 2017-08-18-transformer-site-web-pwa %}) (18/08/2017) - Un billet très didactique de Max Böck qui donne une vision claire sur la façon de procéder pour créer une première Application Web progressive à partir d'un simple site internet.

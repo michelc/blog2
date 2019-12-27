@@ -12,7 +12,7 @@ that I still refer to once in a while : [Mise à jour d'une table à partir d'un
 autre]({% post_url 2007-05-30-mise-a-jour-table-partir-autre %}).
 
 <figure>
-  <img src="{{ post.image }}" alt="sql-database" />
+  <img src="{{ post.image | prepend: site.baseurl }}" alt="sql-database" />
   <figcaption>
     <a href="https://dbdiagram.io/">dbdiagram.io</a>
   </figcaption>

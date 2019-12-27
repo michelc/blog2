@@ -3,7 +3,7 @@ date: 2019-12-23 14:36:42+200
 layout: post
 tags: sql
 title: "Updating a table from another table"
-image: /public/2019/sql-database.jpg
+image: "/public/2019/sql-database.jpg"
 ---
 
 {:.encart}
@@ -12,7 +12,7 @@ that I still refer to once in a while : [Mise à jour d'une table à partir d'un
 autre]({% post_url 2007-05-30-mise-a-jour-table-partir-autre %}).
 
 <figure>
-  <img src="{{ post.image | prepend: site.baseurl }}" alt="sql-database" />
+  <img src="{{ page.image }}" alt="sql-database" />
   <figcaption>
     <a href="https://dbdiagram.io/">dbdiagram.io</a>
   </figcaption>

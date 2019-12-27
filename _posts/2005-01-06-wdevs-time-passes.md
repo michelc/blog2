@@ -3,6 +3,7 @@ date: 2005-01-06 13:00:00
 layout: post
 redirect_from: "post/2005/01/06/Wdevs-Time-passes"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) Time passes"
 ---
 

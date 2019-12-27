@@ -3,6 +3,7 @@ date: 2005-03-10 20:09:00
 layout: post
 redirect_from: "post/2005/03/10/Wdevs-Screens-and-boxes-authorizations"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) Screens and boxes authorizations"
 ---
 

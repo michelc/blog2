@@ -1,6 +1,7 @@
 ---
 date: 2019-10-01 12:23:34
 layout: post
+lang: en-US
 tags: javascript, jquery
 title: "Search and filter a table with JavaScript"
 ---

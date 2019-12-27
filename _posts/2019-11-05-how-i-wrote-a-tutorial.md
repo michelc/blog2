@@ -1,6 +1,7 @@
 ---
 date: 2019-11-05 12:11:04+200
 layout: post
+lang: en-US
 tags: javascript, tutoriel
 title: "How I wrote a Node JS tutorial"
 image: "/public/2019/ididitmyself.jpg"

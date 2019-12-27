@@ -3,6 +3,7 @@ date: 2004-11-15 17:30:00
 layout: post
 redirect_from: "post/2004/11/15/Wdevs-A-links-box"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) A links box"
 ---
 

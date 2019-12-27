@@ -3,6 +3,7 @@ date: 2006-02-20 12:52:00
 layout: post
 redirect_from: "post/2006/02/20/Wdevs-Inventory"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) Inventory"
 ---
 

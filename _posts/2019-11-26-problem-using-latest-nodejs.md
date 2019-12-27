@@ -2,7 +2,7 @@
 date: 2019-11-26 12:28:44+200
 layout: post
 tags: javascript
-lang: en
+lang: en-US
 title: "The problem with blindly using the latest Node"
 image: "/public/2019/le-corniaud.jpg"
 excerpt: "Until a few days ago, I've always used the latest version of Node. Usually it works well, but this time I had to go back."

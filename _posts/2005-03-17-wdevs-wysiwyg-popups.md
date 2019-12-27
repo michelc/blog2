@@ -3,6 +3,7 @@ date: 2005-03-17 19:26:00
 layout: post
 redirect_from: "post/2005/03/17/Wdevs-Wysiwyg-and-popups"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) Wysiwyg and popups"
 ---
 

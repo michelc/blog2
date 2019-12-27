@@ -3,6 +3,7 @@ date: 2004-11-04 19:32:00
 layout: post
 redirect_from: "post/2004/11/04/Wdevs-Of-controls-and-boxes"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) Of controls and boxes"
 ---
 
@@ -36,7 +37,7 @@ ALTER TABLE qc_BoxTypes
 
 INSERT INTO qc_BoxTypes
     (idBoxType, title, description, ctrlSource, editSource, defaultCache, toolbox)
-VALUES 
+VALUES
     ('htmltext', 'Htmltext', 'Html editor', '/classic/htmltext/edithtmltext.ascx', 60, 'Classic');
 ```
 
@@ -64,17 +65,17 @@ ALTER TABLE qc_Boxes
 ALTER TABLE qc_Boxes
     ADD CONSTRAINT FK_qc_Boxes_BoxTypes FOREIGN KEY (idBoxType) REFERENCES qc_BoxTypes (idBoxType) ON DELETE CASCADE ON UPDATE CASCADE;
 
-INSERT INTO qc_Boxes 
+INSERT INTO qc_Boxes
     (idBox, idScreen, idBoxType, title, paneName, paneOrder, cacheTime, alwaysVisible)
-VALUES 
+VALUES
     ('skidootoo', 'home', 'htmltext', 'New Minty Fresh Flavor!', 'paneMain', 1, 60, false);
-INSERT INTO qc_Boxes 
+INSERT INTO qc_Boxes
     (idBox, idScreen, idBoxType, title, paneName, paneOrder, cacheTime, alwaysVisible)
-VALUES 
+VALUES
     ('thanks', 'home', 'htmltext', 'Remerciements', 'paneMore', 1, 60, true);
-INSERT INTO qc_Boxes 
+INSERT INTO qc_Boxes
     (idBox, idScreen, idBoxType, title, paneName, paneOrder, cacheTime, alwaysVisible)
-VALUES 
+VALUES
     ('test1', 'htmltext', 'htmltext', 'First Html test', 'paneMain', 1, 60, false);
 ```
 

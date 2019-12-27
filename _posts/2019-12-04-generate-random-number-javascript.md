@@ -2,7 +2,7 @@
 date: 2019-12-04 12:23:15+200
 layout: post
 tags: javascript
-lang: en
+lang: en-US
 title: "Generate a random number with JavaScript"
 image: "/public/2019/xkcd-221.jpg"
 excerpt: "How to generate random numbers with Math.random() + How to force chance and be sure to always generate the same set of random numbers (useful for testing)."

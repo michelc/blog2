@@ -2,7 +2,6 @@
 date: 2019-11-18 12:31:14+200
 layout: post
 tags: javascript
-lang: fr
 title: "Comment définir une fonction JavaScript"
 image: "/public/2019/butterfly-collection.jpg"
 excerpt: "Pour moi essentiellement, un petit mémo sur les différentes façons de déclarer une fonction en JavaScript."

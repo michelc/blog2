@@ -2,7 +2,7 @@
 date: 2019-12-17 12:09:42+200
 layout: post
 tags: css
-lang: en
+lang: en-US
 title: "A new CSS and 5 tips to know"
 image: "/public/2019/sapin-de-noel.jpg"
 excerpt: "For the coming new year, I have refreshed the visual style of my blog. Besides the 'tout nouveau, tout beau' point, it allowed me to find 2 or 3 things from CSS and Jekyll that I didn't know."

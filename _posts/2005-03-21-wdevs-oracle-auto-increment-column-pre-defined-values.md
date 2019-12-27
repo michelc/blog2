@@ -3,6 +3,7 @@ date: 2005-03-21 17:17:00
 layout: post
 redirect_from: "post/2005/03/21/Wdevs-Oracle-auto-increment-column-and-pre-defined-values"
 tags: qc, sql, wdevs
+lang: en-US
 title: "(Wdevs) Oracle, auto-increment column and pre-defined values"
 ---
 

@@ -2,7 +2,7 @@
 date: 2019-11-19 12:22:52+200
 layout: post
 tags: javascript
-lang: en
+lang: en-US
 title: "How to define a JavaScript function"
 image: "/public/2019/butterfly-collection.jpg"
 excerpt: "A personal reminder post to list some of the JavaScript methods to define a function: declaration, expression and arrow syntax."

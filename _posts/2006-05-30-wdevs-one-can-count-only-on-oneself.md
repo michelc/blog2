@@ -3,6 +3,7 @@ date: 2006-05-30 20:02:00
 layout: post
 redirect_from: "post/2006/05/30/Wdevs-One-can-count-only-on-oneself"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) One can count only on oneself"
 ---
 

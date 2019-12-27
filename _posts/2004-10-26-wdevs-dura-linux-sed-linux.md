@@ -3,6 +3,7 @@ date: 2004-10-26 14:52:00
 layout: post
 redirect_from: "post/2004/10/26/Wdevs-Dura-Linux-sed-Linux"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) Dura Linux, sed Linux"
 ---
 

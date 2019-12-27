@@ -1,6 +1,7 @@
 ---
 date: 2019-10-29 12:33:18+200
 layout: post
+lang: en-US
 tags: javascript, node, sql
 title: "Use SQlite3 in async / await mode"
 image: "/public/2019/grand-bain.jpg"

@@ -3,7 +3,8 @@ date: 2004-10-22 08:55:00
 layout: post
 redirect_from: "post/2004/10/22/Wdevs-Start"
 tags: qc, wdevs
-title: "(Wdevs)  Start"
+lang: en-US
+title: "(Wdevs) Start"
 ---
 
 I plan to use this weblog to track my work as I will develop a light portal

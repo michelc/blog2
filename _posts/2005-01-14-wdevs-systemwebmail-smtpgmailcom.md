@@ -3,6 +3,7 @@ date: 2005-01-14 14:21:00
 layout: post
 redirect_from: "post/2005/01/14/Wdevs-SystemWebMail-and-smtpgmailcom"
 tags: code-snippets, c-sharp, qc, wdevs
+lang: en-US
 title: "(Wdevs) System.Web.Mail and smtp.gmail.com"
 ---
 
@@ -42,7 +43,7 @@ public string sendMail (string from, string to, string cc, string bcc, string su
     return "";
   } catch (Exception ex) {
     return ex.Message;
-} 
+}
 ```
 
 In addition, two useful links:

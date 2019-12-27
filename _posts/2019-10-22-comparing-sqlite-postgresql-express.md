@@ -1,6 +1,7 @@
 ---
 date: 2019-10-22 12:20:34+200
 layout: post
+lang: en-US
 tags: javascript, node, sql
 title: "Comparing SQlite or PostgreSQL with Express"
 image: "/public/2019/microscope.jpg"

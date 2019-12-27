@@ -3,6 +3,7 @@ date: 2004-11-15 17:23:00
 layout: post
 redirect_from: "post/2004/11/15/Wdevs-An-image-box"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) An image box"
 ---
 

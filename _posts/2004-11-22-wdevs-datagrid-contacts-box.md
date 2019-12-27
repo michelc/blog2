@@ -3,6 +3,7 @@ date: 2004-11-22 11:59:00
 layout: post
 redirect_from: "post/2004/11/22/Wdevs-A-DataGrid-for-my-Contacts-box"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) A DataGrid for my Contacts box"
 ---
 

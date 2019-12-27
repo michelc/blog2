@@ -3,6 +3,7 @@ date: 2005-03-08 14:27:00
 layout: post
 redirect_from: "post/2005/03/08/Wdevs-Next-time-on-this-blog"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) Next time on this blog"
 ---
 

@@ -3,6 +3,7 @@ date: 2005-06-23 16:41:00
 layout: post
 redirect_from: "post/2005/06/23/Wdevs-Another-MySQL-manager"
 tags: sql, wdevs
+lang: en-US
 title: "(Wdevs) Another MySQL manager"
 ---
 

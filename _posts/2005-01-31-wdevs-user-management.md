@@ -3,6 +3,7 @@ date: 2005-01-31 13:43:00
 layout: post
 redirect_from: "post/2005/01/31/Wdevs-User-management"
 tags: qc, wdevs
+lang: en-US
 title: "(Wdevs) User management"
 ---
 

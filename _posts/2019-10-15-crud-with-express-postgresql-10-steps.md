@@ -1,6 +1,7 @@
 ---
 date: 2019-10-15 10:59:46
 layout: post
+lang: en-US
 tags: javascript, node, sql
 title: "CRUD application with Express and PostgresSQL in 10 steps"
 image: "/public/2019/elephant-bookshelf.jpg"

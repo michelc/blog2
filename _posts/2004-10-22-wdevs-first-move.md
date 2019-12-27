@@ -3,6 +3,7 @@ date: 2004-10-22 09:11:00
 layout: post
 redirect_from: "post/2004/10/22/Wdevs-First-move"
 tags: blog, qc, wdevs
+lang: en-US
 title: "(Wdevs) First move"
 ---
 

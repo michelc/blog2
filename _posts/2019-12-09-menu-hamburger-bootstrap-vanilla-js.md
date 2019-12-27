@@ -2,6 +2,7 @@
 date: 2019-12-09 12:24:10+200
 layout: post
 tags: javascript, bootstrap
+lang: fr
 title: "Gérer le menu hamburger de Bootstrap 4 en Vanilla JS"
 image: "/public/2019/hamburger-menu.jpg"
 excerpt: "Bootstrap 4 c'est super pour le côté responsive, mais 57 ko de JavaScript juste pour gérer le menu hamburger, c'est trop."

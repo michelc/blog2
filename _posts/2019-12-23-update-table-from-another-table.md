@@ -2,6 +2,7 @@
 date: 2019-12-23 14:36:42+200
 layout: post
 tags: sql
+lang: en
 title: "Updating a table from another table"
 image: "/public/2019/sql-database.jpg"
 ---

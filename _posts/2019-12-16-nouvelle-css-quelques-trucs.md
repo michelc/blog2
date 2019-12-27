@@ -2,6 +2,7 @@
 date: 2019-12-16 12:09:42+200
 layout: post
 tags: css
+lang: fr
 title: "Nouvelle CSS et 5 trucs bons à savoir"
 image: "/public/2019/sapin-de-noel.jpg"
 excerpt: "Pour la nouvelle année à venir, j'ai un peu rafraichi la charte graphique de mon

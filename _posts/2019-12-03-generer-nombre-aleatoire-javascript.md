@@ -2,6 +2,7 @@
 date: 2019-12-03 12:13:15+200
 layout: post
 tags: javascript
+lang: fr
 title: "Générer un nombre aléatoire en JavaScript"
 image: "/public/2019/xkcd-221.jpg"
 excerpt: "Comment générer un nombre aléatoire en JavaScript, mais aussi comment utiliser le module 'seedrandom' pour rendre le hasard plus prévisible."

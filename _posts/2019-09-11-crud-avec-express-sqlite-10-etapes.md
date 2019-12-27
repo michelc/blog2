@@ -59,10 +59,10 @@ CRUD avec Express et PostgreSQL en 10
 
 <a id="crud1"></a>
 
-## 1. Créer un nouveau projet Node
+### 1. Créer un nouveau projet Node
 
 
-### Créer un dossier pour le projet
+#### Créer un dossier pour le projet
 
 On peut commencer au niveau de la ligne de commande (ou "Invite de commande"
 sous Windows) :
@@ -76,7 +76,7 @@ Cela crée un sous-dossier "AppTest" dans mon répertoire "E:\Code" qui sert pou
 tester différents trucs.
 
 
-### Ouvrir le dossier sous Visual Code
+#### Ouvrir le dossier sous Visual Code
 
 Toujours en ligne de commande, lancer Visual Code pour ouvrir le dossier
 "AppTest" :
@@ -90,7 +90,7 @@ A partir de là, l'invite de commande de Windows ne sert plus à rien et peut ê
 fermée. La suite se déroulera dans Visual Code ou dans son terminal.
 
 
-### Initialiser le projet Node
+#### Initialiser le projet Node
 
 Pour cela, il faut ouvrir le terminal de Visual Code et lancer la commande
 `npm init` :
@@ -133,10 +133,10 @@ NPM dans le dossier racine du projet ("E:\Code\AppTest" dans le cas présent).
 
 <a id="crud2"></a>
 
-## 2. Ajouter des modules au projet Node
+### 2. Ajouter des modules au projet Node
 
 
-### Choix techniques
+#### Choix techniques
 
 L'objectif de ce tutoriel est de tester le développement d'une application Node
 de type web. Pour cela, il faut donc installer [Express](https://expressjs.com/)
@@ -152,7 +152,7 @@ facile : pas de serveur à installer et zéro problème sous Windows. Avec Node 
 c'est le module SQlite3 qui sert d'interface pour SQlite.
 
 
-### Installer les dépendances
+#### Installer les dépendances
 
 Cela se fait en ligne de commande, dans le terminal de Visual Code :
 
@@ -197,7 +197,7 @@ Note : Dans des tutoriels un peu anciens, on voit encore la syntaxe `npm install
 "package.json", mais ce n'est plus nécessaire depuis la version 5 de NPM.
 
 
-### Le dossier "node_modules"
+#### Le dossier "node_modules"
 
 Le sous-répertoire "node_modules" est employé par NPM pour stocker tous les
 fichiers de dépendances d'un projet Node.
@@ -227,10 +227,10 @@ PS E:\Code\AppTest> npm install
 
 <a id="crud3"></a>
 
-## 3. Créer l'application Express
+### 3. Créer l'application Express
 
 
-### Vérifier que ça peut marcher...
+#### Vérifier que ça peut marcher...
 
 Pour être certain que tout est installé correctement, le plus sûr est de
 commencer par un fichier "index.js" avec un contenu minimum :
@@ -272,7 +272,7 @@ Il ne reste plus qu'à contrôler que ça marche réellement :
 C'est OK => arrêter le serveur en tapant Ctrl+C dans le terminal de Visual Code.
 
 
-### Comment ça marche ?
+#### Comment ça marche ?
 
 * La première ligne référence / importe le module Express.
 
@@ -308,7 +308,7 @@ app.get("/", (req, res) => {
 Grosso-modo...
 
 
-### Et plus précisément ?
+#### Et plus précisément ?
 
 Cela n'en a pas l'air, mais la méthode `app.get()` fait beaucoup de choses en
 seulement 3 lignes de codes.
@@ -348,7 +348,7 @@ envoyé grâce à la méthode `Response.send()`, qui fait "juste" deux trucs :
 Note : C'est quand même pas mal de technique pour ce tutoriel.
 
 
-### Améliorer le lancement de l'application Node JS
+#### Améliorer le lancement de l'application Node JS
 
 Revenons à des choses plus simples. Dans la section "scripts" du fichier
 "package.json", il est conseillé d'ajouter une ligne pour "automatiser" le
@@ -405,7 +405,7 @@ préfère éviter d'aborder trop de choses à la fois dans ce tutoriel.
 
 <a id="crud4"></a>
 
-## 4. Ajouter des vues EJS
+### 4. Ajouter des vues EJS
 
 Comme le but de l'application est d'avoir plusieurs fonctionnalités, on a besoin
 de créer plusieurs vues. Malheureusement, EJS ne gère pas les "layouts". Il faut
@@ -421,7 +421,7 @@ Note : Ces trois fichiers doivent être enregistrés dans un dossier "views" qui
 doit donc être créé en premier lieu.
 
 
-### Vue partielle "views/_header.ejs"
+#### Vue partielle "views/_header.ejs"
 
 ```
 <!doctype html>
@@ -455,7 +455,7 @@ doit donc être créé en premier lieu.
 ```
 
 
-### Vue "views/index.ejs"
+#### Vue "views/index.ejs"
 
 ```
 <%- include("_header") -%>
@@ -466,7 +466,7 @@ doit donc être créé en premier lieu.
 ```
 
 
-### Vue partielle "views/_footer.ejs"
+#### Vue partielle "views/_footer.ejs"
 
 ```
     <footer>
@@ -485,7 +485,7 @@ C'est un des avantages de EJS par rapport à d'autres moteurs de template pour
 éviter d'avoir à se disperser quand on débute.
 
 
-### Ajouter une feuille de style
+#### Ajouter une feuille de style
 
 Comme on peut le voir dans les trois vues ci-dessus, elles font référence à
 [Bootstrap 4](https://getbootstrap.com/).
@@ -497,13 +497,13 @@ correspondant à la version 4.3.1 de Bootstrap dans mon cas.
 
 <a id="crud5"></a>
 
-## 5. Utiliser les vues dans Express
+### 5. Utiliser les vues dans Express
 
 Note : Si cela n'avait pas été fait en début de projet, il aurait été nécessaire
 d'installer le module "EJS" par un `npm install ejs` pour pouvoir l'utiliser.
 
 
-### Modifications de "index.js"
+#### Modifications de "index.js"
 
 Pour utiliser les vues créées dans l'application Express, il faut modifier
 quelque peu le fichier "index.js".
@@ -554,7 +554,7 @@ app.get("/", (req, res) => {
 ```
 
 
-### Vérifier que cela fonctionne
+#### Vérifier que cela fonctionne
 
 * Faire un `npm start` dans le terminal de Visual Code
 * Naviguer vers "http://localhost:3000/" avec Chrome
@@ -563,7 +563,7 @@ app.get("/", (req, res) => {
 ![Page d'accueil avec la vue "index.ejs"](/public/2019/crud-02-vues.png)
 
 
-### Ajouter un chemin "/about"
+#### Ajouter un chemin "/about"
 
 La barre de navigation de l'application contient un choix "A propos" qui envoie
 vers l'URL "http://localhost:3000/about". Ce menu est défini dans la partie
@@ -604,7 +604,7 @@ compte les modifications apportées au projet).
 ![Page d'à propos avec la vue "about.ejs"](/public/2019/crud-03-about.png)
 
 
-### Envoyer des données du serveur vers la vue
+#### Envoyer des données du serveur vers la vue
 
 La barre de navigation de l'application contient aussi le choix "Données" qui
 envoie vers l'URL "http://localhost:3000/data". Cette URL va servir pour voir
@@ -654,7 +654,7 @@ redémarré le site, on obtient :
 ![Données envoyées à la vue](/public/2019/crud-04-data.png)
 
 
-### Le fichier "index.js" mis à jour
+#### Le fichier "index.js" mis à jour
 
 ```
 const express = require("express");
@@ -697,14 +697,14 @@ app.get("/data", (req, res) => {
 
 <a id="crud6"></a>
 
-## 6. Premiers pas avec le module SQlite3
+### 6. Premiers pas avec le module SQlite3
 
 Note : Si cela n'avait pas été fait en début de projet, il aurait été nécessaire
 d'installer le module SQlite3 par un `npm install sqlite3` pour pouvoir accéder
 à une base de données SQlite sous Node.
 
 
-### Déclarer le module SQlite3
+#### Déclarer le module SQlite3
 
 Il faut commencer par référencer "sqlite3" en tête du programe "index.js", avec
 les deux autres déclarations pour "express" et "path".
@@ -716,7 +716,7 @@ const sqlite3 = require("sqlite3").verbose();
 La méthode ".verbose()" permet d'avoir plus d'informations en cas de problème.
 
 
-### Connexion à la base de données SQlite
+#### Connexion à la base de données SQlite
 
 Ajouter ensuite le code pour se connecter à la base de données, juste avant de
 démarrer le serveur Express.
@@ -742,7 +742,7 @@ servir par la suite à accéder au contenu de la base de données et à effectue
 des requêtes sur cette base de données.
 
 
-### Création d'une table "Livres"
+#### Création d'une table "Livres"
 
 Pour ce tutoriel, on va créer une table de livres avec 4 colonnes :
 
@@ -797,7 +797,7 @@ SQL "IF NOT EXISTS". Ça ne serait pas super pour une vraie application, mais l�
 c'est juste un tutoriel.
 
 
-### Alimenter la table "Livres"
+#### Alimenter la table "Livres"
 
 Pour faciliter la suite du tutoriel, il est plus pratique d'insérer dès
 maintenant quelques livres dans la base de données. Sous SQlite, on pourrait
@@ -843,7 +843,7 @@ A présent, la table "Livres" contient les 3 lignes suivantes :
 ![Contenu de la table Livres](/public/2019/crud-00-livres.png)
 
 
-### Afficher la liste des livres
+#### Afficher la liste des livres
 
 Maintenant que la table "Livres" contient quelques données, il est possible de
 créer une méthode pour l'URL "http://localhost:3000/livres" du site de façon à
@@ -914,7 +914,7 @@ parce que la table "Livres" a été créée en utilisant des majuscules comme
 initiales pour les noms des colonnes.
 
 
-### Afficher les livres sous forme de tableau
+#### Afficher les livres sous forme de tableau
 
 Maintenant que la méthode pour afficher la liste des livres fonctionne, on va
 améliorer la présentation de ces données. La vue de l'étape précédente utilisait
@@ -969,7 +969,7 @@ indispensable pour la suite du tutoriel.
 
 <a id="crud7"></a>
 
-## 7. Modifier une fiche
+### 7. Modifier une fiche
 
 Cette partie du tutoriel va montrer comment modifier une fiche existante. On
 commencera par créer les vues nécéssaires pour saisir les informations du livre
@@ -981,7 +981,7 @@ l'utilisateur validera les modifications apportées via le bouton [Modifier] en
 bas du formulaire de saisie.
 
 
-### Les vues "views/edit.ejs" et "views/_editor.ejs"
+#### Les vues "views/edit.ejs" et "views/_editor.ejs"
 
 La vue principale pour pouvoir modifier une fiche est un formulaire Bootstrap
 assez classique.
@@ -1037,7 +1037,7 @@ code HTML dédié aux différents champs de saisie. Cette vue partielle servira
 ```
 
 
-### La route GET /edit/xxx
+#### La route GET /edit/xxx
 
 Il faut ensuite coder une première route pour afficher le livre à modifier
 lorsque on répond à la requête GET /edit/xxx (quand l'utilisateur a cliqué sur
@@ -1076,7 +1076,7 @@ des livres :
 ![Formulaire de modification d'un livre](/public/2019/crud-07-edit.png)
 
 
-### La route POST /edit/xxx
+#### La route POST /edit/xxx
 
 Et pour finir, il ne reste plus qu'à coder la route pour sauvegarder les
 modifications apportées à la fiche, lors de la requête POST /edit/xxx. Le "post"
@@ -1117,7 +1117,7 @@ un contrôle de saisie côté client et côté serveur, mais ce n'est pas le suj
 ce tutoriel.
 
 
-### Le middleware "express.urlencoded()"
+#### Le middleware "express.urlencoded()"
 
 Comme évoqué dans la partie précédente, il est nécessaire d'utiliser le
 middleware "express.urlencoded()" pour que `Request.body` récupère les valeurs
@@ -1144,10 +1144,10 @@ place, mais ce n'est plus utile depuis la version 4.1.6 de Express.
 
 <a id="crud8"></a>
 
-## 8. Créer une nouvelle fiche
+### 8. Créer une nouvelle fiche
 
 
-### La vue "views/create.ejs"
+#### La vue "views/create.ejs"
 
 La vue principale pour enregistrer un nouveau livre ressemble beaucoup à la vue
 codée pour modifier une fiche. Comme elle, elle fait appel à la vue partielle
@@ -1177,7 +1177,7 @@ codée pour modifier une fiche. Comme elle, elle fait appel à la vue partielle
 ```
 
 
-### La route GET /create
+#### La route GET /create
 
 Par rapport à la modification, cette fonction est beaucoup plus simple. Elle se
 contente de renvoyer la vue "create.ejs" en lui transmettant un objet "livre"
@@ -1210,7 +1210,7 @@ avantages de la vue partielle "_editor.ejs".
 ![Formulaire de création d'un livre](/public/2019/crud-08-create.png)
 
 
-### La route POST /create
+#### La route POST /create
 
 Lorsque l'utilisateur clique sur le bouton [Ajouter] pour valider son formulaire
 de saisie, le navigateur envoie une requête "post" vers cette route. La méthode
@@ -1238,10 +1238,10 @@ app.post("/create", (req, res) => {
 
 <a id="crud9"></a>
 
-## 9. Supprimer une fiche
+### 9. Supprimer une fiche
 
 
-### Les vues "views/delete.ejs" et "views/_display.ejs"
+#### Les vues "views/delete.ejs" et "views/_display.ejs"
 
 La vue principale pour pouvoir supprimer une fiche doit en premier lieu afficher
 les informations du livre sélectionné pour permettre à l'utilisateur de
@@ -1305,7 +1305,7 @@ pourrait également être utilisée dans le cadre d'une route et d'une vue
 "details" qui serviraient à afficher l'intégralité de la fiche.
 
 
-### La route GET /delete/xxx
+#### La route GET /delete/xxx
 
 C'est le même code que la méthode GET /edit/xxx, si ce n'est qu'il renvoie la
 vue "delete.ejs" plutôt que la vue "edit.ejs".
@@ -1329,7 +1329,7 @@ donc grisés selon les conventions de Bootstrap) :
 ![Formulaire de suppression d'un livre](/public/2019/crud-09-delete.png)
 
 
-### La route POST /delete/xxx
+#### La route POST /delete/xxx
 
 Cette fonction toute simple répond à la requête "post" envoyée par le navigateur
 suite au clic sur le bouton [Effacer] pour confirmer la suppression du livre.
@@ -1355,7 +1355,7 @@ app.post("/delete/:id", (req, res) => {
 
 <a id="crud10"></a>
 
-## 10. Conclusion
+### 10. Conclusion
 
 Personnellement, ce tutoriel m'a permis de bien avancer. J'ai enfin écrit une
 application web permettant de mettre à jour une base de données SQL avec Node JS
@@ -1416,7 +1416,7 @@ toujours dans le programme développé)
 
 <a id="annexe"></a>
 
-## Annexe - Le code complet de "index.js"
+### Annexe - Le code complet de "index.js"
 
 Ce n'est pas pour rallonger le billet, mais pour ceux qui comme moi aiment avoir
 une vue d'ensemble d'un programme. Et autant en profiter pour mettre en avant

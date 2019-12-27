@@ -167,19 +167,19 @@ by a blank line
 Là encore, trois rechercher / remplacer à base d'expressions régulières et
 le tour est joué.
 
-* Supprimer la ligne vide après un commentaire, qu'il s'agisse d'un
+#### Supprimer la ligne vide après un commentaire, qu'il s'agisse d'un
 commentaire simple `// xxxx` (SA1512) ou d'un commentaire d'en-tête de la forme
 `/// xxxx` (SA1506) :
 
 * Rechercher : `//{.*}`
 * Remplacer par : `//\1`
 
-* Supprimer la ligne vide après une accolade ouvrante (SA1505) :
-* Rechercher : `\{`
+#### Supprimer la ligne vide après une accolade ouvrante (SA1505) :
 
+* Rechercher : `\{`
 * Remplacer par : `{`
 
-# Supprimer la ligne vide avant une accolade fermante (SA1508) :
+#### Supprimer la ligne vide avant une accolade fermante (SA1508) :
 
 * Rechercher : `\}`
 * Remplacer par : `}`

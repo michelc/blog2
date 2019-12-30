@@ -3,7 +3,7 @@ date: 2019-12-30 13:16:12+200
 layout: post
 tags: jekyll
 title: "Mise à jour de la configuration de Jekyll"
-image: "/public/2019/source-code.jpg
+image: "/public/2019/source-code.jpg"
 ---
 
 Après avoir un peu rafraîchi la charte graphique de mon blogue, je me suis lancé dans sa mise à jour. En fait, depuis que j'étais passé de GandiBlog à Jekyll il y a près de 3 ans, il restait toujours quelques bricoles à faire pour finaliser la migration. Et comme cette année je me suis remis à bloguer, ça vaut le coup de m'y attaquer.

@@ -93,7 +93,7 @@ plugins:
   - jekyll-seo-tag
 ```
 
-Puis j'ajoute `{{ {% seo %} }}` dans le template "\_layout/default.html" :
+Puis j'ajoute `{% raw %}{% seo %}{% endraw %}` dans le template "\_layout/default.html" :
 
 ```html
     {% raw %}...
@@ -268,13 +268,13 @@ Pour faire bonne mesure, je précise aussi la langue dans les liens suivant / pr
 Et aussi dans les liens entre les traductions :
 
 ```html
-{% raw %}English version: [A new CSS and 5 tips to know]({% post_url ... %}){:hreflang="en"}.{% endraw %}
+{% raw %}English version: [A new CSS ...]({% post_url ... %}){:hreflang="en"}.{% endraw %}
 ```
 
 Ou :
 
 ```html
-{% raw %}Version en français : [Nouvelle CSS et 5 trucs bons à savoir]({% post_url ... %}){:hreflang="fr"}.{% endraw %}
+{% raw %}Version en français : [Nouvelle CSS ...]({% post_url ... %}){:hreflang="fr"}.{% endraw %}
 ```
 
-Le coup du `{:hreflang="xx"}` n'a pas été facile à trouver, mais pourtant ça existe bel et bien : [Additional link attributes can be added by using a span IAL after the inline link](https://kramdown.gettalong.org/syntax.html#inline-links).
+Le coup du `{% raw %}{:hreflang="xx"}{% endraw %}` n'a pas été facile à trouver, mais pourtant ça existe bel et bien : [Additional link attributes can be added by using a span IAL after the inline link](https://kramdown.gettalong.org/syntax.html#inline-links).

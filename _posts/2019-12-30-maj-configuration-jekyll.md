@@ -2,6 +2,7 @@
 date: 2019-12-30 13:16:12+200
 layout: post
 tags: jekyll
+lang: fr-FR
 title: "Mise à jour de la configuration de Jekyll"
 image: "/public/2019/source-code.jpg"
 ---
@@ -92,7 +93,7 @@ plugins:
   - jekyll-seo-tag
 ```
 
-Puis j'ajoute `{% seo %}` dans le template "\_layout/default.html" :
+Puis j'ajoute `{{ {% seo %} }}` dans le template "\_layout/default.html" :
 
 ```html
     {% raw %}...
@@ -157,7 +158,7 @@ Mais je vais pas passer ma vie dessus => je ne fais ça que pour les billets ré
 
 Ça c'est un truc perso que je traîne depuis que je blogue. J'ai toujours utilisé la balise `<h1>` pour le titre du blogue, ce qui me laisse avec la balise `<h2>` pour le titre du billet et les balises `<h3>` et `<h4>` pour les différentes sous-parties de l'article.
 
-Mais je vois bien que c'est un peu bizarre et que généralement on utilise la balise `<h1>` pour le titre du billet. Outre le fait que ces jours-ci ce doit être mieux d'un point de vue SEO, cela me permettrait de plus facilement republier mes billets en anglais sur [dev.to] (actuellement de dois faire attention à remplacer les `### ...` par des `## ...`).
+Mais je vois bien que c'est un peu bizarre et que généralement on utilise la balise `<h1>` pour le titre du billet. Outre le fait que ces jours-ci ce doit être mieux d'un point de vue SEO, cela me permettrait de plus facilement republier mes billets en anglais sur [dev.to] (actuellement de dois faire attention à remplacer les `### ... ` par des `## ... `).
 
 Je me suis donc lancé dans toute une série de rechercher / remplacer pour mettre à jour tous mes billets et après avoir corrigé quelques vieux billets mal structurés, je suis enfin entré dans le rang :
 

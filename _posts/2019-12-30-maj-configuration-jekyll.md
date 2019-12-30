@@ -59,16 +59,15 @@ image: "/public/2019/sapin-de-noel.jpg"
 
 ...
 
-<figure>
+{% raw %}<figure>
   <img src="{{ page.image }}" alt="sapin-de-noel" />
   <figcaption>
     <a href="https://unsplash.com/photos/ySNkCkdKyTY">Sapin de Noël - Rodion Kutsaev</a>
   </figcaption>
-</figure>
+</figure>{% endraw %}
 ```
 
-Et je n'ai rien d'autre à faire pour que cette image soit réutilisée par le
-plugin [Jekyll Feed](https://github.com/jekyll/jekyll-feed) :
+Et je n'ai rien d'autre à faire pour que cette image soit réutilisée par le plugin [Jekyll Feed](https://github.com/jekyll/jekyll-feed) :
 
 ```xml
 <entry>
@@ -96,8 +95,8 @@ plugins:
 Puis j'ajoute `{% seo %}` dans le template "\_layout/default.html" :
 
 ```html
-    ...
-    {% seo title=false %}
+    {% raw %}...
+    {% seo title=false %}{% endraw %}
   </head>
 ```
 
@@ -147,7 +146,7 @@ layout: post
 tags: css
 title: "Nouvelle CSS et 5 trucs bons à savoir"
 image: "/public/2019/sapin-de-noel.jpg"
-excerpt: "Pour la nouvelle année à venir, j'ai un peu rafraïchi la charte graphique de mon blogue. Outre le côté 'tout nouveau, tout beau', cela m'a permis de voir 2 ou 3 trucs de CSS et de Jekyll que je ne connaissais pas."
+excerpt: "Pour la nouvelle année à venir, j'ai un peu rafraîchi la charte graphique de mon blogue. Outre le côté 'tout nouveau, tout beau', cela m'a permis de voir 2 ou 3 trucs de CSS et de Jekyll que je ne connaissais pas."
 ---
 ```
 
@@ -178,7 +177,7 @@ Je me suis donc lancé dans toute une série de rechercher / remplacer pour mett
 Au final, j'ai fait ça :
 
 ```liquid
-  {% capture month %}{{ post.date | date: "%m" }}{% endcapture %}
+  {% raw %}{% capture month %}{{ post.date | date: "%m" }}{% endcapture %}
   {% if current_month != month %}
     {% assign current_month = month %}
 ### {% case month %}
@@ -195,7 +194,7 @@ Au final, j'ai fait ça :
       {% when "11" %}Novembre {{ year }}
       {% when "12" %}Décembre {{ year }}
     {% endcase %}
-  {% endif %}
+  {% endif %}{% endraw %}
 ```
 
 C'est pas très beau et j'ai un peu beaucoup galéré parce que je voulais aussi en profiter ajouter l'année à côté du nom du mois. Et [kramdown](https://kramdown.gettalong.org/) s'obstinait à séparer le mois de l'année ce qui fait que je me retrouvais avec le nom du mois en sous-titre `<h3>Décembre</h3>` et l'année sur une ligne à part `<p>2019</p>`, quand ce n'était pas `<pre>2019</pre>`.
@@ -245,36 +244,36 @@ title: "A new CSS and 5 tips to know"
 Il faut ensuite modifier le template dans "\_layout/default.html" pour utiliser la langue définie dans le billet ou sinon la langue générale du blogue :
 
 ```html
-<!DOCTYPE html>
+{% raw %}<!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang }}">
   <head>
     <meta charset="utf-8">
-    ...
+    ...{% endraw %}
 ```
 
 Pour faire bonne mesure, je précise aussi la langue dans les liens suivant / précédent en bas de chaque billet :
 
 ```html
-<nav class="paginate">
+{% raw %}<nav class="paginate">
   {% if post.previous.url %}
     <a href="{{ post.previous.url }}" hreflang="{{ post.previous.lang | default: site.lang }}">{{ post.previous.title }}</a>
   {% endif %}
   {% if post.next.url %}
     <a href="{{ post.next.url }}" hreflang="{{ post.next.lang | default: site.lang }}">{{ post.next.title }}</a>
   {% endif %}
-</nav>
+</nav>{% endraw %}
 ```
 
 Et aussi dans les liens entre les traductions :
 
 ```html
-English version: [A new CSS and 5 tips to know]({% post_url ... %}){:hreflang="en"}.
+{% raw %}English version: [A new CSS and 5 tips to know]({% post_url ... %}){:hreflang="en"}.{% endraw %}
 ```
 
 Ou :
 
 ```html
-Version en français : [Nouvelle CSS et 5 trucs bons à savoir]({% post_url ... %}){:hreflang="fr"}.
+{% raw %}Version en français : [Nouvelle CSS et 5 trucs bons à savoir]({% post_url ... %}){:hreflang="fr"}.{% endraw %}
 ```
 
 Le coup du `{:hreflang="xx"}` n'a pas été facile à trouver, mais pourtant ça existe bel et bien : [Additional link attributes can be added by using a span IAL after the inline link](https://kramdown.gettalong.org/syntax.html#inline-links).

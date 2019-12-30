@@ -138,7 +138,7 @@ That leaves me 3 solutions:
 
 1. Add `<!--more-->` in all (?) posts, but I would still have the link for the translation at the beginning of the excerpt
 1. Remove the link to the translation at the beginning of the post, but I find it's nice to immediatly know there is a translated version for those who are interested.
-1. Manually define the content of the snippet by an `excerpt' key in the Front Matter.
+1. Manually define the content of the snippet by an `excerpt` key in the Front Matter.
 
 As I don't think Github Pages lets me create my own plugins in the "\_plugins" directory (to be tested later but without too much hope), I leave the method of [Scott Watermasysk](https://dev.to/scottw) aside: [Better Jekyll Excerpts](https://scottw.com/blog/better-jekyll-excerpts/).
 
@@ -233,9 +233,9 @@ author: michel
 lang: fr-FR
 ```
 
-Note: I'm not sure which is better: `fr-fr`, `fr-fr` or `fr`.
+Note: I'm not sure which is better: `fr-FR`, `fr-fr` or `fr`.
 
-Then for all English posts, I change the Front Matter to redefine the `language' attribute:
+Then for all English posts, I change the Front Matter to redefine the `language` attribute:
 
 ```markdown
 ---

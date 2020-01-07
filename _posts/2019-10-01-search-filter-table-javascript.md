@@ -233,7 +233,7 @@ init: function() {
 }
 ```
 
-The line `if (input.value! ==" ") input.oninput ({target: input});` checks if
+The line `if (input.value !== "") input.oninput({ target: input });` checks if
 the input field is not empty, and if so, triggers the event by passing it the
 current input tag.
 

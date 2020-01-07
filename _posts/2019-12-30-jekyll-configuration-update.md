@@ -89,7 +89,7 @@ Of course, after setting the cover image in the header, I also want to use it wh
 
 The most important thing is that this plugin is one of the happy few to be accepted by Github Pages: [About GitHub Pages and Jekyll](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins) (and follow the "Dependency versions" link).
 
-It's very easy to do. First I add this plugin to the list of plugins already used in "\ _config.yaml":
+It's very easy to do. First I add this plugin to the list of plugins already used in "\_config.yaml":
 
 ```yaml
 plugins:
@@ -235,7 +235,7 @@ lang: fr-FR
 
 Note: I'm not sure which is better: `fr-FR`, `fr-fr` or `fr`.
 
-Then for all English posts, I change the Front Matter to redefine the `language` attribute:
+Then for all English posts, I change the Front Matter to redefine the `lang` attribute:
 
 ```markdown
 ---

@@ -3,6 +3,8 @@ date: 2019-07-04 12:28:18
 layout: post
 tags: CSS
 title: "Solitaire - Animation CSS en fin de partie"
+image: "/public/2019/fireworks.jpg"
+excerpt: "Comment utiliser @keyframes, transform, translate et rotate pour créer une première animation CSS en cas de victoire à Solitaire-Play."
 ---
 
 J'ai finalement réussi à gérer l'animation pour le déplacement des cartes pour
@@ -13,7 +15,12 @@ C'est un peu compliqué de documenter ça => je vais déjà faire un billet pour
 revenir sur la première animation de
 [Solitaire-Play](https://www.solitaire-play.com/).
 
----
+<figure>
+  <img src="{{ page.image }}" alt="fireworks" />
+  <figcaption>
+    <a href="https://unsplash.com/photos/HxeBUWUiA1A">New year's eve fireworks in the sky - Roven Images</a>
+  </figcaption>
+</figure>
 
 Normalement, je préfère que mes applications soient assez basiques et sobres,
 sans trop de fioritures. C'est pourquoi tout ce qui est animation me parait
@@ -39,7 +46,7 @@ réalisable en CSS pur.
 
 Je ne m'étais pas trompé et il était très facile de faire ça avec uniquement du
 CSS, sans un brin de JavaScript. Par contre, j'ai eu un peu de mal à trouver un
-exemple d'animation qui fasse un truc ressemblant à ce que je souhaitais. 
+exemple d'animation qui fasse un truc ressemblant à ce que je souhaitais.
 Finalement, j'ai fini par trouver quelque chose d'assez fidèle à ce que j'avais
 en tête sur le site de
 [W3Schools](https://www.w3schools.com/howto/howto_css_shake_image.asp) :)
@@ -115,7 +122,7 @@ Cette règle comprend 2 arguments :
 
 Au final, je pense que j'ai à peu près compris le truc, et que ça doit être plus
 ou moins çà. Quoiqu'il en soit, le résultat une fois mis en production me va très
-bien et ça fait maintenant plusieurs mois que ça tourne sans que je m'en sois 
+bien et ça fait maintenant plusieurs mois que ça tourne sans que je m'en sois
 lassé.
 
 Il faudrait peut-être que j'utilise les versions préfixées `-o-transform`,

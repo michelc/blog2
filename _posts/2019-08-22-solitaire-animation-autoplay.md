@@ -3,6 +3,8 @@ date: 2019-08-22 12:48:18
 layout: post
 tags: CSS
 title: "Solitaire - Animation du déplacement des cartes"
+image: "/public/2019/escalator.jpg"
+excerpt: "Pour ajouter l'AutoPlay à mes jeux de Solitaire, il faut commencer par animer le déplacement des cartes..."
 ---
 
 Actuellement, l'AutoPlay de mes jeux de solitaire est instantané. Toutes les
@@ -10,6 +12,13 @@ cartes qui peuvent être jouées sur les fondations sont immédiatement placées
 dessus. Le but de cette nouvelle animation est donc de "montrer" le déplacement
 d'une carte d'un point à un autre pour que le joueur comprenne ce qui se passe,
 spécialement dans le cas de l'AutoPlay pour FreeCell.
+
+<figure>
+  <img src="{{ page.image }}" alt="escalator" />
+  <figcaption>
+    <a href="http://www.micro-sino.com/escalators/">Escalator</a>
+  </figcaption>
+</figure>
 
 Montrer le déplacement, ce n'est finalement pas si compliqué que ça. Il faut
 juste :

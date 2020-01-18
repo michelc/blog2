@@ -3,7 +3,7 @@ date: 2019-09-30 12:23:34
 layout: post
 tags: javascript, jquery
 title: "Rechercher et filtrer une table en JavaScript"
-image: "/public/2020/filter-table-js.jpg"
+image: "/public/2019/filter-table-js.jpg"
 excerpt: "Comment faire une recherche et filtrer le contenu d'une table HTML en JavaScript. Depuis le script trouvé sur codepen.io et après quelques explications arrive à une version finale légèrement retravaillée."
 ---
 

@@ -4,6 +4,8 @@ layout: post
 lang: en-US
 tags: javascript, jquery
 title: "Search and filter a table with JavaScript"
+image: "/public/2020/filter-table-js.jpg"
+excerpt: "How to search and filter the content of an HTML table in JavaScript. From the script found on codepen.io to a final version slightly reworked after some explanations."
 ---
 
 {:.encart}
@@ -13,6 +15,13 @@ Some time ago, I needed to propose a simple search in a table. Normally, I
 prefer the good old `Ctrl+F` but not everyone likes it (and also the goal was
 more to filter the display to the data found, which is not possible with a
 Chrome search).
+
+<figure>
+  <img src="{{ page.image }}" alt="filter-table-js" />
+  <figcaption>
+    <a href="https://www.harborfreight.com/4-piece-funnel-set-744.html">Funnel Set 4 Pc + JavaScript</a>
+  </figcaption>
+</figure>
 
 As my site wasn't yet using jQuery, I looked for a ready-made Vanilla JS script
 and found a very simple and easily understandable example with a demonstration

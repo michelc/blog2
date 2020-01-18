@@ -3,6 +3,8 @@ date: 2019-09-30 12:23:34
 layout: post
 tags: javascript, jquery
 title: "Rechercher et filtrer une table en JavaScript"
+image: "/public/2020/filter-table-js.jpg"
+excerpt: "Comment faire une recherche et filtrer le contenu d'une table HTML en JavaScript. Depuis le script trouvé sur codepen.io et après quelques explications arrive à une version finale légèrement retravaillée."
 ---
 
 {:.encart}
@@ -12,6 +14,13 @@ Il y a quelque temps, j'ai eu besoin de proposer une recherche simple dans un
 tableau. Normalement, je préfère le bon vieux `Ctrl+F` mais ça ne plaît pas à
 tout le monde (et aussi le but était plus de limiter l'affichage aux seules
 lignes trouvées, ce que ne permet pas la recherche de Chrome).
+
+<figure>
+  <img src="{{ page.image }}" alt="filtrer-table-js" />
+  <figcaption>
+    <a href="https://www.harborfreight.com/4-piece-funnel-set-744.html">Ensemble d'entonnoir 4 pièces + JavaScript</a>
+  </figcaption>
+</figure>
 
 Comme mon site n'utilisait pas encore jQuery, j'ai cherché un petit truc tout
 fait en Vanilla JS et j'ai trouvé un exemple très simple et facilement

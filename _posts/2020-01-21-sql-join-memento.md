@@ -1,17 +1,17 @@
 ---
-date: 2012-03-21 19:57:00
+date: 2020-01-21 12:28:02
 layout: post
-redirect_from: "post/2012/03/21/memento-jointures-sql"
+lang: en-US
 tags: sql
-title: "Mémento des jointures en SQL"
+title: "SQL Join Memento"
 image: "/public/2020/sql-join.jpg"
-excerpt: "J'essaie encore une fois de comprendre comment faire des jointures SQL sans passer par un bête «WHERE Table1.Foreign_ID = Table2.ID»..."
+excerpt: "I'm still learning how to write SQL joins, without getting stuck with a basic «WHERE Table1.Foreign_ID = Table2.ID»..."
 ---
 
 {:.encart}
-English version: [SQL Join Memento]({% post_url 2020-01-21-sql-join-memento %}){:hreflang="en"}.
+As I'm a bit slow on JavaScript and also I need to revive my SQL knowledge, I take this opportunity to revisit and translate some of my old posts: [Mémento des jointures en SQL]({% post_url 2012-03-21-memento-jointures-sql %}){:hreflang="fr"}.
 
-Dernièrement, j'ai eu besoin de faire une comparaison assez compliquée entre deux tables, pour faire ressortir toutes les <s>anomalies</s> différences entre les deux, y compris les données qui n'apparaissent que dans une des deux tables. Etant donné mon niveau en jointures, impossible de me souvenir comment faire de mémoire.
+Recently (i.e. March 2012), I needed to make a rather complicated comparison between two tables, to highlight all the <s>errors</s> differences between them, including data that only appear in one of the two tables. Given my level in SQL joins, it's impossible to remember how to do this from memory.
 
 <figure>
   <img src="{{ page.image }}" alt="sql-join" />
@@ -20,16 +20,17 @@ Dernièrement, j'ai eu besoin de faire une comparaison assez compliquée entre d
   </figcaption>
 </figure>
 
-Heureusement, un passage par la page [Join (SQL)](https://en.wikipedia.org/wiki/Join_(SQL)) sur Wikipedia m'a fait (re?)découvrir les FULL OUTER JOIN, ce que j'ai complété par le billet [A Visual Explanation of SQL Joins](http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html) de Jeff Atwood.
+Fortunately, a visit to the [Join (SQL)](https://en.wikipedia.org/wiki/Join_(SQL)) page on Wikipedia made me (re?)discover the FULL OUTER JOIN, which I completed with Jeff Atwood's post [A Visual Explanation of SQL Joins](http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html).
 
-J'ai donc profité de cette occasion pour réviser les différents types de jointures, faire le point sur les deux types de syntaxes possibles (explicite et implicite) et aussi découvrir quelques trucs que je ne connaissais absolument pas :
+So I took this opportunity to review the different types of joints, to learn the two types of syntax (explicit and implicit) and also to discover some tricks that I didn't know at all:
 
-* le natural join : convention over configuration
-* le cross join : je ne savais pas qu'il existait un mot clé dédié pour faire ça de son plein gré
+* the natural join: convention over configuration
+* the cross join: I didn't know there was a dedicated keyword to do that willingly
 
-## Création de 2 tables pour les essais (sous Oracle)
 
-### 1° table
+## Creation of 2 tables to test (for Oracle)
+
+### 1st table
 
 ```
 CREATE TABLE Table1 AS
@@ -48,7 +49,7 @@ ID  Libelle
 3   Trois
 ```
 
-### 2° table
+### 2nd table
 
 ```
 CREATE TABLE Table2 AS
@@ -67,11 +68,12 @@ id  caption
 4   Four
 ```
 
+
 ## INNER JOIN
 
-On ne prend que ce qui existe des 2 côtés.
+We only take what exists on both sides.
 
-### Syntaxe explicite
+### Explicit syntax
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -79,7 +81,7 @@ FROM   Table1 T1
 INNER JOIN Table2 T2 ON T1.ID = T2.ID
 ```
 
-### Syntaxe implicite
+### Implicit syntax
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -88,7 +90,7 @@ FROM   Table1 T1,
 WHERE  T2.ID = T1.ID
 ```
 
-### Syntaxe "naturelle"
+### "Natural" syntax
 
 ```
 SELECT ID, T1.Libelle, T2.Caption
@@ -96,7 +98,7 @@ FROM   Table1 T1
 NATURAL JOIN Table2 T2
 ```
 
-### Résultat
+### Result
 
 ```
 ID  Libelle  Caption
@@ -105,11 +107,13 @@ ID  Libelle  Caption
 2   Deux     Two
 ```
 
+
 ## CROSS JOIN
 
-On prend tout des 2 côtés sans faire de correspondance <=> produit cartésien.
+We take everything from both sides without making a match <=> Cartesian product.
 
-### Syntaxe explicite
+
+### Explicit syntax
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -117,7 +121,7 @@ FROM   Table1 T1
 CROSS JOIN Table2 T2
 ```
 
-### Syntaxe implicite
+### Implicit syntax
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -125,7 +129,7 @@ FROM   Table1 T1,
        Table2 T2
 ```
 
-### Résultat
+### Result
 
 ```
 ID  Libelle  Caption
@@ -141,11 +145,12 @@ ID  Libelle  Caption
 3   Trois    Four
 ```
 
+
 ## LEFT OUTER JOIN
 
-On prend tout ce qui est à gauche (ie la 1° table) et l'autre suit.
+We take everything on the left (i.e. the first table) and the other one follows.
 
-### Syntaxe explicite
+### Explicit syntax
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -153,7 +158,7 @@ FROM   Table1 T1
 LEFT OUTER JOIN Table2 T2 ON T1.ID = T2.ID
 ```
 
-### Syntaxe implicite
+### Implicit syntax
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -162,7 +167,7 @@ FROM   Table1 T1,
 WHERE  T2.ID(+) = T1.ID
 ```
 
-### Résultat
+### Result
 
 ```
 ID  Libelle  Caption
@@ -172,11 +177,12 @@ ID  Libelle  Caption
 3   Trois
 ```
 
+
 ## RIGHT OUTER JOIN
 
-On prend tout ce qui est à droite (ie la 2° table) et l'autre suit.
+We take everything on the right (i.e. the second table) and the other one follows.
 
-### Syntaxe explicite
+### Explicit syntax
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -184,7 +190,7 @@ FROM   Table1 T1
 RIGHT OUTER JOIN Table2 T2 ON T1.ID = T2.ID
 ```
 
-### Syntaxe implicite
+### Implicit syntax
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -193,7 +199,7 @@ FROM   Table1 T1,
 WHERE  T2.ID = T1.ID(+)
 ```
 
-### Résultat
+### Result
 
 ```
 ID  Libelle  Caption
@@ -203,11 +209,12 @@ ID  Libelle  Caption
              Four
 ```
 
+
 ## FULL OUTER JOIN
 
-On prend ce qui existe des 2 côtés.
+We take what exists on both sides.
 
-### Syntaxe explicite
+### Explicit syntax
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -215,7 +222,7 @@ FROM   Table1 T1
 FULL OUTER JOIN Table2 T2 ON T1.ID = T2.ID
 ```
 
-### Syntaxe implicite (ou comment faire sans)
+### Implicit syntax (or how to do without knowledge)
 
 ```
 SELECT T1.ID, T1.Libelle, T2.Caption
@@ -229,7 +236,7 @@ FROM   Table1 T1,
 WHERE  T2.ID = T1.ID(+)
 ```
 
-### Résultat
+### Result
 
 ```
 ID  Libelle  Caption
@@ -240,7 +247,7 @@ ID  Libelle  Caption
 3   Trois
 ```
 
-### Version améliorée pour avoir l'ID
+### Improved version to get ID
 
 ```
 SELECT NVL(T1.ID, T2.ID) AS ID, T1.Libelle, T2.Caption

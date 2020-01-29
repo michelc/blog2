@@ -40,4 +40,4 @@ Comme je n'ai pas encore mis en place de fichier "manifest.json", je n'ai pas no
 Pour l'instant, je vais ranger ça dans la case des bénéfices qu'il y a à passer de Chrome à Firefox. Nous ne voyons pas d'autre explication...
 
 {:.encart}
-English version: [Hey! Firefox scrollbar-color is magical]({% 2020-01-29-firefox-magic-scrollbar-color %}){:hreflang="en"}.
+English version: [Hey! Firefox scrollbar-color is magical]({% post_url 2020-01-29-firefox-magic-scrollbar-color %}){:hreflang="en"}.

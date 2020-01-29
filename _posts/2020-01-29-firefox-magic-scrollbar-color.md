@@ -8,9 +8,6 @@ image: "/public/2020/firefox-scrollbar-color.jpg"
 excerpt: "With Firefox, the scrollbar for my Solitaire-Play games is in the «green» tones, like the rest of the website, but I don't know why..."
 ---
 
-{:.encart}
-Version en français : [Waouh ! La scrollbar de Firefox est magique]({% post_url 2020-01-13-supprimer-doublon-sql %}){:hreflang="fr"}.
-
 I think so. I just came back from my site [Solitaire-Play](https://www.solitaire-play.com/) and I realized that the vertical scrollbar is "green", which is the dominant color of any solitaire game. Cool!
 
 <figure>
@@ -42,3 +39,6 @@ And I swear that I have no `scrollbar` or `scrollbar-color` property in my CSS a
 Since I haven't yet set up a "manifest.json" file, I don't have any "theme_color" property that could have been a good idea to follow.
 
 For now, I'm going to put this in an added bonus of switching from Chrome to Firefox. We don't see any other explanation...
+
+{:.encart}
+Version en français : [Waouh ! La scrollbar de Firefox est magique]({% post_url 2020-01-28-firefox-couleur-scrollbar-magique %}){:hreflang="fr"}.

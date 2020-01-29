@@ -7,6 +7,9 @@ image: "/public/2020/firefox-scrollbar-color.jpg"
 excerpt: "Avec Firefox, la barre de défilement de mes jeux Solitaire-Play est dans les tons «vert», comme le reste du site, et je ne sais pas pourquoi..."
 ---
 
+{:.encart}
+English version: [Hey! Firefox scrollbar-color is magical]({% 2020-01-28-firefox-couleur-scrollbar-magique %}){:hreflang="en"}.
+
 Il me semble. Je reviens de mon site [Solitaire-Play](https://www.solitaire-play.com/) et je viens de m'apercevoir que la barre de l'ascenseur vertical est "verte", ce qui est la couleur dominante de tout jeux de solitaire qui se respecte :)
 
 <figure>

@@ -7,9 +7,6 @@ image: "/public/2020/rita-hayworth.jpg"
 excerpt: "J'ai eu un peu peur, mais finalement c'est pas si compliqué que ça de supprimer des lignes en doubles dans une table SQL Server."
 ---
 
-{:.encart}
-English version: [Remove duplicates rows with SQL]({% post_url 2020-01-14-remove-duplicate-rows-sql %}){:hreflang="en"}.
-
 La semaine dernière j'ai fait une petite erreur de mise à jour sur une application et je me suis retrouvé avec des données enregistrées deux fois dans une table. Bien entendu, ça ne serait pas arrivé si j'avais créé une clé unique, mais comme je teste avant d'insérer, je pensais être à l'abri.
 
 <figure>
@@ -57,3 +54,6 @@ WHERE  Showing_ID IN (
 ```
 
 Des fois, l'informatique c'est pas plus compliqué que ça.
+
+{:.encart}
+English version: [Remove duplicates rows with SQL]({% post_url 2020-01-14-remove-duplicate-rows-sql %}){:hreflang="en"}.

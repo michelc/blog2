@@ -7,9 +7,6 @@ image: "/public/2020/responsive-solitaire.jpg"
 excerpt: "Solitaire-Play est déjà un site responsive, mais il y a toujours à faire pour améliorer le fonctionnement sur les smartphones : désactiver le «pull-to-refresh», passer du «hover» au «ripple», agrandir les boutons, placer la pioche à droite..."
 ---
 
-{:.encart}
-English version: [5 improvements for a better solitaire on smartphone]({% post_url 2020-01-07-better-solitaire-smartphone %}){:hreflang="en"}.
-
 Les différents solitaires de mon site de jeux [Solitaire-Play](https://www.solitaire-play.com/) sont tous "responsive". Ce qui super intéressant puisque ça veut dire qu'ils fonctionnent correctement aussi bien sur un PC de bureau qu'un ordinateur portable, mais aussi sur une tablette ou un iPad et surtout sur des smartphones Android ou iPhone...
 
 <figure>
@@ -161,3 +158,6 @@ C'était pas très compliqué et j'espère que ça fera plaisir aux joueurs qui 
 Pour la suite, il faudrait que je retravaille sur la transformation du site en [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps). J'ai déjà commencé à faire quelques trucs, en particulier passer à HTTPS, utiliser les [polices systèmes](https://markdotto.com/2018/02/07/github-system-fonts/) plutôt que "Century Gothic" et mettre en place les balises pour le [protocole Open Graph](https://opengraphprotocol.org/). En théorie, il me reste "seulement" à créer un fichier [manisfest.json](https://developers.google.com/web/fundamentals/web-app-manifest) puis à coder un [Service Worker](https://developers.google.com/web/ilt/pwa/introduction-to-service-worker).
 
 Sinon, je pourrais aussi essayer de sauvegarder l'avancement d'un jeu dans [window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) pour retrouver la partie en cours ?
+
+{:.encart}
+English version: [5 improvements for a better solitaire on smartphone]({% post_url 2020-01-07-better-solitaire-smartphone %}){:hreflang="en"}.

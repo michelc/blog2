@@ -8,9 +8,6 @@ image: "/public/2020/rita-hayworth.jpg"
 excerpt: "I was a bit worried, but it's not that complicated to delete duplicate rows from a table in SQL Server."
 ---
 
-{:.encart}
-Version en français : [Supprimer des doublons en SQL]({% post_url 2020-01-13-supprimer-doublon-sql %}){:hreflang="fr"}.
-
 Last week I made a small update error on my application and I ended up with duplicates values in a table. Of course, this would not have happened if I had a unique key, but as I check before inserting, I thought I was safe.
 
 <figure>
@@ -58,3 +55,6 @@ WHERE  Showing_ID IN (
 ```
 
 Sometimes, IT is not that complicated.
+
+{:.encart}
+Version en français : [Supprimer des doublons en SQL]({% post_url 2020-01-13-supprimer-doublon-sql %}){:hreflang="fr"}.

@@ -8,9 +8,6 @@ image: "/public/2020/responsive-solitaire.jpg"
 excerpt: "Solitaire-Play is already a responsive site, but there is always room for improvement with smartphones: disable 'pull-to-refresh', switch from 'hover' to 'ripple', enlarge the buttons, move stock to the right..."
 ---
 
-{:.encart}
-Version en français : [5 améliorations pour un meilleur solitaire sur smartphone]({% post_url 2020-01-06-meilleur-solitaire-smartphone %}){:hreflang="fr"}.
-
 The different solitaires on my [Solitaire-Play](https://www.solitaire-play.com/) game website are all "responsive". Which is very interesting since it means that they work properly on a desktop PC as well as a laptop, but also on a tablet or iPad and especially on Android or iPhone smartphones ...
 
 <figure>
@@ -162,3 +159,6 @@ It wasn't very complicated and I hope that players who use Solitaire-Play from t
 For the future, I have to work again on the transformation of the site into [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps). I have already started to do a few things, in particular switching to HTTPS, using [system fonts](https://markdotto.com/2018/02/07/github-system-fonts/) rather than "Century Gothic" and setting up the HTML tags for the [Open Graph protocol](https://opengraphprotocol.org/). In theory, I "only" have to create a [manisfest.json](https://developers.google.com/web/fundamentals/web-app-manifest) file and then code a [Service Worker](https://developers.google.com/web/ilt/pwa/introduction-to-service-worker).
 
 Or, I could also try to save the progress of a game with [window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to come back to current game?
+
+{:.encart}
+Version en français : [5 améliorations pour un meilleur solitaire sur smartphone]({% post_url 2020-01-06-meilleur-solitaire-smartphone %}){:hreflang="fr"}.

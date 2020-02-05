@@ -9,7 +9,7 @@ image: "/public/2020/pumpkin-patch.jpg"
 In order to check the integrity of some data, I had to copy the contents of a large customer table from a DB2 database into an Oracle database. I know SQL*Loader exists, but this is not the time I'm gonna learn how to use it.
 
 <figure>
-  <img src="{{ page.image }}" alt="azami" />
+  <img src="{{ page.image }}" alt="pumpkins" />
   <figcaption>
     <a href="https://unsplash.com/photos/svIdk6Ai94w">Rusty old truck in a pumpkin patch - Priscilla Du Preez</a>
   </figcaption>

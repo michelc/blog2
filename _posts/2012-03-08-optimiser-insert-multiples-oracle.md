@@ -10,7 +10,7 @@ image: "/public/2020/pumpkin-patch.jpg"
 Pour contrôler l'intégrité de certaines données, j'ai eu besoin de ramener une partie du contenu d'une grosse table clients d'une base de donnée DB2 dans une base Oracle. Je sais qu'il existe SQL*Loader mais c'est pas encore cette fois que je vais m'y remettre.
 
 <figure>
-  <img src="{{ page.image }}" alt="azami" />
+  <img src="{{ page.image }}" alt="potirons" />
   <figcaption>
     <a href="https://unsplash.com/photos/svIdk6Ai94w">Un vieux camion au milieu des citrouilles - Priscilla Du Preez</a>
   </figcaption>

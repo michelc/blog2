@@ -1,6 +1,7 @@
 ---
 date: 2020-02-11 19:24:08+200
 layout: post
+lang: fr-FR
 tags: javascript, node, sql
 title: "Déployer une application sur Glitch en 5 étapes"
 image: "/public/2020/ichthyology.jpg"

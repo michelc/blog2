@@ -7,7 +7,7 @@ title: "Déployer une application sur Glitch en 5 étapes"
 image: "/public/2020/ichthyology.jpg"
 ---
 
-Ca faisait un petit moment que je voulais tester Glitch "pour de vrai" et déployer le projet réalisé pour mon tutoriel [Application CRUD avec Express et SQlite en 10 étapes]({% post_url 2019-09-11-crud-avec-express-sqlite-10-etapes %}). J'ai enfin trouvé le temps de m'y mettre et ça marche super bien.
+Ça faisait un petit moment que je voulais tester Glitch "pour de vrai" et déployer le projet réalisé pour mon tutoriel [Application CRUD avec Express et SQlite en 10 étapes]({% post_url 2019-09-11-crud-avec-express-sqlite-10-etapes %}). J'ai enfin trouvé le temps de m'y mettre et ça marche super bien.
 
 <figure>
   <img src="{{ page.image }}" alt="ichthyology" />
@@ -62,7 +62,7 @@ Ces quelques modifications devraient être suffisantes pour me permettre d'exéc
 
 * cliquer sur le bouton "Show" (en haut à gauche),
 * choisir "In a New Window" (à tant qu'à faire) pour lancer / afficher l'application dans une nouvelle fenêtre / onglet,
-* un nouvel onglet s'ouvre avec l'URL [https://michelc-apptest.glitch.me/](https://michelc-apptest.glitch.me/) et l'écran d'accueil de mon application !
+* un nouvel onglet s'ouvre avec l'URL [https://michelc-apptest.glitch.me/](https://michelc-apptest.glitch.me/) et affiche l'écran d'accueil de mon application !
 
 Maintenant, si je clique sur "Livres" dans la barre de menu, j'obtiens bien la liste de livres telle que je l'avais créée. Pour tester, je peux mettre à jour cette liste et tout fonctionne correctement !
 
@@ -83,7 +83,7 @@ Mais quand même, il manque les poissons ! Je regarde vite fait comment c'est fa
 </body>
 ```
 
-Ca y est. Si je rafraichis ma page, je vois apparaitre les célèbres poissons Glitch pour qui voudrait ré-utiliser mon application :) Grâce à eux, je peux même embarquer mon application ici-même :
+Ça y est. Si je rafraichis ma page, je vois apparaitre les célèbres poissons Glitch pour qui voudrait ré-utiliser mon application :) Grâce à eux, je peux même embarquer mon application ici-même :
 
 <div class="glitch-embed-wrap" style="height: 486px; width: 100%;">
   <iframe
@@ -95,7 +95,6 @@ Ca y est. Si je rafraichis ma page, je vois apparaitre les célèbres poissons G
 </div>
 
 
-
 ## Conclusion
 
-Pour un premier essai, c'était super facile. Ca vaut donc le coup d'investir un peu de temps dessus pour mieux maîtriser et faire des trucs un peu plus concrets...
+Pour un premier essai, c'était super facile. Ça vaut donc le coup d'investir un peu de temps dessus pour mieux maîtriser et faire des trucs un peu plus concrets...

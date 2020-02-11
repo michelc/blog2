@@ -36,7 +36,8 @@ Le code complet de l'application est disponible sur
 Pour l'instant, il n'y a pas de site de démonstration du projet terminé. Je n'ai
 pas (encore) trouvé de solution facile pour l'héberger (surtout avec une base de
 données SQlite). Je ferai peut-être un autre tutoriel le jour où je m'attaquerai
-à ce problème.
+à ce problème. Ca a pris du temps, mais c'est fait : [Déployer une application
+sur Glitch en 5 étapes]({% post_url 2020-02-11-deployer-application-glitch-5-etapes %}) !
 
 Note : J'ai depuis rédigé un deuxième tutoriel qui reprend exactement celui-ci,
 mais en se connectant à une base de données PostgreSQL à la place : [Application

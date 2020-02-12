@@ -100,4 +100,4 @@ That's it. After a page refresh, I see the famous Glitch fish button in case som
 For a first try, it was super easy. Now, it's worth investing some time on it to master and do more concrete things...
 
 {:.encart}
-Version en français : [Déployer une application sur Glitch en 5 étapes]({% 2020-02-11-deployer-application-glitch-5-etapes %}){:hreflang="fr"}.
+Version en français : [Déployer une application sur Glitch en 5 étapes]({% post_url 2020-02-11-deployer-application-glitch-5-etapes %}){:hreflang="fr"}.

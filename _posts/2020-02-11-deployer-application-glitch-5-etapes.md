@@ -100,4 +100,4 @@ Mais quand même, il manque les poissons ! Je regarde vite fait comment c'est fa
 Pour un premier essai, c'était super facile. Ça vaut donc le coup d'investir un peu de temps dessus pour mieux maîtriser et faire des trucs un peu plus concrets...
 
 {:.encart}
-English version: [Deploy an application on Glitch in 5 steps]({% 2020-02-12-deploy-application-glitch-5-steps %}){:hreflang="en"}.
+English version: [Deploy an application on Glitch in 5 steps]({% post_url 2020-02-12-deploy-application-glitch-5-steps %}){:hreflang="en"}.

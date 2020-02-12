@@ -26,7 +26,7 @@ This post is only a tutorial to understand how it works and to have a starting p
 
 The final JavaScript code is visible in the appendix at the end of the post. The complete code of the application (in french) is available on [GitHub](https://github.com/michelc/AppTest).
 
-At the moment, there is no demonstration site for the completed project. I have not (yet) found an easy solution to host it (especially with an SQlite database). Maybe I'll do another tutorial the day I deal with this problem. It took time, but it's done: [Deploy an application on Glitch in 5 steps]({% 2020-02-12-deploy-application-glitch-5-steps %})!
+At the moment, there is no demonstration site for the completed project. I have not (yet) found an easy solution to host it (especially with an SQlite database). Maybe I'll do another tutorial the day I deal with this problem. It took time, but it's done: [Deploy an application on Glitch in 5 steps]({% post_url 2020-02-12-deploy-application-glitch-5-steps %})!
 
 Note: I have since written a second tutorial like this one, but by connecting to a PostgreSQL database instead: [CRUD application with Express and PostgreSQL in 10 steps]({% post_url 2019-10-15-crud-with-express-postgresql-10-steps %}).
 

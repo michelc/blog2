@@ -1,5 +1,5 @@
 ---
-date: 2020-02-11 12:21:34+200
+date: 2020-02-12 12:21:34+200
 layout: post
 lang: en-US
 tags: javascript, node, sql

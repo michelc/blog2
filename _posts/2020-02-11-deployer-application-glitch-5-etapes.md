@@ -1,5 +1,5 @@
 ---
-date: 2020-02-11 19:24:08+200
+date: 2020-02-11 12:24:08+200
 layout: post
 lang: fr-FR
 tags: javascript, node, sql
@@ -67,7 +67,7 @@ Ces quelques modifications devraient être suffisantes pour me permettre d'exéc
 Maintenant, si je clique sur "Livres" dans la barre de menu, j'obtiens bien la liste de livres telle que je l'avais créée. Pour tester, je peux mettre à jour cette liste et tout fonctionne correctement !
 
 
-## 5. Inclure le bandeau Glitch
+## 5. Inclure le bouton Glitch
 
 Mais quand même, il manque les poissons ! Je regarde vite fait comment c'est fait sur le projet Node + Express par défaut de Glitch et c'est tout simple. Il faut ajouter quelques lignes à mon pseudo "layout" EJS :
 
@@ -83,7 +83,7 @@ Mais quand même, il manque les poissons ! Je regarde vite fait comment c'est fa
 </body>
 ```
 
-Ça y est. Si je rafraichis ma page, je vois apparaitre les célèbres poissons Glitch pour qui voudrait ré-utiliser mon application :) Grâce à eux, je peux même embarquer mon application ici-même :
+Ça y est. Si je rafraichis ma page, je vois apparaitre les célèbres poissons Glitch pour qui voudrait réutiliser mon application :) Grâce à eux, je peux même embarquer mon application ici-même :
 
 <div class="glitch-embed-wrap" style="height: 486px; width: 100%;">
   <iframe
@@ -98,3 +98,6 @@ Mais quand même, il manque les poissons ! Je regarde vite fait comment c'est fa
 ## Conclusion
 
 Pour un premier essai, c'était super facile. Ça vaut donc le coup d'investir un peu de temps dessus pour mieux maîtriser et faire des trucs un peu plus concrets...
+
+{:.encart}
+English version: [Deploy an application on Glitch in 5 steps]({% 2020-02-12-deploy-application-glitch-5-steps %}){:hreflang="en"}.

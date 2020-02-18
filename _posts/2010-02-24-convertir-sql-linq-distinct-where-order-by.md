@@ -2,7 +2,7 @@
 date: 2010-02-24 13:41:00
 layout: post
 redirect_from: "post/2010/02/24/convertir-sql-en-linq-distinct-where-order-by"
-tags: c-sharp, linq
+tags: csharp, linq
 title: "Convertir SQL en LINQ : DISTINCT, WHERE et ORDER BY"
 ---
 

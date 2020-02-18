@@ -2,7 +2,7 @@
 date: 2005-07-27 16:45:00
 layout: post
 redirect_from: "post/2005/07/27/Encoder-une-chaine-en-MD5-et-hexa"
-tags: code-snippets, c-sharp
+tags: code-snippets, csharp
 title: "Encoder une chaine en MD5 et hexa"
 ---
 

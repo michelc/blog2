@@ -2,7 +2,7 @@
 date: 2005-11-04 16:39:00
 layout: post
 redirect_from: "post/2005/11/04/Retrouver-un-numero-de-semaine"
-tags: code-snippets, c-sharp
+tags: code-snippets, csharp
 title: "Retrouver un numéro de semaine"
 ---
 

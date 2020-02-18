@@ -2,7 +2,7 @@
 date: 2010-02-22 19:32:00
 layout: post
 redirect_from: "post/2010/02/22/convertir-sql-en-linq-introduction"
-tags: c-sharp, linq
+tags: csharp, linq
 title: "Convertir SQL en LINQ : Introduction"
 ---
 

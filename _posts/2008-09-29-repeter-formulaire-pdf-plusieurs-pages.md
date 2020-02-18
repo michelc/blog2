@@ -2,7 +2,7 @@
 date: 2008-09-29 19:07:00
 layout: post
 redirect_from: "post/2008/09/29/Repeter-un-formulaire-PDF-sur-plusieurs-pages"
-tags: boulot, c-sharp
+tags: boulot, csharp
 title: "Répéter un formulaire PDF sur plusieurs pages"
 ---
 

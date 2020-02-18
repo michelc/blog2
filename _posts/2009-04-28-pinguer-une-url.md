@@ -2,7 +2,7 @@
 date: 2009-04-28 11:30:00
 layout: post
 redirect_from: "post/2009/04/28/Pinguer-une-Url"
-tags: code-snippets, c-sharp
+tags: code-snippets, csharp
 title: "Pinguer une Url"
 ---
 

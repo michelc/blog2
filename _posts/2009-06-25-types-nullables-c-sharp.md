@@ -2,7 +2,7 @@
 date: 2009-06-25 11:39:00
 layout: post
 redirect_from: "post/2009/06/25/Les-types-nullables-en-c"
-tags: c-sharp
+tags: csharp
 title: "Les types nullables en c#"
 ---
 

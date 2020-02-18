@@ -2,7 +2,7 @@
 date: 2010-09-01 14:21:00
 layout: post
 redirect_from: "post/2010/09/01/departements-limitrophes"
-tags: code-snippets, c-sharp
+tags: code-snippets, csharp
 title: "Départements limitrophes"
 ---
 

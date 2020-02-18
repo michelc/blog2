@@ -2,7 +2,7 @@
 date: 2005-01-14 14:21:00
 layout: post
 redirect_from: "post/2005/01/14/Wdevs-SystemWebMail-and-smtpgmailcom"
-tags: code-snippets, c-sharp, qc, wdevs
+tags: code-snippets, csharp, qc, wdevs
 lang: en-US
 title: "(Wdevs) System.Web.Mail and smtp.gmail.com"
 ---

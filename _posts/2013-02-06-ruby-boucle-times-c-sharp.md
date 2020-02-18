@@ -2,7 +2,7 @@
 date: 2013-02-06 22:59:00
 layout: post
 redirect_from: "post/2013/02/06/ruby-boucle-times-csharp"
-tags: c-sharp, ruby
+tags: csharp, ruby
 title: "La boucle \"times\" de Ruby en C#"
 ---
 

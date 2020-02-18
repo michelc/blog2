@@ -2,7 +2,7 @@
 date: 2010-02-23 22:51:00
 layout: post
 redirect_from: "post/2010/02/23/convertir-sql-en-linq-from-et-select"
-tags: c-sharp, linq
+tags: csharp, linq
 title: "Convertir SQL en LINQ : FROM et SELECT"
 ---
 

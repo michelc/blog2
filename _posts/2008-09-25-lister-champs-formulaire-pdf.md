@@ -2,7 +2,7 @@
 date: 2008-09-25 19:34:00
 layout: post
 redirect_from: "post/2008/09/25/Lister-les-champs-d-un-formulaire-PDF"
-tags: boulot, c-sharp
+tags: boulot, csharp
 title: "Lister les champs d'un formulaire PDF"
 ---
 

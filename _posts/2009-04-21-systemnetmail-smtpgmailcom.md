@@ -2,7 +2,7 @@
 date: 2009-04-21 17:17:00
 layout: post
 redirect_from: "post/2009/04/21/SystemNetMail-et-smtpgmailcom"
-tags: ap, code-snippets, c-sharp
+tags: ap, code-snippets, csharp
 title: "System.Net.Mail et smtp.gmail.com"
 ---
 

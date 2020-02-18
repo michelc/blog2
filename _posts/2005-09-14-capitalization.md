@@ -2,7 +2,7 @@
 date: 2005-09-14 16:58:00
 layout: post
 redirect_from: "post/2005/09/14/Capitalization"
-tags: code-snippets, c-sharp
+tags: code-snippets, csharp
 title: "Capitalization"
 ---
 
@@ -33,18 +33,18 @@ public class MyClass {
 Edit : commentaire de utagger :
 
 > Here's a shorter version:
-> 
-> 
+>
+>
 > ```
 > protected void Button1_Click(object sender, EventArgs e) {
 >   Label1.Text = Regex.Replace(TextBox1.Text, @”\b\w”, new MatchEvaluator(stam));
 > }
-> 
+>
 > protected string stam(Match m) {
 >   return m.Value.ToUpper();
 > }
 > ```
-> 
-> 
+>
+>
 > (the trick is using \b which is a 0-length match of word boundaries,
 > including ^ and \s)

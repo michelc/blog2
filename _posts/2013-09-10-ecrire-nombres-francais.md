@@ -2,7 +2,7 @@
 date: 2013-09-10 22:35:00
 layout: post
 redirect_from: "post/2013/09/10/ecrire-nombres-en-francais"
-tags: c-sharp, unit-test
+tags: csharp, unit-test
 title: "Ecrire des nombres en français"
 ---
 

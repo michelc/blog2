@@ -2,7 +2,7 @@
 date: 2013-01-14 22:55:00
 layout: post
 redirect_from: "post/2013/01/14/supprimer-espaces-model-binding"
-tags: c-sharp, mvc
+tags: csharp, mvc
 title: "Supprimer les espaces lors du Model Binding"
 ---
 

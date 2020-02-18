@@ -2,7 +2,7 @@
 date: 2009-04-14 13:48:00
 layout: post
 redirect_from: "post/2009/04/14/Zero-erreur-avec-StyleCop"
-tags: c-sharp
+tags: csharp
 title: "Zéro erreur avec StyleCop"
 ---
 

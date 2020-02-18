@@ -2,7 +2,7 @@
 date: 2009-10-14 14:51:00
 layout: post
 redirect_from: "post/2009/10/14/Les-types-implicites-en-c"
-tags: c-sharp
+tags: csharp
 title: "Les types implicites en c#"
 ---
 

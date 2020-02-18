@@ -2,7 +2,7 @@
 date: 2011-01-26 14:30:00
 layout: post
 redirect_from: "post/2011/01/26/un-string-format-ameliore"
-tags: code-snippets, c-sharp
+tags: code-snippets, csharp
 title: "Un String.Format() amélioré"
 ---
 

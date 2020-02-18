@@ -2,7 +2,7 @@
 date: 2005-08-02 19:35:00
 layout: post
 redirect_from: "post/2005/08/02/Wdevs-A-C-Client-to-the-blogmarksnet-Atom-API"
-tags: c-sharp, wdevs
+tags: csharp, wdevs
 lang: en-US
 title: "(Wdevs) A C# Client to the blogmarks.net Atom API"
 ---

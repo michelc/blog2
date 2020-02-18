@@ -1,21 +1,21 @@
 ---
-date: 2020-02-17 21:28:02+200
+date: 2020-02-18 19:12:28+200
 layout: post
 tags: sql, csharp
-title: "Comment mapper colonnes et propriétés avec Dapper"
+title: "How to map column names to class properties with Dapper"
 image: "/public/2020/operatrice.jpg"
 ---
 
-La semaine dernière, j'ai utilisé [Dapper](https://stackexchange.github.io/Dapper/) plutôt que [NHibernate](https://nhibernate.info/) pour réaliser un traitement simple sur une table de notre base de données Oracle. Comme il s'agit d'une vieille table, les noms des colonnes sont "à l'ancienne" et je ne veux pas me retrouver avec des noms de propriétés tarabiscotés, même si ce n'est que pour une moulinette ponctuelle.
+Last week, I used [Dapper](https://stackexchange.github.io/Dapper/) instead of [NHibernate](https://nhibernate.info/) to perform a simple processing on a table in our Oracle database. Since this is an ancient table, the column names are "old-fashioned" and I don't want to end up with overly convoluted property names, even if it's only for a one-shot process.
 
 <figure>
   <img src="{{ page.image }}" alt="operatrice" />
   <figcaption>
-    <a href="https://fr.wikipedia.org/wiki/Demoiselle_du_téléphone">Demoiselle du téléphone</a>
+    <a href="https://en.wikipedia.org/wiki/Switchboard_operator">Demoiselle du téléphone</a>
   </figcaption>
 </figure>
 
-Supposons que la table ait la structure suivante :
+Let's say my table has the following structure:
 
 ```sql
 Contact_Clients
@@ -31,7 +31,7 @@ Contact_Portable        Varchar2(24)
 ...
 ```
 
-Cela m'oblige à définir la classe C# ci-dessous :
+I have to define the C# class below:
 
 ```csharp
 public class Contact
@@ -47,7 +47,7 @@ public class Contact
 }
 ```
 
-Alors que je voudrais utiliser de plus jolis noms pour ses propriétés :
+But I'd prefer to use pretty names for its properties:
 
 ```csharp
 public class Contact
@@ -63,7 +63,7 @@ public class Contact
 }
 ```
 
-Habituellement, j'utilise des alias SQL pour contourner ce problème. Et donc, au lieu de faire un simple `SELECT * FROM Contact_Clients ...`, je me retrouve à écrire :
+Usually I go with SQL aliases to work around this problem. So, instead of doing a regular `SELECT * FROM Contact_Clients ...`, I end up writing:
 
 ```csharp
 var sql = "SELECT Contact_Cli_ID AS Contact_ID,
@@ -78,15 +78,15 @@ var sql = "SELECT Contact_Cli_ID AS Contact_ID,
            ...";
 ```
 
-L'avantage, c'est que je peux me limiter aux colonnes réellement utiles, même si dans ce cas précis presque toutes les colonnes sont nécessaires.
+Pro: I can limit my code to only useful columns, although in this case almost all columns are necessary.
 
-Mais comme cela fait quelques années que j'utilise Dapper, j'ai profité de l'occasion pour voir s'il n'y aurait pas eu des évolutions pour permettre de redéfinir le nom des colonnes.
+Con: I've been using Dapper for a few years now, it's time to search for some improvments to redefine the names of the columns.
 
-C'est un sujet un peu sensible et sans doute pas vraiment prioritaire. Il existe cependant une discussion pour réfléchir à la bonne façon de faire ça, par configuration ou via des attributs : [[Column] and [Table] Attributes ](https://github.com/StackExchange/Dapper/issues/722).
+It's a bit of a sensitive subject and probably not really a priority. However, there is a discussion about the right way to do this, by configuration or with attributes: [[Column] and [Table] Attributes ](https://github.com/StackExchange/Dapper/issues/722).
 
-En attendant mieux, une question sur Stack Overflow ([Manually map column names with class properties](https://stackoverflow.com/a/34856158)) m'a permis de trouver une solution assez simple à implémenter. Basée sur du code tiré de [Dapper Tests](https://github.com/StackExchange/Dapper/blob/master/Dapper.Tests/TypeHandlerTests.cs) (et donc testée :), elle utilise l'attribut l'attribut `[Description]` de `System.ComponentModel`.
+In the meantime, a Stack Overflow question ([Manually map column names with class properties](https://stackoverflow.com/a/34856158)) allowed me to find a quite simple solution to implement. Taken from the [Dapper Tests](https://github.com/StackExchange/Dapper/blob/master/Dapper.Tests/TypeHandlerTests.cs) code (and thus tested :), it uses the `[Description]` attribute from `System.ComponentModel`.
 
-Grâce à cet article, j'ai pu écrire le code suivant :
+Thanks to this article, I can write the following code:
 
 ```csharp
 using System.ComponentModel;
@@ -142,7 +142,7 @@ public class Contact
 }
 ```
 
-A bien y réfléchir, c'est pas sûr que ce soit vraiment plus "propre" que les alias SQL... Mais c'est nouveau !
+Thinking about it, I'm not sure it's more elegant than SQL aliases... But new!
 
 {:.encart}
-English version: [How to map column names to class properties with Dapper]({% post_url 2020-02-18-map-columns-properties-dapper %}){:hreflang="en"}.
+Version en français : [Comment mapper colonnes et propriétés avec Dapper]({% post_url 2020-02-17-mapper-colonnes-proprietes-dapper %}){:hreflang="fr"}.

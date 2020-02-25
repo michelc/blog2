@@ -17,7 +17,7 @@ Pour ne pas oublier comment j'ai fait et retrouver ce paramétrage le jour où j
 
 Le but de cette manipulation, c'est de me permettre de continuer à utiliser le webmail GMail pour :
 
-* recevoir mes méls depuis mon adresse Office 365;
+* recevoir mes méls depuis mon adresse Office 365,
 * envoyer des méls via cette adresse.
 
 
@@ -74,3 +74,6 @@ Juste en dessous, il est préférable de définir que l'on souhaite par défaut 
 Ca marche et surtout, j'ai maintenant accès à mon adresse Office 365 aussi bien depuis GMail que Outlook.
 
 Mais pour information, j'ai testé différentes méthodes jusqu'à ce que je trouve quelque chose qui fonctionne (et je n'ai pas cherché plus loin). Je suis donc preneur si quelqu'un connait une meilleure solution et idéalement la méthode "officielle".
+
+{:.encart}
+English version: [How to access Office 365 email from GMail]({% post_url 2020-02-25-access-office-365-mail-from-gmail %}){:hreflang="en"}.

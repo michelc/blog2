@@ -9,7 +9,7 @@ image: "/public/2020/gaston-lagaffe.jpg"
 Très légèrement motivé par le [#hacktoberfest](https://dev.to/michelc/selfish-hacktoberfest-2019-4g5l), je m'étais lancé il y a quelque temps dans la traduction du site [Oh Shit, Git!?!](https://ohshitgit.com/) en français. Personnellement, je m'en sers quelquefois quand je commite puis que je me rends compte que j'ai oublié juste un dernier petit truc ou bien que j'ai fait une bête faute dans mon message de commit.
 
 <figure>
-  <img src="{{ image }}" alt="gaston-lagaffe" />
+  <img src="{{ page.image }}" alt="gaston-lagaffe" />
   <figcaption>
     <a href="http://www.gastonlagaffe.com/">Gaston Lagaffe</a>
   </figcaption>

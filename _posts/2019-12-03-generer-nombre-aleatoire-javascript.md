@@ -7,9 +7,6 @@ image: "/public/2019/xkcd-221.jpg"
 excerpt: "Comment générer un nombre aléatoire en JavaScript, mais aussi comment utiliser le module 'seedrandom' pour rendre le hasard plus prévisible."
 ---
 
-{:.encart}
-English version: [Generate a random number with JavaScript]({% post_url 2019-12-04-generate-random-number-javascript %}){:hreflang="en"}.
-
 ## La méthode "Math.random()"
 
 <figure>
@@ -107,3 +104,6 @@ en utilisant la chaine "randomize" comme valeur d'initialisation, cela me
 permettra de mieux voir les progrès accomplis par mon système de conseils, au
 fur et à mesure que je le ferai évoluer. Le but étant bien entendu d'arriver au
 minimum à un résultat de 50% de réussite...
+
+{:.encart}
+English version: [Generate a random number with JavaScript]({% post_url 2019-12-04-generate-random-number-javascript %}){:hreflang="en"}.

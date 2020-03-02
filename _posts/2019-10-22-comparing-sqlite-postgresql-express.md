@@ -7,9 +7,6 @@ title: "Comparing SQlite or PostgreSQL with Express"
 image: "/public/2019/microscope.jpg"
 ---
 
-{:.encart}
-Version en français : [Comparaison de l'utilisation de SQlite ou PostgreSQL avec Express]({% post_url 2019-10-07-comparaison-sqlite-postgresql-express %}){:hreflang="fr"}.
-
 After writing two tutorials on Express to access [SQlite]({% post_url 2019-10-08-crud-with-express-sqlite-10-steps %}) and [PostgreSQL]({% post_url 2019-10-15-crud-with-express-postgresql-10-steps %}) databases, I realized that there were not such big gaps between the two systems.
 
 <figure>
@@ -486,3 +483,6 @@ app.post("/delete/:id", (req, res) => {
   });
 });
 ```
+
+{:.encart}
+Version en français : [Comparaison de l'utilisation de SQlite ou PostgreSQL avec Express]({% post_url 2019-10-07-comparaison-sqlite-postgresql-express %}){:hreflang="fr"}.

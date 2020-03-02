@@ -9,9 +9,6 @@ blogue. Outre le côté 'tout nouveau, tout beau', cela m'a permis de voir 2 ou 
 trucs de CSS et de Jekyll que je ne connaissais pas."
 ---
 
-{:.encart}
-English version: [A new CSS and 5 tips to know]({% post_url 2019-12-17-new-css-tips-to-know %}){:hreflang="en"}.
-
 Pour la nouvelle année à venir, j'ai un peu rafraichi la charte graphique de mon
 blogue. Outre le côté "tout nouveau, tout beau", cela m'a permis de voir 2 ou 3
 trucs de CSS et de [Jekyll](https://jekyllrb.com/) que je ne connaissais pas.
@@ -255,3 +252,6 @@ Markdown à l'intérieur d'une balise HTML soit lui aussi correctement transform
 
 Et pour insister légèrement, voici le **truc n° 5** : toujours avoir une feuille
 de style qui donne un bon résultat quand on imprime la page.
+
+{:.encart}
+English version: [A new CSS and 5 tips to know]({% post_url 2019-12-17-new-css-tips-to-know %}){:hreflang="en"}.

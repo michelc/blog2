@@ -7,9 +7,6 @@ title: "Mise à jour d'une table à partir d'une autre"
 image: "/public/2019/sql-database.jpg"
 ---
 
-{:.encart}
-English version: [Updating a table from another table]({% post_url 2019-12-23-update-table-from-another-table %}).
-
 <figure>
   <img src="{{ page.image }}" alt="sql-database" />
   <figcaption>
@@ -50,3 +47,6 @@ SET    LignesFactures.TauxTva = (SELECT Articles.TauxTva
                                  FROM   Articles
                                  WHERE  Articles.ArticleID = LignesFactures.ArticleID)
 ```
+
+{:.encart}
+English version: [Updating a table from another table]({% post_url 2019-12-23-update-table-from-another-table %}){:hreflang="en"}.

@@ -7,9 +7,6 @@ image: "/public/2019/le-corniaud.jpg"
 excerpt: "Jusqu'à présent, j'utilise toujours la dernière version de Node. D'habitude ça marche mais ce coup-ci j'ai dû revenir en arrière."
 ---
 
-{:.encart}
-English version: [The problem with blindly using the latest Node]({% post_url 2019-11-26-problem-using-latest-nodejs %}){:hreflang="en"}.
-
 Depuis que j'ai commencé à faire quelques trucs avec Node, j'ai toujours
 travaillé avec la toute dernière version de Node. Pour cela, j'ai l'habitude de
 faire des `choco upgrade -y nodejs` assez régulièrement.
@@ -167,3 +164,6 @@ Et ce coup-ci, `npm start` réussi à lancer correctement l'application.
 Conclusion : il faudrait qu'à l'avenir je fasse un peu plus attention à ce que
 j'utilise et aux problèmes de compatibilité que cela peut causer. Mais d'un
 autre côté, c'est la première fois que je rencontre un tel problème...
+
+{:.encart}
+English version: [The problem with blindly using the latest Node]({% post_url 2019-11-26-problem-using-latest-nodejs %}){:hreflang="en"}.

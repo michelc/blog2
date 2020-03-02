@@ -8,9 +8,6 @@ image: "/public/2019/hamburger-menu.jpg"
 excerpt: "I only use 'bootstrap.min.js' to handle the Bootstrap hamburger menu. So I 'replaced' the 57 ko of this file with 3 lines of JS."
 ---
 
-{:.encart}
-Version en français : [Gérer le menu hamburger de Bootstrap 4 en Vanilla JS]({% post_url 2019-12-09-menu-hamburger-bootstrap-vanilla-js %}){:hreflang="fr"}.
-
 ## Introduction
 
 Some weeks ago, I wrote a small ASP.NET MVC application where I already have to [Search and filter a table with JavaScript]({% post_url 2019-10-01-search-filter-table-javascript %}).
@@ -145,3 +142,6 @@ This gives the following source file, ready to be integrated with a `<script src
 
 })();
 ```
+
+{:.encart}
+Version en français : [Gérer le menu hamburger de Bootstrap 4 en Vanilla JS]({% post_url 2019-12-09-menu-hamburger-bootstrap-vanilla-js %}){:hreflang="fr"}.

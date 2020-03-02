@@ -7,9 +7,6 @@ image: "/public/2019/hamburger-menu.jpg"
 excerpt: "Bootstrap 4 c'est super pour le côté responsive, mais 57 ko de JavaScript juste pour gérer le menu hamburger, c'est trop."
 ---
 
-{:.encart}
-English version: [Switch Bootstrap 4 hamburger menu with Vanilla JS]({% post_url 2019-12-10-bootstrap-hamburger-menu-vanilla-js %}){:hreflang="en"}.
-
 ## Présentation
 
 J'ai développé il y a quelque temps une petite application en ASP.NET MVC pour
@@ -179,3 +176,6 @@ src="/js/js-navbar-toggler.js"></script>` :
 
 })();
 ```
+
+{:.encart}
+English version: [Switch Bootstrap 4 hamburger menu with Vanilla JS]({% post_url 2019-12-10-bootstrap-hamburger-menu-vanilla-js %}){:hreflang="en"}.

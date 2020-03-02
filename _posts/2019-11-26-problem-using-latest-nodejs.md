@@ -8,9 +8,6 @@ image: "/public/2019/le-corniaud.jpg"
 excerpt: "Until a few days ago, I've always used the latest version of Node. Usually it works well, but this time I had to go back."
 ---
 
-{:.encart}
-Version en français : [De l'inconvénient d'utiliser aveuglément la dernière version de Node]({% post_url 2019-11-25-inconvenient-derniere-version-node-js %}){:hreflang="fr"}.
-
 Since I started doing some testing with Node, I've always worked with the latest version of Node. And that's why I am used to do `choco upgrade -y nodejs` quite regularly.
 
 <figure>
@@ -147,3 +144,6 @@ found 0 vulnerabilities
 And this time, `npm start` successfully launched the application.
 
 Conclusion: I should pay a little more attention in the future to what I use and the compatibility problems it can cause. But on the other hand, it's the first time I've encountered such a problem...
+
+{:.encart}
+Version en français : [De l'inconvénient d'utiliser aveuglément la dernière version de Node]({% post_url 2019-11-25-inconvenient-derniere-version-node-js %}){:hreflang="fr"}.

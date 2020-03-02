@@ -7,9 +7,6 @@ image: "/public/2019/filter-table-js.jpg"
 excerpt: "Comment faire une recherche et filtrer le contenu d'une table HTML en JavaScript. Depuis le script trouvé sur codepen.io et après quelques explications arrive à une version finale légèrement retravaillée."
 ---
 
-{:.encart}
-English version: [Search and filter a table with JavaScript]({% post_url 2019-10-01-search-filter-table-javascript %}){:hreflang="en"}.
-
 Il y a quelque temps, j'ai eu besoin de proposer une recherche simple dans un
 tableau. Normalement, je préfère le bon vieux `Ctrl+F` mais ça ne plaît pas à
 tout le monde (et aussi le but était plus de limiter l'affichage aux seules
@@ -486,3 +483,6 @@ Bootstrap 4 :
   <input type="text" class="form-control" data-table="table" data-count="#count" placeholder="Texte pour filtrer..." aria-label="Filtre" aria-describedby="filter">
 </div>
 ```
+
+{:.encart}
+English version: [Search and filter a table with JavaScript]({% post_url 2019-10-01-search-filter-table-javascript %}){:hreflang="en"}.

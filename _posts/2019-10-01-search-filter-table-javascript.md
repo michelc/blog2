@@ -8,9 +8,6 @@ image: "/public/2019/filter-table-js.jpg"
 excerpt: "How to search and filter the content of an HTML table in JavaScript. From the script found on codepen.io to a final version slightly reworked after some explanations."
 ---
 
-{:.encart}
-Version en français : [Rechercher et filtrer une table en JavaScript]({% post_url 2019-09-30-rechercher-filtrer-table-javascript %}){:hreflang="fr"}.
-
 Some time ago, I needed to propose a simple search in a table. Normally, I
 prefer the good old `Ctrl+F` but not everyone likes it (and also the goal was
 more to filter the display to the data found, which is not possible with a
@@ -481,3 +478,6 @@ As a bonus, the HTML part, ready for when I add this to a Bootstrap 4 template:
   <input type="text" class="form-control" data-table="table" data-count="#count" placeholder="Enter text to filter..." aria-label="Filter" aria-describedby="filter">
 </div>
 ```
+
+{:.encart}
+Version en français : [Rechercher et filtrer une table en JavaScript]({% post_url 2019-09-30-rechercher-filtrer-table-javascript %}){:hreflang="fr"}.

@@ -7,9 +7,6 @@ title: "How I wrote a Node JS tutorial"
 image: "/public/2019/ididitmyself.jpg"
 ---
 
-{:.encart}
-Version en français : [Comment j'ai écrit un tutoriel Node JS]({% post_url 2019-11-04-comment-j-ai-ecrit-un-tutoriel %}){:hreflang="fr"}.
-
 A few weeks ago, I started writing a tutorial on developing a Node JS application with Express to manage an SQlite database. I published it on my blog under the title [CRUD Application with Express and SQlite in 10 steps]({% post_url 2019-10-08-crud-with-express-sqlite-10-steps %}) and I did some publicity about it in the hope that it could be used by others.
 
 <figure>
@@ -56,3 +53,6 @@ The other advantage is that from this initial application, I was able to extend 
 * Replace callbacks with async / await
 * Validate the data entry form
 * And so on...
+
+{:.encart}
+Version en français : [Comment j'ai écrit un tutoriel Node JS]({% post_url 2019-11-04-comment-j-ai-ecrit-un-tutoriel %}){:hreflang="fr"}.

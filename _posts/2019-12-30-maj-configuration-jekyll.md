@@ -8,9 +8,6 @@ image: "/public/2019/source-code.jpg"
 excerpt: "Après avoir un peu rafraîchi la charte graphique de mon blogue, je me suis lancé dans sa mise à jour. Depuis que j'étais passé de GandiBlog à Jekyll il restait toujours quelques bricoles à faire. Comme je me suis remis à bloguer, ça vaut le coup de m'y attaquer."
 ---
 
-{:.encart}
-English version: [Jekyll configuration update]({% post_url 2019-12-30-jekyll-configuration-update %}){:hreflang="en"}.
-
 Après avoir un peu rafraîchi la charte graphique de mon blogue, je me suis lancé dans sa mise à jour. En fait, depuis que j'étais passé de GandiBlog à Jekyll il y a près de 3 ans, il restait toujours quelques bricoles à faire pour finaliser la migration. Et comme cette année je me suis remis à bloguer, ça vaut le coup de m'y attaquer.
 
 <figure>
@@ -282,3 +279,6 @@ Ou :
 ```
 
 Le coup du `{% raw %}{:hreflang="xx"}{% endraw %}` n'a pas été facile à trouver, mais pourtant ça existe bel et bien : [Additional link attributes can be added by using a span IAL after the inline link](https://kramdown.gettalong.org/syntax.html#inline-links).
+
+{:.encart}
+English version: [Jekyll configuration update]({% post_url 2019-12-30-jekyll-configuration-update %}){:hreflang="en"}.

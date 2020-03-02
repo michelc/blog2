@@ -8,9 +8,6 @@ image: "/public/2019/xkcd-221.jpg"
 excerpt: "How to generate random numbers with Math.random() + How to force chance and be sure to always generate the same set of random numbers (useful for testing)."
 ---
 
-{:.encart}
-Version en français : [Générer un nombre aléatoire en JavaScript]({% post_url 2019-12-03-generer-nombre-aleatoire-javascript %}){:hreflang="fr"}.
-
 ## The "Math.random()" method
 
 <figure>
@@ -80,3 +77,6 @@ I tryed with several values for "seed" and got the following results:
 * Test_Run("randomize") => 39.3 of games won
 
 By playing my system as best I can, I can therefore hope to win 4 out of 10 games. Which is already not bad for "if ... else" code. And so, by using the "randomize" string as initialization value, I will have a better view of the progress made by my hint system as I develop it. The goal being of course to achieve at least a 50% success rate...
+
+{:.encart}
+Version en français : [Générer un nombre aléatoire en JavaScript]({% post_url 2019-12-03-generer-nombre-aleatoire-javascript %}){:hreflang="fr"}.

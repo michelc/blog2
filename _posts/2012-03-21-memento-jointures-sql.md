@@ -8,9 +8,6 @@ image: "/public/2020/sql-join.jpg"
 excerpt: "J'essaie encore une fois de comprendre comment faire des jointures SQL sans passer par un bête «WHERE Table1.Foreign_ID = Table2.ID»..."
 ---
 
-{:.encart}
-English version: [SQL Join Memento]({% post_url 2020-01-21-sql-join-memento %}){:hreflang="en"}.
-
 Dernièrement, j'ai eu besoin de faire une comparaison assez compliquée entre deux tables, pour faire ressortir toutes les <s>anomalies</s> différences entre les deux, y compris les données qui n'apparaissent que dans une des deux tables. Etant donné mon niveau en jointures, impossible de me souvenir comment faire de mémoire.
 
 <figure>
@@ -256,3 +253,6 @@ ID  Libelle  Caption
 4            Four
 3   Trois
 ```
+
+{:.encart}
+English version: [SQL Join Memento]({% post_url 2020-01-21-sql-join-memento %}){:hreflang="en"}.

@@ -8,9 +8,6 @@ image: "/public/2019/source-code.jpg"
 excerpt: "After having refreshed the CSS of my blog, I started to upgrade it. Since I switched from GandiBlog to Jekyll there were still a few things left to do. Since this year I've started blogging again, it's worth it."
 ---
 
-{:.encart}
-Version en français : [Mise à jour de la configuration de Jekyll]({% post_url 2019-12-30-maj-configuration-jekyll %}){:hreflang="fr"}.
-
 After having refreshed the CSS of my blog, I started to upgrade it. In fact, since I switched from GandiBlog to Jekyll almost 3 years ago, there were still a few things left to do to finalize the migration. And since this year I've started blogging again, it's worth it.
 
 <figure>
@@ -283,3 +280,6 @@ Or:
 ```
 
 The `{% raw %}{:hreflang="xx"}{% endraw %}` trick wasn't easy to find, but it does exist: [Additional link attributes can be added by using a span IAL after the inline link](https://kramdown.gettalong.org/syntax.html#inline-links).
+
+{:.encart}
+Version en français : [Mise à jour de la configuration de Jekyll]({% post_url 2019-12-30-maj-configuration-jekyll %}){:hreflang="fr"}.

@@ -8,9 +8,6 @@ image: "/public/2019/sapin-de-noel.jpg"
 excerpt: "For the coming new year, I have refreshed the visual style of my blog. Besides the 'tout nouveau, tout beau' point, it allowed me to find 2 or 3 things from CSS and Jekyll that I didn't know."
 ---
 
-{:.encart}
-Version en français : [Nouvelle CSS et 5 trucs bons à savoir]({% post_url 2019-12-16-nouvelle-css-quelques-trucs %}){:hreflang="fr"}.
-
 For the coming new year, I have refreshed the visual style of my blog. Besides the "tout nouveau, tout beau" point, it allowed me to find 2 or 3 things from CSS and [Jekyll](https://jekyllrb.com/) that I didn't know.
 
 <figure>
@@ -205,3 +202,6 @@ For more complicated cases, I had given up and written everything in HTML. But d
 ```
 
 I know I insist, but here's a **5th tip**: always create a print CSS to ensure a good result when printing.
+
+{:.encart}
+Version en français : [Nouvelle CSS et 5 trucs bons à savoir]({% post_url 2019-12-16-nouvelle-css-quelques-trucs %}){:hreflang="fr"}.

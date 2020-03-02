@@ -6,9 +6,6 @@ title: "Comparaison de l'utilisation de SQlite ou PostgreSQL avec Express"
 image: "/public/2019/microscope.jpg"
 ---
 
-{:.encart}
-English version: [Comparing SQlite or PostgreSQL with Express]({% post_url 2019-10-22-comparing-sqlite-postgresql-express %}){:hreflang="en"}.
-
 Après avoir rédigé deux tutoriels sur Express pour accéder à des bases de données
 [SQlite]({% post_url 2019-09-11-crud-avec-express-sqlite-10-etapes %}) puis
 [PostgreSQL]({% post_url 2019-09-21-crud-avec-express-postgresql-10-etapes %}),
@@ -536,3 +533,6 @@ app.post("/delete/:id", (req, res) => {
   });
 });
 ```
+
+{:.encart}
+English version: [Comparing SQlite or PostgreSQL with Express]({% post_url 2019-10-22-comparing-sqlite-postgresql-express %}){:hreflang="en"}.

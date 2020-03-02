@@ -7,9 +7,6 @@ image: "/public/2019/butterfly-collection.jpg"
 excerpt: "Pour moi essentiellement, un petit mémo sur les différentes façons de déclarer une fonction en JavaScript."
 ---
 
-{:.encart}
-English version: [How to define a JavaScript function]({% post_url 2019-11-19-how-to-define-javascript-function %}){:hreflang="en"}.
-
 Comme j'ai toujours un peu de mal à me rappeler de tout et aussi parce qu'il y a
 un petit côté collection que j'aime bien, voici un récapitulatif sommaire des
 différentes façons qui existent pour définir des fonctions en JavaScript.
@@ -110,3 +107,6 @@ test.map((x) => { return x * 2; });         // [2, 4, 6]
 
 test.map(x => x * 2);                       // [2, 4, 6] Bingo !
 ```
+
+{:.encart}
+English version: [How to define a JavaScript function]({% post_url 2019-11-19-how-to-define-javascript-function %}){:hreflang="en"}.

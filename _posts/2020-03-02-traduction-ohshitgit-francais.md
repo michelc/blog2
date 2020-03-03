@@ -35,3 +35,6 @@ Pour la traduction de l'accroche, j'ai un peu hésité entre "Oh m...de" et "Et 
 </figure>
 
 Pour être complet, je vous conseille de suivre la présentation que Katie a réalisé pour la conférence [JAMstack_conf_sf 2019](https://jamstackconf.com/#2019). Elle y explique pourquoi et comment elle a fait évoluer son site. Au départ, il s'agissait d'un simple fichier html qu'elle a fait migrer assez facilement vers [eleventy (11ty)](https://www.11ty.io/), un générateur de site statique développé en JavaScript : [Migrating to JAMstack and OhShitGit!](https://www.youtube.com/watch?v=PqlhYVqLDm0)
+
+{:.encart}
+English version: [Translation of «Oh Shit Git» in French]({% post_url 2020-03-03-ohshitgit-french-translation %}){:hreflang="en"}.

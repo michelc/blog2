@@ -10,7 +10,7 @@ image: "/public/2020/gaston-lagaffe.jpg"
 A little bit motivated by the [#hacktoberfest](https://dev.to/michelc/selfish-hacktoberfest-2019-4g5l), I had started to translate the [Oh Shit, Git!?!](https://ohshitgit.com/) website into French. Personally, I sometimes use it when I commit and then I realize that I forgot just a last little thing or that I made a stupid mistake in my commit message.
 
 <figure>
-  <img src="{{ image }}" alt="gaston-lagaffe" />
+  <img src="{{ page.image }}" alt="gaston-lagaffe" />
   <figcaption>
     <a href="http://www.gastonlagaffe.com/">Gaston Lagaffe</a>
   </figcaption>

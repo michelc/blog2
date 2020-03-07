@@ -46,12 +46,12 @@ const bonjour = function (prenom) {
 
 Même si cela ne se remarque pas, la fonction est anonyme :
 
-* Elle est crée sans lui donner de nom (juste "function (...) { ... }")
+* Elle est créée sans lui donner de nom (juste "function (...) { ... }")
 * Elle est affectée à une variable qui elle a un nom
 
-Note : Comme il s'agit d'une affectation à une variable (en l'occurence on lui
+Note : Comme il s'agit d'une affectation à une variable (en l'occurrence on lui
 affecte une fonction), la commande se termine par un point-virgule, exactement
-comme c'est le cas pour touts les autres affectations : `const pi = 3.14;`.
+comme c'est le cas pour toutes les autres affectations : `const pi = 3.14;`.
 
 
 ## Via la syntaxe arrow

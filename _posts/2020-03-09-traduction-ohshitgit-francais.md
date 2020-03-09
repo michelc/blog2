@@ -3,7 +3,7 @@ date: 2020-03-09 19:59:12+200
 layout: post
 tags: icons
 title: "Coquette : 450 icones en direct de 2009"
-image: "/public/2020/coquettes-icons.jpg"
+image: "/public/2020/coquette-icons.jpg"
 ---
 
 J'ai fait une petite modification sur un ancien programme pour ajouter un nouveau bouton d'action. Etant donné que ce projet date un peu, il utilise les icones "Coquette" que j'aimais bien en ce temps là. C'est un jeu de 450 jolies icones très colorées, avec un petit côté décontracté qui qui permettait d'obtenir facilement une interface utilisateur de bonne qualité.

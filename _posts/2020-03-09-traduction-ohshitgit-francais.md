@@ -1,5 +1,5 @@
 ---
-date: 2020-03-02 12:16:55+200
+date: 2020-03-09 19:59:12+200
 layout: post
 tags: icons
 title: "Coquette : 450 icones en direct de 2009"
@@ -19,14 +19,14 @@ Ces icones sont disponibles aux formats de l'époque (ICNS, ICO et PNG) et dans 
 
 Comme ça n'a pas été facile de retrouver les différents icones proposées par [DryIcons](https://dryicons.com/), je note ici la liste des 9 packs qu'ils avaient créés :
 
-* https://dryicons.com/icon-packs/coquette-icons-set
-* https://dryicons.com/icon-packs/coquette-part-2-icons-set
-* https://dryicons.com/icon-packs/coquette-part-3-icons-set
-* https://dryicons.com/icon-packs/coquette-part-4-icons-set
-* https://dryicons.com/icon-packs/coquette-part-5-icons-set
-* https://dryicons.com/icon-packs/coquette-part-6-icons-set
-* https://dryicons.com/icon-packs/coquette-part-7-icons-set
-* https://dryicons.com/icon-packs/coquette-part-8-icons-set
-* https://dryicons.com/icon-packs/coquette-part-9-icons-set
+* [https://dryicons.com/icon-packs/coquette-icons-set](https://dryicons.com/icon-packs/coquette-icons-set)
+* [https://dryicons.com/icon-packs/coquette-part-2-icons-set](https://dryicons.com/icon-packs/coquette-part-2-icons-set)
+* [https://dryicons.com/icon-packs/coquette-part-3-icons-set](https://dryicons.com/icon-packs/coquette-part-3-icons-set)
+* [https://dryicons.com/icon-packs/coquette-part-4-icons-set](https://dryicons.com/icon-packs/coquette-part-4-icons-set)
+* [https://dryicons.com/icon-packs/coquette-part-5-icons-set](https://dryicons.com/icon-packs/coquette-part-5-icons-set)
+* [https://dryicons.com/icon-packs/coquette-part-6-icons-set](https://dryicons.com/icon-packs/coquette-part-6-icons-set)
+* [https://dryicons.com/icon-packs/coquette-part-7-icons-set](https://dryicons.com/icon-packs/coquette-part-7-icons-set)
+* [https://dryicons.com/icon-packs/coquette-part-8-icons-set](https://dryicons.com/icon-packs/coquette-part-8-icons-set)
+* [https://dryicons.com/icon-packs/coquette-part-9-icons-set](https://dryicons.com/icon-packs/coquette-part-9-icons-set)
 
 J'aurais peut-être pu en profiter pour changer d'icones, mais ce n'était pas le but et en plus, je me rends compte qu'elles me plaisent toujours autant et que 10 ans plus tard ça donne presque un petit côté rétro...

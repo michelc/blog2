@@ -3,7 +3,7 @@ date: 2020-05-19 19:42:12+200
 layout: post
 tags: css
 title: "Créer un template simple avec sidebar + contenu"
-image: "/public/2020/dev-first-plan.jpg"
+image: "/public/2020/first-plan.jpg"
 ---
 
 Je fais quelques essais sur une application de gestion et plutôt que d'avoir une barre de navigation "compliquée" en haut de l'écran, j'aimerai tester ce que donnerait un template basique avec seulement 2 colonnes :

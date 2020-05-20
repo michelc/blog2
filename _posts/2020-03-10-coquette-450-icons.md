@@ -1,6 +1,7 @@
 ---
 date: 2020-03-10 12:24:16+200
 layout: post
+lang: en-US
 tags: icons
 title: "Coquette: 450 icons live from 2009"
 image: "/public/2020/coquette-icons.jpg"

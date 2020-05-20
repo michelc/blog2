@@ -32,4 +32,4 @@ Comme ça n'a pas été facile de retrouver les différents icones proposées pa
 J'aurais peut-être pu en profiter pour changer d'icones, mais ce n'était pas le but et en plus, je me rends compte qu'elles me plaisent toujours autant et que 10 ans plus tard ça donne presque un petit côté rétro...
 
 {:.encart}
-English version: [Coquette: 450 icons live from 200]({% post_url 2020-03-10-coquette-450-icons %}){:hreflang="en"}.
+English version: [Coquette: 450 icons live from 2009]({% post_url 2020-03-10-coquette-450-icons %}){:hreflang="en"}.

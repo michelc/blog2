@@ -81,7 +81,7 @@ Ce que je peux faire en utilisant une seule classe "no-sidebar" :
 Pour être malin, je fais ça au niveau du "wrapper" qui englobe "sidebar" et "content" :
 
 ```html
-<div class="wrapper no-sidebar">
+<div id="wrapper" class="no-sidebar">
 ```
 
 Et ce coup-ci je n'ai besoin que de 2 règles CSS :
@@ -100,7 +100,7 @@ Bien mieux !
 Maintenant, il suffit d'un bouton et d'un rien de Javascript pour afficher ou masquer la "sidebar".
 
 ```html
-<button id="toggle">Masquer / Afficher</button>
+<button id="sidebar-toggle">Masquer / Afficher</button>
 ```
 
 Le code Javascript vraiment tout simple (et qui utilise jQuery parce que j'en aurai aussi besoin pour mes formulaires) :
@@ -111,7 +111,7 @@ Le code Javascript vraiment tout simple (et qui utilise jQuery parce que j'en au
     $(document).ready(function () {
 
         $("#sidebar-toggle").on("click", function () {
-            $(".wrapper").toggleClass("no-sidebar");
+            $("#wrapper").toggleClass("no-sidebar");
         });
 
     });

@@ -73,7 +73,7 @@ Mon premier essai mobilise 4 classes différentes alors qu'en gros il n'y a que 
 * On a une "sidebar" et le "content" => sidebar = true (par défaut),
 * On n'a que le "content" => sidebar = false (à la demande).
 
-Ce que je peux faire en utilisant une seule classe "no-sidebar"
+Ce que je peux faire en utilisant une seule classe "no-sidebar" :
 
 * Par défaut cette classe n'est pas utilisée => la "sidebar" est visible,
 * Et pour masquer la "sidebar" il suffit d'ajouter cette classe.
@@ -118,10 +118,10 @@ Le code Javascript vraiment tout simple (et qui utilise jQuery parce que j'en au
 </script>
 ```
 
-Récapitulatif, il suffit de 4 éléments pour gérer une présentation en 2 colonnes, avec une barre latérale rétractable :
+Pour récapituler, il suffit de 4 éléments pour réaliser une présentation sur 2 colonnes, avec une barre latérale rétractable :
 
 * Une div "#wrapper" pour englober tout le contenu,
-* Un nav "#sidebar" pour contenir la barre latérale,
+* Un nav "#sidebar" pour contenir la barre latérale pour le menu de navigation,
 * Une div "#content" pour contenir le contenu principal,
 * Une classe .no-sidebar quand il faut masquer la barre latérale.
 
@@ -168,7 +168,7 @@ On peut aussi se contenter d'ajouter la classe Bootstrap "d-print-none" à "side
 
 ![](/public/2020/clic2.gif)
 
-Youpi ! Mon 1° GIF animé depuis des siècles, ou en tout cas depuis le siècle dernier (créé grâce à https://ezgif.com/).
+Youpi ! Mon 1° GIF animé depuis des siècles, ou en tout cas depuis le siècle dernier (créé grâce à [https://ezgif.com/](https://ezgif.com/)).
 
 C'était pas très compliqué... Aussi je ferais sans doute une 3° partie pour améliorer le côté "artistique" :
 

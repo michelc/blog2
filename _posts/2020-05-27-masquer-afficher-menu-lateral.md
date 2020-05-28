@@ -174,3 +174,6 @@ C'était pas très compliqué... Aussi je ferais sans doute une 3° partie pour 
 
 * Utiliser une icone pour afficher ou cacher la "sidebar",
 * Ajouter une animation pour passer d'un état à l'autre.
+
+{:.encart}
+English version: [Hide or show sidebar]({% post_url 2020-05-28-hide-show-sidebar %}){:hreflang="en"}.

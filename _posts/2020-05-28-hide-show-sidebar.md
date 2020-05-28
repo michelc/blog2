@@ -1,5 +1,5 @@
 ---
-date: 2020-05-27 13:20:08+200
+date: 2020-05-28 13:20:08+200
 layout: post
 tags: css
 title: "Hide or show sidebar"

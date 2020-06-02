@@ -1,6 +1,7 @@
 ---
 date: 2020-05-28 13:20:08+200
 layout: post
+lang: en-US
 tags: css
 title: "Hide or show sidebar"
 image: "/public/2020/switches.jpg"

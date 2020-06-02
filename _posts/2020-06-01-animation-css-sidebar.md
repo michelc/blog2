@@ -6,7 +6,7 @@ title: "Animer une sidebar avec CSS"
 image: "/public/2020/swing.jpg"
 ---
 
-J'ai déjà réussi à faire un [template avec content + sidebar]({% post_url 2020-05-19-creer-template-sidebar-contenu %}), puis à [masquer la sidebar]({% post_url 2020-05-27-masquer-afficher-menu-lateral %}) assez simplement. Je vais maintenant voir comment améliorer le côté très basique de mes premiers essais grâce à quelques animations CSS et autres icônes.
+J'ai déjà réussi à faire un [template avec contenu + sidebar]({% post_url 2020-05-19-creer-template-sidebar-contenu %}), puis à [masquer la sidebar]({% post_url 2020-05-27-masquer-afficher-menu-lateral %}) assez simplement. Je vais maintenant voir comment améliorer le côté très basique de mes premiers essais grâce à quelques animations CSS et autres icônes.
 
 <figure>
   <img src="{{ page.image }}" alt="balançoires" />
@@ -20,12 +20,11 @@ J'ai déjà réussi à faire un [template avec content + sidebar]({% post_url 20
 
 C'est tout simple, il suffit de compléter les styles de "sidebar" et "content" avec :
 
-```
+```css
 transition: all 1s;
 ```
 
 Il s'agit d'une propriété CSS qui en 1 seconde (pour avoir le temps de voir ce qui se passe) va animer le passage des valeurs CSS suivantes :
-
 
 ```css
 #sidebar {
@@ -37,7 +36,6 @@ Il s'agit d'une propriété CSS qui en 1 seconde (pour avoir le temps de voir ce
 ```
 
 À ces nouvellles valeurs :
-
 
 ```css
 .no-sidebar #sidebar {
@@ -56,9 +54,9 @@ Pour le "content", on le voit bien "bouger" quand on clique sur le bouton pour o
 
 Par contre, la "sidebar" disparait ou apparait instantanément. C'est parce que le changement de la propriété "display" de "block" en "none" n'est pas pris en compte par les animations CSS :(
 
-Il faut donc ruser et cacher "sidebar" en la sortant de l'écran. Pour cela, on lui met une marge négative égale à sa largeur.
+Il faut donc ruser et cacher "sidebar" en la sortant de l'écran. Pour cela, on lui met une marge négative égale à sa largeur :
 
-```
+```css
 #sidebar {
     margin-left: 0;
 }
@@ -70,7 +68,7 @@ Il faut donc ruser et cacher "sidebar" en la sortant de l'écran. Pour cela, on 
 
 On peut alors accélérer l'animation (parce que sinon le *lorem ipsum dolor sit amet...* tangue et va finir par me rendre malade) :
 
-```
+```css
 transition: all 0.25s;
 ```
 
@@ -87,13 +85,13 @@ Et comme je ne suis pas assez doué, je copie / colle tout depuis StackOverflow 
 
 Je commence par remplacer le bouton par une balise `a` :
 
-```
+```html
 <a href="#" id="sidebar-toggle"></a>
 ```
 
 Puis j'ajoute le CSS :
 
-```
+```css
 #sidebar-toggle {
     background-color: orange;
     border-radius: 50%;
@@ -129,7 +127,7 @@ Et voila, ça marche.
 
 Pour friser la perfection, je n'ai plus qu'à positionner cette "icône" pile sur la tranche entre la "sidebar" et le "content" :
 
-```
+```css
 #sidebar-toggle {
     position: absolute;
     left: -1.25rem;
@@ -139,7 +137,7 @@ Pour friser la perfection, je n'ai plus qu'à positionner cette "icône" pile su
 
 Et penser à la masquer lors des impressions :
 
-```
+```css
 @media print {
     #sidebar-toggle { display: none; }
 }
@@ -147,8 +145,12 @@ Et penser à la masquer lors des impressions :
 
 Ça fera très bien l'affaire :)
 
+
 ## Démonstration
 
 <script async src="//jsfiddle.net/qo6dx3w4/1/embed/result/"></script>
 
 Bon, maintenant que j'ai à peu près le template que je voulais et même plus grâce à ces derniers ajouts, je vais pouvoir travailler pour de vrai et commencer à coder mon application...
+
+{:.encart}
+English version: [Sidebar animation with CSS]({% post_url 2020-06-02-sidebar-css-animation %}){:hreflang="en"}.

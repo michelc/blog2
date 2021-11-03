@@ -42,7 +42,3 @@ defaults:
       path: "temp/**"
     values:
       sitemap: false
-
-future: false
-
-show_drafts: true

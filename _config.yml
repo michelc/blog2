@@ -33,11 +33,15 @@ defaults:
   - scope:
       path: "git-hub-tips.md"
     values:
-      sitemap:         false
+      sitemap: false
   - scope:
       path: "public/**"
     values:
-      sitemap:         false
+      sitemap: false
+  - scope:
+      path: "temp/**"
+    values:
+      sitemap: false
 
 future: false
 

@@ -31,7 +31,7 @@ kramdown:
 # (on peut aussi ajouter "sitemap: false" dans le front-matter des posts/pages à exclure)
 defaults:
   - scope:
-      path: "git-hub-tips/**"
+      path: "git-hub-tips.md"
     values:
       sitemap:         false
   - scope:

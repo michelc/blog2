@@ -12,9 +12,9 @@ Est-ce qu'il est visible ?
 
 Si oui, où ?
 
-* [x]  url spécifique : [https://blog.pagesd.info/temp/2021/11/03/test-billet-ailleurs/]
-* [ ]  index du site : [https://blog.pagesd.info/]
-* [ ]  archives du site : [https://blog.pagesd.info/archives/]
+* [x]  url spécifique : https://blog.pagesd.info/temp/2021/11/03/test-billet-ailleurs/
+* [ ]  index du site : https://blog.pagesd.info/
+* [ ]  archives du site : https://blog.pagesd.info/archives/
 * [ ]  dans les liens précédent / suivant
-* [ ]  sitemap : [https://blog.pagesd.info/sitemap.xml]
-* [ ]  fil atom : [https://blog.pagesd.info/atom.xml]
+* [ ]  sitemap : https://blog.pagesd.info/sitemap.xml
+* [ ]  fil atom : https://blog.pagesd.info/atom.xml

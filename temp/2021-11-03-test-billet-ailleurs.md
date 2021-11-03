@@ -1,6 +1,6 @@
 ---
 date: 2021-11-03 12:28:16+200
-layout: post
+layout: page
 lang: fr-FR
 tags: test
 title: "Test d'un billet dans un autre dossier"

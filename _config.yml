@@ -38,3 +38,5 @@ defaults:
       path: "public/**"
     values:
       sitemap:         false
+  - future: false
+

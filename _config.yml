@@ -25,3 +25,16 @@ feed:
 kramdown:
   syntax_highlighter_opts:
     disable : true
+
+
+# Pour exclure certains trucs du sitemap.xml
+# (on peut aussi ajouter "sitemap: false" dans le front-matter des posts/pages à exclure)
+defaults:
+  - scope:
+      path: "git-hub-tips/**"
+    values:
+      sitemap:         false
+  - scope:
+      path: "public/**"
+    values:
+      sitemap:         false

@@ -39,6 +39,6 @@ defaults:
     values:
       sitemap:         false
 
-future: false
+# future: false
 
 show_drafts: true

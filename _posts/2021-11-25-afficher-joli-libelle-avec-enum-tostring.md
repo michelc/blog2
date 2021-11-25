@@ -3,7 +3,7 @@ date: 2021-11-25 14:41:28+200
 layout: post
 tags: csharp, enum
 title: "Afficher un joli libellé avec Enum.ToString()"
-image: "https://unsplash.com/photos/fliwkBbS7oM"
+image: "/public/2021/cute-puppies.jpg"
 ---
 
 Un jour, j'ai eu besoin d'afficher un libellé en fonction de la valeur d'un `Enum`. J'ai donc fait comme à chaque fois et j'ai utilisé l'attribut `Description` pour définir de jolis libellés.

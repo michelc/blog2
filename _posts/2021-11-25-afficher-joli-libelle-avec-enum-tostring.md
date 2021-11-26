@@ -100,3 +100,6 @@ public static string ToCaption(this Enum value)
 J'ai hésité avec `.ToFriendlyName()` qui semble un peu plus tendance, mais  `.ToCaption()` a l'avantage d'être plus court :)
 
 Alors d'accord, ça m'oblige à accepter d'avoir quelquefois des accents dans les noms de variables (enfin seulement dans les noms de valeurs d'enum). Mais je pense que désormais ça va être ma nouvelle façon de faire, au moins dans mes projets personnels.
+
+{:.encart}
+English version: [Display a friendly name with Enum.ToString()]({% post_url 2021-11-26-display-friendly-name-with-enum-tostring %}){:hreflang="en"}.
